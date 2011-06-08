@@ -54,6 +54,4 @@ if [ -f ~/.bash_colors ]; then
     source ~/.bash_colors
 fi
 
-cd ~/infakt
-
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
