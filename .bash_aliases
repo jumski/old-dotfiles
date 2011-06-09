@@ -7,18 +7,37 @@ alias iwayhigh="mocp -l http://70.38.71.74:8000"
 alias groovesalad="mocp -l http://streamer-ntc-aa06.somafm.com:80/stream/1018"
 alias spacestationsoma="mocp -l http://207.200.96.231:8012"
 
-function f {
+function show_regex {
   printf "\e[31m===================================================================\n"
   printf "\e[31m======================== \e[33m$1\e[31m ====================\n"
   printf "\e[31m===================================================================\e[0m\n"
   echo ""
-  ack-grep "$1" app/$2
 }
 
+# szukaj w app/
+function f {
+  show_regex $1
+  ack-grep "$1" app/$2
+}
+# szukaj definicji ("def metoda") w app
 function fm {
   f "def $1" $2
 }
-
+# szukaj wywołania (".metoda" lub "metoda")
 function fc {
   f "(\.|\s+)$1" $2
+}
+
+# szukaj w public/javascripts
+function fj {
+  show_regex $1
+  ack-grep "$1" public/javascripts/$2
+}
+# szukaj deklaracji ("funkcja =") 
+function fjm {
+  fj "def $1" $2
+}
+# szukaj wywołania ("funkcja(")
+function fjc {
+  fj "$1\(" $2
 }
