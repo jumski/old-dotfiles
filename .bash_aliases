@@ -17,11 +17,11 @@ function show_regex {
 # szukaj w app/
 function f {
   show_regex $1
-  ack-grep "$1" app/$2
+  ack-grep $1 app/$2
 }
 # szukaj definicji ("def metoda") w app
 function fm {
-  f "def $1" $2
+  f "(def $1|define_method\(:$1|alias_method :$1)" $2
 }
 # szukaj wywołania (".metoda" lub "metoda")
 function fc {
@@ -31,11 +31,11 @@ function fc {
 # szukaj w public/javascripts
 function fj {
   show_regex $1
-  ack-grep "$1" public/javascripts/$2
+  ack-grep $1 public/javascripts/$2
 }
 # szukaj deklaracji ("funkcja =") 
 function fjm {
-  fj "def $1" $2
+  fj "($1 = function|function $1\()" $2
 }
 # szukaj wywołania ("funkcja(")
 function fjc {
