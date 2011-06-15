@@ -6,7 +6,7 @@ alias livednb="mocp -l http://173.236.56.82:8006"
 alias iwayhigh="mocp -l http://70.38.71.74:8000"
 alias groovesalad="mocp -l http://streamer-ntc-aa06.somafm.com:80/stream/1018"
 alias spacestationsoma="mocp -l http://207.200.96.231:8012"
-alias realias="source ~/.bash_aliases"
+alias realias="source ~/.bash_aliases && echo 'reloaded .bash_aliases'"
 
 function show_regex {
   printf "\e[31m===================================================================\n"
