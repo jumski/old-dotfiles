@@ -11,12 +11,10 @@ function parse_git_dirty {
   [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo "*"
 }
 function parse_git_branch {
-  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[\1$(parse_git_dirty)]/"
+  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1/"
 }
 function parse_rvm_prompt {
   rvm-prompt | sed 's/\(ruby-\)\(.*\)@\(.*\)/\3/'
 }
 
-#PROMPT_COMMAND='export PS1=" $c_white\w $c_green($(parse_rvm_prompt)$c_reset)$c_yellow $(parse_git_branch)$c_red $ $c_reset"'
-PROMPT_COMMAND='export PS1=" $c_white\w $c_yellow$(parse_git_branch)$c_red $ $c_reset"'
-
+PROMPT_COMMAND='export PS1=" $c_white\w$c_yellow [$(parse_git_branch)]$c_red $ $c_reset"'
