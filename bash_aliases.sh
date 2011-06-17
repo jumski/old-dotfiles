@@ -1,4 +1,4 @@
-alias g=/home/jumski/gmate/g
+alias g=mate
 
 alias jungletrain="mocp -l http://stream2.jungletrain.net:8000"
 alias bassdrive="mocp -l http://shouthostdirect13.streams.bassdrive.com:8202"
