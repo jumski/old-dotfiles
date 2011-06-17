@@ -1,4 +1,5 @@
 alias g=mate
+alias ack-grep=ack
 
 alias jungletrain="mocp -l http://stream2.jungletrain.net:8000"
 alias bassdrive="mocp -l http://shouthostdirect13.streams.bassdrive.com:8202"
@@ -7,6 +8,9 @@ alias iwayhigh="mocp -l http://70.38.71.74:8000"
 alias groovesalad="mocp -l http://streamer-ntc-aa06.somafm.com:80/stream/1018"
 alias spacestationsoma="mocp -l http://207.200.96.231:8012"
 alias realias="source ~/.bash_aliases && echo 'reloaded .bash_aliases'"
+
+alias pg_start="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
+alias pg_stop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
 
 function show_regex {
   printf "\e[31m===================================================================\n"
