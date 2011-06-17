@@ -27,7 +27,7 @@ function fm {
 }
 # szukaj wywołania (".metoda" lub "metoda")
 function fc {
-  f "(\.|\s+)$1" $2
+  f "[^def][\.|\s]+$1" $2
 }
 
 # szukaj w public/javascripts
