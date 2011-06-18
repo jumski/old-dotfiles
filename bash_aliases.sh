@@ -8,6 +8,9 @@ alias groovesalad="mocp -l http://streamer-ntc-aa06.somafm.com:80/stream/1018"
 alias spacestationsoma="mocp -l http://207.200.96.231:8012"
 alias realias="source ~/.bash_aliases && echo 'reloaded .bash_aliases'"
 
+alias pg_start="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
+alias pg_stop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
+
 function show_regex {
   printf "\e[31m===================================================================\n"
   printf "\e[31m======================== \e[33m$1\e[31m ====================\n"
@@ -27,7 +30,7 @@ function fm {
 }
 # szukaj wywołania (".metoda" lub "metoda")
 function fc {
-  f "(\.|\s+)$1" $2
+  f "[^def][\.|\s]+$1" $2
 }
 
 # szukaj w public/javascripts
