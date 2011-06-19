@@ -1,7 +1,7 @@
 [user]
 	name = Wojtek Majewski
 	email = wojciech.majewski@infakt.pl
-	
+
 [alias]
   ci = commit
   s = status
@@ -17,3 +17,9 @@
 	main-window-view = HistoryView
 [push]
 	default = nothing
+[color]
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
+
