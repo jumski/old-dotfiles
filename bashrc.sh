@@ -59,4 +59,6 @@ cd "$HOME/infakt"
 PATH=$PATH:/Library/PostgreSQL/9.0/bin
 #PATH=/usr/local/bin:$PATH
 
+source ~/.git-completion.bash
+
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
