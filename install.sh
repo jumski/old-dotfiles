@@ -26,3 +26,7 @@ ln -s "$PWD/bash_colors.sh" "$HOME/.bash_colors"
 ln -s "$PWD/tmux.conf" "$HOME/tmux.conf"
 ln -s "$PWD/gitconfig" "$HOME/.gitconfig"
 ln -s "$PWD/vimrc" "$HOME/.vimrc"
+
+source ~/.bashrc
+
+dotfiles_help

@@ -8,7 +8,19 @@ call vundle#rc()
 " required! 
 Bundle 'gmarik/vundle'
 
-Bundle 'rails.vim'
+" BUNDLEZZZ
+Bundle 'tpope/vim-rails' 
+Bundle 'tpope/vim-haml'
+Bundle 'tpope/vim-endwise'
+Bundle 'tpope/vim-cucumber'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'oceandeep'
+
+" OPTIONZZZ
+syntax enable
+set t_Co=16
+set background=dark
+colorscheme solarized
 
 filetype plugin indent on     " required! 
 "
