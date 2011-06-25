@@ -55,3 +55,5 @@ if [ -f ~/.bash_colors ]; then
 fi
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
+rvm gemset use rails308
+
