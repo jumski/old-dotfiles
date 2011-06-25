@@ -12,6 +12,15 @@ alias realias="source ~/.bash_aliases && echo 'reloaded .bash_aliases'"
 alias pg_start="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
 alias pg_stop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
 
+function dotfiles_help {
+	echo "========= dotfiles help"
+	echo " -> solarized gnome terminal:"
+	echo ""
+	echo "    git clone git://github.com/sigurdga/gnome-terminal-colors-solarized.git"
+	echo "    cd gnome-terminal-colors-solarized"
+	echo "    ./install.sh"
+}
+
 function show_regex {
   printf "\e[31m===================================================================\n"
   printf "\e[31m======================== \e[33m$1\e[31m ====================\n"
