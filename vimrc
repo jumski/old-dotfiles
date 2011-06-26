@@ -14,13 +14,17 @@ Bundle 'tpope/vim-haml'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-cucumber'
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'oceandeep'
+Bundle 'sethbc/fuzzyfinder_textmate'
+Bundle 'Ack'
 
 " OPTIONZZZ
 syntax enable
 set t_Co=16
 set background=dark
 colorscheme solarized
+
+" fuzzy finder
+map <leader>t :FuzzyFinderTextMate<CR>
 
 filetype plugin indent on     " required! 
 "
