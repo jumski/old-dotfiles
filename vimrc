@@ -17,20 +17,15 @@ Bundle 'tpope/vim-unimpaired'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-markdown'
 Bundle 'vim-ruby/vim-ruby'
-Bundle 'jumski/FuzzyFinder-216'
-Bundle 'jamis/fuzzyfinder_textmate'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'vim-scripts/ack.vim'
-"Bundle 'project'
+Bundle 'wincent/Command-T'
 
 " OPTIONZZZ
 syntax enable
-set t_Co=16
+set t_Co=256
 set background=dark
 colorscheme solarized
-
-" fuzzy finder
-map <leader>t :FuzzyFinderTextMate<CR>
 
 filetype plugin indent on     " required! 
 "
