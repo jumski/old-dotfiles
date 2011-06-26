@@ -13,9 +13,15 @@ Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-haml'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-cucumber'
+Bundle 'tpope/vim-unimpaired'
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-markdown'
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'jumski/FuzzyFinder-216'
+Bundle 'jamis/fuzzyfinder_textmate'
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'sethbc/fuzzyfinder_textmate'
-Bundle 'Ack'
+Bundle 'vim-scripts/ack.vim'
+"Bundle 'project'
 
 " OPTIONZZZ
 syntax enable
