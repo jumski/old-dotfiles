@@ -54,6 +54,8 @@ if [ -f ~/.bash_colors ]; then
     source ~/.bash_colors
 fi
 
+eval `dircolors /home/jumski/src/dircolors-solarized/dircolors.ansi-universal`
+
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 rvm gemset use rails308
 
