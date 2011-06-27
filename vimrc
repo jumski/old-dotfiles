@@ -34,6 +34,8 @@ colorscheme solarized
 set number
 noremap <leader>qqq :MiniBufExplorer<cr>
 
+set directory=/tmp
+
 filetype plugin indent on     " required! 
 "
 " Brief help
