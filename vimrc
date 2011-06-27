@@ -32,7 +32,7 @@ set background=dark
 colorscheme solarized
 
 set number
-noremap <leader>qqq :TMiniBufExplorer<cr>
+noremap <leader>qqq :MiniBufExplorer<cr>
 
 filetype plugin indent on     " required! 
 "
