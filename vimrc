@@ -21,18 +21,14 @@ Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-fugitive'
 Bundle 'wincent/Command-T'
 Bundle 'vim-scripts/ack.vim'
-"Bundle 'vim-scripts/minibufexplorer'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'minibufexpl.vim'
 Bundle 'ctags.vim'
 Bundle 'Lokaltog/vim-easymotion'
-" syntax error highlighting
-Bundle 'Syntastic'
-" better pair matching
 Bundle 'matchit.zip'
-" repeat commands from plugins by '.'
 Bundle 'repeat.vim'
+
 " OPTIONZZZ
 syntax enable
 set t_Co=256
