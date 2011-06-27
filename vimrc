@@ -16,16 +16,21 @@ Bundle 'tpope/vim-cucumber'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-markdown'
+Bundle 'tpope/vim-fugitive'
+Bundle 'wincent/Command-T'
+Bundle 'vim-scripts/ack.vim'
+Bundle 'vim-scripts/vim-ctags'
+Bundle 'vim-scripts/minibufexplorer'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'vim-scripts/ack.vim'
-Bundle 'wincent/Command-T'
 
 " OPTIONZZZ
 syntax enable
 set t_Co=256
 set background=dark
 colorscheme solarized
+
+set number
 
 filetype plugin indent on     " required! 
 "
