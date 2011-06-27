@@ -19,10 +19,11 @@ Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-fugitive'
 Bundle 'wincent/Command-T'
 Bundle 'vim-scripts/ack.vim'
-Bundle 'vim-scripts/vim-ctags'
 Bundle 'vim-scripts/minibufexplorer'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'minibufexpl.vim'
+Bundle 'ctags.vim'
 
 " OPTIONZZZ
 syntax enable
