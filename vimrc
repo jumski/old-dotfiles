@@ -11,7 +11,9 @@ Bundle 'gmarik/vundle'
 " BUNDLEZZZ
 Bundle 'tpope/vim-rails' 
 Bundle 'tpope/vim-haml'
+" auto closing / end
 Bundle 'tpope/vim-endwise'
+Bundle 'delimitMate.vim'
 Bundle 'tpope/vim-cucumber'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'tpope/vim-surround'
@@ -19,12 +21,18 @@ Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-fugitive'
 Bundle 'wincent/Command-T'
 Bundle 'vim-scripts/ack.vim'
-Bundle 'vim-scripts/minibufexplorer'
+"Bundle 'vim-scripts/minibufexplorer'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'minibufexpl.vim'
 Bundle 'ctags.vim'
-
+Bundle 'Lokaltog/vim-easymotion'
+" syntax error highlighting
+Bundle 'Syntastic'
+" better pair matching
+Bundle 'matchit.zip'
+" repeat commands from plugins by '.'
+Bundle 'repeat.vim'
 " OPTIONZZZ
 syntax enable
 set t_Co=256
@@ -33,10 +41,20 @@ colorscheme solarized
 
 set number
 noremap <leader>qqq :MiniBufExplorer<cr>
+noremap <leader>` :CommandT<cr>
 
 set directory=/tmp
 
 filetype plugin indent on     " required! 
+filetype plugin on
+
+runtime macros/matchit.vim        " Load the matchit plugin.
+
+set encoding=utf-8                " Default encoding
+set showcmd                       " Display incomplete commands.
+set showmode                      " Display the mode you're in.
+set backspace=indent,eol,start    " Intuitive backspacing.
+
 "
 " Brief help
 "
