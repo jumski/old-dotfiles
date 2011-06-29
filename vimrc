@@ -25,14 +25,7 @@ Bundle 'vim-ruby/vim-ruby'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'ctags.vim'
 Bundle 'Lokaltog/vim-easymotion'
-
-" syntax error highlighting
-Bundle 'Syntastic'
-
-" better pair matching
 Bundle 'matchit.zip'
-
-" repeat commands from plugins by '.'
 Bundle 'repeat.vim'
 
 " OPTIONZZZ
