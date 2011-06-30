@@ -27,6 +27,7 @@ Bundle 'ctags.vim'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'matchit.zip'
 Bundle 'repeat.vim'
+Bundle 'tomtom/tcomment_vim'
 
 " OPTIONZZZ
 syntax enable
