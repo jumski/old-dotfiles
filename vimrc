@@ -23,11 +23,11 @@ Bundle 'wincent/Command-T'
 Bundle 'vim-scripts/ack.vim'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'minibufexpl.vim'
 Bundle 'ctags.vim'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'matchit.zip'
 Bundle 'repeat.vim'
+Bundle 'tomtom/tcomment_vim'
 
 " OPTIONZZZ
 syntax enable
@@ -35,11 +35,17 @@ set t_Co=256
 set background=dark
 colorscheme solarized
 
+" force syntax highlighting on files w/o extensions
+au BufNewFile,BufRead Rakefile setfiletype ruby
+au BufNewFile,BufRead Capfile setfiletype ruby
+au BufNewFile,BufRead Guardfile setfiletype ruby
+au BufNewFile,BufRead Gemfile setfiletype ruby
+
 set number
-noremap <leader>qqq :MiniBufExplorer<cr>
 noremap <leader>` :CommandT<cr>
 
 set directory=/tmp
+set sessionoptions=buffers,folds,winsize,winpos
 
 filetype plugin indent on     " required! 
 filetype plugin on
@@ -51,6 +57,7 @@ set showcmd                       " Display incomplete commands.
 set showmode                      " Display the mode you're in.
 set backspace=indent,eol,start    " Intuitive backspacing.
 
+let g:CommandTMaxHeight=10
 "
 " Brief help
 "
