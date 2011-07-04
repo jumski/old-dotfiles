@@ -30,6 +30,7 @@ Bundle 'othree/html5.vim'
 Bundle 'php.vim'
 Bundle 'samsonw/vim-task'
 Bundle 'vimwiki'
+Bundle 'TTCoach'
 
 filetype plugin indent on
 filetype plugin on
