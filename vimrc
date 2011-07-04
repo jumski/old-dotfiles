@@ -8,10 +8,8 @@ call vundle#rc()
 " required! 
 Bundle 'gmarik/vundle'
 
-" BUNDLEZZZ
 Bundle 'tpope/vim-rails' 
 Bundle 'tpope/vim-haml'
-" auto closing / end
 Bundle 'tpope/vim-endwise'
 Bundle 'delimitMate.vim'
 Bundle 'tpope/vim-cucumber'
@@ -33,7 +31,21 @@ Bundle 'php.vim'
 Bundle 'samsonw/vim-task'
 Bundle 'vimwiki'
 
-" OPTIONZZZ
+filetype plugin indent on
+filetype plugin on
+
+"""""""""" CUSTOM OPTIONS
+
+set number
+set directory=/tmp
+set sessionoptions=buffers,folds,winsize,winpos
+set encoding=utf-8                " Default encoding
+set showcmd                       " Display incomplete commands.
+set showmode                      " Display the mode you're in.
+set backspace=indent,eol,start    " Intuitive backspacing.
+set tags=~/tags
+
+" Syntax highlighting and eyecandy
 syntax enable
 set t_Co=256
 set background=dark
@@ -45,35 +57,13 @@ au BufNewFile,BufRead Capfile setfiletype ruby
 au BufNewFile,BufRead Guardfile setfiletype ruby
 au BufNewFile,BufRead Gemfile setfiletype ruby
 
-set number
+" PLUGIN OPTIONS AND MAPPINGS
+runtime macros/matchit.vim
+let g:CommandTMaxHeight=10
+
+""""" CUSTOM MAPPINGS
 noremap <leader>` :CommandT<cr>
 
-set directory=/tmp
-set sessionoptions=buffers,folds,winsize,winpos
+" touch current file (useful for triggering guard)
+" noremap <silent><leader>r :call system('touch ' . expand("%:p"))<cr> 
 
-filetype plugin indent on     " required! 
-filetype plugin on
-
-runtime macros/matchit.vim        " Load the matchit plugin.
-
-set encoding=utf-8                " Default encoding
-set showcmd                       " Display incomplete commands.
-set showmode                      " Display the mode you're in.
-set backspace=indent,eol,start    " Intuitive backspacing.
-
-let g:CommandTMaxHeight=10
-"
-" Brief help
-"
-" :BundleInstall  - install bundles (won't update installed)
-" :BundleInstall! - update if installed
-"
-" :Bundles foo    - search for foo
-" :Bundles! foo   - refresh cached list and search for foo
-"
-" :BundleClean    - confirm removal of unused bundles
-" :BundleClean!   - remove without confirmation
-"
-" see :h vundle for more details
-" or wiki for FAQ
-" Note: comments after Bundle command are not allowed..
