@@ -26,6 +26,10 @@ Bundle 'Lokaltog/vim-easymotion'
 Bundle 'matchit.zip'
 Bundle 'repeat.vim'
 Bundle 'tomtom/tcomment_vim'
+Bundle 'othree/html5.vim'
+Bundle 'php.vim'
+Bundle 'samsonw/vim-task'
+Bundle 'vimwiki'
 
 filetype plugin indent on
 filetype plugin on
