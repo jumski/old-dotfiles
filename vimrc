@@ -46,6 +46,16 @@ set showmode                      " Display the mode you're in.
 set backspace=indent,eol,start    " Intuitive backspacing.
 set tags=~/tags
 
+"""""""""" TABS and SPACES
+set ts=2          " szerokosc tabulacji 
+set sw=2          " szerokosc automagicznego wciecia
+set expandtab     " rozwijanie tabow na spacje"
+set tabstop=2     " ile spacji to tab"    
+set softtabstop=2
+
+" kodowanie
+set fileencodings=utf-8,latin2
+
 " Syntax highlighting and eyecandy
 syntax enable
 set t_Co=256
