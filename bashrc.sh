@@ -63,5 +63,7 @@ fi
 eval `dircolors /home/jumski/src/dircolors-solarized/dircolors.ansi-universal`
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
+
+cd ~/antykwariat
 rvm gemset use rails308
 
