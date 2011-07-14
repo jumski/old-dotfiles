@@ -31,6 +31,7 @@ Bundle 'php.vim'
 Bundle 'samsonw/vim-task'
 Bundle 'vimwiki'
 Bundle 'TTCoach'
+Bundle 'autotags'
 
 filetype plugin indent on
 filetype plugin on
