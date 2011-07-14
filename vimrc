@@ -32,6 +32,7 @@ Bundle 'samsonw/vim-task'
 Bundle 'vimwiki'
 Bundle 'TTCoach'
 Bundle 'autotags'
+Bundle 'kchmck/vim-coffee-script'
 
 filetype plugin indent on
 filetype plugin on
