@@ -45,7 +45,7 @@ set encoding=utf-8                " Default encoding
 set showcmd                       " Display incomplete commands.
 set showmode                      " Display the mode you're in.
 set backspace=indent,eol,start    " Intuitive backspacing.
-set tags=~/tags
+set tags=./tags
 set cursorline
 
 """""""""" TABS and SPACES
