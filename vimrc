@@ -31,6 +31,7 @@ Bundle 'php.vim'
 Bundle 'samsonw/vim-task'
 Bundle 'vimwiki'
 Bundle 'TTCoach'
+Bundle 'autotags'
 
 filetype plugin indent on
 filetype plugin on
@@ -45,6 +46,17 @@ set showcmd                       " Display incomplete commands.
 set showmode                      " Display the mode you're in.
 set backspace=indent,eol,start    " Intuitive backspacing.
 set tags=~/tags
+set cursorline
+
+"""""""""" TABS and SPACES
+set ts=2          " szerokosc tabulacji 
+set sw=2          " szerokosc automagicznego wciecia
+set expandtab     " rozwijanie tabow na spacje"
+set tabstop=2     " ile spacji to tab"    
+set softtabstop=2
+
+" kodowanie
+set fileencodings=utf-8,latin2
 
 " Syntax highlighting and eyecandy
 syntax enable
