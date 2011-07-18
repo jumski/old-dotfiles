@@ -33,6 +33,7 @@ Bundle 'vimwiki'
 Bundle 'TTCoach'
 Bundle 'autotags'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'vim-fakeclip'
 
 filetype plugin indent on
 filetype plugin on
