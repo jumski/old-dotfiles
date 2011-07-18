@@ -64,6 +64,7 @@ syntax enable
 set t_Co=256
 set background=dark
 colorscheme solarized
+set lazyredraw
 
 " force syntax highlighting on files w/o extensions
 au BufNewFile,BufRead Rakefile setfiletype ruby
