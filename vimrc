@@ -49,6 +49,8 @@ set showmode                      " Display the mode you're in.
 set backspace=indent,eol,start    " Intuitive backspacing.
 set tags=./tags
 set cursorline
+set ls=2                          " allways show status line"
+set incsearch
 
 """""""""" TABS and SPACES
 set ts=2          " szerokosc tabulacji 
