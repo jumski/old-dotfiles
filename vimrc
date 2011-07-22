@@ -87,10 +87,10 @@ noremap <C-k>k <C-w><C-w>
 imap <C-w> <C-o><C-w> " this allows all window commands in insert mode and i'm not accidentally deleting words anymore :-)"
 
 " tab mappings
-nmap <silent> <leader>n :tabnew %<CR>
+nmap <silent> <leader>c :tabnew %<CR>
 nmap <silent> <leader><leader> :tabn<CR>
 nmap <silent> <leader><Tab> :tabp<CR>
-nmap <silent> <leader>c :tabclose<CR>
+nmap <silent> <leader>x :tabclose<CR>
 " nmap <silent> <C--> :tabp
 
 " touch current file (useful for triggering guard)
