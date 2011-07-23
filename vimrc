@@ -32,7 +32,7 @@ Bundle 'samsonw/vim-task'
 Bundle 'vimwiki'
 Bundle 'TTCoach'
 Bundle 'autotags'
-Bundle 'kchmck/vim-coffee-script'
+" Bundle 'kchmck/vim-coffee-script'
 Bundle 'vim-fakeclip'
 
 filetype plugin indent on
@@ -78,7 +78,7 @@ au BufNewFile,BufRead Gemfile setfiletype ruby
 " PLUGIN OPTIONS AND MAPPINGS
 runtime macros/matchit.vim
 let g:CommandTMaxHeight=10
-autocmd BufWritePost *.coffee silent CoffeeMake! -b | cwindow " auto compiles coffee to js
+" autocmd BufWritePost *.coffee silent CoffeeMake! -b | cwindow " auto compiles coffee to js
 
 """"" CUSTOM MAPPINGS
 noremap <leader>` :CommandT<cr>
