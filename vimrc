@@ -33,6 +33,7 @@ Bundle 'vimwiki'
 Bundle 'TTCoach'
 Bundle 'autotags'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'vim-fakeclip'
 
 filetype plugin indent on
 filetype plugin on
@@ -46,8 +47,10 @@ set encoding=utf-8                " Default encoding
 set showcmd                       " Display incomplete commands.
 set showmode                      " Display the mode you're in.
 set backspace=indent,eol,start    " Intuitive backspacing.
-set tags=~/tags
+set tags=./tags
 set cursorline
+set ls=2                          " allways show status line"
+set incsearch
 
 """""""""" TABS and SPACES
 set ts=2          " szerokosc tabulacji 
@@ -64,6 +67,7 @@ syntax enable
 set t_Co=256
 set background=dark
 colorscheme solarized
+set lazyredraw
 
 " force syntax highlighting on files w/o extensions
 au BufNewFile,BufRead Rakefile setfiletype ruby
@@ -78,6 +82,16 @@ autocmd BufWritePost *.coffee silent CoffeeMake! -b | cwindow " auto compiles co
 
 """"" CUSTOM MAPPINGS
 noremap <leader>` :CommandT<cr>
+noremap <C-k><C-k> <C-w><C-w>
+noremap <C-k>k <C-w><C-w>
+imap <C-w> <C-o><C-w> " this allows all window commands in insert mode and i'm not accidentally deleting words anymore :-)"
+
+" tab mappings
+nmap <silent> <leader>c :tabnew %<CR>
+nmap <silent> <leader><leader> :tabn<CR>
+nmap <silent> <leader><Tab> :tabp<CR>
+nmap <silent> <leader>x :tabclose<CR>
+" nmap <silent> <C--> :tabp
 
 " touch current file (useful for triggering guard)
 " noremap <silent><leader>r :call system('touch ' . expand("%:p"))<cr> 
