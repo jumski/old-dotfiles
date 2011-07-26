@@ -51,6 +51,7 @@ set tags=./tags
 set cursorline
 set ls=2                          " allways show status line"
 set incsearch
+set ignorecase
 
 """""""""" TABS and SPACES
 set ts=2          " szerokosc tabulacji 
