@@ -64,3 +64,7 @@ function fjm {
 function fjc {
   fj "$1\(" $2
 }
+
+function gitlogger {
+  git log --pretty="%ad - %h - %s" --date=short --author=Wojtek --after="2011-07-$1" --before="2011-07-$2" --no-merges
+}
