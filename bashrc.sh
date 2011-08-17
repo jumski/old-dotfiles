@@ -60,12 +60,6 @@ if [ -f ~/.bash_colors ]; then
     source ~/.bash_colors
 fi
 
-cd "$HOME/infakt"
-
-PATH=$PATH:/Library/PostgreSQL/9.0/bin
-#PATH=/usr/local/bin:$PATH
 export PATH=$HOME/local/node/bin:$PATH
-
-source ~/.git-completion.bash
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
