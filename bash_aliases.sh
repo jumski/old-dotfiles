@@ -15,6 +15,9 @@ alias tmux="tmux -f ~/tmux.conf"
 alias compile_tags="ctags -R --exclude=.git --exclude=log * $GEM_HOME/gems/*"
 alias fav="~/various/fav"
 
+alias s="apt-cache search "
+alias i="sudo apt-get install "
+
 function dotfiles_help {
 	echo "========= dotfiles help"
 	echo " -> solarized gnome terminal:"
@@ -67,4 +70,16 @@ function fjc {
 
 function gitlogger {
   git log --pretty="%ad - %h - %s" --date=short --author=Wojtek --after="2011-07-$1" --before="2011-07-$2" --no-merges
+}
+
+function p {
+  ps ax|grep -i $1
+}
+
+function work_blubase {
+  rvm use 1.8.7 && rvm gemset use blubase
+}
+
+function work_antykwariat {
+  rvm use 1.9.2 && rvm gemset use rails308
 }

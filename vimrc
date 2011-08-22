@@ -75,6 +75,7 @@ au BufNewFile,BufRead Rakefile setfiletype ruby
 au BufNewFile,BufRead Capfile setfiletype ruby
 au BufNewFile,BufRead Guardfile setfiletype ruby
 au BufNewFile,BufRead Gemfile setfiletype ruby
+au BufNewFile,BufRead tmuxgo setfiletype bash
 
 " PLUGIN OPTIONS AND MAPPINGS
 runtime macros/matchit.vim

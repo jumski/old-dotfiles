@@ -60,13 +60,4 @@ if [ -f ~/.bash_colors ]; then
     source ~/.bash_colors
 fi
 
-eval `dircolors /home/jumski/src/dircolors-solarized/dircolors.ansi-universal`
-
-export EDITOR=vim
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
-export PATH=$HOME/local/node/bin:$PATH
-
-cd ~/antykwariat
-rvm gemset use rails308
-
+export PATH=$HOME/local/node/bin:/home/jumski/various/bin:$PATH
