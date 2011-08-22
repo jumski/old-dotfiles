@@ -76,3 +76,11 @@ function gitlogger {
 function p {
   ps ax|grep -i $1
 }
+
+function work_blubase {
+  rvm use 1.8.7 && rvm gemset use blubase
+}
+
+function work_antykwariat {
+  rvm use 1.9.2 && rvm gemset use rails308
+}
