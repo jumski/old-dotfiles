@@ -60,6 +60,6 @@ if [ -f ~/.bash_colors ]; then
     source ~/.bash_colors
 fi
 
-export PATH=$HOME/local/node/bin:/home/jumski/various/bin:$PATH
+export PATH=$HOME/local/node/bin:/home/jumski/dotfiles/bin:/home/jumski/various/bin:$PATH
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
