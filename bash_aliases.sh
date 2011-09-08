@@ -1,4 +1,3 @@
-alias g=mate
 alias ack-grep=ack
 
 alias jungletrain="mocp -l http://stream2.jungletrain.net:8000"
@@ -25,20 +24,6 @@ alias ack=ack-grep
 
 function mkcd {
   mkdir $1 && cd $1
-}
-
-function dotfiles_help {
-	echo "========= dotfiles help"
-	echo " -> solarized gnome terminal:"
-	echo
-	echo "    git clone git://github.com/sigurdga/gnome-terminal-colors-solarized.git"
-	echo "    cd gnome-terminal-colors-solarized"
-	echo "    ./install.sh"
-	echo
-	echo " -> dircolors-solarized"
-	echo
-	echo "    git clone git://github.com/huyz/dircolors-solarized.git"
-	echo "    eval `dircolors /home/jumski/src/dircolors-solarized/dircolors.ansi-universal`"
 }
 
 function show_regex {
