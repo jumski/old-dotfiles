@@ -1,33 +1,31 @@
 #!/bin/bash
 
-if [ -f "$HOME/.bashrc" ]; then
-	mv "$HOME/.bashrc" "$HOME/.bashrc.old"
-fi
+echo 'Installing scripts'
+export DOTFILES_PATH=~/dotfiles
 
-if [ -f "$HOME/.bash_aliases" ]; then
-	mv "$HOME/.bash_aliases" "$HOME/.bash_aliases.old"
-fi
+rm -f "$HOME/.bashrc"
+ln -s "$DOTFILES_PATH/bashrc.sh" "$HOME/.bashrc"
 
-if [ -f "$HOME/.bash_colors" ]; then
-	mv "$HOME/.bash_colors" "$HOME/.bash_colors.old"
-fi
+rm -f "$HOME/tmux.conf"
+ln -s "$DOTFILES_PATH/tmux.conf" "$HOME/tmux.conf"
 
-if [ -f "$HOME/tmux.conf" ]; then
-	mv "$HOME/tmux.conf" "$HOME/tmux.conf.old"
-fi
+rm -f "$HOME/.gitconfig"
+ln -s "$DOTFILES_PATH/gitconfig" "$HOME/.gitconfig"
 
-if [ -f "$HOME/gitconfig" ]; then
-	mv "$HOME/gitconfig" "$HOME/gitconfig.old"
-fi
+rm -f "$HOME/.vimrc"
+ln -s "$DOTFILES_PATH/vim/vimrc" "$HOME/.vimrc"
 
-ln -s "$PWD/bashrc.sh" "$HOME/.bashrc"
-ln -s "$PWD/bash_aliases.sh" "$HOME/.bash_aliases"
-ln -s "$PWD/bash_colors.sh" "$HOME/.bash_colors"
-ln -s "$PWD/tmux.conf" "$HOME/tmux.conf"
-ln -s "$PWD/gitconfig" "$HOME/.gitconfig"
-ln -s "$PWD/vimrc" "$HOME/.vimrc"
-ln -s "$PWD/vendor/Xresources" "$HOME/.Xdefaults"
-ln -s "$PWD/vendor/dircolors.256dark" "$HOME/.dircolors"
-source ~/.bashrc
+rm -f "$HOME/.gemrc"
+ln -s "$DOTFILES_PATH/gemrc" "$HOME/.gemrc"
 
-dotfiles_help
+rm -f "$HOME/.Xdefaults"
+ln -s "$DOTFILES_PATH/vendor/Xresources" "$HOME/.Xdefaults"
+
+rm -f "$HOME/.dircolors"
+ln -s "$DOTFILES_PATH/vendor/dircolors.256dark" "$HOME/.dircolors"
+
+echo 'Load bashrc'
+source ~/dotfiles/bashrc.sh
+source ~/dotfiles/bash/aliases.sh
+
+confirm 'Installation complete. Do you want to customize?' && $DOTFILES_PATH/customize.sh

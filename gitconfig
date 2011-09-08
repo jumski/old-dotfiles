@@ -12,6 +12,7 @@
   push = push origin development
 	wc = whatchanged
 	lp = log -p
+  hist = log --pretty=format:\"%Cgreen%h%Creset %Cblue%ad%Creset %s%C(yellow)%d%Creset %Cblue[%an]%Creset\" --graph --date=short
 [giggle]
 	main-window-maximized = true
 	main-window-geometry = 0x0+0+0
