@@ -1,3 +1,22 @@
+
+## DEFAULT ALIASES
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
+    alias dir='dir --color=auto'
+    alias vdir='vdir --color=auto'
+
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi
+
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+## CUSTOM ALIASES
 alias ack-grep=ack
 
 alias jungletrain="mocp -l http://stream2.jungletrain.net:8000"
@@ -76,4 +95,50 @@ function work_blubase {
 
 function work_antykwariat {
   rvm use 1.9.2 && rvm gemset use rails308
+}
+
+# ======================================================================
+#
+# Function: confirm
+# Asks the user to confirm an action, If the user does not answer yes,
+# then the script will immediately exit.
+#
+# Parameters:
+# $@ - The confirmation message
+#
+# Examples:
+# >  # Example 1
+# >  # The preferred way to use confirm
+# >  confirm Delete file1? && echo rm file1
+# >
+# >  # Example 2
+# >  # Use the $? variable to examine confirm's return value
+# >  confirm Delete file2?
+# >  if [ $? -eq 0 ]
+# >  then
+# >      echo Another file deleted
+# >  fi
+# >
+# >  # Example 3
+# >  # Tell bash to exit right away if any command returns a non-zero code
+# >  set -o errexit
+# >  confirm Do you want to run the rest of the script?
+# >  echo Here is the rest of the script
+#
+# ======================================================================
+
+function confirm()
+{
+  echo -n "$@ "
+  read -e answer
+  for response in y Y yes YES Yes Sure sure SURE OK ok Ok t T tak Tak TAK
+  do
+    if [ "_$answer" == "_$response" ]
+    then
+      return 0
+    fi
+  done
+
+  # Any answer other than the list above is considerred a "no" answer
+  return 1
 }
