@@ -7,17 +7,25 @@ alias livednb="mocp -l http://173.236.56.82:8006"
 alias iwayhigh="mocp -l http://70.38.71.74:8000"
 alias groovesalad="mocp -l http://streamer-ntc-aa06.somafm.com:80/stream/1018"
 alias spacestationsoma="mocp -l http://207.200.96.231:8012"
-alias realias="source ~/.bash_aliases && echo 'reloaded .bash_aliases'"
 
 alias pg_start="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
 alias pg_stop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
 
 alias tmux="tmux -f ~/tmux.conf"
 alias compile_tags="ctags -R --exclude=.git --exclude=log * $GEM_HOME/gems/*"
-alias fav="~/various/fav"
+alias realias="source ~/.bash_aliases && echo 'reloaded .bash_aliases'"
 
 alias s="apt-cache search "
 alias i="sudo apt-get install "
+
+alias fav="~/various/fav"
+alias skype="LD_PRELOAD=/usr/lib32/libv4l/v4l1compat.so skype"
+
+alias ack=ack-grep
+
+function mkcd {
+  mkdir $1 && cd $1
+}
 
 function dotfiles_help {
 	echo "========= dotfiles help"
