@@ -25,9 +25,8 @@ ln -s "$PWD/bash_aliases.sh" "$HOME/.bash_aliases"
 ln -s "$PWD/bash_colors.sh" "$HOME/.bash_colors"
 ln -s "$PWD/tmux.conf" "$HOME/tmux.conf"
 ln -s "$PWD/gitconfig" "$HOME/.gitconfig"
+ln -s "$PWD/gemrc" "$HOME/.gemrc"
 ln -s "$PWD/vimrc" "$HOME/.vimrc"
 ln -s "$PWD/vendor/Xresources" "$HOME/.Xdefaults"
 ln -s "$PWD/vendor/dircolors.256dark" "$HOME/.dircolors"
 source ~/.bashrc
-
-dotfiles_help
