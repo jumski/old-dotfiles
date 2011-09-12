@@ -41,6 +41,12 @@ alias skype="LD_PRELOAD=/usr/lib32/libv4l/v4l1compat.so skype"
 
 alias ack=ack-grep
 
+alias ssh-maroko="ssh -t -p 60022 jumski@dev.jumski.com ssh root@127.0.0.1 -p 9999"
+
+function killflash {
+  ps ax|grep flashplugin|grep -v grep|awk {'print $1'}|xargs kill
+}
+
 function mkcd {
   mkdir $1 && cd $1
 }
