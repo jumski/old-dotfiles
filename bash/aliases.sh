@@ -42,6 +42,11 @@ alias skype="LD_PRELOAD=/usr/lib32/libv4l/v4l1compat.so skype"
 alias ack=ack-grep
 
 alias ssh-maroko="ssh -t -p 60022 jumski@dev.jumski.com ssh root@127.0.0.1 -p 9999"
+alias vpnbluair="ssh svnbluair exec telnet localhost 7505"
+
+function showsizes {
+  du --max-depth=1 $1 | sort -n -r
+}
 
 function killflash {
   ps ax|grep flashplugin|grep -v grep|awk {'print $1'}|xargs kill
