@@ -37,12 +37,19 @@ alias s="apt-cache search "
 alias i="sudo apt-get install "
 
 alias fav="~/various/fav"
+function nowplayin {
+  mocp -i | grep SongTitle | awk {'gsub("SongTitle: ", ""); print $0'}
+}
+
 alias skype="LD_PRELOAD=/usr/lib32/libv4l/v4l1compat.so skype"
 
 alias ack=ack-grep
 
 alias ssh-maroko="ssh -t -p 60022 jumski@dev.jumski.com ssh root@127.0.0.1 -p 9999"
-alias vpnbluair="ssh svnbluair exec telnet localhost 7505"
+# alias vpnbluair="ssh svnbluair exec telnet localhost 7505"
+vpnbluair="ssh svnbluair \"echo 'status' | nc localhost 7505\""
+
+alias shoes=/home/jumski/shoes/dist/shoes
 
 function showsizes {
   du --max-depth=1 $1 | sort -n -r
@@ -54,6 +61,10 @@ function killflash {
 
 function mkcd {
   mkdir $1 && cd $1
+}
+
+function list-colors {
+  for i in {0..255} ; do printf "\x1b[38;5;${i}mcolour${i}\n"; done
 }
 
 function show_regex {
