@@ -14,5 +14,6 @@ nmap <silent> <leader><Tab> :tabp<CR>
 nmap <silent> <leader>x :tabclose<CR>
 " nmap <silent> <C--> :tabp
 
+cmap w!! w !sudo tee >/dev/null %
 " touch current file (useful for triggering guard)
 " noremap <silent><leader>r :call system('touch ' . expand("%:p"))<cr> 
