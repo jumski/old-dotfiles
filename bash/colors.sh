@@ -17,4 +17,4 @@ function parse_rvm_prompt {
   rvm-prompt | sed 's/\(ruby-\)\(.*\)@\(.*\)/\3/'
 }
 
-PROMPT_COMMAND='export PS1=" $c_white`basename $PWD`$c_yellow [$(parse_git_branch)]$c_red $ $c_reset"'
+PROMPT_COMMAND='export PS1=" $c_white`basename "$PWD"`$c_yellow [$(parse_git_branch)]$c_red $ $c_reset"'
