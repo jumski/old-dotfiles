@@ -6,6 +6,7 @@
   ci = commit
   s = status
   d = diff
+  dc = diff --cached
   c = checkout
   b = branch
   l = log
@@ -14,6 +15,7 @@
 	lp = log -p
   hist = log --pretty=format:\"%Cgreen%h%Creset %Cblue%ad%Creset %s%C(yellow)%d%Creset %Cblue[%an]%Creset\" --graph --date=short
   dstat = diff --stat
+	wtf = !git-wtf
 [giggle]
 	main-window-maximized = true
 	main-window-geometry = 0x0+0+0
@@ -27,3 +29,5 @@
 	interactive = auto
 	status = auto
 
+[core]
+	autocrlf = input
