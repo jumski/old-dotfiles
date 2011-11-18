@@ -13,6 +13,11 @@ nmap <silent> <leader><leader> :tabn<CR>
 nmap <silent> <leader><Tab> :tabp<CR>
 nmap <silent> <leader>x :tabclose<CR>
 " nmap <silent> <C--> :tabp
+"
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-h> <C-w>h
+map <C-l> <C-w>l
 
 cmap w!! w !sudo tee >/dev/null %
 " touch current file (useful for triggering guard)
