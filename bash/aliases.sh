@@ -116,7 +116,7 @@ function work_blubase {
 }
 
 function work_antykwariat {
-  rvm use 1.9.2 && rvm gemset use rails308
+  rvm use 1.9.2 && rvm gemset use rails308 && cd ~/antykwariat && ll
 }
 
 # ======================================================================
@@ -163,4 +163,32 @@ function confirm()
 
   # Any answer other than the list above is considerred a "no" answer
   return 1
+}
+
+function start-vbox-blubase {
+  vboxmanage discardstate squeeze
+  vboxmanage snapshot squeeze restore "ports forwarded"
+  vboxheadless -s squeeze
+}
+
+function vbox-forward-port {
+  name=$1
+  host_port=$2
+  guest_port=$3
+  protocol=TCP
+
+  vboxmanage setextradata $name "VBoxInternal/Devices/pcnet/0/LUN#0/Config/ssh/HostPort" $host_port
+  vboxmanage setextradata $name "VBoxInternal/Devices/pcnet/0/LUN#0/Config/ssh/GuestPort" $guest_port
+  vboxmanage setextradata $name "VBoxInternal/Devices/pcnet/0/LUN#0/Config/ssh/Protocol" $protocol
+
+  vboxmanage setextradata $name "VBoxInternal/Devices/e1000/0/LUN#0/Config/ssh/HostPort" $host_port
+  vboxmanage setextradata $name "VBoxInternal/Devices/e1000/0/LUN#0/Config/ssh/GuestPort" $guest_port
+  vboxmanage setextradata $name "VBoxInternal/Devices/e1000/0/LUN#0/Config/ssh/Protocol" $protocol
+}
+
+function show_migration() {
+  server=$1
+  migration=$2
+
+  ssh $server cat /srv/www/bluBase/current/db/migrate/$migration*
 }
