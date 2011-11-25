@@ -192,3 +192,10 @@ function show_migration() {
 
   ssh $server cat /srv/www/bluBase/current/db/migrate/$migration*
 }
+alias xevx="xev | grep -A2 --line-buffered '^KeyRelease' | sed -n '/keycode /s/^.*keycode \([0-9]*\).* (.*, \(.*\)).*$/\1 \2/p'"
+
+function vol() {
+  VOLUME="$1"0
+  echo "volume set to $VOLUME"
+  amixer set Master $VOLUME
+}
