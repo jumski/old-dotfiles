@@ -31,7 +31,7 @@ alias pg_stop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
 
 alias tmux="tmux -f ~/tmux.conf"
 alias compile_tags="ctags -R --exclude=.git --exclude=log * $GEM_HOME/gems/*"
-alias realias="source ~/.bash_aliases && echo 'reloaded .bash_aliases'"
+alias realias="source $DOTFILES_PATH/bash/aliases.sh && echo 'reloaded .bash/aliases.sh'"
 
 alias s="apt-cache search "
 alias i="sudo apt-get install "
