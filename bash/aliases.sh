@@ -199,3 +199,5 @@ function vol() {
   echo "volume set to $VOLUME"
   amixer set Master $VOLUME
 }
+
+alias synergys="synergys --config $DOTFILES_PATH/synergy.conf --daemon -l ~/.synergy.log"
