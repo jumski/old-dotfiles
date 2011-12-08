@@ -3,6 +3,8 @@
 export BLUBASE_DIR=~/work/blu/base
 cd $BLUBASE_DIR;
 
+ssh-add || (echo "Need to add identity - try again" && exit 1)
+
 tmux start-server
 
 tmux new-session -d -s blubase
@@ -14,7 +16,7 @@ tmux new-window -tblubase -n vim
 tmux new-window -tblubase -n bash
 tmux kill-window -t 0
 
-tmux send-keys -tblubase:1 "script/server" C-m
+tmux send-keys -tblubase:1 "script/server thin" C-m
 tmux send-keys -tblubase:2 "script/console" C-m
 tmux send-keys -tblubase:3 "vim -c Gstatus" C-m
 tmux send-keys -tblubase:4 "git wtf" C-m
