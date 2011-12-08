@@ -9,11 +9,18 @@ imap <C-w> <C-o><C-w> " this allows all window commands in insert mode and i'm n
 
 " tab mappings
 nmap <silent> <leader>c :tabnew %<CR>
-nmap <silent> <leader><leader> :tabn<CR>
 nmap <silent> <leader><Tab> :tabp<CR>
+nmap <silent> <leader>f :tabn<CR>
 nmap <silent> <leader>x :tabclose<CR>
-" nmap <silent> <C--> :tabp
-"
+
+noremap  <Up> ""
+noremap! <Up> <Esc>
+noremap  <Down> ""
+noremap! <Down> <Esc>
+noremap  <Left> ""
+noremap! <Left> <Esc>
+noremap  <Right> ""
+noremap! <Right> <Esc>
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-h> <C-w>h
