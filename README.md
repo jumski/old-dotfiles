@@ -1,7 +1,3 @@
-jumski dotfiles
----------------
-
-# manual tasks
 
 ## rubygems_cache
     
