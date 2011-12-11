@@ -1,20 +1,21 @@
 jumski dotfiles
 ---------------
 
-manual tasks
-------------
+# manual tasks
 
-* rubygems_cache
+## rubygems_cache
     
-    $ mkdir ~/installed
-  
-    $ git clone git@github.com:akitaonrails/rubygems_proxy.git ~/installed/
+```bash
+  $ mkdir ~/installed
+  $ git clone git@github.com:akitaonrails/rubygems_proxy.git ~/installed/
+```
 
-* nginx for rubygems_cache
+## nginx for rubygems_cache
 
   install passenger with nginx, then:
 
-    $ rm -rf /opt/nginx/conf
-
-    $ ln -s $DOTFILES_PATH/conf/nginx /opt/nginx/conf
+```bash
+  $ rm -rf /opt/nginx/conf
+  $ ln -s $DOTFILES_PATH/conf/nginx /opt/nginx/conf
+```
 
