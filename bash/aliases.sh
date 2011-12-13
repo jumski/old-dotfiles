@@ -25,6 +25,7 @@ alias livednb="mocp -l http://173.236.56.82:8006"
 alias iwayhigh="mocp -l http://70.38.71.74:8000"
 alias groovesalad="mocp -l http://streamer-ntc-aa06.somafm.com:80/stream/1018"
 alias spacestationsoma="mocp -l http://207.200.96.231:8012"
+alias ambientdrones="mocp -l http://srv3.electro-music.com:8500/"
 
 alias pg_start="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
 alias pg_stop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
