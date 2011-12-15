@@ -14,9 +14,10 @@ Bundle 'othree/html5.vim'
 Bundle 'samsonw/vim-task'
 Bundle 'vimwiki'
 Bundle 'TTCoach'
-Bundle 'autotags'
+" Bundle 'autotags' " bug during BundleInstall
 Bundle 'kchmck/vim-coffee-script'
-Bundle 'vim-fakeclip'
+" Bundle 'vim-fakeclip' " bug during BundleInstall
+Bundle 'vim-scripts/marvim'
 
 " PLUGIN OPTIONS AND MAPPINGS
 runtime macros/matchit.vim
