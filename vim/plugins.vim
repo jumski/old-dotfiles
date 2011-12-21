@@ -1,6 +1,4 @@
 
-Bundle 'wincent/Command-T'
-
 Bundle 'tpope/vim-rails' 
 Bundle 'tpope/vim-haml'
 Bundle 'tpope/vim-cucumber'
@@ -23,7 +21,6 @@ Bundle 'tomtom/tcomment_vim'
 Bundle 'othree/html5.vim'
 Bundle 'samsonw/vim-task'
 Bundle 'vimwiki'
-Bundle 'TTCoach'
 " Bundle 'autotags' " bug during BundleInstall
 Bundle 'kchmck/vim-coffee-script'
 " Bundle 'vim-fakeclip' " bug during BundleInstall
