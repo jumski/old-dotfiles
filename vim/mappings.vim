@@ -1,4 +1,5 @@
-Bundle 'wincent/Command-T'
+noremap q :q<cr>
+noremap Q :q<cr>
 
 """"" CUSTOM MAPPINGS
 noremap <leader>` :CommandT<cr>
