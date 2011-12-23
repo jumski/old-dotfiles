@@ -54,7 +54,7 @@ vpnbluair="ssh svnbluair \"echo 'status' | nc localhost 7505\""
 alias shoes=/home/jumski/shoes/dist/shoes
 
 function showsizes {
-  du --max-depth=1 $1 | sort -n -r
+  du --max-depth=1 "$1" | sort -n -r
 }
 
 function killflash {
