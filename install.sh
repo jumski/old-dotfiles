@@ -6,8 +6,8 @@ export DOTFILES_PATH=~/dotfiles
 rm -f "$HOME/.bashrc"
 ln -s "$DOTFILES_PATH/bashrc.sh" "$HOME/.bashrc"
 
-rm -f "$HOME/tmux.conf"
-ln -s "$DOTFILES_PATH/tmux.conf" "$HOME/tmux.conf"
+rm -f "$HOME/.tmux.conf"
+ln -s "$DOTFILES_PATH/tmux.conf" "$HOME/.tmux.conf"
 
 rm -f "$HOME/.gitconfig"
 ln -s "$DOTFILES_PATH/gitconfig" "$HOME/.gitconfig"
