@@ -31,7 +31,6 @@ alias ambientdrones="mocp -l http://srv3.electro-music.com:8500/"
 alias pg_start="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
 alias pg_stop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
 
-alias tmux="tmux -f ~/tmux.conf"
 alias compile_tags="ctags -R --exclude=.git --exclude=log * $GEM_HOME/gems/*"
 alias realias="source $DOTFILES_PATH/bash/aliases.sh && echo 'reloaded .bash/aliases.sh'"
 
@@ -54,7 +53,7 @@ vpnbluair="ssh svnbluair \"echo 'status' | nc localhost 7505\""
 alias shoes=/home/jumski/shoes/dist/shoes
 
 function showsizes {
-  du --max-depth=1 $1 | sort -n -r
+  du --max-depth=1 "$1" | sort -n -r
 }
 
 function killflash {
