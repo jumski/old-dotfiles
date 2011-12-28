@@ -1,0 +1,29 @@
+server{
+  listen 80;
+  server_name welovedesign.eu;
+  access_log /home/jumski/work/welovedesign.eu/access.log;
+  error_log /home/jumski/work/welovedesign.eu/error.log;
+
+  location / {
+    root /home/jumski/work/welovedesign.eu/;
+    index index.php index.html index.htm;
+
+    # this serves static files that exist without running other rewrite tests
+    if (-f $request_filename) {
+        expires 30d;
+        break;
+    }
+
+    # this sends all non-existing file or directory requests to index.php
+    if (!-e $request_filename) {
+        rewrite ^(.+)$ /index.php?q=$1 last;
+    }
+  }
+
+  location ~ \.php$ {
+      fastcgi_pass    127.0.0.1:9000;
+      fastcgi_index   index.php;
+      fastcgi_param   SCRIPT_FILENAME /home/jumski/work/welovedesign.eu$fastcgi_script_name;
+      include         fastcgi_params;
+  }
+}
