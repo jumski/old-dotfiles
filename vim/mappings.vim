@@ -1,6 +1,3 @@
-noremap q :q<cr>
-noremap Q :q<cr>
-
 """"" CUSTOM MAPPINGS
 noremap <leader>` :CommandT<cr>
 noremap <C-k><C-k> <C-w><C-w>
