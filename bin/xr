@@ -1,0 +1,5 @@
+#!/bin/bash
+xrandr --verbose \
+  --output LVDS1 --mode 1366x768 --pos 0x180 --primary \
+  --output VGA2 --mode 1920x1080 --pos 1370x0 \
+  2>> ~/.xrandr.log
