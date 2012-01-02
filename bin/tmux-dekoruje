@@ -3,4 +3,4 @@
 export SERVER_COMMAND="rails server"
 export CONSOLE_COMMAND="rails console"
 
-tmux-rails.sh ~/work/dekoruje.com dekoruje
+tmux-rails ~/work/dekoruje.com dekoruje
