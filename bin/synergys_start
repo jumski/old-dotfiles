@@ -1,1 +1,3 @@
-alias synergys='synergys --config /home/jumski/dotfiles//synergy.conf --daemon -l ~/.synergy.log'
+#!/bin/bash
+
+synergys --config /home/jumski/dotfiles/synergy.conf --daemon -l ~/.synergy.log
