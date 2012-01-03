@@ -1,8 +1,9 @@
 /home/deploy/dekoruje.com/log/*.log {
-  daily
   missingok
-  rotate 30
+  rotate 5
   compress
   delaycompress
   copytruncate
+  size=1024k
+  mail jumski@gmail.com
 }
