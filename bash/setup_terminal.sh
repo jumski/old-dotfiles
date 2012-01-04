@@ -26,3 +26,10 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 
 [ -f $DOTFILES_PATH/bash/bundler-exec.sh ] && source $DOTFILES_PATH/bash/bundler-exec.sh
+
+# add identity if not set
+if ! ssh-add -l 1>/dev/null;
+then
+  ssh-add
+fi
+
