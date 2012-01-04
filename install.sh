@@ -18,6 +18,9 @@ ln -s "$DOTFILES_PATH/vim/vimrc" "$HOME/.vimrc"
 rm -f "$HOME/.gemrc"
 ln -s "$DOTFILES_PATH/gemrc" "$HOME/.gemrc"
 
+rm -f "$HOME/.irbrc"
+ln -s "$DOTFILES_PATH/irbrc" "$HOME/.irbrc"
+
 echo 'Load bashrc'
 source ~/dotfiles/bashrc.sh
 source ~/dotfiles/bash/aliases.sh
