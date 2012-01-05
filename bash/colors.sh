@@ -17,4 +17,15 @@ function parse_rvm_prompt {
   rvm-prompt | sed 's/\(ruby-\)\(.*\)@\(.*\)/\3/'
 }
 
-PROMPT_COMMAND='export PS1="$c_green\u@\H $c_white`basename "$PWD"`$c_yellow [$(parse_git_branch)] $c_celadon(\A)\n$c_red $ $c_reset"'
+function get_color_hostname {
+  case `hostname` in
+    jumski-laptop)
+      echo "${c_celadon}laptop$c_reset" ;;
+    jumski-old)
+      echo "${c_violet}old$c_reset" ;;
+    jumski-akra)
+      echo "${c_green}akra$c_reset" ;;
+  esac
+}
+
+PROMPT_COMMAND='export PS1=" `get_color_hostname` $c_white`basename "$PWD"`$c_yellow [$(parse_git_branch)] $c_red $ $c_reset"'
