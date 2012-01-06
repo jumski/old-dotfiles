@@ -30,5 +30,3 @@ ln -s "$DOTFILES_PATH/vendor/dircolors.256dark" "$HOME/.dircolors"
 echo 'Load bashrc'
 source ~/dotfiles/bashrc.sh
 source ~/dotfiles/bash/aliases.sh
-
-confirm 'Installation complete. Do you want to customize?' && $DOTFILES_PATH/customize.sh
