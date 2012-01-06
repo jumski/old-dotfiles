@@ -13,12 +13,11 @@ rvm install 1.9.3-p0 && rvm use 1.9.3-p0 --default
 if ! ruby --version;
 then
   echo "Ruby is not installed!!!!!!"
-  echo "Please install it manually, then install rake gem and run \`rake install\`"
+  echo "Please install it manually, then install rake and run \`rake install\`"
   exit 1
 fi
 
-gem install bundler
-bundle install
+export DOTFILES_PATH=~/dotfiles
 
-rake install
+gem install bundler && bundle install && rake install
 

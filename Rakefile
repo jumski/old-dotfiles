@@ -1,31 +1,52 @@
 require 'rubygems'
 require 'rake'
+require 'fileutils'
+require 'pry'
 
-DOTFILES_PATH="~/dotfiles"
+LINKABLES = {
+  'vendor/dircolors.256dark' => '~/.dircolors',
+  'vendor/kde/share/apps/konsole/*' => '~/.kde/share/apps/konsole/%',
+  %w(bashrc tmux.conf gitconfig vimrc gemrc irbrc) => '~/.%'
+}
+
+DOTFILES_PATH = ENV["DOTFILES_PATH"]
 
 task :install do
-  %(bashrc tmux.conf gitconfig vimrc gemrc irbrc).each do |name|
-    link_to_home file
-  end
+  LINKABLES.each do |path, destination|
+    # puts
+    # puts path.inspect
 
-  OTHER_LINKABLES.each_with_index do |file, destination|
-    next if file.nil?
+    next if path.nil?
 
-    FileUtils.mkdir_p destination
-    FileUtils.rm "~/#{destination}/#{file}"
-    FileUtils.ln_s "#{DOTFILES_PATH}/#{file}" "~/#{destination}/#{file}"
+    if path.include?('*')
+      Dir.glob("#{DOTFILES_PATH}/#{path}").each do |file|
+        link_to file, destination
+      end
+    elsif path.respond_to?(:each)
+      path.each do |file|
+        link_to file, destination
+      end
+    else
+      link_to path, destination
+    end
   end
 end
 
-OTHER_LINKABLES = {
-  'vendor/dircolors.256dark' => '.dircolors',
-  'vendor/kde/share/apps/konsole/konsoleui.rc' => 'vendor/kde/share/apps/konsole/konsoleui.rc',
-  'vendor/kde/share/apps/konsole/jumshell.profile' => 'vendor/kde/share/apps/konsole/jumshell.profile',
-  'vendor/kde/share/apps/konsole/solarized_dark.colortheme' => 'vendor/kde/share/apps/konsole/solarized_dark.colortheme',
-}
+# if % is found in destination, put file name instead
+# and link to this path
+#
+# otherwise link to destination/file
+def link_to(file, destination)
+  if destination.include?('%')
+    destination_path = destination.gsub('%', File.basename(file))
+  else
+    destination_path = "#{destination}"
+  end
 
-def link_to_home(file)
-  home_path = "~/.#{file}"
-  FileUtils.rm home_path
-  FileUtils.ln_s "#{DOTFILES_PATH}/file", home_path 
+  # puts file
+  # puts destination_path
+  puts "ln -s #{file} #{destination_path}"
+  # %x[ ln -s #{destination_path}
+
+  # FileUtils.ln_s "#{DOTFILES_PATH}/#{file}" destination_path
 end
