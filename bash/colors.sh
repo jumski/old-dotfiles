@@ -28,4 +28,4 @@ function get_color_hostname {
   esac
 }
 
-PROMPT_COMMAND='export PS1=" `get_color_hostname` $c_white`basename "$PWD"`$c_yellow [$(parse_git_branch)] $c_red $ $c_reset"'
+PROMPT_COMMAND='export PS1=" `get_color_hostname` $c_white`basename "$PWD"`$c_yellow [$(parse_git_branch)] $c_red$ $c_reset"'
