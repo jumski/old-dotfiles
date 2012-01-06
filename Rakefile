@@ -45,7 +45,7 @@ def link_to(file, destination)
 
   # puts file
   # puts destination_path
-  puts "ln -s #{file} #{destination_path}"
+  `ln -s #{file} #{destination_path}`
   # %x[ ln -s #{destination_path}
 
   # FileUtils.ln_s "#{DOTFILES_PATH}/#{file}" destination_path
