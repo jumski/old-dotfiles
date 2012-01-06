@@ -4,7 +4,7 @@ echo 'Installing scripts'
 export DOTFILES_PATH=~/dotfiles
 
 rm -f "$HOME/.bashrc"
-ln -s "$DOTFILES_PATH/bashrc.sh" "$HOME/.bashrc"
+ln -s "$DOTFILES_PATH/bashrc" "$HOME/.bashrc"
 
 rm -f "$HOME/.tmux.conf"
 ln -s "$DOTFILES_PATH/tmux.conf" "$HOME/.tmux.conf"
