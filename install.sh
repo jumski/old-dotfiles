@@ -24,6 +24,11 @@ ln -s "$DOTFILES_PATH/irbrc" "$HOME/.irbrc"
 rm -f "$HOME/.dircolors"
 ln -s "$DOTFILES_PATH/vendor/dircolors.256dark" "$HOME/.dircolors"
 
+mkdir -p "$HOME/.kde/share/apps/konsole"
+ln -s "$DOTFILES_PATH/vendor/kde/share/apps/konsole/konsoleui.rc" "$HOME/.kde/share/apps/konsole/konsoleui.rc"
+ln -s "$DOTFILES_PATH/vendor/kde/share/apps/konsole/solarized_dark.colorscheme" "$HOME/.kde/share/apps/konsole/solarized_dark.colorscheme"
+ln -s "$DOTFILES_PATH/vendor/kde/share/apps/konsole/jumshell.profile" "$HOME/.kde/share/apps/konsole/jumshell.profile"
+
 echo 'Load bashrc'
 source ~/dotfiles/bashrc.sh
 source ~/dotfiles/bash/aliases.sh
