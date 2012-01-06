@@ -13,7 +13,7 @@ task :install do
 
     FileUtils.mkdir_p destination
     FileUtils.rm "~/#{destination}/#{file}"
-    FileUtils.ln_s "#{file}" "~/#{destination}/#{file}"
+    FileUtils.ln_s "#{DOTFILES_PATH}/#{file}" "~/#{destination}/#{file}"
   end
 end
 
@@ -27,5 +27,5 @@ OTHER_LINKABLES = {
 def link_to_home(file)
   home_path = "~/.#{file}"
   FileUtils.rm home_path
-  FileUtils.ln_s file, home_path 
+  FileUtils.ln_s "#{DOTFILES_PATH}/file", home_path 
 end
