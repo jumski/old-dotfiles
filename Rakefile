@@ -3,29 +3,32 @@ require 'rake'
 require 'fileutils'
 require 'pry'
 
-LINKABLES = {
-  'vendor/dircolors.256dark' => '~/.dircolors',
-  'vendor/kde/share/apps/konsole/*' => '~/.kde/share/apps/konsole/%',
-  %w(bashrc tmux.conf gitconfig vimrc gemrc irbrc) => '~/.%'
-}
+# LINKABLES = {
+#   # 'vendor/dircolors.256dark' => '~/.dircolors',
+#   # 'vendor/kde/share/apps/konsole/*' => '~/.kde/share/apps/konsole/%',
+#   %w(bashrc tmux.conf gitconfig vimrc gemrc irbrc) => '~/.%'
+# }
+linkable :source      => 'vendor/dircolors.256dark',
+         :destination => '~/.dircolors'
+linkable :source      => 'vendor/kde/share/apps/konsole/*',
+         :destination => '~/.kde/share/apps/konsole/%'
+linkable :source %w(bashrc tmux.conf gitconfig vimrc gemrc irbrc) => '~/.%'
 
 DOTFILES_PATH = ENV["DOTFILES_PATH"]
 
 task :install do
-  LINKABLES.each do |path, destination|
+  LINKABLES.each do |source, destination|
     # puts
     # puts path.inspect
 
-    next if path.nil?
+    next if source.nil?
 
-    if path.include?('*')
-      Dir.glob("#{DOTFILES_PATH}/#{path}").each do |file|
-        link_to file, destination
+    if source.include?('*')
+      Dir.glob("#{DOTFILES_PATH}/#{source}").each do |path|
+        link_to path, destination
       end
-    elsif path.respond_to?(:each)
-      path.each do |file|
-        link_to file, destination
-      end
+    elsif source.respond_to?(:each)
+      source.each {|path| link_to path, destination}
     else
       link_to path, destination
     end
@@ -43,9 +46,9 @@ def link_to(file, destination)
     destination_path = "#{destination}"
   end
 
-  # puts file
-  # puts destination_path
-  `ln -s #{file} #{destination_path}`
+  puts file
+  puts destination_path
+  # `ln -s #{file} #{destination_path}`
   # %x[ ln -s #{destination_path}
 
   # FileUtils.ln_s "#{DOTFILES_PATH}/#{file}" destination_path
