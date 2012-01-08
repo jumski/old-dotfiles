@@ -31,3 +31,5 @@
 
 [core]
 	autocrlf = input
+[github]
+	user = jumski
