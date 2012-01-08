@@ -25,8 +25,8 @@ set tags=~/.tags
 set expandtab     " rozwijanie tabow na spacje"
 set softtabstop=2
 set sw=2          " szerokosc automagicznego wciecia
-set tabstop=2     " ile spacji to tab"    
-set ts=2          " szerokosc tabulacji 
+set tabstop=2     " ile spacji to tab"
+set ts=2          " szerokosc tabulacji
 set shiftround
 
 set foldmethod=indent
@@ -37,4 +37,31 @@ set nofoldenable
 set wildmenu
 set wildmode=list:longest,list:full
 
+set cmdwinheight=12         " command history window height
+
 set noesckeys """" removes the delay after returning to normal mode
+
+set matchpairs+=<:>                  " add < and > to the chars that can be navigated with %
+set matchpairs+=/:/
+set iskeyword+=?                     " in ruby ? can end keyword"
+
+" set list
+" set listchars=tab:»\ ,trail:·,nbsp:·
+
+set splitbelow
+set splitright
+
+""""""""" strip whitespace
+fun! <SID>StripTrailingWhitespaces()
+  let l = line(".")
+  let c = col(".")
+  %s/\s\+$//e
+  let _s=@/
+  call cursor(l, c)
+  let @/=_s
+endfun
+autocmd BufWritePre *.* :call <SID>StripTrailingWhitespaces()
+
+" set laststatus=2
+" set statusline=%F%m%r%h%w\ (%{&ff}){%Y}[%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}
+
