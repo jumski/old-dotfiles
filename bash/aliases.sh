@@ -204,4 +204,4 @@ function vol() {
 }
 
 alias synergys="synergys --config $DOTFILES_PATH/synergy.conf --daemon -l ~/.synergy.log"
-alias git=hub
+# alias git=hub
