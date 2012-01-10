@@ -21,6 +21,9 @@ ln -s "$DOTFILES_PATH/gemrc" "$HOME/.gemrc"
 rm -f "$HOME/.irbrc"
 ln -s "$DOTFILES_PATH/irbrc" "$HOME/.irbrc"
 
+rm -f "$HOME/.ackrc"
+ln -s "$DOTFILES_PATH/ackrc" "$HOME/.ackrc"
+
 rm -f "$HOME/.dircolors"
 ln -s "$DOTFILES_PATH/vendor/dircolors.256dark" "$HOME/.dircolors"
 
