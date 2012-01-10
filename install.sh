@@ -3,35 +3,20 @@
 echo 'Installing scripts'
 export DOTFILES_PATH=~/dotfiles
 
-rm -f "$HOME/.bashrc"
-ln -s "$DOTFILES_PATH/bashrc" "$HOME/.bashrc"
-
-rm -f "$HOME/.tmux.conf"
-ln -s "$DOTFILES_PATH/tmux.conf" "$HOME/.tmux.conf"
-
-rm -f "$HOME/.gitconfig"
-ln -s "$DOTFILES_PATH/gitconfig" "$HOME/.gitconfig"
-
-rm -f "$HOME/.vimrc"
-ln -s "$DOTFILES_PATH/vim/vimrc" "$HOME/.vimrc"
-
-rm -f "$HOME/.gemrc"
-ln -s "$DOTFILES_PATH/gemrc" "$HOME/.gemrc"
-
-rm -f "$HOME/.irbrc"
-ln -s "$DOTFILES_PATH/irbrc" "$HOME/.irbrc"
-
-rm -f "$HOME/.ackrc"
-ln -s "$DOTFILES_PATH/ackrc" "$HOME/.ackrc"
-
-rm -f "$HOME/.dircolors"
-ln -s "$DOTFILES_PATH/vendor/dircolors.256dark" "$HOME/.dircolors"
+ln -s --force "$DOTFILES_PATH/bashrc" "$HOME/.bashrc"
+ln -s --force "$DOTFILES_PATH/tmux.conf" "$HOME/.tmux.conf"
+ln -s --force "$DOTFILES_PATH/gitconfig" "$HOME/.gitconfig"
+ln -s --force "$DOTFILES_PATH/vim/vimrc" "$HOME/.vimrc"
+ln -s --force "$DOTFILES_PATH/gemrc" "$HOME/.gemrc"
+ln -s --force "$DOTFILES_PATH/irbrc" "$HOME/.irbrc"
+ln -s --force "$DOTFILES_PATH/ackrc" "$HOME/.ackrc"
+ln -s --force "$DOTFILES_PATH/vendor/dircolors.256dark" "$HOME/.dircolors"
 
 mkdir -p "$HOME/.kde/share/apps/konsole"
-ln -s "$DOTFILES_PATH/vendor/kde/share/apps/konsole/konsoleui.rc" "$HOME/.kde/share/apps/konsole/konsoleui.rc"
-ln -s "$DOTFILES_PATH/vendor/kde/share/apps/konsole/solarized_dark.colorscheme" "$HOME/.kde/share/apps/konsole/solarized_dark.colorscheme"
-ln -s "$DOTFILES_PATH/vendor/kde/share/apps/konsole/jumshell.profile" "$HOME/.kde/share/apps/konsole/jumshell.profile"
+ln -s --force "$DOTFILES_PATH/vendor/kde/share/apps/konsole/konsoleui.rc" "$HOME/.kde/share/apps/konsole/konsoleui.rc"
+ln -s --force "$DOTFILES_PATH/vendor/kde/share/apps/konsole/solarized_dark.colorscheme" "$HOME/.kde/share/apps/konsole/solarized_dark.colorscheme"
+ln -s --force "$DOTFILES_PATH/vendor/kde/share/apps/konsole/jumshell.profile" "$HOME/.kde/share/apps/konsole/jumshell.profile"
 
 echo 'Load bashrc'
-source ~/dotfiles/bashrc.sh
+source ~/dotfiles/bashrc
 source ~/dotfiles/bash/aliases.sh
