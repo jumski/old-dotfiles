@@ -12,11 +12,13 @@ then
   tmux new-window -t$SESSION_NAME -n console
   tmux new-window -t$SESSION_NAME -n vim
   tmux new-window -t$SESSION_NAME -n bash
+  tmux new-window -t$SESSION_NAME -n guard
 
   tmux send-keys -t$SESSION_NAME:1 "$SERVER_COMMAND" C-m
   tmux send-keys -t$SESSION_NAME:2 "$CONSOLE_COMMAND" C-m
   tmux send-keys -t$SESSION_NAME:3 "vim" C-m
   tmux send-keys -t$SESSION_NAME:4 "git wtf" C-m
+  tmux send-keys -t$SESSION_NAME:5 "guard" C-m
   
   tmux select-window -t$SERVER_OPTIONS:4
 fi
