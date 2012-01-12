@@ -15,7 +15,7 @@ set ls=2                          " allways show status line"
 set nobackup
 set noswapfile
 set nowritebackup
-set number
+set number " line numbering
 set sessionoptions=buffers,folds,winsize,winpos
 set showcmd                       " Display incomplete commands.
 set showmode                      " Display the mode you're in.
@@ -38,6 +38,9 @@ set wildmenu
 set wildmode=list:longest,list:full
 
 set cmdwinheight=12         " command history window height
+
+set ttyfast
+
 
 set noesckeys """" removes the delay after returning to normal mode
 

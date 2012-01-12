@@ -26,4 +26,10 @@ map <C-l> <C-w>l
 
 cmap w!! w !sudo tee >/dev/null %
 " touch current file (useful for triggering guard)
-" noremap <silent><leader>r :call system('touch ' . expand("%:p"))<cr> 
+" noremap <silent><leader>r :call system('touch ' . expand("%:p"))<cr>
+
+" Rails specific
+map <leader>gr :topleft :split config/routes.rb<cr>
+map <leader>gg :topleft 100 :split Gemfile<cr>
+map <leader>gb :topleft 100 :split spec/support/blueprints.rb<cr>
+map <leader>gs :topleft 100 :split spec/spec_helper.rb<cr>
