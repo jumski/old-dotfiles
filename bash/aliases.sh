@@ -206,4 +206,5 @@ function vol() {
 alias synergys="synergys --config $DOTFILES_PATH/synergy.conf --daemon -l ~/.synergy.log"
 # alias git=hub
 alias spec="rspec --drb --format documentation"
-alias db_remigrate="rake db:drop && rake db:create && rake db:migrate && rake db:seed && rake db:test:prepare"
+alias db_redo="rake db:drop && rake db:create && rake db:migrate && rake db:seed && rake db:test:prepare"
+alias db_remigrate="rake db:rollback && rake db:migrate"
