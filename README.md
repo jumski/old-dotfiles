@@ -28,3 +28,10 @@
 ```
   apt-get install libgtkmm-2.4-dev libnotify-bin
 ```
+
+## install dropbox
+
+```
+  cd ~ && wget -O - http://www.dropbox.com/download?plat=lnx.x86_64 | tar xzf -
+  .dropbox-dist/dropboxd
+```
