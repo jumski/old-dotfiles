@@ -97,7 +97,7 @@ function fj {
   show_regex "$1"
   ack-grep "$1" public/javascripts/$2
 }
-# szukaj deklaracji ("funkcja =") 
+# szukaj deklaracji ("funkcja =")
 function fjm {
   fj "($1 = function|function $1\()" $2
 }
@@ -205,3 +205,4 @@ function vol() {
 
 alias synergys="synergys --config $DOTFILES_PATH/synergy.conf --daemon -l ~/.synergy.log"
 # alias git=hub
+alias spec="rspec --drb --format documentation"
