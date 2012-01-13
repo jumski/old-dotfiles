@@ -25,6 +25,8 @@ function get_color_hostname {
       echo "${c_violet}old$c_reset" ;;
     jumski-akra)
       echo "${c_green}akra$c_reset" ;;
+    s11.linuxpl.com)
+      echo "${c_yellow}linuxpl$c_reset" ;;
   esac
 }
 
