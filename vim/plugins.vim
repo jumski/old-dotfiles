@@ -1,35 +1,38 @@
-
-Bundle 'wincent/Command-T'
-
-Bundle 'tpope/vim-rails' 
-Bundle 'tpope/vim-haml'
-Bundle 'tpope/vim-cucumber'
-Bundle 'tpope/vim-markdown'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'php.vim'
-
-
-Bundle 'tpope/vim-endwise'
-Bundle 'delimitMate.vim'
-Bundle 'tpope/vim-unimpaired'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-fugitive'
-Bundle 'vim-scripts/ack.vim'
+Bundle 'altercation/vim-colors-solarized'
 Bundle 'ctags.vim'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'matchit.zip'
-Bundle 'repeat.vim'
-Bundle 'tomtom/tcomment_vim'
-Bundle 'othree/html5.vim'
-Bundle 'samsonw/vim-task'
-Bundle 'vimwiki'
-Bundle 'TTCoach'
-" Bundle 'autotags' " bug during BundleInstall
+Bundle 'delimitMate.vim'
 Bundle 'kchmck/vim-coffee-script'
-" Bundle 'vim-fakeclip' " bug during BundleInstall
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'othree/html5.vim'
+Bundle 'php.vim'
+Bundle 'repeat.vim'
+Bundle 'samsonw/vim-task'
+Bundle 'tomtom/tcomment_vim'
+Bundle 'tpope/vim-cucumber'
+Bundle 'tpope/vim-endwise'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-haml'
+Bundle 'tpope/vim-markdown'
+Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-unimpaired'
+Bundle 'TTCoach'
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'vim-scripts/ack.vim'
 Bundle 'vim-scripts/marvim'
+Bundle 'vimwiki'
+Bundle 'wincent/Command-T'
+Bundle 'matchit.zip'
 
-" PLUGIN OPTIONS AND MAPPINGS
-runtime macros/matchit.vim
+"===============================
+"    plugin specific options
+"===============================
+
+" set commant-t window height
 let g:CommandTMaxHeight=10
-" autocmd BufWritePost *.coffee silent CoffeeMake! -b | cwindow " auto compiles coffee to js
+
+" require matchit manually
+runtime macros/matchit.vim
+
+" Bundle 'autotags' " bug during BundleInstall
+" Bundle 'vim-fakeclip' " bug during BundleInstall

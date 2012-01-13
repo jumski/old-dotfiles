@@ -33,3 +33,13 @@ map <leader>gr :topleft :split config/routes.rb<cr>
 map <leader>gg :topleft 100 :split Gemfile<cr>
 map <leader>gb :topleft 100 :split spec/support/blueprints.rb<cr>
 map <leader>gs :topleft 100 :split spec/spec_helper.rb<cr>
+
+" `a jumps to line and column marked ma
+" 'a jumps only to line marked ma
+" so we swap each other because ' have easy access
+noremap ' `
+noremap ` '
+
+" map <leader> to ,
+" THIS DOES NOT WORK !!!
+let mapleader = ","

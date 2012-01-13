@@ -3,10 +3,6 @@ source ~/dotfiles/vim/init.vim
 
 source ~/dotfiles/vim/plugins.vim
 
-filetype plugin indent on
-filetype plugin on
-
-source ~/dotfiles/vim/colors.vim
 source ~/dotfiles/vim/settings.vim
 source ~/dotfiles/vim/mappings.vim
 

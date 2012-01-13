@@ -18,6 +18,8 @@ ln -s --force "$DOTFILES_PATH/vendor/kde/share/apps/konsole/konsoleui.rc" "$HOME
 ln -s --force "$DOTFILES_PATH/vendor/kde/share/apps/konsole/solarized_dark.colorscheme" "$HOME/.kde/share/apps/konsole/solarized_dark.colorscheme"
 ln -s --force "$DOTFILES_PATH/vendor/kde/share/apps/konsole/jumshell.profile" "$HOME/.kde/share/apps/konsole/jumshell.profile"
 
+mkdir -p $HOME/.vim-tmp
+
 echo 'Load bashrc'
 source ~/dotfiles/bashrc
 source ~/dotfiles/bash/aliases.sh
