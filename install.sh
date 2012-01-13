@@ -10,6 +10,7 @@ ln -s --force "$DOTFILES_PATH/vim/vimrc" "$HOME/.vimrc"
 ln -s --force "$DOTFILES_PATH/gemrc" "$HOME/.gemrc"
 ln -s --force "$DOTFILES_PATH/irbrc" "$HOME/.irbrc"
 ln -s --force "$DOTFILES_PATH/ackrc" "$HOME/.ackrc"
+ln -s --force "$DOTFILES_PATH/kderc" "$HOME/.kderc"
 ln -s --force "$DOTFILES_PATH/vendor/dircolors.256dark" "$HOME/.dircolors"
 
 mkdir -p "$HOME/.kde/share/apps/konsole"
