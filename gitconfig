@@ -10,6 +10,10 @@
   c = checkout
   b = branch
   l = log
+  unstage = reset HEAD  # removes files from index
+  uncommit = reset --soft HEAD^
+  amend = commit --amend
+  
   push = push origin development
 	wc = whatchanged
 	lp = log -p
