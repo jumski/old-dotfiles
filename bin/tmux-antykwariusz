@@ -1,0 +1,6 @@
+#!/bin/bash
+
+export SERVER_COMMAND="tail -f log/development.log"
+export CONSOLE_COMMAND="rails console"
+
+tmux-rails ~/work/antykwariusz antykwariusz
