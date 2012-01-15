@@ -23,6 +23,8 @@ Bundle 'vim-scripts/marvim'
 Bundle 'vimwiki'
 Bundle 'wincent/Command-T'
 Bundle 'matchit.zip'
+Bundle 'kana/vim-fakeclip'
+Bundle 'scrooloose/syntastic'
 
 "===============================
 "    plugin specific options
@@ -35,4 +37,3 @@ let g:CommandTMaxHeight=10
 runtime macros/matchit.vim
 
 " Bundle 'autotags' " bug during BundleInstall
-" Bundle 'vim-fakeclip' " bug during BundleInstall
