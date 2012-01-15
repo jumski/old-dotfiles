@@ -44,17 +44,8 @@ function nowplayin {
 
 alias skype="LD_PRELOAD=/usr/lib32/libv4l/v4l1compat.so skype"
 
-alias ack=ack-grep
-
 alias ssh-maroko="ssh -t -p 60022 jumski@dev.jumski.com ssh root@127.0.0.1 -p 9999"
-# alias vpnbluair="ssh svnbluair exec telnet localhost 7505"
 vpnbluair="ssh svnbluair \"echo 'status' | nc localhost 7505\""
-
-alias shoes=/home/jumski/shoes/dist/shoes
-
-function showsizes {
-  du --max-depth=1 "$1" | sort -n -r
-}
 
 function killflash {
   ps ax|grep flashplugin|grep -v grep|awk {'print $1'}|xargs kill
@@ -70,56 +61,8 @@ function list-colors {
   done
 }
 
-function show_regex {
-  printf "\e[31m===================================================================\n"
-  printf "\e[31m======================== \e[33m$1\e[31m ====================\n"
-  printf "\e[31m===================================================================\e[0m\n"
-  echo ""
-}
-
-# szukaj w app/
-function f {
-  show_regex "$1"
-  ack-grep "$1" app/$2
-}
-# szukaj definicji ("def metoda") w app
-function fm {
-  f "def $1" $2
-#  f "(def $1|define_method\(:$1|alias_method :$1)" $2
-}
-# szukaj wywołania (".metoda" lub "metoda")
-function fc {
-  f "[^def][\.|\s]+$1" $2
-}
-
-# szukaj w public/javascripts
-function fj {
-  show_regex "$1"
-  ack-grep "$1" public/javascripts/$2
-}
-# szukaj deklaracji ("funkcja =")
-function fjm {
-  fj "($1 = function|function $1\()" $2
-}
-# szukaj wywołania ("funkcja(")
-function fjc {
-  fj "$1\(" $2
-}
-
-function gitlogger {
-  git log --pretty="%ad - %h - %s" --date=short --author=Wojtek --after="2011-07-$1" --before="2011-07-$2" --no-merges
-}
-
 function p {
   ps ax|grep -i $1
-}
-
-function work_blubase {
-  rvm use 1.8.7 && rvm gemset use blubase
-}
-
-function work_antykwariat {
-  rvm use 1.9.2 && rvm gemset use rails308 && cd ~/antykwariat && ll
 }
 
 # ======================================================================
