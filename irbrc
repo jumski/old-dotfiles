@@ -1,6 +1,6 @@
 
 require 'irb/completion'
-require 'bundler/setup'
+require 'bundler'
 ENV['BUNDLE_GEMFILE'] = File.join(ENV["DOTFILES_PATH"], 'Gemfile')
 Bundler.require
 
