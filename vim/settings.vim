@@ -10,8 +10,8 @@ set backspace=indent,eol,start
 set history=5000
 
 " set swap files dirs
-set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
-set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set noswapfile
+set nowritebackup
 
 " set tags file location
 set tags=TAGS;~/
