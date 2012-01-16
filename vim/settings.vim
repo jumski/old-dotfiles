@@ -84,7 +84,7 @@ set matchpairs+=/:/
 
 " in ruby ? and : can be a part of keyword
 set iskeyword+=?
-set iskeyword+=:
+set iskeyword+=!
 
 "================ TABS AND SPACES
 set expandtab     " all tabs expands to spaces
