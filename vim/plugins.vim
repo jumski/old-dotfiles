@@ -25,6 +25,7 @@ Bundle 'wincent/Command-T'
 Bundle 'matchit.zip'
 Bundle 'kana/vim-fakeclip'
 Bundle 'scrooloose/syntastic'
+Bundle 'godlygeek/tabular'
 
 "===============================
 "    plugin specific options
