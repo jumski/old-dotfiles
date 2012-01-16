@@ -56,7 +56,7 @@ colorscheme solarized
 set lazyredraw
 
 " force syntax highlighting on files w/o extensions
-au BufNewFile,BufRead Rakefile,Capfile,Guardfile,Gemfile setfiletype ruby
+au BufNewFile,BufRead Rakefile,Capfile,Guardfile,Gemfile,pryrc setfiletype ruby
 
 " change behaviour of <TAB> completion of commands
 " to similar to bash completion

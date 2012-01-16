@@ -1,10 +1,7 @@
 
-require 'irb/completion'
 require 'bundler/setup'
 ENV['BUNDLE_GEMFILE'] = File.join(ENV["DOTFILES_PATH"], 'Gemfile')
 Bundler.require
-
-IRB.conf[:AUTO_INDENT] = true
 
 def desc(model)
   y model.columns.map(&:name)
