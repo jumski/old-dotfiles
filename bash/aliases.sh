@@ -151,3 +151,11 @@ alias synergys="synergys --config $DOTFILES_PATH/synergy.conf --daemon -l ~/.syn
 alias spec="rspec --drb --format documentation"
 alias db_redo="rake db:drop && rake db:create && rake db:migrate && rake db:seed && rake db:test:prepare"
 alias db_remigrate="rake db:rollback && rake db:migrate"
+
+gcd() {
+  gem_require_path=$(gem which "$1")
+  gem_require_folder=$(dirname "$gem_require_path")
+
+  ls -la "$gem_require_folder"
+  # cd "$gem_require_folder"
+}
