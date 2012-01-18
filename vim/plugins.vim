@@ -38,4 +38,4 @@ let g:CommandTMaxHeight=10
 runtime macros/matchit.vim
 
 " define coffee script R-macro
-autocmd User Rails Rnavcommand coffeescripts app/coffeescripts/ -suffix=.coffee
+autocmd User Rails Rnavcommand coffeescripts app/assets/javascripts/ -suffix=.js.coffee
