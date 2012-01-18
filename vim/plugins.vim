@@ -37,4 +37,5 @@ let g:CommandTMaxHeight=10
 " require matchit manually
 runtime macros/matchit.vim
 
-" Bundle 'autotags' " bug during BundleInstall
+" define coffee script R-macro
+autocmd User Rails Rnavcommand coffeescripts app/coffeescripts/ -suffix=.coffee
