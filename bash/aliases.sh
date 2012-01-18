@@ -159,3 +159,5 @@ gcd() {
   ls -la "$gem_require_folder"
   # cd "$gem_require_folder"
 }
+
+alias hth=html2haml
