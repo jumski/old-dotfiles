@@ -135,6 +135,13 @@ fun! <SID>StripTrailingWhitespaces()
 endfun
 autocmd BufWritePre *.* :call <SID>StripTrailingWhitespaces()
 
+" Restore cursor position
+autocmd BufReadPost *
+  \ if line("'\"") > 1 && line("'\"") <= line("$") |
+  \   exe "normal! g`\"" |
+  \ endif
+
+
 " shorten 'Press ENTER or type command to continue' messages
 " TODO: ENABLE THIS AFTER SOME LEARNING
 " set shortmess=atI
