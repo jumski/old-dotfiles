@@ -1,0 +1,3 @@
+#!/bin/bash
+
+konsole --profile tmux-main && konsole --profile tmux-guard 

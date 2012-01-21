@@ -7,9 +7,9 @@ Font=Monaco,12,-1,5,50,0,0,0,0,0
 [General]
 Command=/bin/bash
 Icon=utilities-terminal
-LocalTabTitleFormat=%d : %n
+LocalTabTitleFormat=tmux-main
 MenuIndex=1
-Name=jumshell
+Name=tmux-main
 Parent=FALLBACK/
 RemoteTabTitleFormat=%h : %u
 SaveGeometryOnExit=true
