@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [ "$1" = "" ];
+then
+  google-chrome "http://delicious.com/yummster/"
+else
+  google-chrome "http://delicious.com/yummster/$1"
+fi
