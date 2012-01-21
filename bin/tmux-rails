@@ -4,6 +4,11 @@ cd $PROJECT_DIR;
 
 SESSION_NAME="$2"
 
+if [ "$GUARD_COMMAND" = "" ];
+then
+  GUARD_COMMAND="guard"
+fi
+
 tmux start-server
 
 if ! tmux has-session -t $SESSION_NAME;
@@ -18,7 +23,7 @@ then
   tmux send-keys -t$SESSION_NAME:2 "$CONSOLE_COMMAND" C-m
   tmux send-keys -t$SESSION_NAME:3 "vim" C-m
   tmux send-keys -t$SESSION_NAME:4 "git wtf" C-m
-  tmux send-keys -t$SESSION_NAME:5 "guard" C-m
+  tmux send-keys -t$SESSION_NAME:5 "$GUARD_COMMAND" C-m
   
   tmux select-window -t$SERVER_OPTIONS:4
 fi
