@@ -1,7 +1,7 @@
 
 require 'bundler/setup'
 ENV['BUNDLE_GEMFILE'] = File.join(ENV["DOTFILES_PATH"], 'Gemfile')
-Bundler.require
+Bundler.require(:default, :pry)
 
 def desc(model)
   y model.columns.map(&:name)

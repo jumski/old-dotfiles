@@ -1,8 +1,9 @@
 
-require 'irb/completion'
 require 'bundler'
 ENV['BUNDLE_GEMFILE'] = File.join(ENV["DOTFILES_PATH"], 'Gemfile')
-Bundler.require
+Bundler.require(:default)
+
+require 'irb/completion'
 
 IRB.conf[:AUTO_INDENT] = true
 

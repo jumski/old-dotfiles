@@ -6,7 +6,6 @@ GEM
     hirb (0.6.0)
     interactive_editor (0.0.10)
       spoon (>= 0.0.1)
-    irb-history (1.0.0)
     map_by_method (0.8.3)
     method_source (0.6.7)
       ruby_parser (>= 2.3.1)
@@ -34,7 +33,6 @@ DEPENDENCIES
   awesome_print
   hirb
   interactive_editor
-  irb-history
   map_by_method
   pry
   pry-doc
