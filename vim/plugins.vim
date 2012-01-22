@@ -42,3 +42,6 @@ autocmd User Rails Rnavcommand coffeescripts app/assets/javascripts/ -suffix=.js
 
 " define Rsupport
 autocmd User Rails Rnavcommand support spec/support/ -suffix=.rb
+
+" define Ruploaders
+autocmd User Rails Rnavcommand uploaders app/uploaders/ -suffix=.rb
