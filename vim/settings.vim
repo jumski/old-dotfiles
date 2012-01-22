@@ -141,6 +141,34 @@ autocmd BufReadPost *
   \   exe "normal! g`\"" |
   \ endif
 
+" {{{
+" {{{ SESSION AUTOSAVE
+" {{{ TODO: rewrite for my usage
+fu! SaveSess()
+  execute 'mksession! ' . getcwd() . '/.session.vim'
+endfunction
+fu! RestoreSess()
+if filereadable(getcwd() . '/.session.vim')
+  execute 'source ' . getcwd() . '/.session.vim'
+  "if bufexists(1)
+  "  for l in range(1, bufnr('$'))
+  "    if bufnr(l) == -1
+  "      exec 'sbuffer ' . l
+  "    endif
+  "  endfor
+  "endif
+endif
+syntax enable
+endfunction
+" autocmd VimLeave * call SaveSess()
+"autocmd VimEnter * call RestoreSess()
+" }}}
+" }}} SESSION AUTOSAVE
+" }}}
+
+
+
+
 
 " shorten 'Press ENTER or type command to continue' messages
 " TODO: ENABLE THIS AFTER SOME LEARNING
