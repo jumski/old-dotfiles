@@ -1,3 +1,6 @@
 [submodule "vendor/git-wtf"]
 	path = vendor/git-wtf
 	url = git://github.com/michaelklishin/git-wtf.git
+[submodule "vendor/interactive_editor"]
+	path = vendor/interactive_editor
+	url = hub:jumski/interactive_editor.git

@@ -1,11 +1,16 @@
+GIT
+  remote: /home/jumski/dotfiles/vendor/interactive_editor
+  revision: da8797b3e789bb38bb9d1d89635b4ebfe8b07b3b
+  specs:
+    interactive_editor (0.0.10)
+      spoon (>= 0.0.1)
+
 GEM
   remote: http://rubygems.org/
   specs:
     awesome_print (1.0.2)
     coderay (0.9.8)
     hirb (0.6.0)
-    interactive_editor (0.0.10)
-      spoon (>= 0.0.1)
     map_by_method (0.8.3)
     method_source (0.6.7)
       ruby_parser (>= 2.3.1)
@@ -32,7 +37,7 @@ PLATFORMS
 DEPENDENCIES
   awesome_print
   hirb
-  interactive_editor
+  interactive_editor!
   map_by_method
   pry
   pry-doc
