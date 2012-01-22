@@ -1,3 +1,3 @@
 #!/bin/bash
 
-wmctrl -a "chrome"
+wmctrl -a "chrome" && wmctrl -a "tmux-main"
