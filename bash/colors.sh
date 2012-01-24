@@ -16,6 +16,9 @@ function parse_git_branch {
 function parse_rvm_prompt {
   rvm-prompt | sed 's/\(ruby-\)\(.*\)@\(.*\)/\3/'
 }
+function parse_rails_env {
+  [ "$RAILS_ENV" = "production" ] && echo "$c_red(P) $c_reset"
+}
 
 function get_color_hostname {
   case `hostname` in
@@ -30,4 +33,4 @@ function get_color_hostname {
   esac
 }
 
-PROMPT_COMMAND='export PS1=" `get_color_hostname` $c_white`basename "$PWD"`$c_yellow [$(parse_git_branch)] $c_red$ $c_reset"'
+PROMPT_COMMAND='export PS1=" `get_color_hostname` $c_white`basename "$PWD"`$c_yellow [$(parse_git_branch)] `parse_rails_env`$c_red$ $c_reset"'
