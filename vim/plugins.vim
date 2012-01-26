@@ -5,6 +5,7 @@ Bundle 'godlygeek/tabular'
 Bundle 'kana/vim-fakeclip'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'lastpos.vim'
+Bundle 'Lokaltog/vim-easymotion'
 Bundle 'matchit.zip'
 Bundle 'repeat.vim'
 Bundle 'scrooloose/syntastic'
@@ -20,7 +21,6 @@ Bundle 'vim-ruby/vim-ruby'
 Bundle 'vim-scripts/ack.vim'
 
 """"""""" DISABLED PLUGINS
-" Bundle 'Lokaltog/vim-easymotion'
 " Bundle 'php.vim'
 " Bundle 'samsonw/vim-task'
 " Bundle 'tpope/vim-cucumber'
@@ -32,6 +32,9 @@ Bundle 'vim-scripts/ack.vim'
 "===============================
 "    plugin specific options
 "===============================
+
+" set leader for easy motion
+let g:EasyMotion_leader_key = ','
 
 " set commant-t window height
 let g:CommandTMaxHeight=10
