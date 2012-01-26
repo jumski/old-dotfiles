@@ -24,6 +24,9 @@ map <C-k> <C-w>k
 map <C-h> <C-w>h
 map <C-l> <C-w>l
 
+" Split line(opposite to S-J joining line)
+nnoremap <C-J> gEa<CR><ESC>
+
 cmap w!! w !sudo tee >/dev/null %
 " touch current file (useful for triggering guard)
 " noremap <silent><leader>r :call system('touch ' . expand("%:p"))<cr>
