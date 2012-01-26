@@ -26,6 +26,7 @@ Bundle 'matchit.zip'
 Bundle 'kana/vim-fakeclip'
 Bundle 'scrooloose/syntastic'
 Bundle 'godlygeek/tabular'
+Bundle 'lastpos.vim'
 
 "===============================
 "    plugin specific options

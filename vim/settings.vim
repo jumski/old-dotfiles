@@ -138,12 +138,6 @@ fun! <SID>StripTrailingWhitespaces()
 endfun
 autocmd BufWritePre *.* :call <SID>StripTrailingWhitespaces()
 
-" Restore cursor position
-autocmd BufReadPost *
-  \ if line("'\"") > 1 && line("'\"") <= line("$") |
-  \   exe "normal! g`\"" |
-  \ endif
-
 " {{{
 " {{{ SESSION AUTOSAVE
 " {{{ TODO: rewrite for my usage
