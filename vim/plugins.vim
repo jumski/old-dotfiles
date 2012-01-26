@@ -1,6 +1,6 @@
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'delimitMate.vim'
-Bundle 'file-line.vim'
+Bundle 'vim-scripts/file-line'
 Bundle 'godlygeek/tabular'
 Bundle 'kana/vim-fakeclip'
 Bundle 'kchmck/vim-coffee-script'
