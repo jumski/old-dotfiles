@@ -40,10 +40,6 @@ map <leader>gs :topleft 100 :split spec/spec_helper.rb<cr>
 noremap ' `
 noremap ` '
 
-" map <leader> to ,
-" THIS DOES NOT WORK !!!
-let mapleader = ","
-
 " Y yanks to the end of line
 map Y y$
 
