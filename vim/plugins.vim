@@ -21,6 +21,7 @@ Bundle 'tpope/vim-unimpaired'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'vim-scripts/ack.vim'
 Bundle 'vim-scripts/file-line'
+Bundle 'ZoomWin'
 
 """"""""" DISABLED PLUGINS
 " Bundle 'php.vim'
