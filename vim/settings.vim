@@ -78,7 +78,7 @@ set noesckeys
 
 " time out on mapping after three seconds
 " time out on key codes after a tenth of a second
-set timeoutlen=3000
+set timeoutlen=300
 set ttimeoutlen=100
 
 " add char pairs that can be navigated with %
