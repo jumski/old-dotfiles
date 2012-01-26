@@ -1,3 +1,6 @@
+" experimental ESC mapping
+inoremap kj <esc>
+
 """"" CUSTOM MAPPINGS
 noremap <leader>` :CommandT<cr>
 noremap <C-k><C-k> <C-w><C-w>
