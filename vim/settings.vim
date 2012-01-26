@@ -35,6 +35,9 @@ set showcmd
 " display the mode you're in
 set showmode
 
+" do not reindent when inserting :
+set cinkeys-=:
+
 " file type highlighting and configuration
 syntax enable
 filetype on
@@ -123,6 +126,11 @@ set nomodeline
 " scroll viewport faster
 nnoremap <C-e> 3<C-e>
 nnoremap <C-y> 3<C-y>
+
+" easy access/surce vimrc and other
+nnoremap <leader>rs :source ~/.vimrc<CR>
+nnoremap <leader>rt :tabnew ~/dotfiles/vim<CR>
+nnoremap <leader>rb :BundleInstall<CR>
 
 " session saving options
 set sessionoptions=buffers,winsize,tabpages,winpos,winsize
