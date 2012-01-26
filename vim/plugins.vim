@@ -1,14 +1,14 @@
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'ctags.vim'
 Bundle 'delimitMate.vim'
+Bundle 'file-line.vim'
+Bundle 'godlygeek/tabular'
+Bundle 'kana/vim-fakeclip'
 Bundle 'kchmck/vim-coffee-script'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'othree/html5.vim'
-Bundle 'php.vim'
+Bundle 'lastpos.vim'
+Bundle 'matchit.zip'
 Bundle 'repeat.vim'
-Bundle 'samsonw/vim-task'
+Bundle 'scrooloose/syntastic'
 Bundle 'tomtom/tcomment_vim'
-Bundle 'tpope/vim-cucumber'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-haml'
@@ -16,17 +16,18 @@ Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-unimpaired'
-Bundle 'TTCoach'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'vim-scripts/ack.vim'
-Bundle 'vim-scripts/marvim'
-Bundle 'vimwiki'
-Bundle 'wincent/Command-T'
-Bundle 'matchit.zip'
-Bundle 'kana/vim-fakeclip'
-Bundle 'scrooloose/syntastic'
-Bundle 'godlygeek/tabular'
-Bundle 'lastpos.vim'
+
+""""""""" DISABLED PLUGINS
+" Bundle 'Lokaltog/vim-easymotion'
+" Bundle 'php.vim'
+" Bundle 'samsonw/vim-task'
+" Bundle 'tpope/vim-cucumber'
+" Bundle 'TTCoach' " touch typing coach
+" Bundle 'vim-scripts/marvim' " macro persistent storage
+" Bundle 'vimwiki'
+" Bundle 'wincent/Command-T' " textmate-like searching throught project
 
 "===============================
 "    plugin specific options
