@@ -1,6 +1,6 @@
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'delimitMate.vim'
-Bundle 'vim-scripts/file-line'
+Bundle 'gmarik/ide-popup.vim'
 Bundle 'godlygeek/tabular'
 Bundle 'kana/vim-fakeclip'
 Bundle 'kchmck/vim-coffee-script'
@@ -19,6 +19,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'vim-scripts/ack.vim'
+Bundle 'vim-scripts/file-line'
 
 """"""""" DISABLED PLUGINS
 " Bundle 'php.vim'
