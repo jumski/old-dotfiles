@@ -117,6 +117,9 @@ set smartcase
 " when scrolling near the edge of screen
 set scrolloff=3
 
+" disable reading modelines
+set nomodeline
+
 " scroll viewport faster
 nnoremap <C-e> 3<C-e>
 nnoremap <C-y> 3<C-y>
