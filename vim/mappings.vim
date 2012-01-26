@@ -43,3 +43,7 @@ noremap ` '
 " map <leader> to ,
 " THIS DOES NOT WORK !!!
 let mapleader = ","
+
+" Y yanks to the end of line
+map Y y$
+
