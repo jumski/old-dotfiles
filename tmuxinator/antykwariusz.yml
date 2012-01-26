@@ -1,0 +1,12 @@
+# ~/.tmuxinator/default.yml
+# you can make as many tabs as you wish...
+
+project_name: antykwariusz
+project_root: ~/work/antykwariusz
+rvm: 1.9.3-p0
+tabs:
+  - bash: tail -f log/development.log
+  - console: rails console
+  - vim: vim
+  - bash: git wtf
+  - guard: guard -d default

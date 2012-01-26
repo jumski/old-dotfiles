@@ -1,5 +1,0 @@
-#!/bin/bash
-
-tmux new-session -t antykwariusz -s antykwariusz-guard
-tmux select-window -t$SERVER_OPTIONS:4
-

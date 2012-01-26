@@ -1,0 +1,9 @@
+# ~/.tmuxinator/dotfilez.yml
+# you can make as many tabs as you wish...
+
+project_name: dotfilez
+project_root: ~/dotfiles
+rvm: 1.9.3-p0
+tabs:
+  - vim: vim -p vim/* bash/aliases.sh
+  - shell: git wtf

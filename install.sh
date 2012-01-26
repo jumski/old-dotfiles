@@ -13,6 +13,7 @@ ln -s --force "$DOTFILES_PATH/pryrc" "$HOME/.pryrc"
 ln -s --force "$DOTFILES_PATH/ackrc" "$HOME/.ackrc"
 ln -s --force "$DOTFILES_PATH/kderc" "$HOME/.kderc"
 ln -s --force "$DOTFILES_PATH/vendor/dircolors.256dark" "$HOME/.dircolors"
+ln -s --force "$DOTFILES_PATH/tmuxinator" "$HOME/.tmuxinator"
 
 mkdir -p "$HOME/.kde/share/apps/konsole"
 ln -s --force "$DOTFILES_PATH/vendor/kde/share/apps/konsole/konsoleui.rc" "$HOME/.kde/share/apps/konsole/konsoleui.rc"

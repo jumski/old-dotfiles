@@ -27,6 +27,9 @@ fi
 
 [ -f $DOTFILES_PATH/bash/bundler-exec.sh ] && source $DOTFILES_PATH/bash/bundler-exec.sh
 
+export PATH="$PATH:$DOTFILES_PATH/vendor/tmuxinator/bin/"
+source $DOTFILES_PATH/vendor/tmuxinator/bin/tmuxinator_completion
+
 # add identity if not set
 if ! ssh-add -l 1>/dev/null;
 then

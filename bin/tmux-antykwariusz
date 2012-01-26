@@ -1,7 +1,0 @@
-#!/bin/bash
-
-export SERVER_COMMAND="tail -f log/development.log"
-export CONSOLE_COMMAND="rails console"
-export GUARD_COMMAND="guard -g default"
-
-tmux-rails ~/work/antykwariusz antykwariusz
