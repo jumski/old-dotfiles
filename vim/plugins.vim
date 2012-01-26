@@ -34,7 +34,7 @@ Bundle 'vim-scripts/ack.vim'
 "===============================
 
 " set leader for easy motion
-let g:EasyMotion_leader_key = ','
+let g:EasyMotion_Leader_key = '<Leader><Leader>'
 
 " set commant-t window height
 let g:CommandTMaxHeight=10
