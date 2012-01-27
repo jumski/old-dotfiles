@@ -1,6 +1,6 @@
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'delimitMate.vim'
-Bundle 'gmarik/ide-popup.vim'
+" Bundle 'gmarik/ide-popup.vim'
 Bundle 'godlygeek/tabular'
 Bundle 'kana/vim-fakeclip'
 Bundle 'kchmck/vim-coffee-script'
