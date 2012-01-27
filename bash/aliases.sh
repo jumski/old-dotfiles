@@ -115,33 +115,6 @@ function confirm()
   return 1
 }
 
-function start-vbox-blubase {
-  vboxmanage discardstate squeeze
-  vboxmanage snapshot squeeze restore "ports forwarded"
-  vboxheadless -s squeeze
-}
-
-function vbox-forward-port {
-  name=$1
-  host_port=$2
-  guest_port=$3
-  protocol=TCP
-
-  vboxmanage setextradata $name "VBoxInternal/Devices/pcnet/0/LUN#0/Config/ssh/HostPort" $host_port
-  vboxmanage setextradata $name "VBoxInternal/Devices/pcnet/0/LUN#0/Config/ssh/GuestPort" $guest_port
-  vboxmanage setextradata $name "VBoxInternal/Devices/pcnet/0/LUN#0/Config/ssh/Protocol" $protocol
-
-  vboxmanage setextradata $name "VBoxInternal/Devices/e1000/0/LUN#0/Config/ssh/HostPort" $host_port
-  vboxmanage setextradata $name "VBoxInternal/Devices/e1000/0/LUN#0/Config/ssh/GuestPort" $guest_port
-  vboxmanage setextradata $name "VBoxInternal/Devices/e1000/0/LUN#0/Config/ssh/Protocol" $protocol
-}
-
-function show_migration() {
-  server=$1
-  migration=$2
-
-  ssh $server cat /srv/www/bluBase/current/db/migrate/$migration*
-}
 alias xevx="xev | grep -A2 --line-buffered '^KeyRelease' | sed -n '/keycode /s/^.*keycode \([0-9]*\).* (.*, \(.*\)).*$/\1 \2/p'"
 
 function vol() {
@@ -149,12 +122,6 @@ function vol() {
   echo "volume set to $VOLUME"
   amixer set Master $VOLUME
 }
-
-alias synergys="synergys --config $DOTFILES_PATH/synergy.conf --daemon -l ~/.synergy.log"
-# alias git=hub
-alias spec="rspec --drb --format documentation"
-alias db_redo="rake db:drop && rake db:create && rake db:migrate && rake db:seed && rake db:test:prepare"
-alias db_remigrate="rake db:rollback && rake db:migrate"
 
 gcd() {
   gem_require_path=$(gem which "$1")
