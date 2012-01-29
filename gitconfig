@@ -13,7 +13,7 @@
   unstage = reset HEAD  # removes files from index
   uncommit = reset --soft HEAD^
   amend = commit --amend
-
+  cherry = cherry -v
   push = push origin development
 	wc = whatchanged
 	lp = log -p
