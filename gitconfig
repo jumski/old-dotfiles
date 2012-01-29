@@ -13,7 +13,7 @@
   unstage = reset HEAD  # removes files from index
   uncommit = reset --soft HEAD^
   amend = commit --amend
-  
+
   push = push origin development
 	wc = whatchanged
 	lp = log -p
@@ -26,7 +26,7 @@
 	history-view-vpane-position = 577
 	main-window-view = HistoryView
 [push]
-	default = nothing
+	default = current
 [color]
 	branch = auto
 	diff = auto
