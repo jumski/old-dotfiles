@@ -78,7 +78,7 @@ set noesckeys
 
 " time out on mapping after three seconds
 " time out on key codes after a tenth of a second
-set timeoutlen=300
+set timeoutlen=800
 set ttimeoutlen=100
 
 " add char pairs that can be navigated with %
@@ -129,7 +129,10 @@ nnoremap <C-y> 3<C-y>
 
 " easy access/surce vimrc and other
 nnoremap <leader>rs :source ~/.vimrc<CR>
-nnoremap <leader>rt :tabnew ~/dotfiles/vim<CR>
+nnoremap <leader>rt :tabnew ~/dotfiles/vim/plugins.vim<CR>
+  " \ :sp     ~/dotfiles/settings.vim<CR>
+  " \ :sp     ~/dotfiles/mappings.vim<CR>
+  " \ :vs     ~/dotfiles/macros.vim<CR><C-K><C-K>
 nnoremap <leader>rb :BundleInstall<CR>
 
 " session saving options
