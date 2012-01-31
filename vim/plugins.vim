@@ -23,6 +23,7 @@ Bundle 'vim-scripts/ack.vim'
 Bundle 'vim-scripts/file-line'
 Bundle 'ZoomWin'
 Bundle 'ecomba/vim-ruby-refactoring'
+Bundle 'sjl/gundo.vim'
 
 """"""""" DISABLED PLUGINS
 " Bundle 'php.vim'
