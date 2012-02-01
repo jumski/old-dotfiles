@@ -21,6 +21,10 @@ ln -s --force "$DOTFILES_PATH/vendor/kde/share/apps/konsole/solarized_dark.color
 ln -s --force "$DOTFILES_PATH/vendor/kde/share/apps/konsole/tmux-main.profile" "$HOME/.kde/share/apps/konsole/tmux-main.profile"
 ln -s --force "$DOTFILES_PATH/vendor/kde/share/apps/konsole/tmux-guard.profile" "$HOME/.kde/share/apps/konsole/tmux-guard.profile"
 
+# install git-hooks
+rm -rf $DOTFILES_PATH/.git/hooks/post-merge
+ln -s $DOTFILES_PATH/bin/hooks/post-merge $DOTFILES_PATH/.git/hooks/post-merge
+
 mkdir -p $HOME/.vim-tmp
 
 echo 'Load bashrc'
