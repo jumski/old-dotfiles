@@ -70,5 +70,6 @@
   <Action shortcut="" name="split-view-left-right"/>
   <Action shortcut="" name="split-view-top-bottom"/>
   <Action shortcut="" name="activate_menu"/>
+  <Action shortcut="Ctrl+Shift+F11" name="fullscreen"/>
  </ActionProperties>
 </kpartgui>
