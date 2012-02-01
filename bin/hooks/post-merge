@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+require 'bundler'
+ENV['BUNDLE_GEMFILE'] = File.join(ENV["DOTFILES_PATH"], 'Gemfile')
+Bundler.require(:default)
+
+puts "=====================".red
+puts "== post-merge hook ==".yellow
+ap ARGV
