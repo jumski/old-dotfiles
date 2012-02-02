@@ -5,6 +5,10 @@ inoremap kj <esc>
 noremap <leader>` :CommandT<cr>
 noremap <C-k><C-k> <C-w><C-w>
 noremap <C-k>k <C-w><C-w>
+
+" opens file under curson in vertical split
+noremap <C-X>gf :vs<CR>gf
+
 imap <C-w> <C-o><C-w> " this allows all window commands in insert mode and i'm not accidentally deleting words anymore :-)"
 " imap ;; <esc> " shourtcut for going to normal mode from insert mode
 
