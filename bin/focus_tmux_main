@@ -1,3 +1,5 @@
 #!/bin/bash
 
-wmctrl -a "tmux-main"
+# sometimes konsole gets focus but promt does not so you cannot type
+# this force to focus twice so it never happens
+wmctrl -a "tmux-main"; wmctrl -a "tmux-main"
