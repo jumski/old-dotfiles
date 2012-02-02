@@ -20,13 +20,10 @@
   hist = log --pretty=format:\"%Cgreen%h%Creset %Cblue%ad%Creset %s%C(yellow)%d%Creset %Cblue[%an]%Creset\" --graph --date=short
   dstat = diff --stat
 	wtf = !git-wtf
-[giggle]
-	main-window-maximized = true
-	main-window-geometry = 0x0+0+0
-	history-view-vpane-position = 577
-	main-window-view = HistoryView
+
 [push]
 	default = current
+
 [color]
 	branch = auto
 	diff = auto
@@ -35,5 +32,7 @@
 
 [core]
 	autocrlf = input
+
 [github]
 	user = jumski
+
