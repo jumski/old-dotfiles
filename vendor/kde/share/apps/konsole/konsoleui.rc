@@ -50,7 +50,7 @@
   </Menu>
  </MenuBar>
  <ActionProperties scheme="Default">
-  <Action shortcut="" name="add_bookmark"/>
+  <Action shortcut="Ctrl+Shift+B" name="add_bookmark"/>
   <Action shortcut="" name="close-active-view"/>
   <Action shortcut="" name="close-other-views"/>
   <Action shortcut="" name="detach-view"/>
