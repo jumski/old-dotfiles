@@ -1,0 +1,3 @@
+#!/bin/bash
+xrandr --verbose \
+  --output LVDS1 --mode 1366x768 --pos 0x180 --primary 2>> ~/.xrandr.log
