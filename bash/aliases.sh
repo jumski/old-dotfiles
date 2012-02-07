@@ -132,3 +132,6 @@ gcd() {
 }
 
 alias hth=html2haml
+
+alias goprod="export RAILS_ENV=production; echo 'Rails.env set to production'"
+alias godev="export RAILS_ENV=development; echo 'Rails.env set to development'"
