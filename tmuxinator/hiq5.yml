@@ -1,0 +1,12 @@
+# ~/.tmuxinator/default.yml
+# you can make as many tabs as you wish...
+
+project_name: hiq5
+project_root: ~/work/hiq5
+rvm: 1.9.2
+tabs:
+  - bash: tail -f log/development.log
+  - console: rails console
+  - vim: vim
+  - bash: git wtf
+  - server: rails server
