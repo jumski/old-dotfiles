@@ -14,6 +14,9 @@ nmap <silent> <leader><Tab> :tabp<CR>
 nmap <silent> <leader>f :tabn<CR>
 nmap <silent> <leader>x :tabclose<CR>
 
+" open file under curson in vsplit
+nmap <C-X>gf :vs %<CR>gf
+
 noremap  <Up> ""
 noremap! <Up> <Esc>
 noremap  <Down> ""
