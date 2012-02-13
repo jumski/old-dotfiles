@@ -30,6 +30,10 @@ fi
 export PATH="$PATH:$DOTFILES_PATH/vendor/tmuxinator/bin/"
 source $DOTFILES_PATH/vendor/tmuxinator/bin/tmuxinator_completion
 
+# readline settings
+bind "set completion-ignore-case on"
+bind "set show-all-if-ambiguous On" # this allows you to automatically show completion without double tab-ing
+
 # add identity if not set
 if ! ssh-add -l 1>/dev/null;
 then
