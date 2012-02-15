@@ -19,8 +19,8 @@ set tags=TAGS;~/
 " use horizontal line at cursor position
 set cursorline
 
-" line numbering
-set number
+" disable line numbering
+set nonu
 
 " always show status line
 set laststatus=2
