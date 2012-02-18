@@ -6,6 +6,7 @@ gem 'interactive_editor'
 gem 'map_by_method'
 gem 'what_methods'
 gem 'wirble'
+gem 'github'
 
 group :pry do
   gem 'pry'
