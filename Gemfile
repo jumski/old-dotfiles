@@ -7,6 +7,7 @@ gem 'map_by_method'
 gem 'what_methods'
 gem 'wirble'
 gem 'github'
+gem 'gist'
 
 group :pry do
   gem 'pry'
