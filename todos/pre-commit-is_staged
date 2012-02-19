@@ -1,0 +1,13 @@
+#!/bin/bash
+
+is_staged() {
+  git status --porcelain "$1" | grep "^M  $1" >/dev/null
+}
+
+if is_staged file1 && is_staged file2;
+then
+  exit 0
+else
+  echo "You must stage file1 and file2 simultanously"
+  exit 1
+fi
