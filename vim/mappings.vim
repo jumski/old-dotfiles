@@ -1,3 +1,8 @@
+
+" more useful leader
+let mapleader=","
+let g:mapleader = ","
+
 " experimental ESC mapping
 inoremap kj <esc>
 

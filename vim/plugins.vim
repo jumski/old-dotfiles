@@ -39,7 +39,7 @@ Bundle 'sjl/gundo.vim'
 "===============================
 
 " set leader for easy motion
-let g:EasyMotion_Leader_key = '<Leader><Leader>'
+let g:EasyMotion_Leader_key = ',,'
 
 " set commant-t window height
 let g:CommandTMaxHeight=10
