@@ -61,6 +61,9 @@ set lazyredraw
 " force syntax highlighting on files w/o extensions
 au BufNewFile,BufRead Rakefile,Capfile,Guardfile,Gemfile,pryrc setfiletype ruby
 
+" use ack as grep
+set grepprg=ack-grep\ -a
+
 " change behaviour of <TAB> completion of commands
 " to similar to bash completion
 set wildmenu
