@@ -51,8 +51,6 @@ nnoremap <leader>rb :BundleInstall<CR>
 nnoremap <C-J> gEa<CR><ESC>
 
 cmap w!! w !sudo tee >/dev/null %
-" touch current file (useful for triggering guard)
-" noremap <silent><leader>r :call system('touch ' . expand("%:p"))<cr>
 
 " Rails specific
 map <leader>gr :topleft :split config/routes.rb<cr>
