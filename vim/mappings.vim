@@ -58,6 +58,9 @@ map <leader>gg :topleft 100 :split Gemfile<cr>
 map <leader>gb :topleft 100 :split spec/support/blueprints.rb<cr>
 map <leader>gs :topleft 100 :split spec/spec_helper.rb<cr>
 
+" Convert to Ruby 1.9 hash syntax
+noremap <leader>9 :s/:\(\S\+\)\s\+=>\s\+/\1: /g<cr>
+
 " `a jumps to line and column marked ma
 " 'a jumps only to line marked ma
 " so we swap each other because ' have easy access
