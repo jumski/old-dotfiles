@@ -13,3 +13,5 @@ export PATH=$HOME/local/node/bin/:$DOTFILES_PATH/bin/:/home/jumski/various/bin/:
 ## LOAD RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
