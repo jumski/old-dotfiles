@@ -34,4 +34,15 @@ function get_color_hostname {
   esac
 }
 
-PROMPT_COMMAND='export PS1=" `get_color_hostname` $c_white`basename "$PWD"`$c_yellow [$(parse_git_branch)]`parse_rails_env` $c_red$ $c_reset"'
+function prompt_indicator {
+  if [ $LAST_EXIT_CODE = 0 ];
+  then
+    indicator_color=$c_green
+  else
+    indicator_color=$c_red
+  fi
+
+  echo "${indicator_color}$"
+}
+
+PROMPT_COMMAND='LAST_EXIT_CODE=$?;export PS1=" `get_color_hostname` $c_white`basename "$PWD"`$c_yellow [$(parse_git_branch)]`parse_rails_env` $c_red`prompt_indicator`$c_reset "'
