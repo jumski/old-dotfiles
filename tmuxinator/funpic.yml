@@ -1,0 +1,11 @@
+# ~/.tmuxinator/default.yml
+# you can make as many tabs as you wish...
+
+project_name: funpic
+project_root: ~/work/funpic
+tabs:
+  - bash: tail -f log/development.log
+  - console: rails console
+  - vim: vim
+  - bash: git wtf
+  - server: guard
