@@ -3,7 +3,7 @@
 
 project_name: name
 project_root: ~/work/
-rvm: 1.9.3-p0
+rvm: 1.9.3-p0-falcon
 tabs:
   - bash: tail -f log/development.log
   - console: rails console
