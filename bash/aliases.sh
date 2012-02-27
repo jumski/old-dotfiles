@@ -23,6 +23,7 @@ coltree(){
 
 ## CUSTOM ALIASES
 alias ack=ack-grep
+alias g=git
 
 alias jungletrain="mocp -l http://stream2.jungletrain.net:8000"
 alias bassdrive="mocp -l http://shouthostdirect13.streams.bassdrive.com:8202"
