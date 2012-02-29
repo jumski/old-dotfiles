@@ -1,0 +1,12 @@
+# ~/.tmuxinator/default.yml
+# you can make as many tabs as you wish...
+
+project_name: intranet
+project_root: ~/work/intranet
+rvm: ree
+tabs:
+  - server: script/server
+  - bash: git wtf
+  - vim: vim
+  - console: script/console
+  - bash: tail -f log/development.log
