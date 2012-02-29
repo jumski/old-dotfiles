@@ -5,8 +5,8 @@ project_name: dekoruje
 project_root: ~/work/dekoruje.com
 rvm: 1.9.3-p0-falcon
 tabs:
-  - bash: tail -f log/development.log
-  - console: rails console
-  - vim: vim
-  - bash: git wtf
   - guard: guard
+  - bash: git wtf
+  - vim: vim
+  - console: rails console
+  - bash: tail -f log/development.log

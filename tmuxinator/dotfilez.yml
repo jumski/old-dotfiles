@@ -5,5 +5,5 @@ project_name: dotfilez
 project_root: ~/dotfiles
 rvm: 1.9.3-p0-falcon
 tabs:
-  - vim: vim -p vim/ bash/
   - shell: git wtf
+  - vim: vim -p vim/ bash/

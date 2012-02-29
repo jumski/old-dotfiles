@@ -5,8 +5,8 @@ project_name: akra
 project_root: ~/work/akra_website
 rvm: 1.9.3-p0-falcon
 tabs:
-  - bash: tail -f log/development.log
-  - console: rails console
-  - vim: vim
-  - bash: git wtf
   - guard: guard
+  - bash: git wtf
+  - vim: vim
+  - console: rails console
+  - bash: tail -f log/development.log
