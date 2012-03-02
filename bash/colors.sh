@@ -52,6 +52,23 @@ function pwd_indicator {
   echo "${c_white}`basename "$PWD"`$c_reset "
 }
 
+source $DOTFILES_PATH/bash/battery_functions.sh
+battery_indicator() {
+  local percent=$(battery_percentage)
+  local state=$(battery_state)
+
+  if [ "$state" != "discharging" ];
+  then
+    return 0
+  fi
+
+  local battery_color=$c_red
+  [ "$percent" -gt "15" ] && local battery_color=$c_yellow
+  [ "$percent" -gt "30" ] && local battery_color=$c_green
+
+  echo "${battery_color}${percent}%${c_reset} "
+}
+
 function prompt_indicator {
   if [ $LAST_EXIT_CODE = 0 ];
   then
@@ -63,4 +80,4 @@ function prompt_indicator {
   echo "${indicator_color}\$${c_reset} "
 }
 
-PROMPT_COMMAND='LAST_EXIT_CODE=$?;export PS1=" $(hostname_indicator)$(pwd_indicator)$(git_indicator)$(rails_env_indicator)$(prompt_indicator)"'
+PROMPT_COMMAND='LAST_EXIT_CODE=$?;export PS1=" $(battery_indicator)$(hostname_indicator)$(pwd_indicator)$(git_indicator)$(rails_env_indicator)$(prompt_indicator)"'
