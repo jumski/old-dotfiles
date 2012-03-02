@@ -47,9 +47,23 @@ within-bundled-project()
     false
 }
 
+within-intranet-project()
+{
+    local dir="$(pwd)"
+    while [ "$(dirname $dir)" != "/" ]; do
+        [ `basename "$dir"` = "intranet" ] && return
+        dir="$(dirname $dir)"
+    done
+    false
+}
+not-within-intranet-project()
+{
+    ! within-intranet-project
+}
+
 run-with-bundler()
 {
-    if bundler-installed && within-bundled-project; then
+    if bundler-installed && within-bundled-project && not-within-intranet-project; then
         bundle exec $@
     else
         $@

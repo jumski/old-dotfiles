@@ -1,12 +1,12 @@
 # ~/.tmuxinator/default.yml
 # you can make as many tabs as you wish...
 
-project_name: name
-project_root: ~/work/
-rvm: 1.9.3-p0
+project_name: default
+project_root: ~/work/default
+rvm: ree
 tabs:
-  - bash: tail -f log/development.log
-  - console: rails console
-  - vim: vim
+  - server: script/server
   - bash: git wtf
-  - guard: guard
+  - vim: vim
+  - console: script/console
+  - bash: tail -f log/development.log
