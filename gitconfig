@@ -11,6 +11,8 @@
   c = checkout
   b = branch
   l = log
+  clfd = clean -fd
+  cap = !git commit && git push && cap deploy
   unstage = reset HEAD  # removes files from index
   uncommit = reset --soft HEAD^
   amend = commit --amend
