@@ -10,11 +10,17 @@ c_reset="\[\e[0m\]"
 function is_git_dirty {
   (git status | tail -n1 | grep -v "nothing to commit") 2> /dev/null >/dev/null
 }
-function is_git_repo {
-  (git status | grep -v "Not a git repository") 2>/dev/null >/dev/null
+function is_git_repo()
+{
+    local dir="$(pwd)"
+    while [ "$(dirname $dir)" != "/" ]; do
+        [ -d "$dir/.git" ] && return
+        dir="$(dirname $dir)"
+    done
+    false
 }
 function current_branch {
-  echo $(git status 2>/dev/null | head -1 | awk {'print $4'})
+  git branch | grep \* | awk {'print $2'}
 }
 function git_dirty_indicator {
   is_git_dirty && echo '*'
