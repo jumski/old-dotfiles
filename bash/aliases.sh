@@ -23,6 +23,8 @@ coltree(){
   tree -C "$@" | less -R
 }
 
+alias updatedb="sudo updatedb"
+
 ## CUSTOM ALIASES
 alias ack=ack-grep
 alias g=git

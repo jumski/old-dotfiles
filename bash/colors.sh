@@ -10,11 +10,17 @@ c_reset="\[\e[0m\]"
 function is_git_dirty {
   (git status | tail -n1 | grep -v "nothing to commit") 2> /dev/null >/dev/null
 }
-function is_git_repo {
-  (git status | grep -v "Not a git repository") 2>/dev/null >/dev/null
+function is_git_repo()
+{
+    local dir="$(pwd)"
+    while [ "$(dirname $dir)" != "/" ]; do
+        [ -d "$dir/.git" ] && return
+        dir="$(dirname $dir)"
+    done
+    false
 }
 function current_branch {
-  echo $(git status 2>/dev/null | head -1 | awk {'print $4'})
+  git branch | grep \* | awk {'print $2'}
 }
 function git_dirty_indicator {
   is_git_dirty && echo '*'
@@ -80,4 +86,9 @@ function prompt_indicator {
   echo "${indicator_color}\$${c_reset} "
 }
 
-PROMPT_COMMAND='LAST_EXIT_CODE=$?;export PS1=" $(battery_indicator)$(hostname_indicator)$(pwd_indicator)$(git_indicator)$(rails_env_indicator)$(prompt_indicator)"'
+if [ `hostname` = 'jumski-akra' ];
+then
+  PROMPT_COMMAND='LAST_EXIT_CODE=$?;export PS1=" $(hostname_indicator)$(pwd_indicator)$(git_indicator)$(rails_env_indicator)$(prompt_indicator)"'
+else
+  PROMPT_COMMAND='LAST_EXIT_CODE=$?;export PS1=" $(battery_indicator)$(hostname_indicator)$(pwd_indicator)$(git_indicator)$(rails_env_indicator)$(prompt_indicator)"'
+fi
