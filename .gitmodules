@@ -4,3 +4,6 @@
 [submodule "vendor/tmuxinator"]
 	path = vendor/tmuxinator
 	url = hub:aziz/tmuxinator
+[submodule "vendor/dotjs-ubuntu"]
+	path = vendor/dotjs-ubuntu
+	url = git://github.com/glenbot/dotjs-ubuntu.git
