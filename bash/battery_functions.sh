@@ -25,6 +25,8 @@ battery_percentage() {
   local full=$(battery_max)
   local state=$(battery_state)
 
+  [ "$state" = "" ] && return 0
+
   local percent_charged=`echo $(( $remaining * 100 / $full ))`
 
   # prevent a charge of more than 100% displaying
