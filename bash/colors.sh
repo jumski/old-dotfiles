@@ -60,15 +60,18 @@ function pwd_indicator {
 
 source $DOTFILES_PATH/bash/battery_functions.sh
 battery_indicator() {
-  local percent=$(battery_percentage)
-  local state=$(battery_state)
-
-  if [ "$state" != "discharging" ];
-  then
+  if [ !battery_present ]; then
     return 0
   fi
 
+  local state=$(battery_state)
+  if [ "$state" != "discharging" ]; then
+    return 0
+  fi
+
+  local percent=$(battery_percentage)
   local battery_color=$c_red
+
   [ "$percent" -gt "15" ] && local battery_color=$c_yellow
   [ "$percent" -gt "30" ] && local battery_color=$c_green
 

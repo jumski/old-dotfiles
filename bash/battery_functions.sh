@@ -5,6 +5,14 @@
 # and modified
 #
 
+battery_present() {
+  local battery=/proc/acpi/battery/BAT0
+  local is_present=$(grep "^present:" $battery/state | awk '{ print $2 }')
+
+  [ "$is_present" = "no" ] && return 1
+  return 0
+}
+
 battery_state() {
   local battery=/proc/acpi/battery/BAT0
   grep "^charging state" $battery/state | awk '{ print $3 }'
@@ -24,9 +32,6 @@ battery_percentage() {
   local remaining=$(battery_remaining)
   local full=$(battery_max)
   local state=$(battery_state)
-
-  [ "$state" = "" ] && return 0
-
   local percent_charged=`echo $(( $remaining * 100 / $full ))`
 
   # prevent a charge of more than 100% displaying
@@ -44,7 +49,7 @@ battery_state_indicator() {
 
   case "$state" in
     'charged')
-    local state_indicator="x"
+    local state_indicator="."
     ;;
     'charging')
     local state_indicator="+"
