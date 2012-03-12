@@ -48,7 +48,7 @@ nnoremap <leader>rt :tabnew ~/dotfiles/vim/plugins.vim<CR>
 nnoremap <leader>rb :BundleInstall<CR>
 
 " Split line(opposite to S-J joining line)
-nnoremap <C-J> gEa<CR><ESC>
+" nnoremap <C-J> gEa<CR><ESC>
 
 cmap w!! w !sudo tee >/dev/null %
 
