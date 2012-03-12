@@ -24,6 +24,7 @@ Bundle 'vim-scripts/file-line'
 Bundle 'ZoomWin'
 Bundle 'ecomba/vim-ruby-refactoring'
 Bundle 'sjl/gundo.vim'
+Bundle 'jumski/ultisnips'
 
 """"""""" DISABLED PLUGINS
 " Bundle 'php.vim'
