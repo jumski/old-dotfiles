@@ -91,7 +91,7 @@ function prompt_indicator {
 
 if [ `hostname` = 'jumski-akra' ];
 then
-  PROMPT_COMMAND='LAST_EXIT_CODE=$?;export PS1=" $(hostname_indicator)$(pwd_indicator)$(git_indicator)$(rails_env_indicator)$(prompt_indicator)"'
+  PROMPT_COMMAND='LAST_EXIT_CODE=$?;history -a;export PS1=" $(hostname_indicator)$(pwd_indicator)$(git_indicator)$(rails_env_indicator)$(prompt_indicator)"'
 else
-  PROMPT_COMMAND='LAST_EXIT_CODE=$?;export PS1=" $(battery_indicator)$(hostname_indicator)$(pwd_indicator)$(git_indicator)$(rails_env_indicator)$(prompt_indicator)"'
+  PROMPT_COMMAND='LAST_EXIT_CODE=$?;history -a;export PS1=" $(battery_indicator)$(hostname_indicator)$(pwd_indicator)$(git_indicator)$(rails_env_indicator)$(prompt_indicator)"'
 fi
