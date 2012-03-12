@@ -5,8 +5,8 @@ project_name: default
 project_root: ~/work/default
 rvm: ree
 tabs:
-  - server: script/server
-  - bash: git wtf
+  - server: rails server
+  - bash: 
   - vim: vim
-  - console: script/console
-  - bash: tail -f log/development.log
+  - console: rails console
+  - bash: 
