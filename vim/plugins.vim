@@ -55,3 +55,6 @@ autocmd User Rails Rnavcommand support spec/support/ -suffix=.rb
 
 " define Ruploaders
 autocmd User Rails Rnavcommand uploaders app/uploaders/ -suffix=.rb
+
+" define Roverrides
+autocmd User Rails Rnavcommand overrides app/overrides/ -suffix=.rb
