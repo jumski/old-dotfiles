@@ -7,3 +7,6 @@
 [submodule "vendor/dotjs-ubuntu"]
 	path = vendor/dotjs-ubuntu
 	url = git://github.com/glenbot/dotjs-ubuntu.git
+[submodule "vendor/fu"]
+	path = vendor/fu
+	url = git://github.com/samirahmed/fu.git
