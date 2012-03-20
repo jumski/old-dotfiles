@@ -1,0 +1,12 @@
+# ~/.tmuxinator/default.yml
+# you can make as many tabs as you wish...
+
+project_name: akrapl
+project_root: ~/work/akrapl
+rvm: 1.9.3-p0-falcon
+tabs:
+  - guard: guard
+  - bash: git wtf
+  - vim: vim
+  - console: rails console
+  - bash: tail -f log/development.log
