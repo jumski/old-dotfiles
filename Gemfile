@@ -8,6 +8,7 @@ gem 'what_methods'
 gem 'wirble'
 gem 'github'
 gem 'gist'
+gem 'vimdb'
 
 group :pry do
   gem 'pry'
