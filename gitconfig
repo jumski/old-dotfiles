@@ -17,6 +17,7 @@
   uncommit = reset --soft HEAD^
   amend = commit --amend
   cherry = cherry -v
+  remote = remote -v
   push = push origin development
 	wc = whatchanged
 	lp = log -p
