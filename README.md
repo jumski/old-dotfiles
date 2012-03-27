@@ -1,4 +1,10 @@
 
+## dotjs
+```bash
+@reboot /home/jumski/dotfiles/vendor/dotjs-ubuntu/bin/djsd -d
+```
+
+
 ## rubygems_cache
 
 ```bash
