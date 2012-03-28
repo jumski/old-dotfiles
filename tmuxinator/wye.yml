@@ -2,7 +2,7 @@
 # you can make as many tabs as you wish...
 
 project_name: wye
-project_root: ~/work/wye
+project_root: ~/work/what-you-eat
 rvm: 1.9.3-p0-falcon
 tabs:
   - guard: guard
