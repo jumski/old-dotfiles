@@ -8,3 +8,4 @@ tabs:
   - shell:
   - vim: vim -p vim/ bash/
   - shell: git wtf
+  - git-dude: cd ~/.git-dude && git-dude
