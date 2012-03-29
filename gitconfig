@@ -41,3 +41,6 @@
 	autocrlf = input
 [github]
 	user = jumski
+[dude]
+	interval = 30
+	icon = /home/jumski/dotfiles/vendor/icons/github-icon.png
