@@ -41,11 +41,11 @@ nnoremap <C-y> 3<C-y>
 
 " easy access/surce vimrc and other
 nnoremap <leader>rs :source ~/.vimrc<CR>
-nnoremap <leader>rt :tabnew ~/dotfiles/vim/plugins.vim<CR>
-  " \ :sp     ~/dotfiles/settings.vim<CR>
-  " \ :sp     ~/dotfiles/mappings.vim<CR>
-  " \ :vs     ~/dotfiles/macros.vim<CR><C-K><C-K>
-nnoremap <leader>rb :BundleInstall<CR>
+nnoremap <leader>rt :tabnew ~/dotfiles/vim/plugins.vim<cr>
+  " \ :sp     ~/dotfiles/settings.vim<cr>
+  " \ :sp     ~/dotfiles/mappings.vim<cr>
+  " \ :vs     ~/dotfiles/macros.vim<cr><c-k><c-k>
+nnoremap <leader>rb :bundleinstall<cr>
 
 " Split line(opposite to S-J joining line)
 " nnoremap <C-J> gEa<CR><ESC>
@@ -70,3 +70,6 @@ noremap ` '
 " Y yanks to the end of line
 map Y y$
 
+" keeps visual mode after indenting
+vmap > >gv
+vmap < <gv
