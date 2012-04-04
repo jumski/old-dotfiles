@@ -59,3 +59,6 @@ autocmd User Rails Rnavcommand uploaders app/uploaders/ -suffix=.rb
 
 " define Roverrides
 autocmd User Rails Rnavcommand overrides app/overrides/ -suffix=.rb
+
+" define Rfactories
+autocmd User Rails Rnavcommand factories spec/factories/ -suffix=.rb
