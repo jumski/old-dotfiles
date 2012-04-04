@@ -4,7 +4,7 @@
 
 [alias]
   ci = commit
-  cim = commit -m 
+  cim = commit -m
   s = status
   d = diff
   dc = diff --cached
@@ -16,8 +16,8 @@
   unstage = reset HEAD  # removes files from index
   uncommit = reset --soft HEAD^
   amend = commit --amend
-  cherry = cherry -v
-  remote = remote -v
+  chr = cherry -v
+  rmt = remote -v
   push = push origin development
 	wc = whatchanged
 	lp = log -p
