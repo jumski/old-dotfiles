@@ -1,1 +1,3 @@
 python-xmpp python-notify python-dns python-gtk2
+
+grc # generic colouriser for everything
