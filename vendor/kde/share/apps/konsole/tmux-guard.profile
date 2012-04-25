@@ -1,5 +1,5 @@
 [Appearance]
-AntiAliasFonts=false
+AntiAliasFonts=true
 BoldIntense=false
 ColorScheme=Solarized Dark
 Font=Monaco,12,-1,5,50,0,0,0,0,0
