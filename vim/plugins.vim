@@ -25,6 +25,8 @@ Bundle 'ZoomWin'
 Bundle 'ecomba/vim-ruby-refactoring'
 Bundle 'sjl/gundo.vim'
 Bundle 'jumski/ultisnips'
+Bundle 'duskhacker/sweet-rspec-vim'
+Bundle 'kien/ctrlp.vim'
 
 """"""""" DISABLED PLUGINS
 " Bundle 'php.vim'
@@ -38,6 +40,12 @@ Bundle 'jumski/ultisnips'
 "===============================
 "    plugin specific options
 "===============================
+
+" map <leader>xf :SweetVimRspecRunFile<CR>
+" map <leader>xs :SweetVimRspecRunFocused<CR>
+" map <leader>xp :SweetVimRspecRunPrevious<CR>
+
+map <leader>b :CtrlPBuffer<CR>
 
 " set leader for easy motion
 let g:EasyMotion_Leader_key = ',,'
