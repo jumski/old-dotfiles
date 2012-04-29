@@ -18,6 +18,8 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 alias mkdir='mkdir -p'
 
 alias g=git
+alias gs="git status"
+alias gd="git diff"
 
 coltree(){
   tree -C "$@" | less -R
