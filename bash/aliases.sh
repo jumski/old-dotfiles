@@ -142,3 +142,7 @@ alias hth=html2haml
 
 alias goprod="export RAILS_ENV=production; echo 'Rails.env set to production'"
 alias godev="export RAILS_ENV=development; echo 'Rails.env set to development'"
+
+precompile() {
+  rm -rf public/assets && rake assets:precompile RAILS_ENV=production && git add public/assets
+}
