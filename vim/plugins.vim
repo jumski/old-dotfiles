@@ -21,11 +21,11 @@ Bundle 'tpope/vim-unimpaired'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'vim-scripts/ack.vim'
 Bundle 'vim-scripts/file-line'
-Bundle 'ZoomWin'
+" Bundle 'ZoomWin'
 Bundle 'ecomba/vim-ruby-refactoring'
 Bundle 'sjl/gundo.vim'
-Bundle 'jumski/ultisnips'
-Bundle 'duskhacker/sweet-rspec-vim'
+" Bundle 'jumski/ultisnips'
+" Bundle 'duskhacker/sweet-rspec-vim'
 Bundle 'kien/ctrlp.vim'
 
 """"""""" DISABLED PLUGINS
@@ -56,17 +56,8 @@ let g:CommandTMaxHeight=10
 " require matchit manually
 runtime macros/matchit.vim
 
-" redefine Rjavascripts
 autocmd User Rails Rnavcommand javascripts app/assets/javascripts/ -suffix=.js,.js.erb,.js.coffee,.js.coffee.erb
-
-" define Rsupport
 autocmd User Rails Rnavcommand support spec/support/ -suffix=.rb
-
-" define Ruploaders
 autocmd User Rails Rnavcommand uploaders app/uploaders/ -suffix=.rb
-
-" define Roverrides
 autocmd User Rails Rnavcommand overrides app/overrides/ -suffix=.rb
-
-" define Rfactories
 autocmd User Rails Rnavcommand factories spec/factories/ -suffix=.rb
