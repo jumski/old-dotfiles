@@ -52,6 +52,9 @@ set t_Co=256
 " use dark background
 set background=dark
 
+" show 80 columns marker
+set colorcolumn=80
+
 " use solarized scheme
 colorscheme solarized
 
