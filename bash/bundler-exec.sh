@@ -9,6 +9,7 @@ guard
 haml
 heroku
 html2haml
+localeapp
 rackup
 rails
 rake
