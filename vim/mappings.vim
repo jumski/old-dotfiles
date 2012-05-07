@@ -52,6 +52,8 @@ nnoremap <leader>rb :bundleinstall<cr>
 
 cmap w!! w !sudo tee >/dev/null %
 
+cmap wqq wq
+
 " Rails specific
 map <leader>gr :topleft :split config/routes.rb<cr>
 map <leader>gg :topleft 100 :split Gemfile<cr>
