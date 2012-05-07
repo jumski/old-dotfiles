@@ -20,6 +20,9 @@ alias mkdir='mkdir -p'
 alias g=git
 alias gs="git status"
 alias gd="git diff"
+complete -o default -o nospace -F _git g
+complete -o default -o nospace -F _git_status gs
+complete -o default -o nospace -F _git_diff gd
 
 coltree(){
   tree -C "$@" | less -R
