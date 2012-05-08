@@ -1,0 +1,13 @@
+map j 10j
+map k 10k
+set disablesites=mail.google.com, reader.google.com
+set hintkeys=JLKHFSDAGWERUI
+set useletters=1
+
+unmap <C-f>
+unmap <C-u>
+unmap <C-d>
+
+map J gT
+map K gt
+map x <M-d>
