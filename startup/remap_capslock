@@ -1,0 +1,4 @@
+#!/bin/bash
+
+setxkbmap -option ctrl:nocaps
+setxkbmap -option altwin:ctrl_win
