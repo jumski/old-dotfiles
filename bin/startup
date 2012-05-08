@@ -1,3 +1,4 @@
 #!/bin/bash
 
 sh $HOME/dotfiles/startup/*
+xhotkeys
