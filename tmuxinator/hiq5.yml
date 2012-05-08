@@ -3,7 +3,7 @@
 
 project_name: hiq5
 project_root: ~/work/hiq5
-rvm: 1.9.3-p0-falcon
+rvm: 1.9.3-p194-falcon
 tabs:
   - server: rails server
   - bash: git wtf

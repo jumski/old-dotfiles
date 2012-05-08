@@ -3,7 +3,7 @@
 
 project_name: dekoruje
 project_root: ~/work/dekoruje.com
-rvm: 1.9.3-p0-falcon
+rvm: 1.9.3-p194-falcon
 tabs:
   - guard: guard
   - bash: git wtf

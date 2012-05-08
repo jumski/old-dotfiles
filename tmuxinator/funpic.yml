@@ -3,7 +3,7 @@
 
 project_name: funpic
 project_root: ~/work/funpic
-rvm: 1.9.3-p0-falcon
+rvm: 1.9.3-p194-falcon
 tabs:
   - server: guard
   - bash: git wtf
