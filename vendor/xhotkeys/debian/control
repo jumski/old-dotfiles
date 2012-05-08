@@ -1,0 +1,14 @@
+Source: xhotkeys
+Section: x11
+Priority: optional
+Maintainer: Arnau Sanchez <arnau@ehas.org>
+Build-Depends: debhelper (>= 4.0.0), imagemagick
+Standards-Version: 3.6.1
+
+Package: xhotkeys
+Architecture: all
+Depends: python (>= 2.3), python-gtk2, python-glade2, python-xlib
+Description: Bind keys and mouse events to commands in the X-Window
+ XhotKeys binds commands to hotkeys and mouse event in the X-Window
+ System (so it should work on all desktop interfaces). You can 
+ configure the hotkeys manually or with a little graphical GTK+ app.

@@ -1,0 +1,6 @@
+?package(xhotkeys):\
+	needs="X11"\
+	section="Apps/Tools"\
+	title="Xhotkeys"\
+	command="/usr/bin/xhotkeys"\
+	icon="/usr/share/pixmaps/xhotkeys.xpm"

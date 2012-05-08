@@ -1,0 +1,74 @@
+xhotkeys - Bind keys and mouse events to commands in the X-Window
+
+*** Author
+
+	Tokland <arnau@ehas.org>
+
+*** Motivation
+
+	Some desktop environments have their own hotkey launcher utilitity. 
+	This is nice, but also has a serious problem: if you change the 
+	environment, you have to reconfigure all the hotkeys (disgusting!). 
+	It's better to have a utility that do this task separately.
+
+*** How to install
+
+- Go to xhotkeys source directory and just:
+
+	make install
+	
+	...
+	
+	with Debian, better create the package:
+	
+		make dist-deb
+		dpkg -i ../xhotkeys_VERSION_all.deb
+
+You need the "imagemagick" package installed.	
+
+- Configure your X Desktop environment to run "xhotkeys" at startup. For 
+  example, with GNOME: 
+	 
+	 - System-> Preferences -> Sessions
+	 - StartUp Programs -> Add 
+	 - StartUp Command: xhotkeys (Order: 50)
+
+*** How to configure
+
+	Take a look at the manpage (man xhotkeys), but basically:
+
+	xhotkeys --config
+
+*** Specificacions
+
+	- Python 2.3 with PyXlib, PyGlade and PyGTK libraries 
+	- User configuration file in $HOME/.xhotkeys 
+	- Pidfile for each hotkey daemon: $HOME/.xhotkeys.pid-$USER 
+	- Daemon reloads configuration with SIGHUP signal
+
+*** Why Python?
+
+	Python is a multiplataform dynamic object-oriented language. It's easy 
+	to learn and *very* funny to use. With Python you spend your time 
+	programming instead of fighting with the language itself. Moreover, 
+	it has tons of modules and add-ons. Wrappers for the most popular C
+	libraries are often available. Take a look at http://www.python.org.
+
+*** Pluses
+
+	- Developed in Python: compact, easy to understand and modify.
+	- In addition to keys, it recognizes mouse events.
+	- Graphical GTK-configuration.
+	- Recognizes all (eight) modifiers, not only the typical Ctrt, Alt and Shift.
+	- Configuration files can be changed manually.
+
+*** Minuses:
+
+	Devoloped in Python :-). Scripting languages are big memory eaters (also
+	CPU, but not important for this kind of utilities), far more than compiled C 
+	applications. Although a C version of the daemon would be nice, it's 
+	not a urgent task for now.
+
+*** Contact
+
+	Feel free to contact me for whatever reason at <arnau@ehas.org>

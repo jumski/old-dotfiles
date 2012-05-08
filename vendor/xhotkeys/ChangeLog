@@ -1,0 +1,176 @@
+xhotkeys (0.9)
+
+* Modifier table (keysym to mask modifier) created at runtime
+
+-- Arnau Sanchez <arnau@ehas.org>  Sat,  1 Jul 2006 12:15:29 +0200
+
+xhotkeys (0.8.2)
+
+* Some corrections on Makefile (dist-deb rule) 
+
+-- Arnau Sanchez <arnau@ehas.org>  Fri, 30 Jun 2006 22:23:31 +0200
+
+xhotkeys (0.8.1)
+
+* Improved treeview behaviour
+
+-- Arnau Sanchez <arnau@ehas.org>  Wed, 28 Jun 2006 20:26:39 +0200
+
+xhotkeys (0.8)
+
+* Saved window (pos & size), and columns (size) state for next session
+
+-- Arnau Sanchez <arnau@ehas.org>  Mon, 26 Jun 2006 00:28:05 +0200
+
+xhotkeys (0.7)
+
+* Drag&drop desktop files to hotkey table (with locales support)
+
+-- Arnau Sanchez <arnau@ehas.org>  Fri, 23 Jun 2006 21:13:20 +0200
+
+xhotkeys (0.6-2)
+
+* Right-click on table with no-entry selected displays "add" popmenu 
+
+-- Arnau Sanchez <arnau@ehas.org>  Sat, 10 Jun 2006 08:57:39 +0200
+
+xhotkeys (0.6-1)
+
+* Man page correct 
+* GTK Configuration: reload configuration only when hotkey changed
+
+-- Arnau Sanchez <arnau@ehas.org>  Thu,  8 Jun 2006 01:28:02 +0200
+
+xhotkeys (0.6)
+
+* Status bar showing if daemon is running
+* Pops up a menu (edit/remove) on right-button
+
+-- Arnau Sanchez <arnau@ehas.org>  Wed,  7 Jun 2006 23:09:23 +0200
+
+xhotkeys (0.5-3)
+
+* From now mouse buttons are labeled Button1, not @Button1@ 
+
+-- Arnau Sanchez <arnau@ehas.org>  Wed,  7 Jun 2006 02:47:53 +0200
+
+xhotkeys (0.5-2)
+
+* Icon on GTK+ was lost, recovered
+* Corrected a bug when command has characters ":" or "="
+* Allowed all X buttons (normally from button1 to button5)
+
+-- Arnau Sanchez <arnau@ehas.org>  Tue,  6 Jun 2006 22:25:45 +0200
+
+xhotkeys (0.5-1)
+
+* Correction on reload daemon
+
+-- Arnau Sanchez <arnau@ehas.org>  Tue,  6 Jun 2006 13:41:15 +0200
+
+xhotkeys (0.5)
+
+* New feature: mouse buttons are accepted, use @ButtonX@ as key
+* Configurable pidfile
+* Some improvement in hotkey table visual aspect
+* Command execution use $SHELL environment variable 
+
+-- Arnau Sanchez <arnau@ehas.org>  Tue,  6 Jun 2006 00:02:17 +0200
+
+xhotkeys (0.4.1)
+
+* Del accelerator
+* Some correction on glade file
+* Single keys are allowed as hotkeys
+
+-- Arnau Sanchez <arnau@ehas.org>  Sun,  4 Jun 2006 20:53:03 +0200
+
+xhotkeys (0.4)
+
+* os.spawn uses "sh -c command", so shell variables are allowed
+
+-- Arnau Sanchez <arnau@ehas.org>  Fri,  2 Jun 2006 23:30:30 +0200
+
+xhotkeys (0.3-3)
+
+* Works with hotkeys using the same keycode (Closes #16707, thanks Jeff)
+
+-- Arnau Sanchez <arnau@ehas.org>  Wed, 31 May 2006 11:35:15 +0200
+
+xhotkeys (0.3-2)
+
+* Using os.spawn for command execution
+* It's not allowed to repeat names of hotkeys (which is confusing) 
+
+-- Arnau Sanchez <arnau@ehas.org>  Wed, 31 May 2006 08:53:00 +0200
+
+xhotkeys (0.3-1)
+
+* Reduce dependency to python2.3
+
+-- Arnau Sanchez <arnau@ehas.org>  Wed, 31 May 2006 00:55:56 +0200
+
+xhotkeys (0.3)
+
+* Don't display repeated modifiers, now <Shift><Shift> = <Shift>
+* Hotkey widget now gets focus on recording process
+* Added "test command" button on add window
+* Solved a bug when closing add window (just hide, not get destroyed)
+
+-- Arnau Sanchez <arnau@ehas.org>  Sun, 28 May 2006 23:53:35 +0200
+
+xhotkeys (0.2-3)
+
+* Added vertical/horizontal scroll at configuration table
+
+-- Arnau Sanchez <arnau@ehas.org>  Sun, 28 May 2006 21:10:58 +0200
+
+xhotkeys (0.2-2)
+
+* XPM on pixmaps and PNG on icons/hicolor
+* Menu file for debian
+
+-- Arnau Sanchez <arnau@ehas.org>  Sat, 27 May 2006 21:38:21 +0200
+
+xhotkeys (0.2-1)
+
+* Help on change hotkey
+* Press enter on modify window equal to press accept button
+
+-- Arnau Sanchez <arnau@ehas.org>  Fri, 26 May 2006 21:45:56 +0200
+
+xhotkeys (0.1-4)
+
+* Unknown keycodes are supported and written in configuration as @keycode@
+* Smart file-configuration modification.
+
+-- Arnau Sanchez <arnau@ehas.org>  Wed, 24 May 2006 23:11:17 +0200
+
+xhotkeys (0.1-3)
+
+* Instead of "pressed" signals for buttons, use "clicked"
+* Always show key from "XK_" tables not from string
+* Added icon
+* Desktop launcher (xhotkeys.dekstop) in Accesories section
+
+-- Arnau Sanchez <arnau@ehas.org>  Tue, 23 May 2006 22:08:38 +0200
+
+xhotkeys (0.1-2)
+
+* Works with hotkeys containing <Return>
+* Run-command allows parameters
+* Added Manpage 
+
+-- Arnau Sanchez <arnau@ehas.org>  Sun, 21 May 2006 09:02:18 +0200
+
+xhotkeys (0.1-1)
+
+* First release
+* Python 2.4, PyGTK2 and PyXLib needed
+* Server mode
+* Configuration mode (--config)
+* 3 verbose levels: error, info, debug
+* Pidfile at user's home dir
+* Signal communication
+
+-- Arnau Sanchez <arnau@ehas.org>  Sat, 20 May 2006 22:17:21 +0200

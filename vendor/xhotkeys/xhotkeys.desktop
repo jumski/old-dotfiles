@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Name=Key bindings
+Name[es]=Combinaciones de teclas
+Type=Application
+Exec=xhotkeys --config
+Icon=xhotkeys.png
+Terminal=false
+Categories=Application;Utility;
+StartupNotify=true

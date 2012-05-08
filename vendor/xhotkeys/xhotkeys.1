@@ -1,0 +1,101 @@
+.\" '\" t
+.\" ** The above line should force tbl to be used as a preprocessor **
+.\" 
+.\" Man page for xhotkeys
+.\" 
+.\" For license terms, see the file COPYING in this directory.
+.TH "xhotkeys" "1" "" "Arnau Sanchez" "X11"
+.SH "NAME"
+xhotkeys \- Bind keys and mouse events to commands in the X-Window
+.SH "SYNOPSIS"
+\fBxhotkeys\fR [\fIoptions\fR]
+.SH "DESCRIPTION"
+The purpose of \fIxhotkeys\fR is to provide a simple and easy configurable 
+hotkey launcher for the X-Window System, independent from the desktop 
+(Gnome, KDE, Xfce, ...) used.
+.PP
+Although \fIxhotkeys\fR has a graphical GTK+ configurator, it's possible to 
+manage configuration files manually.
+.SH "CONFIGURATION"
+The \fIxhotkeys\fR daemon should be run after X user logs in. All desktop 
+interfaces provide (or should provide) a way to do this automatically (for example, 
+Gnome has the Startup Programs at Sessions). Take a look on the 
+documentation.
+.SH "OPTIONS"
+.TP
+.B \\-h | \\-\\-help
+Displays the help message and exit
+.TP
+
+.B \\-v | \\-\\-verbose
+Increase the level of verbosity (0: error, 1: info, 2: debug)
+.TP
+
+.B \\-c | \\-\\-config
+Start GTK+ configurator
+.TP
+
+.B \\-f | \\-\\-configuration\\-file \fI configuration_file\fR
+Alternative configuration file
+
+.SH "CONFIGURATION FILE"
+By default, \fI$HOME/.xhotkeys\fR would be used. Any line beggining with \fI#\fR is ignored. 
+Hotkeys are defined that way:
+
+.nf 
+name=[<modifier1>][<modifier2>][<modifierN>]key:command
+.fi 
+
+Hotkey names cannot use \fI=\fR character. 
+
+Available modifiers are: \fIshift\fR, \fIcontrol\fR, \fIalt\fR, \fIwinkey\fR, \fIaltgr\fR, 
+\fIlock\fR, \fImod2\fR and \fImod3\fR. Available keys are all the strings defined 
+in \fImiscellany\fR and \fIlatin1\fR Xlib source files. Both modifiers and
+keys are case-insensitive. Moreover, you can define some special \fIkey\fR values: 
+
+.nf 
+\fI@DIGIT@\fR meaning keycode = DIGIT (use for keys without X-name)
+.PP
+\fIButtonX\fR meaning a mouse button (where X=1..5) 
+.fi 
+.PP 
+
+.B Examples:
+
+.nf 
+  Calculator=<control><alt>F1:xcalc
+  Eyes=<control><winkey>Button3:xeyes
+  Window's Info=<alt><shift>@103@:xwininfo
+.fi 
+
+.SH "FILES"
+.TP 5
+~/.xhotkeys
+Default configuration for current user
+.TP 5
+~/.xhotkeys.settings-$USER
+Last window's setting used on GTK+ configurator
+.TP 5
+~/.xhotkeys.pid-$USER
+Pidfile for running daemon
+.TP 5
+/usr/lib/python\-VERSION/site\-packages/Xlib/keysymdef/latin1.py
+String definitions for latin1 keycodes.
+.TP 5
+/usr/lib/python\-VERSION/site\-packages/Xlib/keysymdef/miscellany.py
+String definitions for control keycodes.
+
+.SH "ENVIRONMENT"
+\fIUSER\fR and \fIHOME\fR are used to get username and user's home path.
+
+.SH "SIGNALS"
+\fISIGHUP\fR makes the hotkey daemon to reload the configuration file and continue 
+running. 
+.PP 
+.SH "AUTHOR"
+Arnau Sanchez <arnau@ehas.org>. 
+.PP
+Some ideas were taken from \fIkeylaunch\fR (Ken Lynch and Stefan Pfetzing). Without their 
+code this utility would have been painful to program.
+.SH "SEE ALSO"
+keylaunch(1), xbindkeys(1), xev(1), xmodmap(1)

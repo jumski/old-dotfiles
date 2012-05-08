@@ -1,0 +1,18 @@
+#!/bin/bash
+# getdclick: simulate double-click and print selected word
+
+# Time to wait between clicks (test what works for you)
+DCLICK_WAIT=0.1
+
+# Before send a double-click, simulate a Release event for all buttons
+xte "mouseup 1" "mouseup 2" "mouseup 3" "mouseup 4" "mouseup 5"
+
+# Now we can simulate double click
+xte "mouseclick 1" "sleep $DCLICK_WAIT" "mouseclick 1"
+
+# Get selection first word from primary X clipbloard
+SELECTION=$(xsel -p | awk '{print $1}')
+
+# Print selection
+echo $SELECTION
+exit 0
