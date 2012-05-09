@@ -10,5 +10,5 @@ tabs:
   - vim: vim
   - console: rails console
   - bash: tail -f log/development.log
-  - gem_home: cd $GEM_HOME/gems; ls
+  - gem_home: cd `rvm gemdir`; ls
 
