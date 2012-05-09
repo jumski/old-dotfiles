@@ -45,7 +45,7 @@ nnoremap <leader>rt :tabnew ~/dotfiles/vim/plugins.vim<cr>
   " \ :sp     ~/dotfiles/settings.vim<cr>
   " \ :sp     ~/dotfiles/mappings.vim<cr>
   " \ :vs     ~/dotfiles/macros.vim<cr><c-k><c-k>
-nnoremap <leader>rb :bundleinstall<cr>
+nnoremap <leader>rb :BundleInstall<cr>
 
 " Split line(opposite to S-J joining line)
 " nnoremap <C-J> gEa<CR><ESC>
@@ -75,3 +75,11 @@ map Y y$
 " keeps visual mode after indenting
 vmap > >gv
 vmap < <gv
+
+
+" plugin specific mappings
+nnoremap <leader>a :RunRubyFocusedTest<CR>
+nnoremap <leader>q :RunRubyFocusedContext<CR>
+nnoremap <leader>t :RunAllRubyTests<CR>
+nnoremap <leader>Q :CloseVimTmuxRunner<CR>
+nnoremap <leader>b :CtrlPBuffer<CR>

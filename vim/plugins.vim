@@ -27,6 +27,8 @@ Bundle 'sjl/gundo.vim'
 " Bundle 'jumski/ultisnips'
 " Bundle 'duskhacker/sweet-rspec-vim'
 Bundle 'kien/ctrlp.vim'
+Bundle 'benmilli/vimux'
+Bundle 'pgr0ss/vimux-ruby-test'
 
 """"""""" DISABLED PLUGINS
 " Bundle 'php.vim'
@@ -40,12 +42,7 @@ Bundle 'kien/ctrlp.vim'
 "===============================
 "    plugin specific options
 "===============================
-
-" map <leader>xf :SweetVimRspecRunFile<CR>
-" map <leader>xs :SweetVimRspecRunFocused<CR>
-" map <leader>xp :SweetVimRspecRunPrevious<CR>
-
-map <leader>b :CtrlPBuffer<CR>
+let VimuxHeight = "30"
 
 " set leader for easy motion
 let g:EasyMotion_Leader_key = ',,'
