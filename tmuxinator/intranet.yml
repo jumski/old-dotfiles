@@ -6,7 +6,7 @@ project_root: ~/work/intranet
 rvm: ree
 tabs:
   - server: script/server
-  - bash: git wtf
+  - bash:
   - vim: vim
   - console: script/console
   - wsmock:
