@@ -41,7 +41,8 @@ source $DOTFILES_PATH/vendor/tmuxinator/bin/tmuxinator_completion
 bind "set completion-ignore-case on"
 bind "set show-all-if-ambiguous On" # this allows you to automatically show completion without double tab-ing
 
-. $HOME/startup/*
+# startup terminal things
+$HOME/startup/*
 
 # add identity if not set
 if ! ssh-add -l 1>/dev/null;
