@@ -24,6 +24,10 @@ ln -s --force "$DOTFILES_PATH/vendor/kde/share/apps/konsole/solarized_dark.color
 ln -s --force "$DOTFILES_PATH/vendor/kde/share/apps/konsole/tmux-main.profile" "$HOME/.kde/share/apps/konsole/tmux-main.profile"
 ln -s --force "$DOTFILES_PATH/vendor/kde/share/apps/konsole/tmux-guard.profile" "$HOME/.kde/share/apps/konsole/tmux-guard.profile"
 
+if [ -d ~/.config/openbox ]; then
+  ln -s --force $DOTFILES_PATH/conf/openbox/lubuntu-rc.xml $HOME/.config/openbox/
+fi
+
 mkdir -p $HOME/.vim-tmp
 
 echo 'Load bashrc'
