@@ -179,77 +179,77 @@
   <keyboard>
     <chainQuitKey>C-g</chainQuitKey>
     <!-- Keybindings for desktop switching -->
-    <keybind key="C-A-Left">
-      <action name="GoToDesktop">
-        <to>left</to>
-        <wrap>no</wrap>
-      </action>
-    </keybind>
-    <keybind key="C-A-Right">
-      <action name="GoToDesktop">
-        <to>right</to>
-        <wrap>no</wrap>
-      </action>
-    </keybind>
-    <keybind key="C-A-Up">
-      <action name="GoToDesktop">
-        <to>up</to>
-        <wrap>no</wrap>
-      </action>
-    </keybind>
-    <keybind key="C-A-Down">
-      <action name="GoToDesktop">
-        <to>down</to>
-        <wrap>no</wrap>
-      </action>
-    </keybind>
-    <keybind key="S-A-Left">
-      <action name="SendToDesktop">
-        <to>left</to>
-        <wrap>no</wrap>
-      </action>
-    </keybind>
-    <keybind key="S-A-Right">
-      <action name="SendToDesktop">
-        <to>right</to>
-        <wrap>no</wrap>
-      </action>
-    </keybind>
-    <keybind key="S-A-Up">
-      <action name="SendToDesktop">
-        <to>up</to>
-        <wrap>no</wrap>
-      </action>
-    </keybind>
-    <keybind key="S-A-Down">
-      <action name="SendToDesktop">
-        <to>down</to>
-        <wrap>no</wrap>
-      </action>
-    </keybind>
-    <keybind key="W-F1">
-      <action name="GoToDesktop">
-        <to>1</to>
-      </action>
-    </keybind>
-    <keybind key="W-F2">
-      <action name="GoToDesktop">
-        <to>2</to>
-      </action>
-    </keybind>
-    <keybind key="W-F3">
-      <action name="GoToDesktop">
-        <to>3</to>
-      </action>
-    </keybind>
-    <keybind key="W-F4">
-      <action name="GoToDesktop">
-        <to>4</to>
-      </action>
-    </keybind>
-    <keybind key="W-d">
-      <action name="ToggleShowDesktop"/>
-    </keybind>
+    <!-- <keybind key="C-A-Left"> -->
+    <!--   <action name="GoToDesktop"> -->
+    <!--     <to>left</to> -->
+    <!--     <wrap>no</wrap> -->
+    <!--   </action> -->
+    <!-- </keybind> -->
+    <!-- <keybind key="C-A-Right"> -->
+    <!--   <action name="GoToDesktop"> -->
+    <!--     <to>right</to> -->
+    <!--     <wrap>no</wrap> -->
+    <!--   </action> -->
+    <!-- </keybind> -->
+    <!-- <keybind key="C-A-Up"> -->
+    <!--   <action name="GoToDesktop"> -->
+    <!--     <to>up</to> -->
+    <!--     <wrap>no</wrap> -->
+    <!--   </action> -->
+    <!-- </keybind> -->
+    <!-- <keybind key="C-A-Down"> -->
+    <!--   <action name="GoToDesktop"> -->
+    <!--     <to>down</to> -->
+    <!--     <wrap>no</wrap> -->
+    <!--   </action> -->
+    <!-- </keybind> -->
+    <!-- <keybind key="S-A-Left"> -->
+    <!--   <action name="SendToDesktop"> -->
+    <!--     <to>left</to> -->
+    <!--     <wrap>no</wrap> -->
+    <!--   </action> -->
+    <!-- </keybind> -->
+    <!-- <keybind key="S-A-Right"> -->
+    <!--   <action name="SendToDesktop"> -->
+    <!--     <to>right</to> -->
+    <!--     <wrap>no</wrap> -->
+    <!--   </action> -->
+    <!-- </keybind> -->
+    <!-- <keybind key="S-A-Up"> -->
+    <!--   <action name="SendToDesktop"> -->
+    <!--     <to>up</to> -->
+    <!--     <wrap>no</wrap> -->
+    <!--   </action> -->
+    <!-- </keybind> -->
+    <!-- <keybind key="S-A-Down"> -->
+    <!--   <action name="SendToDesktop"> -->
+    <!--     <to>down</to> -->
+    <!--     <wrap>no</wrap> -->
+    <!--   </action> -->
+    <!-- </keybind> -->
+    <!-- <keybind key="W-F1"> -->
+    <!--   <action name="GoToDesktop"> -->
+    <!--     <to>1</to> -->
+    <!--   </action> -->
+    <!-- </keybind> -->
+    <!-- <keybind key="W-F2"> -->
+    <!--   <action name="GoToDesktop"> -->
+    <!--     <to>2</to> -->
+    <!--   </action> -->
+    <!-- </keybind> -->
+    <!-- <keybind key="W-F3"> -->
+    <!--   <action name="GoToDesktop"> -->
+    <!--     <to>3</to> -->
+    <!--   </action> -->
+    <!-- </keybind> -->
+    <!-- <keybind key="W-F4"> -->
+    <!--   <action name="GoToDesktop"> -->
+    <!--     <to>4</to> -->
+    <!--   </action> -->
+    <!-- </keybind> -->
+    <!-- <keybind key="W-d"> -->
+    <!--   <action name="ToggleShowDesktop"/> -->
+    <!-- </keybind> -->
     <!-- Keybindings for windows -->
     <keybind key="A-F4">
       <action name="Close"/>
@@ -451,6 +451,12 @@
     <keybind key="XF86PowerOff">
       <action name="Execute">
         <command>lubuntu-logout</command>
+      </action>
+    </keybind>
+    <!-- focus tmux-main -->
+    <keybind key="A-semicolon">
+      <action name="Execute">
+        <command>wmctrl -a 'tmux-main'; wmctrl -a 'tmux-main'</command>
       </action>
     </keybind>
   </keyboard>
@@ -843,7 +849,7 @@
   # order that they appear in this list
 
 
-    # each rule element can be left out or set to 'default' to specify to not 
+    # each rule element can be left out or set to 'default' to specify to not
     # change that attribute of the window
 
     <decor>yes</decor>
