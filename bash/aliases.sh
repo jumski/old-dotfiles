@@ -48,7 +48,9 @@ alias pg_stop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
 alias compile_tags="ctags -R --exclude=.git --exclude=log * $GEM_HOME/gems/*"
 alias realias="source $DOTFILES_PATH/bash/aliases.sh && echo 'reloaded .bash/aliases.sh'"
 
-alias s="apt-cache search "
+function s {
+  apt-cache search "$@" | sort | less
+}
 alias i="sudo apt-get install "
 
 alias fav="~/various/fav"
