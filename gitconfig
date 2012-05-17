@@ -11,6 +11,7 @@
   c = checkout
   b = branch
   l = log
+  yesterday = log --pretty=format:\"%Cgreen%h%Creset %Cblue%ad%Creset %s%C(yellow)%d%Creset %Cblue[%an]%Creset\" --graph --date=short --after=yesterday --author=Wojtek
   clfd = clean -fd
   cap = !git commit && git push && cap deploy
   unstage = reset HEAD  # removes files from index
