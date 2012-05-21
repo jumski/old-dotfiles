@@ -459,6 +459,11 @@
         <command>wmctrl -a 'tmux-main'; wmctrl -a 'tmux-main'</command>
       </action>
     </keybind>
+    <!-- <keybind key="A-semicolon"> -->
+    <!--   <action name="Execute"> -->
+    <!--     <command>wmctrl -a 'tmux-main'; wmctrl -a 'tmux-main'</command> -->
+    <!--   </action> -->
+    <!-- </keybind> -->
   </keyboard>
   <mouse>
     <dragThreshold>8</dragThreshold>

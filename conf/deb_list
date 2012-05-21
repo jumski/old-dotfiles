@@ -1,1 +1,2 @@
 python-xmpp python-notify python-dns python-gtk2 grc 
+python-pip python-dev build-essential
