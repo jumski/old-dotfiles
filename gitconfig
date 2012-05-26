@@ -26,6 +26,7 @@
   dstat = diff --stat
 	wtf = !git-wtf
   conflicts = !git ls-files -u | cut -f 2 | sort -u
+  stats = !git-stats
 [giggle]
 	main-window-maximized = true
 	main-window-geometry = 0x0+0+0
