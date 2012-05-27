@@ -9,6 +9,7 @@ gem 'wirble'
 gem 'github'
 gem 'gist'
 gem 'vimdb'
+gem 'google'
 
 group :pry do
   gem 'pry'
