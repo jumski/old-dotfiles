@@ -42,6 +42,7 @@
 
 [core]
 	autocrlf = input
+	whitespace = cr-at-eol
 [github]
 	user = jumski
 [dude]
