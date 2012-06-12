@@ -19,10 +19,10 @@
   amend = commit --amend
   chr = cherry -v
   rmt = remote -v
-  push = push origin development
 	wc = whatchanged
 	lp = log -p
   hist = log --pretty=format:\"%Cgreen%h%Creset %Cblue%ad%Creset %s%C(yellow)%d%Creset %Cblue[%an]%Creset\" --graph --date=short
+  h = log --pretty=format:\"%Cgreen%h%Creset %Cblue%ad%Creset %s%C(yellow)%d%Creset %Cblue[%an]%Creset\" --graph --date=short
   dstat = diff --stat
 	wtf = !git-wtf
   conflicts = !git ls-files -u | cut -f 2 | sort -u

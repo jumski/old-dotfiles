@@ -62,7 +62,7 @@ colorscheme solarized
 set lazyredraw
 
 " force syntax highlighting on files w/o extensions
-au BufNewFile,BufRead Rakefile,Capfile,Guardfile,Gemfile,pryrc setfiletype ruby
+au BufNewFile,BufRead Rakefile,Capfile,Guardfile,Gemfile,pryrc,*.god setfiletype ruby
 
 " use ack as grep
 set grepprg=ack-grep\ -a

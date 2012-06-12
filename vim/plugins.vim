@@ -27,7 +27,7 @@ Bundle 'sjl/gundo.vim'
 " Bundle 'jumski/ultisnips'
 " Bundle 'duskhacker/sweet-rspec-vim'
 Bundle 'kien/ctrlp.vim'
-Bundle 'benmilli/vimux'
+Bundle 'vim-scripts/vimux'
 Bundle 'pgr0ss/vimux-ruby-test'
 
 """"""""" DISABLED PLUGINS
