@@ -25,6 +25,36 @@ set nonu
 " always show status line
 set laststatus=2
 
+" make the command mode less annyoing
+cnoremap <c-a> <Home>
+cnoremap <c-e> <End>
+cnoremap <c-p> <Up>
+cnoremap <c-n> <Down>
+cnoremap <c-b> <Left>
+cnoremap <c-f> <Right>
+cnoremap <c-d> <Del>
+cnoremap <c-k> <C-\>estrpart(getcmdline(), 0, getcmdpos()-1)<cr>>
+
+" " status line --------------------------------------------------------------
+" set statusline=
+" " file name
+" set statusline+=%f\ %2*%m\ %1*%h
+" " generic warning message
+" set statusline+=%#warningmsg#
+" " Syntastic status
+" set statusline+=%{SyntasticStatuslineFlag()}
+"
+" " FuGITive status
+" set statusline+=%{fugitive#statusline()}
+" " span
+" "
+" set statusline+=%*
+" " [ encoding CR-type filetype]
+" set statusline+=%r%=[%{&encoding}\ %{&fileformat}\ %{strlen(&ft)?&ft:'none'}]
+"
+" " current column line and total number of lines
+" set statusline+=\ %12.(%c:%l/%L%)
+
 " automatically read file if it changes
 " this does not happen if file is deleted
 set autoread

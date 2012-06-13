@@ -29,6 +29,7 @@ Bundle 'sjl/gundo.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'vim-scripts/vimux'
 Bundle 'pgr0ss/vimux-ruby-test'
+Bundle 'jayferd/eco.vim'
 
 """"""""" DISABLED PLUGINS
 " Bundle 'php.vim'
@@ -54,6 +55,7 @@ let g:CommandTMaxHeight=10
 runtime macros/matchit.vim
 
 autocmd User Rails Rnavcommand javascripts app/assets/javascripts/ -suffix=.js,.js.erb,.js.coffee,.js.coffee.erb
+autocmd User Rails Rnavcommand templates app/assets/templates/ -suffix=.jst,.jst.eco,.eco
 autocmd User Rails Rnavcommand support spec/support/ -suffix=.rb
 autocmd User Rails Rnavcommand uploaders app/uploaders/ -suffix=.rb
 autocmd User Rails Rnavcommand overrides app/overrides/ -suffix=.rb

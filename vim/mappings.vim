@@ -55,10 +55,10 @@ cmap w!! w !sudo tee >/dev/null %
 cmap wqq wq
 
 " Rails specific
-map <leader>gr :topleft :split config/routes.rb<cr>
-map <leader>gg :topleft 100 :split Gemfile<cr>
-map <leader>gb :topleft 100 :split spec/support/blueprints.rb<cr>
-map <leader>gs :topleft 100 :split spec/spec_helper.rb<cr>
+map <leader>gr :topleft :tabnew config/routes.rb<cr>
+map <leader>gg :topleft 100 :tabnew Gemfile<cr>
+map <leader>gb :topleft 100 :tabnew spec/support/blueprints.rb<cr>
+map <leader>gs :topleft 100 :tabnew spec/spec_helper.rb<cr>
 
 " Convert to Ruby 1.9 hash syntax
 noremap <leader>9 :s/:\(\S\+\)\s\+=>\s\+/\1: /g<cr>
