@@ -25,6 +25,16 @@ set nonu
 " always show status line
 set laststatus=2
 
+" make the command mode less annyoing
+cnoremap <c-a> <Home>
+cnoremap <c-e> <End>
+cnoremap <c-p> <Up>
+cnoremap <c-n> <Down>
+cnoremap <c-b> <Left>
+cnoremap <c-f> <Right>
+cnoremap <c-d> <Del>
+cnoremap <c-k> <C-\>estrpart(getcmdline(), 0, getcmdpos()-1)<cr>>
+
 " " status line --------------------------------------------------------------
 " set statusline=
 " " file name
