@@ -5,7 +5,11 @@ project_name: antykwariusz
 project_root: ~/work/antykwariusz
 rvm: default
 tabs:
-  - guard: guard -d default
+  - stuff:
+    layout: even-horizontal
+    panes:
+      - rails server
+      - spork
   - bash:
   - vim: vim
   - console: rails console
