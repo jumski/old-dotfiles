@@ -1,4 +1,4 @@
 #!/bin/bash
 
-$HOME/dotfiles/startup/*
-# xhotkeys
+$HOME/dotfiles/startup/set_keyboard_repeat
+$HOME/dotfiles/startup/remap_capslock
