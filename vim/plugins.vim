@@ -60,3 +60,4 @@ autocmd User Rails Rnavcommand support spec/support/ -suffix=.rb
 autocmd User Rails Rnavcommand uploaders app/uploaders/ -suffix=.rb
 autocmd User Rails Rnavcommand overrides app/overrides/ -suffix=.rb
 autocmd User Rails Rnavcommand factories spec/factories/ -suffix=.rb
+autocmd User Rails Rnavcommand admin app/admin/ -suffix=.rb
