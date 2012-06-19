@@ -70,6 +70,15 @@ function killflash {
 function mkcd {
   mkdir $1 && cd $1
 }
+function .. {
+  cd ..
+}
+function ... {
+  cd ../..
+}
+function - {
+  cd -
+}
 
 function list-colors {
   for i in {0..255} ; do
