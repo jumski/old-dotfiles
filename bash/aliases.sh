@@ -33,6 +33,7 @@ alias updatedb="sudo updatedb"
 ## CUSTOM ALIASES
 alias ack=ack-grep
 alias g=git
+alias tf="tail -100f"
 
 alias jungletrain="mocp -l http://stream2.jungletrain.net:8000"
 alias bassdrive="mocp -l http://shouthostdirect13.streams.bassdrive.com:8202"
