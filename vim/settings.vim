@@ -93,6 +93,7 @@ set lazyredraw
 
 " force syntax highlighting on files w/o extensions
 au BufNewFile,BufRead Rakefile,Capfile,Guardfile,Gemfile,pryrc,*.god setfiletype ruby
+autocmd BufNewFile,BufRead *.json set ft=javascript
 
 " use ack as grep
 set grepprg=ack-grep\ -a
