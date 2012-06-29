@@ -2,6 +2,7 @@
 - vim gi
 - vim C-t/C-d
 - vim ==
+- vim :options
 - bash fc
 - bash vi mode
 - bash vi mode alternative prompt http://stackoverflow.com/questions/1039713/different-bash-prompt-for-different-vi-editing-mode
