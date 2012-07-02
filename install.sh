@@ -29,6 +29,11 @@ if [ -d $HOME/.config/openbox ]; then
   ln -s --force $DOTFILES_PATH/conf/openbox/lubuntu-rc.xml $HOME/.config/openbox/
 fi
 
+if ! test -d ~/.vim/bundle/vundle; then
+  git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+  vim -se -c BundleInstall -c qa
+fi
+
 mkdir -p $HOME/.vim-tmp
 
 echo 'Load bashrc'
