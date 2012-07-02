@@ -6,6 +6,7 @@ Bundle 'kana/vim-fakeclip'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'lastpos.vim'
 Bundle 'Lokaltog/vim-easymotion'
+Bundle 'Lokaltog/vim-powerline'
 Bundle 'matchit.zip'
 Bundle 'michaeljsmith/vim-indent-object'
 Bundle 'repeat.vim'
@@ -60,3 +61,4 @@ autocmd User Rails Rnavcommand support spec/support/ -suffix=.rb
 autocmd User Rails Rnavcommand uploaders app/uploaders/ -suffix=.rb
 autocmd User Rails Rnavcommand overrides app/overrides/ -suffix=.rb
 autocmd User Rails Rnavcommand factories spec/factories/ -suffix=.rb
+autocmd User Rails Rnavcommand admin app/admin/ -suffix=.rb

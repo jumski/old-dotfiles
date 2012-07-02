@@ -1,0 +1,4 @@
+#!/bin/bash
+
+ssh -MNf kimsufi
+ssh -MNf root@wye
