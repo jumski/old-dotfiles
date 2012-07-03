@@ -3,7 +3,7 @@
 - vim C-t/C-d
 - vim ==
 - vim :options
-- vim powerline https://github.com/Lokaltog/vim-powerline
+- vim conque http://www.vim.org/scripts/script.php?script_id=2771
 - bash fc
 - bash vi mode
 - bash vi mode alternative prompt http://stackoverflow.com/questions/1039713/different-bash-prompt-for-different-vi-editing-mode
