@@ -28,6 +28,10 @@
   conflicts = !git ls-files -u | cut -f 2 | sort -u
   stats = !git-stats
   rank = !git-rank-contributors
+
+  ribbon = tag --force _ribbon origin/master
+  catchup = log --patch --reverse --topo-order _ribbon..origin/master
+
 [giggle]
 	main-window-maximized = true
 	main-window-geometry = 0x0+0+0
