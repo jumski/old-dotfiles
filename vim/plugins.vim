@@ -50,8 +50,15 @@ Bundle 'jayferd/eco.vim'
 let VimuxHeight = "30"
 
 " mappings for ctrlp
-let g:ctrlp_map = '<C-c>'
-let g:ctrlp_cmd = 'CtrlPBuffer'
+" let g:ctrlp_map = '<leader>z'
+let g:ctrlp_map = '<leader>v'
+let g:ctrlp_cmd = 'CtrlPMRU'
+" let g:ctrlp_custom_ignore = {
+"   \ 'dir':  '\.git$\|\.hg$\|\.svn$',
+"   \ 'file': '\.exe$\|\.so$\|\.dll$',
+"   \ }
+let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
+" \ 'link': 'some_bad_symbolic_links',
 
 " set leader for easy motion
 let g:EasyMotion_Leader_key = ',,'
