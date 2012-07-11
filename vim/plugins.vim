@@ -47,6 +47,10 @@ Bundle 'jayferd/eco.vim'
 "===============================
 let VimuxHeight = "30"
 
+" mappings for ctrlp
+let g:ctrlp_map = '<C-c>'
+let g:ctrlp_cmd = 'CtrlPBuffer'
+
 " set leader for easy motion
 let g:EasyMotion_Leader_key = ',,'
 
