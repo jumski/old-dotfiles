@@ -24,6 +24,7 @@ GEM
     guess_html_encoding (0.0.4)
     highline (1.5.2)
     hirb (0.6.0)
+    hookup (1.1.0)
     htmlentities (4.3.1)
     interactive_editor (0.0.10)
       spoon (>= 0.0.1)
@@ -77,6 +78,7 @@ DEPENDENCIES
   github
   google
   hirb
+  hookup
   interactive_editor
   map_by_method
   pry

@@ -26,11 +26,13 @@
   dstat = diff --stat
 	wtf = !git-wtf
   conflicts = !git ls-files -u | cut -f 2 | sort -u
+  resolve = !vim -p $(git conflicts)
   stats = !git-stats
   rank = !git-rank-contributors
 
   ribbon = tag --force _ribbon origin/master
   catchup = log --patch --reverse --topo-order _ribbon..origin/master
+	ctags = !.git/hooks/ctags
 
 [giggle]
 	main-window-maximized = true
@@ -53,3 +55,5 @@
 [dude]
 	interval = 30
 	icon = /home/jumski/dotfiles/vendor/icons/github-icon.png
+[init]
+	templatedir = /home/jumski/dotfiles/git_template

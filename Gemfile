@@ -12,6 +12,7 @@ gem 'vimdb'
 gem 'google'
 gem 'gem-browse'
 gem 'gem-ctags'
+gem 'hookup'
 
 group :pry do
   gem 'pry'
