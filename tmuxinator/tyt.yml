@@ -1,0 +1,18 @@
+# ~/.tmuxinator/default.yml
+# you can make as many tabs as you wish...
+
+project_name: tyt
+project_root: ~/work/tyt
+rvm: default
+tabs:
+  - stuffz:
+      layout: main-vertical
+      panes:
+        - spork
+        - rails server
+  - bash:
+  - vim: vim
+  - console: rails console
+  - bash: tail -f log/development.log
+  - gem_home: cd `rvm gemdir`; ls
+
