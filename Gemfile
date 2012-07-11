@@ -10,6 +10,8 @@ gem 'github'
 gem 'gist'
 gem 'vimdb'
 gem 'google'
+gem 'gem-browse'
+gem 'gem-ctags'
 
 group :pry do
   gem 'pry'
