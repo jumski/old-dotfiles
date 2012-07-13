@@ -3,6 +3,8 @@
 - vim C-t/C-d
 - vim :options
 - vim conque http://www.vim.org/scripts/script.php?script_id=2771
+- vim line complete C-X C-L -> need to remap it or change tmux mappings
+  useful info 'bout completion: http://robots.thoughtbot.com/post/27041742805/vim-you-complete-me
 - bash fc
 - bash vi mode
 - bash vi mode alternative prompt http://stackoverflow.com/questions/1039713/different-bash-prompt-for-different-vi-editing-mode
