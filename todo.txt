@@ -11,3 +11,4 @@
 - bash vi mode alternative prompt http://stackoverflow.com/questions/1039713/different-bash-prompt-for-different-vi-editing-mode
 - todo.txt cli https://github.com/ginatrapani/todo.txt-cli
 - altsql
+- rails: rack-mini-profiler
