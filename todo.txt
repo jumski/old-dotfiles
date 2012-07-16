@@ -12,3 +12,4 @@
 - todo.txt cli https://github.com/ginatrapani/todo.txt-cli
 - altsql
 - rails: rack-mini-profiler
+- github: speed up pulles/pushes with control master http://coderrr.wordpress.com/2011/10/31/github-hack-speed-up-git-push-and-git-pull/
