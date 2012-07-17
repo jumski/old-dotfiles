@@ -68,3 +68,7 @@ let g:CommandTMaxHeight=10
 
 " require matchit manually
 runtime macros/matchit.vim
+
+" coffee script
+let coffee_compile_vert = 1
+
