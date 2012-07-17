@@ -6,6 +6,7 @@
 - vim line complete C-X C-L -> need to remap it or change tmux mappings
   useful info 'bout completion: http://robots.thoughtbot.com/post/27041742805/vim-you-complete-me
 - vim omnicompletion for ruby: http://www.cuberick.com/2008/10/ruby-autocomplete-in-vim.html
+- vim-rails - alternating others than rspec: https://github.com/tpope/vim-rails/issues/142
 - bash fc
 - bash vi mode
 - bash vi mode alternative prompt http://stackoverflow.com/questions/1039713/different-bash-prompt-for-different-vi-editing-mode
