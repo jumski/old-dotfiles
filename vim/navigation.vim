@@ -15,5 +15,5 @@ autocmd User Rails Rnavcommand jviews app/assets/javascripts/models/ -glob=**/* 
 autocmd User Rails Rnavcommand templates app/assets/templates/ -glob=**/* -suffix=.hbs
 
 " project specific
-autocmd User Rails Rnavcommand jasmine vendor/backbone-widgets/spec/ -glob=**/* -suffix=.js.coffee
+autocmd User Rails Rnavcommand jspec vendor/backbone-widgets/spec/ -glob=**/* -suffix=.js.coffee
 autocmd User Rails Rnavcommand widgets vendor/backbone-widgets/src/ -glob=**/* -suffix=.js.coffee
