@@ -13,7 +13,7 @@ autocmd User Rails Rnavcommand jcollections app/assets/javascripts/collections/ 
 autocmd User Rails Rnavcommand jmodels app/assets/javascripts/models/ -glob=**/* -suffix=.js.coffee
 autocmd User Rails Rnavcommand jviews app/assets/javascripts/views/ -glob=**/* -suffix=.js.coffee
 autocmd User Rails Rnavcommand jrouters app/assets/javascripts/routers/ -glob=**/* -suffix=.js.coffee
-autocmd User Rails Rnavcommand templates app/assets/templates/ -glob=**/* -suffix=.hbs
+autocmd User Rails Rnavcommand templates app/assets/javascripts/templates/ -glob=**/* -suffix=.hbs
 
 " project specific
 autocmd User Rails Rnavcommand jspec vendor/backbone-widgets/spec/ -glob=**/* -suffix=.js.coffee
