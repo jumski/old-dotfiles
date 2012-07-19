@@ -90,14 +90,15 @@ function prompt_indicator {
 }
 
 function todo_oneliner {
-  c_tip="\[\033[40m\]"
-  oneliner=$(egrep -v "(^\"|^\s*$)" ~/dotfiles/todo.txt | shuf -n 1)
-  echo "${c_tip}TODO: ${oneliner}${c_reset}"
+  # c_tip="\[\033[40m\]"
+  # oneliner=$(egrep -v "(^\"|^\s*$)" ~/dotfiles/todo.txt | shuf -n 1)
+  # echo "\n${c_tip}TODO: ${oneliner}${c_reset}\n"
+  echo ""
 }
 
 if [ `hostname` = 'jumski-akra' ];
 then
-  PROMPT_COMMAND='LAST_EXIT_CODE=$?;history -a;export PS1="\n$(todo_oneliner)\n $(hostname_indicator)$(pwd_indicator)$(git_indicator)$(rails_env_indicator)$(prompt_indicator)"'
+  PROMPT_COMMAND='LAST_EXIT_CODE=$?;history -a;export PS1="$(todo_oneliner) $(hostname_indicator)$(pwd_indicator)$(git_indicator)$(rails_env_indicator)$(prompt_indicator)"'
 else
-  PROMPT_COMMAND='LAST_EXIT_CODE=$?;history -a;export PS1="\n$(todo_oneliner)\n $(battery_indicator)$(hostname_indicator)$(pwd_indicator)$(git_indicator)$(rails_env_indicator)$(prompt_indicator)"'
+  PROMPT_COMMAND='LAST_EXIT_CODE=$?;history -a;export PS1="$(todo_oneliner) $(battery_indicator)$(hostname_indicator)$(pwd_indicator)$(git_indicator)$(rails_env_indicator)$(prompt_indicator)"'
 fi
