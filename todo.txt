@@ -14,7 +14,8 @@
 - vim https://github.com/nathanaelkane/vim-indent-guides
 - vim surround:
 - vim-tmux https://github.com/pivotal/tmux-config
-- vim pivotal config https://github.com/pivotal/vim-config
+- vim pivotal config https://github.com/pivotal/vim-config (DIFFERENT PROMPT IN INSERT MODE)
+- vim some good mappings from pivotal https://github.com/pivotal/vim-config/blob/master/init/keybindings.vim
 " Surround: Surround text.
 "   (Visual) S"       - Surround with "
 "   (Visual) gS"      - Surround with " and indent
