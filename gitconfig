@@ -34,6 +34,9 @@
   catchup = log --patch --reverse --topo-order _ribbon..origin/master
 	ctags = !.git/hooks/ctags
 
+  good = bisect good
+  bad  = bisect bad
+
 [giggle]
 	main-window-maximized = true
 	main-window-geometry = 0x0+0+0
