@@ -12,6 +12,7 @@
   b = branch
   l = log
   yesterday = log --pretty=format:\"%Cgreen%h%Creset %Cblue%ad%Creset %s%C(yellow)%d%Creset %Cblue[%an]%Creset\" --graph --date=short --after=yesterday --author=Wojtek
+  today = log --pretty=format:\"%Cgreen%h%Creset %Cblue%ad%Creset %s%C(yellow)%d%Creset %Cblue[%an]%Creset\" --graph --date=short --since='1 Day Ago' --date=relative --author=Wojtek
   clfd = clean -fd
   cap = !git commit && git push && cap deploy
   unstage = reset HEAD  # removes files from index
@@ -29,6 +30,8 @@
   resolve = !vim -p $(git conflicts)
   stats = !git-stats
   rank = !git-rank-contributors
+  new = ls-files --others --exclude-standard
+  done = !git fetch origin && git rebase origin/master && git checkout master && git merge @{-1} && bundle exec rake && git push
 
   ribbon = tag --force _ribbon origin/master
   catchup = log --patch --reverse --topo-order _ribbon..origin/master
@@ -36,6 +39,13 @@
 
   good = bisect good
   bad  = bisect bad
+  next =!git add . && git rebase --continue
+
+  up = !git fetch origin && git rebase origin/master
+  aa = add .
+  plre = pull --rebase
+  ff = merge --ff-only
+  prune-remotes = remote prune origin
 
 [giggle]
 	main-window-maximized = true
@@ -52,7 +62,7 @@
 
 [core]
 	autocrlf = input
-	whitespace = cr-at-eol
+	whitespace = trailing-space,cr-at-eol
 [github]
 	user = jumski
 [dude]
@@ -60,3 +70,13 @@
 	icon = /home/jumski/dotfiles/vendor/icons/github-icon.png
 [init]
 	templatedir = /home/jumski/dotfiles/git_template
+
+# url shortcuts
+[url "git@heroku.com:"]
+  insteadOf = heroku:
+[url "git://github.com/"]
+  # Read-only
+  insteadOf = gh:
+[url "git@github.com:"]
+  # With write access
+  insteadOf = wgh:
