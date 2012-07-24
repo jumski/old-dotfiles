@@ -25,16 +25,32 @@ if [ -d $HOME/.kde/share/apps/konsole ]; then
   ln -s --force "$DOTFILES_PATH/vendor/kde/share/apps/konsole/tmux-guard.profile" "$HOME/.kde/share/apps/konsole/tmux-guard.profile"
 fi
 
+# install wget
+if ! which wget ; then
+  sudo apt-get install wget
+fi
+
+# openbox
 if [ -d $HOME/.config/openbox ]; then
   ln -s --force $DOTFILES_PATH/conf/openbox/lubuntu-rc.xml $HOME/.config/openbox/
 fi
 
-if ! test -d ~/.vim/bundle/vundle; then
+# vundle
+if [ ! -d ~/.vim/bundle/vundle ]; then
+  echo "Vundle not found - installing"
   git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
   vim -se -c BundleInstall -c qa
 fi
-
 mkdir -p $HOME/.vim-tmp
+
+# fonts
+FONT_DIR=$HOME/.fonts
+FONT_PATH=$FONT_DIR/Monaco_Linux-Powerline.ttf
+if [ ! -f $FONT_PATH ]; then
+  mkdir $FONT_DIR
+  wget https://gist.github.com/raw/1634235/d1e0dd8b745a7868444ecb0d1d6cdb593249f9d5/Monaco_Linux-Powerline.ttf -O $FONT_PATH
+  fc-cache -vf
+fi
 
 echo 'Load bashrc'
 source ~/dotfiles/bashrc
