@@ -1,12 +1,6 @@
 [submodule "vendor/git-wtf"]
 	path = vendor/git-wtf
 	url = git://github.com/michaelklishin/git-wtf.git
-[submodule "vendor/tmuxinator"]
-	path = vendor/tmuxinator
-	url = hub:aziz/tmuxinator
-[submodule "vendor/dotjs-ubuntu"]
-	path = vendor/dotjs-ubuntu
-	url = git://github.com/glenbot/dotjs-ubuntu.git
 [submodule "vendor/fu"]
 	path = vendor/fu
 	url = git://github.com/samirahmed/fu.git
