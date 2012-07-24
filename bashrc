@@ -15,3 +15,8 @@ export PATH=$HOME/local/node/bin/:$DOTFILES_PATH/bin/:/home/jumski/various/bin/:
 
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+# source .local_variables if present
+if [ -f $HOME/.local_variables ]; then
+  source $HOME/.local_variables
+fi

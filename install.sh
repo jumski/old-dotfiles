@@ -25,6 +25,11 @@ if [ -d $HOME/.kde/share/apps/konsole ]; then
   ln -s --force "$DOTFILES_PATH/vendor/kde/share/apps/konsole/tmux-guard.profile" "$HOME/.kde/share/apps/konsole/tmux-guard.profile"
 fi
 
+# copy local_variables sample, if not present
+if [ ! -f $HOME/.local_variables ]; then
+  cp $DOTFILES_PATH/bash/local_variables.sample $HOME/.local_variables
+fi
+
 # install wget
 if ! which wget ; then
   sudo apt-get install wget
