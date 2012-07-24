@@ -13,8 +13,11 @@ export PATH=$HOME/local/node/bin/:$DOTFILES_PATH/bin/:/home/jumski/various/bin/:
 ## LOAD RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
+# Add RVM to PATH for scripting
+PATH="$PATH:$HOME/.rvm/bin" 
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+# prepend PATH with binstubs path
+PATH=".git/binstubs:$PATH"
 
 # source .local_variables if present
 if [ -f $HOME/.local_variables ]; then
