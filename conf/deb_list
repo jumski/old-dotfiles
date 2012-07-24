@@ -5,3 +5,5 @@ mysql-server-5.5
 tig
 tmux
 moc
+exuberant_ctags
+exuberant-ctags
