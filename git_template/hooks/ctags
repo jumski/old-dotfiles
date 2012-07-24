@@ -4,3 +4,5 @@ PATH="/usr/local/bin:$PATH"
 trap "rm -f .git/tags.$$" EXIT
 ctags --tag-relative -Rf.git/tags.$$ --exclude=.git --languages=-javascript,sql
 mv .git/tags.$$ .git/tags
+
+.git/install-binstubs

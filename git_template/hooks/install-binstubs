@@ -1,0 +1,2 @@
+#!/bin/bash
+bundle install --binstubs=.git/bundler-binstubs
