@@ -36,6 +36,7 @@
   ribbon = tag --force _ribbon origin/master
   catchup = log --patch --reverse --topo-order _ribbon..origin/master
 	ctags = !.git/hooks/ctags
+  binstubs = !.git/hooks/install-binstubs
 
   good = bisect good
   bad  = bisect bad
