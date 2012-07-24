@@ -13,6 +13,7 @@ gem 'google'
 gem 'gem-browse'
 gem 'gem-ctags'
 gem 'hookup'
+gem 'tmuxinator'
 
 group :pry do
   gem 'pry'

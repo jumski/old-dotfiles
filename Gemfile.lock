@@ -59,6 +59,7 @@ GEM
     text-format (1.0.0)
       text-hyphen (~> 1.0.0)
     text-hyphen (1.0.0)
+    tmuxinator (0.5.0)
     trollop (1.16.2)
     vimdb (0.5.1)
       boson (>= 1.1.1)
@@ -83,6 +84,7 @@ DEPENDENCIES
   map_by_method
   pry
   pry-doc
+  tmuxinator
   vimdb
   what_methods
   wirble

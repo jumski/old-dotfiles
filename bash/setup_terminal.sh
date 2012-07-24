@@ -34,9 +34,6 @@ export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
 export RUBY_GC_MALLOC_LIMIT=1000000000
 export RUBY_HEAP_FREE_MIN=500000
 
-export PATH="$PATH:$DOTFILES_PATH/vendor/tmuxinator/bin/"
-source $DOTFILES_PATH/vendor/tmuxinator/bin/tmuxinator_completion
-
 # readline settings
 bind "set completion-ignore-case on"
 bind "set show-all-if-ambiguous On" # this allows you to automatically show completion without double tab-ing

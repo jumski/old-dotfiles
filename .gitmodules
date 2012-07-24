@@ -4,9 +4,6 @@
 [submodule "vendor/fu"]
 	path = vendor/fu
 	url = git://github.com/samirahmed/fu.git
-[submodule "vendor/tmuxinator"]
-	path = vendor/tmuxinator
-	url = git://github.com/aziz/tmuxinator.git
 [submodule "vendor/dotjs-ubuntu"]
 	path = vendor/dotjs-ubuntu
 	url = git://github.com/glenbot/dotjs-ubuntu.git
