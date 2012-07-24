@@ -37,6 +37,8 @@ if [ ! -f $HOME/.local_variables ]; then
   cp $DOTFILES_PATH/bash/local_variables.sample $HOME/.local_variables
 fi
 
+test -d $HOME/.git-dude || mkdir $HOME/.git-dude
+
 # install wget
 if ! which wget ; then
   sudo apt-get install wget
