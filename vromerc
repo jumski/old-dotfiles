@@ -1,7 +1,7 @@
 map j 10j
 map k 10k
 set disablesites=mail.google.com, reader.google.com
-set hintkeys=JLKHFSDAGWERUI
+set hintkeys=jlkhfsdagwerui
 set useletters=1
 
 unmap <C-f>
