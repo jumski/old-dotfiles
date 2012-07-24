@@ -1,0 +1,3 @@
+#!/bin/bash
+
+grep -i "$1" $DOTFILES_PATH/todo.txt
