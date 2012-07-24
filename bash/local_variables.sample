@@ -1,1 +1,2 @@
 export MAIN_TERMINAL_WINDOW_NAME=urxvt
+export BIG_SCREEN_NAME=VGA-0
