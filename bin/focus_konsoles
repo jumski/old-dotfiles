@@ -2,4 +2,6 @@
 
 # sometimes konsole gets focus but promt does not so you cannot type
 # this force to focus twice so it never happens
-wmctrl -a "tmux-guard"; wmctrl -a "tmux-main"; wmctrl -a "tmux-main"
+# wmctrl -a "tmux-main"; wmctrl -a "tmux-main"
+source $HOME/.local_variables
+wmctrl -a $MAIN_TERMINAL_WINDOW_NAME
