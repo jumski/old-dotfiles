@@ -3,3 +3,4 @@ python-pip python-dev build-essential
 wmctrl
 mysql-server-5.5
 tig
+tmux
