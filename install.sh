@@ -26,6 +26,11 @@ if [ -d $HOME/.kde/share/apps/konsole ]; then
   ln -s --force "$DOTFILES_PATH/vendor/kde/share/apps/konsole/tmux-guard.profile" "$HOME/.kde/share/apps/konsole/tmux-guard.profile"
 fi
 
+# link chromium to fake google-chrome for some apps
+if ! which google-chrome && which chromium-browser; then
+  sudo ln -s $(which chromium-browser) /usr/bin/google-chrome
+fi
+
 # copy local_variables sample, if not present
 if [ ! -f $HOME/.local_variables ]; then
   cp $DOTFILES_PATH/bash/local_variables.sample $HOME/.local_variables
