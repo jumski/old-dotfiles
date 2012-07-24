@@ -29,11 +29,11 @@ URxvt.lineSpace:            0
 ! Fonts
 URxvt.allow_bold:           true
 /* URxvt.font:                 -*-terminus-medium-r-normal-*-12-120-72-72-c-60-iso8859-1 */
-URxvt*font:                 xft:Monaco for Powerline:regular:size=12
-URxvt*imFont:               xft:Monaco for Powerline:regular:size=12
-URxvt*boldFont:             xft:Monaco for Powerline:bold:size=12
-URxvt*italicFont:           xft:Monaco for Powerline:italic:size=12
-URxvt*boldItalicFont:       xft:Monaco for Powerline:bold:italic:size=12
+URxvt*font:                 xft:Monaco for Powerline:regular:size=13
+URxvt*imFont:               xft:Monaco for Powerline:regular:size=13
+URxvt*boldFont:             xft:Monaco for Powerline:bold:size=13
+URxvt*italicFont:           xft:Monaco for Powerline:italic:size=13
+URxvt*boldItalicFont:       xft:Monaco for Powerline:bold:italic:size=13
 
 ! Fix font space
 URxvt*letterSpace: -1
