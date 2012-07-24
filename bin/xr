@@ -1,6 +1,6 @@
 #!/bin/bash
 source $HOME/.local_variables
 xrandr --verbose \
-  --output LVDS1 --mode 1366x768 --pos 1920x370 --primary \
+  --output $SMALL_SCREEN_NAME --mode 1366x768 --pos 1920x370 --primary \
   --output $BIG_SCREEN_NAME --mode 1920x1080 --pos 0x0 \
   2>> ~/.xrandr.log
