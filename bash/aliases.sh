@@ -52,7 +52,13 @@ alias realias="source $DOTFILES_PATH/bash/aliases.sh && echo 'reloaded .bash/ali
 function s {
   apt-cache search "$@" | sort | less
 }
-alias i="sudo apt-get install "
+function i {
+  if ! grep "$1" $DOTFILES_PATH/conf/deb_list; then
+    echo "$1" >> $DOTFILES_PATH/conf/deb_list
+  fi
+
+  sudo apt-get install $1
+}
 
 alias fav="~/various/fav"
 function nowplayin {
