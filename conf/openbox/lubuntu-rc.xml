@@ -454,7 +454,7 @@
       </action>
     </keybind>
     <!-- focus tmux-main -->
-    <keybind key="A-semicolon">
+    <keybind key="C-semicolon">
       <action name="Execute">
         <command>/home/jumski/dotfiles/bin/focus_konsoles</command>
       </action>
