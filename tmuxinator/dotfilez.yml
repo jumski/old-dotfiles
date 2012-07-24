@@ -9,3 +9,4 @@ tabs:
   - vim: vim -p vim/ bash/
   - shell:
   - git-dude: cd ~/.git-dude && git-dude
+  - autossh-git: autossh git@github.com git-receive-pack jumski/dotfiles
