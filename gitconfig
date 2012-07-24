@@ -63,6 +63,7 @@
 [core]
 	autocrlf = input
 	whitespace = trailing-space,cr-at-eol
+	excludesfile = /home/jumski/.gitignore_global
 [github]
 	user = jumski
 [dude]

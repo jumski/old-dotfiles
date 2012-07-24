@@ -6,6 +6,7 @@ export DOTFILES_PATH=~/dotfiles
 ln -s --force "$DOTFILES_PATH/bashrc" "$HOME/.bashrc"
 ln -s --force "$DOTFILES_PATH/tmux.conf" "$HOME/.tmux.conf"
 ln -s --force "$DOTFILES_PATH/gitconfig" "$HOME/.gitconfig"
+ln -s --force "$DOTFILES_PATH/gitignore_global" "$HOME/.gitignore_global"
 ln -s --force "$DOTFILES_PATH/vim/vimrc" "$HOME/.vimrc"
 ln -s --force "$DOTFILES_PATH/gemrc" "$HOME/.gemrc"
 ln -s --force "$DOTFILES_PATH/irbrc" "$HOME/.irbrc"
