@@ -61,6 +61,7 @@ function i {
 }
 
 alias fav="~/various/fav"
+alias favgrep="~/various/favgrep"
 function nowplayin {
   mocp -i | grep SongTitle | awk {'gsub("SongTitle: ", ""); print $0'}
 }
