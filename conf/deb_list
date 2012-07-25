@@ -1,5 +1,10 @@
-python-xmpp python-notify python-dns python-gtk2 grc 
-python-pip python-dev build-essential
+python-xmpp
+python-notify
+python-dns
+python-gtk2 grc 
+python-pip
+python-dev
+build-essential
 wmctrl
 mysql-server-5.5
 tig
