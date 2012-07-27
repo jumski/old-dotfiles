@@ -2,10 +2,11 @@
 " rails.vim navcommands
 autocmd User Rails Rnavcommand admin app/admin/ -suffix=.rb
 autocmd User Rails Rnavcommand factories spec/factories/ -suffix=.rb
+autocmd User Rails Rnavcommand jobs app/jobs/ -suffix=.rb
 autocmd User Rails Rnavcommand overrides app/overrides/ -suffix=.rb
+autocmd User Rails Rnavcommand serializers app/serializers/ -suffix=_serializer.rb
 autocmd User Rails Rnavcommand support spec/support/ -suffix=.rb
 autocmd User Rails Rnavcommand uploaders app/uploaders/ -suffix=.rb
-autocmd User Rails Rnavcommand serializers app/serializers/ -suffix=_serializer.rb
 
 " backbone related
 autocmd User Rails Rnavcommand eco app/assets/javascripts/templates/ -glob=**/* -suffix=.jst.eco
