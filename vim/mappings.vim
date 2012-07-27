@@ -63,6 +63,10 @@ map <leader>gs :topleft 100 :tabnew spec/spec_helper.rb<cr>
 " Convert to Ruby 1.9 hash syntax
 noremap <leader>9 :s/:\(\S\+\)\s\+=>\s\+/\1: /g<cr>
 
+" goto next/previous Ack result
+nnoremap <leader>n :cnext<CR>
+nnoremap <leader>N :cprevious<CR>
+
 " `a jumps to line and column marked ma
 " 'a jumps only to line marked ma
 " so we swap each other because ' have easy access
