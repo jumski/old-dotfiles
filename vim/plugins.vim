@@ -69,6 +69,9 @@ let g:CommandTMaxHeight=10
 " require matchit manually
 runtime macros/matchit.vim
 
+" powerline settings
+let g:Powerline_symbols = 'fancy'
+
 " coffee script
 let coffee_compile_vert = 1
 
