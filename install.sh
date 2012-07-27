@@ -39,6 +39,8 @@ fi
 
 test -d $HOME/.git-dude || mkdir $HOME/.git-dude
 
+(which ack-grep && ! which ack) && sudo ln -s /usr/bin/ack-grep /usr/bin/ack
+
 # install wget
 if ! which wget ; then
   sudo apt-get install wget
