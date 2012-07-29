@@ -5,7 +5,7 @@ project_name: dotfilez
 project_root: ~/dotfiles
 rvm: default
 tabs:
-  - shell:
+  - todos: todo
   - vim: vim -p vim/ bash/
   - shell:
   - git-dude: cd ~/.git-dude && git-dude

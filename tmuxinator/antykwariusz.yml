@@ -6,11 +6,11 @@ project_root: ~/work/antykwariusz
 rvm: default
 tabs:
   - stuff:
-    layout: even-horizontal
-    panes:
-      - rails server
-      - spork
-  - bash:
+      layout: even-horizontal
+      panes:
+        - rails server
+        - spork
+  - bash: todo @books
   - vim: vim
   - console: rails console
   - bash: tail -f log/development.log
