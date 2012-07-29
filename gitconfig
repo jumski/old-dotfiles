@@ -4,7 +4,7 @@
 
 [alias]
   ci = commit
-  cim = commit -m
+  cim = !git-cim
   s = status
   d = diff
   dc = diff --cached
