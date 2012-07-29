@@ -7,3 +7,6 @@
 [submodule "vendor/dotjs-ubuntu"]
 	path = vendor/dotjs-ubuntu
 	url = git://github.com/glenbot/dotjs-ubuntu.git
+[submodule "vendor/sh-todo"]
+	path = vendor/sh-todo
+	url = git://github.com/asb/sh-todo.git
