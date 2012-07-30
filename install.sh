@@ -20,6 +20,7 @@ ln -s --force "$DOTFILES_PATH/tmuxinator" "$HOME/.tmuxinator"
 ln -s --force "$DOTFILES_PATH/dotjs" "$HOME/.js"
 ln -s --force "$DOTFILES_PATH/Xdefaults" "$HOME/.Xdefaults"
 ln -s --force "$DOTFILES_PATH/sh-todo" "$HOME/.sh-todo"
+ln -s --force $HOME/Dropbox $HOME/dropbox
 
 if [ -d $HOME/.kde/share/apps/konsole ]; then
   ln -s --force "$DOTFILES_PATH/vendor/kde/share/apps/konsole/konsoleui.rc" "$HOME/.kde/share/apps/konsole/konsoleui.rc"
@@ -45,6 +46,12 @@ test -d $HOME/.git-dude || mkdir $HOME/.git-dude
 # install wget
 if ! which wget ; then
   sudo apt-get install wget
+fi
+
+# install dropbox
+if ! which dropbox; then
+  wget -O /tmp/dropbox.deb https://www.dropbox.com/download?dl=packages/ubuntu/dropbox_1.4.0_amd64.deb
+  sudo dpkg -i /tmp/dropbox.deb && rm /tmp/dropbox.deb
 fi
 
 # openbox
