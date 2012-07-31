@@ -42,6 +42,7 @@ fi
 test -d $HOME/.git-dude || mkdir $HOME/.git-dude
 
 (which ack-grep && ! which ack) && sudo ln -s /usr/bin/ack-grep /usr/bin/ack
+(which python && ! which fu) && (cd vendor/fu && sudo python setup.py install)
 
 # install wget
 if ! which wget ; then
