@@ -21,3 +21,6 @@ imagemagick
 tree
 pidgin-libnotify
 redis-server
+cowsay
+toilet
+fortune-mod
