@@ -57,6 +57,7 @@ fi
 # openbox
 if [ -d $HOME/.config/openbox ]; then
   ln -s --force $DOTFILES_PATH/conf/openbox/lubuntu-rc.xml $HOME/.config/openbox/
+  ln -s --force $DOTFILES_PATH/conf/startup.desktop $HOME/.config/autostart/
 fi
 
 # vundle

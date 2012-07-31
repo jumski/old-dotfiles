@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Dotfilez
+GenericName=Dotfilez
+Comment=Dotfilez
+Exec=/home/jumski/dotfiles/bin/startup
+Terminal=false
+Type=Application
+StartupNotify=false
