@@ -11,6 +11,10 @@ tabs:
         - spork
         - rails server
   - bash:
+      layout: main-vertical
+      panes:
+        - cd vendor/backbone-widgets; git status
+        - todo @tyt
   - vim: vim
   - console: rails console
   - bash: tail -f log/development.log
