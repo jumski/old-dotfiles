@@ -1,22 +1,45 @@
 
 " rails.vim navcommands
 autocmd User Rails Rnavcommand admin app/admin/ -suffix=.rb
-autocmd User Rails Rnavcommand factories spec/factories/ -suffix=.rb
-autocmd User Rails Rnavcommand jobs app/jobs/ -suffix=.rb
-autocmd User Rails Rnavcommand overrides app/overrides/ -suffix=.rb
-autocmd User Rails Rnavcommand serializers app/serializers/ -suffix=_serializer.rb
+autocmd User Rails Rnavcommand factory spec/factories/ -suffix=.rb
+autocmd User Rails Rnavcommand job app/jobs/ -suffix=.rb
+autocmd User Rails Rnavcommand override app/overrides/ -suffix=.rb
+autocmd User Rails Rnavcommand serializer app/serializers/ -suffix=_serializer.rb
 autocmd User Rails Rnavcommand support spec/support/ -suffix=.rb
-autocmd User Rails Rnavcommand uploaders app/uploaders/ -suffix=.rb
+autocmd User Rails Rnavcommand uploader app/uploaders/ -suffix=.rb
 
 " backbone related
 autocmd User Rails Rnavcommand eco app/assets/javascripts/templates/ -glob=**/* -suffix=.jst.eco
-autocmd User Rails Rnavcommand javascripts app/assets/javascripts/ -suffix=.js,.js.erb,.js.coffee,.js.coffee.erb
-autocmd User Rails Rnavcommand jcollections app/assets/javascripts/collections/ -glob=**/* -suffix=.js.coffee
-autocmd User Rails Rnavcommand jmodels app/assets/javascripts/models/ -glob=**/* -suffix=.js.coffee
-autocmd User Rails Rnavcommand jviews app/assets/javascripts/views/ -glob=**/* -suffix=.js.coffee
-autocmd User Rails Rnavcommand jrouters app/assets/javascripts/routers/ -glob=**/* -suffix=.js.coffee
-autocmd User Rails Rnavcommand templates app/assets/javascripts/templates/ -glob=**/* -suffix=.hbs
+autocmd User Rails Rnavcommand jcollection app/assets/javascripts/collections/ -glob=**/* -suffix=.js.coffee
+autocmd User Rails Rnavcommand jmodel app/assets/javascripts/models/ -glob=**/* -suffix=.js.coffee
+autocmd User Rails Rnavcommand jview app/assets/javascripts/views/ -glob=**/* -suffix=.js.coffee
+autocmd User Rails Rnavcommand jrouter app/assets/javascripts/routers/ -glob=**/* -suffix=.js.coffee
+autocmd User Rails Rnavcommand template app/assets/javascripts/templates/ -glob=**/* -suffix=.hbs
 
 " project specific
 autocmd User Rails Rnavcommand jspec vendor/backbone-widgets/spec/ -glob=**/* -suffix=.js.coffee
-autocmd User Rails Rnavcommand widgets vendor/backbone-widgets/src/ -glob=**/* -suffix=.js.coffee
+autocmd User Rails Rnavcommand widget vendor/backbone-widgets/src/ -glob=**/* -suffix=.js.coffee
+
+" rails vim speed mappings
+map <leader>rm :Rmodel<Space>
+map <leader>rc :Rcontroller<Space>
+map <leader>rv :Rview<Space>
+map <leader>rh :Rhelper<Space>
+map <leader>rf :Rfactory<Space>
+map <leader>rsr :Rserializer<Space>
+map <leader>rsp :Rspec<Space>
+map <leader>rsu :Rsupport<Space>
+
+map <leader>rjs :Rjavascript<Space>
+map <leader>rjm :Rjmodel<Space>
+map <leader>rjv :Rjview<Space>
+map <leader>rjc :Rjcollection<Space>
+map <leader>rjr :Rjrouter<Space>
+map <leader>rjs :Rjspec<Space>
+map <leader>rt :Rtemplate<Space>
+map <leader>rw :Rwidget<Space>
+
+map <leader>rjo :Rjob<Space>
+map <leader>ra :Radmin<Space>
+map <leader>ru :Ruploader<Space>
+map <leader>rst :Rstylesheet<Space>
