@@ -62,9 +62,6 @@ function i {
 
 alias fav="~/various/fav"
 alias favgrep="~/various/favgrep"
-function nowplayin {
-  mocp -i | grep SongTitle | awk {'gsub("SongTitle: ", ""); print $0'}
-}
 
 alias skype="LD_PRELOAD=/usr/lib32/libv4l/v4l1compat.so skype"
 
