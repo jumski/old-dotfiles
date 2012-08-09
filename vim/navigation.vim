@@ -30,7 +30,7 @@ map <leader>rsr :Rserializer<Space>
 map <leader>rsp :Rspec<Space>
 map <leader>rsu :Rsupport<Space>
 
-map <leader>rjs :Rjavascript<Space>
+map <leader>rjj :Rjavascript<Space>
 map <leader>rjm :Rjmodel<Space>
 map <leader>rjv :Rjview<Space>
 map <leader>rjc :Rjcollection<Space>
