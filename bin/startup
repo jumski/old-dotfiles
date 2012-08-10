@@ -2,3 +2,4 @@
 
 $HOME/dotfiles/startup/set_keyboard_repeat
 $HOME/dotfiles/startup/remap_capslock
+mocp --server
