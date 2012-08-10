@@ -34,6 +34,7 @@ alias updatedb="sudo updatedb"
 alias ack=ack-grep
 alias g=git
 alias tf="tail -100f"
+alias k9="kill -9 "
 
 alias jungletrain="mocp -l http://stream2.jungletrain.net:8000"
 alias bassdrive="mocp -l http://shouthostdirect13.streams.bassdrive.com:8202"
