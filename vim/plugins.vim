@@ -35,6 +35,8 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'vim-scripts/vimux'
 Bundle 'pgr0ss/vimux-ruby-test'
 Bundle 'jayferd/eco.vim'
+Bundle 'sickill/vim-pasta'
+Bundle 'nono/vim-handlebars'
 
 """"""""" DISABLED PLUGINS
 " Bundle 'php.vim'
