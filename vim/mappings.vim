@@ -85,5 +85,5 @@ vmap < <gv
 nnoremap <leader>a :RunRubyFocusedTest<CR>
 nnoremap <leader>q :RunRubyFocusedContext<CR>
 nnoremap <leader>t :RunAllRubyTests<CR>
-nnoremap <leader>Q :CloseVimTmuxRunner<CR>
+nnoremap <leader>Q :CloseVimTmuxPane<CR>
 nnoremap <leader>b :CtrlPBuffer<CR>
