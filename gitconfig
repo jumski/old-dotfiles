@@ -47,6 +47,7 @@
   aa = add .
   plre = pull --rebase
   ff = merge --ff-only
+  noff = merge --no-ff
   prune-remotes = remote prune origin
 
 [giggle]
