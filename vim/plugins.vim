@@ -31,12 +31,13 @@ Bundle 'ecomba/vim-ruby-refactoring'
 Bundle 'sjl/gundo.vim'
 " Bundle 'jumski/ultisnips'
 " Bundle 'duskhacker/sweet-rspec-vim'
-Bundle 'kien/ctrlp.vim'
+" Bundle 'kien/ctrlp.vim'
 Bundle 'vim-scripts/vimux'
 Bundle 'pgr0ss/vimux-ruby-test'
 Bundle 'jayferd/eco.vim'
 Bundle 'sickill/vim-pasta'
 Bundle 'nono/vim-handlebars'
+Bundle 'jgdavey/vim-blockle'
 
 """"""""" DISABLED PLUGINS
 " Bundle 'php.vim'
@@ -54,13 +55,13 @@ let VimuxHeight = "30"
 
 " mappings for ctrlp
 " let g:ctrlp_map = '<leader>z'
-let g:ctrlp_map = '<leader>v'
-let g:ctrlp_cmd = 'CtrlPMRU'
+" let g:ctrlp_map = '<leader>v'
+" let g:ctrlp_cmd = 'CtrlPMRU'
 " let g:ctrlp_custom_ignore = {
 "   \ 'dir':  '\.git$\|\.hg$\|\.svn$',
 "   \ 'file': '\.exe$\|\.so$\|\.dll$',
 "   \ }
-let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
+" let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
 " \ 'link': 'some_bad_symbolic_links',
 
 " set leader for easy motion
@@ -77,4 +78,7 @@ let g:Powerline_symbols = 'fancy'
 
 " coffee script
 let coffee_compile_vert = 1
+
+" use vim-pasta in coffeescript
+let g:pasta_disabled_filetypes = ["python", "markdown", "coffee"]
 
