@@ -8,6 +8,7 @@ autocmd User Rails Rnavcommand serializer app/serializers/ -suffix=_serializer.r
 autocmd User Rails Rnavcommand support spec/support/ -suffix=.rb
 autocmd User Rails Rnavcommand uploader app/uploaders/ -suffix=.rb
 autocmd User Rails Rnavcommand observer app/models/ -suffix=_observer.rb
+autocmd User Rails Rnavcommand concern app/models/concerns -suffix=.rb
 
 " backbone related
 autocmd User Rails Rnavcommand eco app/assets/javascripts/templates/ -glob=**/* -suffix=.jst.eco
