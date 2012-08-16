@@ -1,11 +1,11 @@
 # ~/.tmuxinator/default.yml
 # you can make as many tabs as you wish...
 
-project_name: funpic
-project_root: ~/work/funpic
+project_name: epics
+project_root: ~/work/epics
 rvm: default
 tabs:
-  - server: guard
+  - stuff: spork
   - bash:
   - vim: vim
   - console: rails console
