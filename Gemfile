@@ -18,4 +18,5 @@ gem 'tmuxinator'
 group :pry do
   gem 'pry'
   gem 'pry-doc'
+  gem 'pry-theme'
 end

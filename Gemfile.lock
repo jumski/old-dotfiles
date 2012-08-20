@@ -43,6 +43,8 @@ GEM
     pry-doc (0.4.4)
       pry (>= 0.9.9.6)
       yard (~> 0.8.1)
+    pry-theme (0.1.1)
+      json
     ruby-readability (0.5.3)
       guess_html_encoding (>= 0.0.4)
       nokogiri (>= 1.4.2)
@@ -77,6 +79,7 @@ DEPENDENCIES
   map_by_method
   pry
   pry-doc
+  pry-theme
   tmuxinator
   vimdb
   what_methods
