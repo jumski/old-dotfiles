@@ -3,7 +3,6 @@
 
 project_name: dotfilez
 project_root: ~/dotfiles
-rvm: default
 tabs:
   - todos: todo
   - vim: vim -p vim/ bash/

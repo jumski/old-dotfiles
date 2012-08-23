@@ -3,7 +3,6 @@
 
 project_name: akrapl
 project_root: ~/work/akrapl
-rvm: default
 tabs:
   - guard: guard
   - bash:

@@ -3,7 +3,6 @@
 
 project_name: wye
 project_root: ~/work/what-you-eat
-rvm: default
 tabs:
   - guard: guard
   - bash:

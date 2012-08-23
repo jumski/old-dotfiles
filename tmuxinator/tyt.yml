@@ -3,7 +3,6 @@
 
 project_name: tyt
 project_root: ~/work/turn-your-time
-rvm: default
 tabs:
   - stuffz:
       layout: main-vertical

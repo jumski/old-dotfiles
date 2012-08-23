@@ -3,7 +3,6 @@
 
 project_name: hiq5
 project_root: ~/work/hiq5
-rvm: default
 tabs:
   - server: rails server
   - bash:

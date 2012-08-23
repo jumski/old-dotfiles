@@ -3,7 +3,6 @@
 
 project_name: epics
 project_root: ~/work/epics
-rvm: default
 tabs:
   - stuff: spork
   - bash:

@@ -3,7 +3,6 @@
 
 project_name: akra
 project_root: ~/work/akra_website
-rvm: default
 tabs:
   - guard: guard
   - bash:
