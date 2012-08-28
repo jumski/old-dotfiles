@@ -87,3 +87,6 @@ nnoremap <leader>q :RunRubyFocusedContext<CR>
 nnoremap <leader>t :RunAllRubyTests<CR>
 nnoremap <leader>Q :CloseVimTmuxPane<CR>
 nnoremap <leader>b :CtrlPBuffer<CR>
+
+" replase word under cursor in whole file
+nnoremap <leader>: yiw:%s/<C-R>"/
