@@ -53,6 +53,9 @@ Bundle 'jgdavey/vim-blockle'
 "===============================
 let VimuxHeight = "30"
 
+" gundo toggler
+nnoremap <leader>gu :GundoToggle<CR>
+
 " mappings for ctrlp
 " let g:ctrlp_map = '<leader>z'
 " let g:ctrlp_map = '<leader>v'

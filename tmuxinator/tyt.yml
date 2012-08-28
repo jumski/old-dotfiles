@@ -4,11 +4,12 @@
 project_name: tyt
 project_root: ~/work/turn-your-time
 tabs:
-  - stuffz:
-      layout: main-vertical
-      panes:
-        - spork
-        - rails server
+  - server: rails server
+  # - stuffz:
+  #     layout: main-vertical
+  #     panes:
+  #       - spork
+  #       - rails server
   - bash:
       layout: main-vertical
       panes:
