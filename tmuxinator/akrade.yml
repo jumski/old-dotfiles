@@ -1,8 +1,8 @@
 # ~/.tmuxinator/default.yml
 # you can make as many tabs as you wish...
 
-project_name: akra
-project_root: ~/work/akra_website
+project_name: akrade
+project_root: ~/work/akra-de
 tabs:
   - guard: guard
   - bash:
