@@ -4,7 +4,7 @@
 project_name: akrade
 project_root: ~/work/akra-de
 tabs:
-  - guard: guard
+  - server: rails server
   - bash:
   - vim: vim
   - console: rails console

@@ -4,7 +4,7 @@
 project_name: akrapl
 project_root: ~/work/akrapl
 tabs:
-  - guard: guard
+  - server: rails server
   - bash:
   - vim: vim
   - console: rails console
