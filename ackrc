@@ -8,3 +8,4 @@
 --type-add=ruby=haml,rake
 --type-add=css=less,sass,scss
 --type-add=js=coffee
+--type-add=html=.html.erb,.html.haml,.handlebars,.hbs,.eco,.jst
