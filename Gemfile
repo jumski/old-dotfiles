@@ -14,6 +14,7 @@ gem 'gem-browse'
 gem 'gem-ctags'
 gem 'hookup'
 gem 'tmuxinator'
+gem 'github'
 
 group :pry do
   gem 'pry'
