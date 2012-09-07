@@ -37,3 +37,7 @@ cpanminus
 openvpn
 network-manager-openvpn
 siege
+festival
+ffserver
+ffmpeg
+exim4-daemon-light
