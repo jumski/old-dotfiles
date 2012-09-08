@@ -33,7 +33,7 @@ Bundle 'sjl/gundo.vim'
 " Bundle 'duskhacker/sweet-rspec-vim'
 " Bundle 'kien/ctrlp.vim'
 Bundle 'vim-scripts/vimux'
-Bundle 'pgr0ss/vimux-ruby-test'
+Bundle 'jumski/vimux-ruby-test'
 Bundle 'jayferd/eco.vim'
 Bundle 'sickill/vim-pasta'
 Bundle 'nono/vim-handlebars'
@@ -51,7 +51,7 @@ Bundle 'jgdavey/vim-blockle'
 "===============================
 "    plugin specific options
 "===============================
-let VimuxHeight = "30"
+let VimuxHeight = "5"
 
 " gundo toggler
 nnoremap <leader>gu :GundoToggle<CR>
@@ -61,7 +61,7 @@ nnoremap <leader>gu :GundoToggle<CR>
 " let g:ctrlp_map = '<leader>v'
 " let g:ctrlp_cmd = 'CtrlPMRU'
 " let g:ctrlp_custom_ignore = {
-"   \ 'dir':  '\.git$\|\.hg$\|\.svn$',
+"   \ 'dir':  '\.git$5\|\.hg$\|\.svn$',
 "   \ 'file': '\.exe$\|\.so$\|\.dll$',
 "   \ }
 " let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
