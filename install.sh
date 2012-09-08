@@ -29,6 +29,12 @@ if [ -d $HOME/.kde/share/apps/konsole ]; then
   ln -s --force "$DOTFILES_PATH/vendor/kde/share/apps/konsole/tmux-guard.profile" "$HOME/.kde/share/apps/konsole/tmux-guard.profile"
 fi
 
+# install git if missing
+which git 2>/dev/null >/dev/null || sudo apt-get install git
+
+# init submodules
+git submodule update --init
+
 # link chromium to fake google-chrome for some apps
 if ! which google-chrome && which chromium-browser; then
   sudo ln -s $(which chromium-browser) /usr/bin/google-chrome
