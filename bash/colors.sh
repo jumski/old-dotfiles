@@ -7,6 +7,16 @@ c_violet="\[\e[34m\]"
 c_red="\[\e[31m\]"
 c_reset="\[\e[0m\]"
 
+gitdir()
+{
+    local dir="$(pwd)"
+    while [ "$(dirname $dir)" != "/" ]; do
+        [ -d "$dir/.git" ] && echo "$dir/.git" && return
+        dir="$(dirname $dir)"
+    done
+    false
+}
+
 function is_git_dirty {
   (git status | tail -n1 | grep -v "nothing to commit") 2> /dev/null >/dev/null
 }
@@ -20,7 +30,7 @@ function is_git_repo()
     false
 }
 function current_branch {
-  git branch | grep \* | awk {'print $2'}
+  cat `gitdir`/HEAD | sed 's|ref: refs/heads/||'
 }
 function git_dirty_indicator {
   is_git_dirty && echo '*'
@@ -32,7 +42,7 @@ function git_indicator {
     return
   fi
 
-  echo "${c_yellow}[$(current_branch)${c_red}$(git_dirty_indicator)$(is_git_dirty)${c_yellow}]$c_reset "
+  echo "${c_yellow}[$(current_branch)${c_red}$(git_dirty_indicator)${c_yellow}]$c_reset "
 }
 function parse_rvm_prompt {
   rvm-prompt | sed 's/\(ruby-\)\(.*\)@\(.*\)/\3/'
