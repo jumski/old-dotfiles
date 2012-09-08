@@ -27,10 +27,20 @@ if (!isHomePage) {
   }
   var keyToButton = {
     s: 'answer_a',
+    a: 'answer_a',
+
     d: 'answer_b',
+    b: 'answer_b',
+
     f: 'answer_c',
+    c: 'answer_c',
+
     j: 'next',
+    n: 'next',
+
     k: 'prev',
+    p: 'prev',
+
     q: 'end',
     v: 'showValid',
   }
