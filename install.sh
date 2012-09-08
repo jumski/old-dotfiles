@@ -35,6 +35,15 @@ which git 2>/dev/null >/dev/null || sudo apt-get install git
 # init submodules
 git submodule update --init
 
+# install vendor debs
+has_20_bash_completion() {
+  dpkg -l | grep bash-completion | awk '{print $3}' | grep '2.0'
+}
+if ! has_20_bash_completion; then
+  sudo apt-get purge bash-completion &&
+  sudo dpkg -i $DOTFILES_PATH/vendor/bash-completion_2.0-1_all.deb
+fi
+
 # link chromium to fake google-chrome for some apps
 if ! which google-chrome && which chromium-browser; then
   sudo ln -s $(which chromium-browser) /usr/bin/google-chrome
