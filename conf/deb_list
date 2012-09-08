@@ -41,3 +41,6 @@ festival
 ffserver
 ffmpeg
 exim4-daemon-light
+chromium-browser
+libinotifytools0-dev
+libinotifytools-dev
