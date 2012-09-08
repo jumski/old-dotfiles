@@ -15,6 +15,7 @@ gem 'gem-ctags'
 gem 'hookup'
 gem 'tmuxinator'
 gem 'github'
+gem 'zeus'
 
 group :pry do
   gem 'pry'
