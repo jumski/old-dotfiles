@@ -7,9 +7,9 @@ if (!isHomePage) {
     answer_a: $('#__A img'),
     answer_b: $('#__B img'),
     answer_c: $('#__C img'),
-    click: function(name) {
-      this[name].click();
-    }
+    end: $('#zakoncz img'),
+    showValid: $('#poprawna img'),
+    click: function(name) { this[name].click(); }
   }
   var keys = {
     97: 'a',
@@ -21,7 +21,9 @@ if (!isHomePage) {
     107: 'k',
     110: 'n',
     112: 'p',
+    113: 'q',
     115: 's',
+    118: 'v',
   }
   var keyToButton = {
     s: 'answer_a',
@@ -29,11 +31,13 @@ if (!isHomePage) {
     f: 'answer_c',
     j: 'next',
     k: 'prev',
+    q: 'end',
+    v: 'showValid',
   }
 
   $(document).bind('keypress', function(event){
     var charCode = event.charCode, key
-    console.log(event.keyCode)
+    // console.log(event.keyCode)
 
     if (key = keys[charCode]) {
       buttons.click(keyToButton[key])
