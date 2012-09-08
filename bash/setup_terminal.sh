@@ -36,7 +36,7 @@ bind "set show-all-if-ambiguous On" # this allows you to automatically show comp
 $DOTFILES_PATH/startup/*
 
 # enable keychain
-eval `keychain --eval --agents ssh --inherit any`
+eval `keychain --eval --agents ssh --inherit local-once`
 
 # add identity if not set
 if ! ssh-add -l 1>/dev/null;
