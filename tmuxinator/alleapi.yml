@@ -1,0 +1,12 @@
+# ~/.tmuxinator/default.yml
+# you can make as many tabs as you wish...
+
+project_name: alleapi
+project_root: ~/work/alle_api
+tabs:
+  - server: cd spec/dummy; rails server
+  - bash: todo @alleapi
+  - vim: vim
+  - console: cd spec/dummy; rails console
+  - bash: tail -f log/development.log
+
