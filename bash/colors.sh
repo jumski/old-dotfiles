@@ -106,9 +106,21 @@ function todo_oneliner {
   echo ""
 }
 
+prompt_command() {
+  LAST_EXIT_CODE=$?
+  history -a
+  export PS1="$(todo_oneliner) $(battery_indicator)$(hostname_indicator)$(pwd_indicator)$(git_indicator)$(rails_env_indicator)$(prompt_indicator)"
+}
+
+speedy_promt_command() {
+  LAST_EXIT_CODE=$?
+  history -a
+  export PS1="$(todo_oneliner) $(hostname_indicator)$(pwd_indicator)$(git_indicator)$(rails_env_indicator)$(prompt_indicator)"
+}
+
 if [ `hostname` = 'jumski-akra' ];
 then
-  PROMPT_COMMAND='LAST_EXIT_CODE=$?;history -a;export PS1="$(todo_oneliner) $(hostname_indicator)$(pwd_indicator)$(git_indicator)$(rails_env_indicator)$(prompt_indicator)"'
+  PROMPT_COMMAND=speedy_prompt_command
 else
-  PROMPT_COMMAND='LAST_EXIT_CODE=$?;history -a;export PS1="$(todo_oneliner) $(battery_indicator)$(hostname_indicator)$(pwd_indicator)$(git_indicator)$(rails_env_indicator)$(prompt_indicator)"'
+  PROMPT_COMMAND=prompt_command
 fi
