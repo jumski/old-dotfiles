@@ -21,7 +21,7 @@ GEM
       json (~> 1)
       ruby-readability (~> 0.5)
       trollop (~> 1)
-    guess_html_encoding (0.0.5)
+    guess_html_encoding (0.0.6)
     highline (1.6.14)
     hirb (0.6.2)
     hookup (1.1.0)
@@ -43,7 +43,7 @@ GEM
     pry-doc (0.4.4)
       pry (>= 0.9.9.6)
       yard (~> 0.8.1)
-    pry-theme (0.1.1)
+    pry-theme (0.1.2)
       json
     ruby-readability (0.5.4)
       guess_html_encoding (>= 0.0.4)
