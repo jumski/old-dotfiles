@@ -4,6 +4,7 @@ set disablesites=mail.google.com, reader.google.com, www.grupaimage.pl, grupaima
 set hintkeys=asdfghjkl;
 set hintkeysdisplayuppercase=1
 set useletters=1
+set shotstatus=0
 
 unmap <C-f>
 unmap <C-u>
