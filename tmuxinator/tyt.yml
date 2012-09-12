@@ -4,19 +4,13 @@
 project_name: tyt
 project_root: ~/work/turn-your-time
 tabs:
-  - server: rails server
-  # - stuffz:
-  #     layout: main-vertical
-  #     panes:
-  #       - spork
-  #       - rails server
-  - bash:
-      layout: main-vertical
-      panes:
-        - cd vendor/backbone-widgets; git status
-        - todo @tyt
-  - vim: vim
-  - console: rails console
-  - bash: tail -f log/development.log
-  - gem_home: cd `rvm gemdir`; ls
+- stuff:
+    layout: even-horizontal
+    panes:
+      - ls
+      - ls
+- bash: todo @books
+- vim: vim
+- console: ls
+- bash: tail -f log/development.log
 
