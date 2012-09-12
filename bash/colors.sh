@@ -112,7 +112,7 @@ prompt_command() {
   export PS1="$(todo_oneliner) $(battery_indicator)$(hostname_indicator)$(pwd_indicator)$(git_indicator)$(rails_env_indicator)$(prompt_indicator)"
 }
 
-speedy_promt_command() {
+speedy_prompt_command() {
   LAST_EXIT_CODE=$?
   history -a
   export PS1="$(todo_oneliner) $(hostname_indicator)$(pwd_indicator)$(git_indicator)$(rails_env_indicator)$(prompt_indicator)"
