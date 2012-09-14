@@ -23,9 +23,9 @@ function is_git_dirty {
 function is_git_repo()
 {
     local dir="$(pwd)"
-    while [ "$(dirname $dir)" != "/" ]; do
+    while [ "$(dirname "$dir")" != "/" ]; do
         [ -d "$dir/.git" ] && return
-        dir="$(dirname $dir)"
+        dir="$(dirname "$dir")"
     done
     false
 }
