@@ -10,7 +10,6 @@ mysql-server-5.5
 tig
 tmux
 moc
-exuberant_ctags
 exuberant-ctags
 keychain
 autossh
@@ -24,11 +23,7 @@ redis-server
 cowsay
 toilet
 fortune-mod
-sensors
 xsel
-node
-npm
-coffeescript
 xclip
 gawk
 graphviz
@@ -38,8 +33,6 @@ openvpn
 network-manager-openvpn
 siege
 festival
-ffserver
-ffmpeg
 exim4-daemon-light
 chromium-browser
 libinotifytools0-dev
@@ -48,3 +41,12 @@ firefox
 qnapi
 smplayer
 wine
+rxvt-unicode
+libmysqlclient-dev
+libmysqlclient18
+curl
+vim-nox
+autoreconf
+apt-file
+libqt4-dev
+ack-grep
