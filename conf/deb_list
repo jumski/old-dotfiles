@@ -45,7 +45,7 @@ libmysqlclient-dev
 libmysqlclient18
 curl
 vim-nox
-autoreconf
+autoconf
 apt-file
 libqt4-dev
 ack-grep
