@@ -20,7 +20,10 @@ ln -s --force -T "$DOTFILES_PATH/tmuxinator" "$HOME/.tmuxinator"
 ln -s --force -T "$DOTFILES_PATH/dotjs" "$HOME/.js"
 ln -s --force "$DOTFILES_PATH/Xdefaults" "$HOME/.Xdefaults"
 ln -s --force "$DOTFILES_PATH/sh-todo" "$HOME/.sh-todo"
-ln -s --force $HOME/Dropbox $HOME/dropbox
+
+if [ ! -d $HOME/dropbox ]; then
+  ln -s --force $HOME/Dropbox $HOME/dropbox
+fi
 
 if [ -d $HOME/.kde/share/apps/konsole ]; then
   ln -s --force "$DOTFILES_PATH/vendor/kde/share/apps/konsole/konsoleui.rc" "$HOME/.kde/share/apps/konsole/konsoleui.rc"
@@ -29,8 +32,15 @@ if [ -d $HOME/.kde/share/apps/konsole ]; then
   ln -s --force "$DOTFILES_PATH/vendor/kde/share/apps/konsole/tmux-guard.profile" "$HOME/.kde/share/apps/konsole/tmux-guard.profile"
 fi
 
+function log() {
+  echo "-- ${1}"
+}
+
 # install git if missing
-which git 2>/dev/null >/dev/null || sudo apt-get install git
+which git 2>/dev/null >/dev/null || sudo apt-get install -y git
+
+# install curl if missing
+which curl 2>/dev/null >/dev/null || sudo apt-get install -y curl
 
 # init submodules
 git submodule update --init
@@ -40,6 +50,7 @@ has_20_bash_completion() {
   dpkg -l | grep bash-completion | awk '{print $3}' | grep '2.0'
 }
 if ! has_20_bash_completion; then
+  log 'Intalling bash-completion 2.0'
   sudo apt-get purge bash-completion &&
   sudo dpkg -i $DOTFILES_PATH/vendor/bash-completion_2.0-1_all.deb
 fi
@@ -49,11 +60,27 @@ if ! which google-chrome && which chromium-browser; then
   sudo ln -s $(which chromium-browser) /usr/bin/google-chrome
 fi
 
+# set up rvm
+if [ ! -d $HOME/.rvm ]; then
+  #log 'Installing RVM'
+  #curl -L https://get.rvm.io | bash -s stable --ruby
+
+  log 'Installing RVM requirements'
+  sudo $(rvm requirements|grep -A1 "# For Ruby"|grep "ruby:"|cut -c9-|sed 's/install/install -y/g')
+
+  log 'Installing ruby-falcon'
+  rvm get head && rvm reinstall 1.9.3-perf --patch falcon
+
+  source bashrc
+  rvm use 1.9.3-perf --default
+fi
+
 # copy local_variables sample, if not present
 if [ ! -f $HOME/.local_variables ]; then
   cp $DOTFILES_PATH/bash/local_variables.sample $HOME/.local_variables
 fi
 
+# make git-dude dir
 test -d $HOME/.git-dude || mkdir $HOME/.git-dude
 
 (which ack-grep && ! which ack) && sudo ln -s /usr/bin/ack-grep /usr/bin/ack
