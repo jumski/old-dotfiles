@@ -9,3 +9,4 @@ tabs:
   - shell:
   - git-dude: cd ~/.git-dude && git-dude
   - autossh-git: autossh git@github.com git-receive-pack jumski/dotfiles
+  - djsd: ~/dotfiles/vendor/dotjs-ubuntu/bin/djsd
