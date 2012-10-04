@@ -45,7 +45,7 @@ URxvt.scrollBar:            false
 ! Perl extensions
 URxvt.perl-ext-common:      default,matcher
 URxvt.matcher.button:       1
-URxvt.urlLauncher:          firefox
+URxvt.urlLauncher:          google-chrome
 
 ! Cursor
 URxvt.cursorBlink:          true
@@ -57,6 +57,8 @@ URxvt.title:                urxvt-main
 
 ! Pointer
 URxvt.pointerBlank:         true
+URxvt.geometry: 166x40
+URxvt.position: 0x0
 
 !!Source http://github.com/altercation/solarized
 
