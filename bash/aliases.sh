@@ -33,7 +33,6 @@ coltree(){
 alias updatedb="sudo updatedb"
 
 ## CUSTOM ALIASES
-alias ack=ack-grep
 alias git=hub
 alias g=git
 alias tf="tail -100f"
