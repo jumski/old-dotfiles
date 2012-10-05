@@ -53,3 +53,6 @@ fbreader
 virtualbox
 virtualbox-dkms
 transmission
+calibre
+aptitude
+virtualbox-guest-additions
