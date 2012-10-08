@@ -1,6 +1,6 @@
 
 def desc(model)
-  y model.columns.map(&:name)
+  pp model.columns.map(&:name)
 end
 
 def reqs(model)
@@ -9,7 +9,7 @@ def reqs(model)
 
   puts "Required columns:"
   if required
-    y required
+    pp required
   else
     puts " -- All columns are optional"
   end
