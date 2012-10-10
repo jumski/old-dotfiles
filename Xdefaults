@@ -16,14 +16,14 @@ Xft.hintstyle:              hintslight
 !-------------------------------------------------------------------------------
 
 URxvt.depth:                32
-URxvt.geometry:             90x30
+URxvt.geometry:             166x40
 URxvt.transparent:          false
 URxvt.fading:               0
 ! URxvt.urgentOnBell:         true
 ! URxvt.visualBell:           true
 URxvt.loginShell:           true
-URxvt.saveLines:            50
-URxvt.internalBorder:       3
+URxvt.saveLines:            0
+URxvt.internalBorder:       1
 URxvt.lineSpace:            0
 
 ! Fonts
@@ -57,8 +57,6 @@ URxvt.title:                urxvt-main
 
 ! Pointer
 URxvt.pointerBlank:         true
-URxvt.geometry: 166x40
-URxvt.position: 0x0
 
 !!Source http://github.com/altercation/solarized
 
