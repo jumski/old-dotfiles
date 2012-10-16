@@ -28,6 +28,9 @@ fi
 [ -f $HOME/.local_variables ] && source $HOME/.local_variables
 # [ -f $DOTFILES_PATH/bash/bundler-exec.sh ] && source $DOTFILES_PATH/bash/bundler-exec.sh
 
+# java home
+export JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:bin/java::")
+
 # readline settings
 bind "set completion-ignore-case on"
 bind "set show-all-if-ambiguous On" # this allows you to automatically show completion without double tab-ing
