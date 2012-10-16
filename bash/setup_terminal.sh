@@ -31,6 +31,10 @@ fi
 # java home
 export JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:bin/java::")
 
+# wrk home
+export WRK_HOME=$DOTFILES_PATH/vendor/wrk
+export PATH="$PATH:$WRK_HOME/bin"
+
 # readline settings
 bind "set completion-ignore-case on"
 bind "set show-all-if-ambiguous On" # this allows you to automatically show completion without double tab-ing
