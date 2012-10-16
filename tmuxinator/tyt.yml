@@ -2,7 +2,7 @@
 # you can make as many tabs as you wish...
 
 project_name: tyt
-project_root: ~/work/turn-your-time
+project_root: ~/work/tyt
 tabs:
 - stuff:
     layout: even-horizontal
