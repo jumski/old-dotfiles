@@ -36,6 +36,10 @@ function git_dirty_indicator {
   is_git_dirty && echo '*'
 }
 function git_indicator {
+  if [ -n "$DISABLE_GIT_INDICATOR" ]; then
+    return
+  fi
+
   if ! is_git_repo;
   then
     echo ''
