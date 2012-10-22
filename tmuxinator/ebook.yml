@@ -3,6 +3,7 @@
 
 project_name: ebook
 project_root: ~/work/ebookmakr
+rvm: default
 tabs:
 - stuff:
     layout: even-horizontal
