@@ -8,5 +8,6 @@ tabs:
   - vim: vim -p vim/ bash/
   - shell: ls
   - git-dude: cd ~/.git-dude && git-dude
-  - autossh-git: autossh git@github.com git-receive-pack jumski/dotfiles
+  - autossh-github: autossh git@github.com git-receive-pack jumski/dotfiles
+  - autossh-bitbucket: autossh git@bitbucket.org git-receive-pack jumski/dotfiles
   - djsd: ~/dotfiles/vendor/dotjs-ubuntu/bin/djsd
