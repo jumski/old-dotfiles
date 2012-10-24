@@ -3,6 +3,7 @@
 
 project_name: tyt
 project_root: ~/work/tyt
+pre: default
 tabs:
 - stuff:
     layout: even-horizontal
