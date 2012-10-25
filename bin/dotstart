@@ -6,7 +6,7 @@ step(){
 
 step cd ~/dotfiles/    &&
 step git stash         &&
-step $(git pull --rebase && step git stash pop) &&
+step "\$(git pull --rebase && step git stash pop)" &&
 step ./install.sh      &&
 step source bashrc     &&
 step mux steptfilez
