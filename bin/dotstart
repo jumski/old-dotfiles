@@ -4,9 +4,13 @@ step(){
   "$@" 2>&1 >/dev/null
 }
 
+if [ -n "$(git status --porcelain)" ]; then
+  echo "GIT changes detected!"
+  echo "Please make your dotfiles working dir clean and try again!"
+  exit 1
+fi
+
 step cd ~/dotfiles/    &&
-step git stash         &&
-step "\$(git pull --rebase && step git stash pop)" &&
 step ./install.sh      &&
 step source bashrc     &&
 step mux steptfilez
