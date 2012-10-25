@@ -10,7 +10,9 @@ if [ -n "$(git status --porcelain)" ]; then
   exit 1
 fi
 
-step cd ~/dotfiles/    &&
-step ./install.sh      &&
-step source bashrc     &&
-step mux steptfilez
+step cd ~/dotfiles/         &&
+step git pull --rebase      &&
+step git push origin master &&
+step ./install.sh           &&
+step source bashrc          &&
+step mux dotfilez
