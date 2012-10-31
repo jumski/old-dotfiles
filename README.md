@@ -1,4 +1,9 @@
 
+## two finger scroll
+
+use gpointing-device-settings
+
+
 ## dotjs
 ```bash
 @reboot /home/jumski/dotfiles/vendor/dotjs-ubuntu/bin/djsd -d
