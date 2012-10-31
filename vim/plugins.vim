@@ -39,6 +39,7 @@ Bundle 'jayferd/eco.vim'
 Bundle 'sickill/vim-pasta'
 Bundle 'nono/vim-handlebars'
 Bundle 'jgdavey/vim-blockle'
+Bundle 'derekwyatt/vim-scala'
 
 """"""""" DISABLED PLUGINS
 " Bundle 'php.vim'
