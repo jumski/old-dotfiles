@@ -2,4 +2,5 @@
 
 $HOME/dotfiles/startup/set_keyboard_repeat
 $HOME/dotfiles/startup/remap_capslock
+$HOME/dotfiles/startup/prevent_touchpad_clicks 
 mocp --server
