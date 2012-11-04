@@ -87,5 +87,5 @@ let g:Powerline_symbols = 'fancy'
 let coffee_compile_vert = 1
 
 " use vim-pasta in coffeescript
-let g:pasta_disabled_filetypes = ["python", "markdown", "coffee"]
+let g:pasta_disabled_filetypes = ["python", "markdown", "coffee", "haml", "sass"]
 
