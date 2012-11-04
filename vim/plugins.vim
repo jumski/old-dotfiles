@@ -21,8 +21,8 @@ Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-unimpaired'
-Bundle 'tpope/vim-bundler'
-Bundle 'tpope/vim-rake'
+" Bundle 'tpope/vim-bundler'
+" Bundle 'tpope/vim-rake'
 Bundle 'vim-ruby/vim-ruby'
 " Bundle 'vim-scripts/ack.vim'
 Bundle 'epmatsw/ag.vim'
@@ -57,6 +57,8 @@ let VimuxHeight = "5"
 
 " gundo toggler
 nnoremap <leader>gu :GundoToggle<CR>
+
+let g:syntastic_disabled_filetypes = ["haml"]
 
 " mappings for ctrlp
 " let g:ctrlp_map = '<leader>z'
