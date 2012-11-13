@@ -3,7 +3,7 @@
 
 project_name: antykwariusz
 project_root: ~/work/antykwariusz
-pre: default
+rvm: default
 tabs:
   - stuff:
       layout: even-horizontal
