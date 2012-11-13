@@ -39,9 +39,6 @@ export PATH="$PATH:$WRK_HOME/bin"
 bind "set completion-ignore-case on"
 bind "set show-all-if-ambiguous On" # this allows you to automatically show completion without double tab-ing
 
-# startup per-terminal thingzzz things
-$DOTFILES_PATH/startup/*
-
 # enable keychain
 eval `keychain --eval --agents ssh --inherit local-once --nolock`
 

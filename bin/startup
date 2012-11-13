@@ -1,6 +1,14 @@
 #!/bin/bash
 
-$HOME/dotfiles/startup/set_keyboard_repeat
-$HOME/dotfiles/startup/remap_capslock
-$HOME/dotfiles/startup/prevent_touchpad_clicks 
+# set keyboard repeat
+xset r rate 250 100
+
+# remap caps and right win key
+setxkbmap -option ctrl:nocaps
+setxkbmap -option altwin:ctrl_win
+
+# prevent mouse clicks
+syndaemon -i 1.5 -t &
+
+# music on console
 mocp --server
