@@ -120,6 +120,16 @@ if [ ! -f $FONT_PATH ]; then
   fc-cache -vf
 fi
 
+# local user supervisor
+mkdir -p $HOME/tmp
+mkdir -p $HOME/log/supervisor
+if ! which supervisord; then
+  sudo apt-get install -y supervisord
+fi
+if [ -f /etc/rc3.d/S20supervisor ]; then
+  sudo update-rc.d -f supervisor remove
+fi
+
 echo 'Load bashrc'
 source ~/dotfiles/bashrc
 source ~/dotfiles/bash/aliases.sh

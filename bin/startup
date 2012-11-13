@@ -12,3 +12,6 @@ syndaemon -i 1.5 -t &
 
 # music on console
 mocp --server
+
+# supervisor
+supervisord -c $HOME/jumski/conf/supervisord.conf

@@ -1,0 +1,3 @@
+[program:github-ssh]
+command = ssh git@github.com git-receive-pack jumski/dotfiles
+autorestart = true

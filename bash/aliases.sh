@@ -42,6 +42,8 @@ killzeus() {
   test -f .zeus.sock && rm zeus.sock
 }
 
+alias visor="supervisorctl -c /home/jumski/dotfiles/conf/supervisord.conf"
+
 alias jungletrain="mocp -l http://stream2.jungletrain.net:8000"
 alias bassdrive="mocp -l http://shouthostdirect13.streams.bassdrive.com:8202"
 alias livednb="mocp -l http://173.236.56.82:8006"

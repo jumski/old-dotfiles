@@ -1,0 +1,3 @@
+[program:bitbucket-ssh]
+command = ssh git@bitbucket.org git-receive-pack jumski/dotfiles
+autorestart = true
