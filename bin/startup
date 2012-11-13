@@ -14,4 +14,4 @@ syndaemon -i 1.5 -t &
 mocp --server
 
 # supervisor
-supervisord -c $HOME/jumski/conf/supervisord.conf
+supervisord -c $HOME/dotfiles/conf/supervisord.conf
