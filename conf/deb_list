@@ -69,3 +69,6 @@ gpointing-device-settings
 shutter
 gnapi
 gftp
+smartmontools
+gsmartcontrol
+openssh-server
