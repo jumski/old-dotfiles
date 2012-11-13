@@ -54,6 +54,8 @@
   axe = !git-axe
   axer = !git-axer
 
+  ftp = !git-ftp
+
 [giggle]
 	main-window-maximized = true
 	main-window-geometry = 0x0+0+0
