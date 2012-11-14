@@ -127,6 +127,7 @@ if ! which supervisord; then
   sudo apt-get install -y supervisord
 fi
 if [ -f /etc/rc3.d/S20supervisor ]; then
+  sudo /etc/init.d/supervisor stop
   sudo update-rc.d -f supervisor remove
 fi
 
