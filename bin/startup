@@ -10,8 +10,20 @@ setxkbmap -option altwin:ctrl_win
 # prevent mouse clicks
 syndaemon -i 1.5 -t &
 
-# music on console
+# mocp
 mocp --server
+
+# skype
+skype &
+
+# pidgin
+pidgin &
+
+# chrome
+google-chrome &
+
+# urxvt
+urxvt &
 
 # supervisor
 supervisord -c $HOME/dotfiles/conf/supervisord.conf
