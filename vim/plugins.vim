@@ -54,7 +54,7 @@ NeoBundle 'Shougo/vimproc'
 "===============================
 "    plugin specific options
 "===============================
-let VimuxHeight = "5"
+let VimuxHeight = "20"
 
 " let g:syntastic_disabled_filetypes = ["haml"]
 
