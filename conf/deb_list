@@ -74,3 +74,5 @@ gsmartcontrol
 openssh-server
 rcconf
 supervisor
+bitcoind
+gnupg-agent
