@@ -1,0 +1,16 @@
+# ~/.tmuxinator/default.yml
+# you can make as many tabs as you wish...
+
+project_name: phone-db
+project_root: ~/work/phone-db
+tabs:
+  - stuff:
+      layout: even-horizontal
+      panes:
+        - ls
+        - ls
+  - bash: todo @phone-db
+  - vim: vim
+  - console: ls
+  - bash: tail -f log/development.log
+
