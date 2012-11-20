@@ -11,7 +11,7 @@ NeoBundle 'jumski/Conque-Shell'
 NeoBundle 'matchit.zip'
 NeoBundle 'michaeljsmith/vim-indent-object'
 NeoBundle 'repeat.vim'
-" NeoBundle 'scrooloose/syntastic'
+NeoBundle 'scrooloose/syntastic'
 NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'tpope/vim-endwise'
 NeoBundle 'tpope/vim-eunuch'
@@ -21,8 +21,8 @@ NeoBundle 'tpope/vim-markdown'
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-unimpaired'
-" NeoBundle 'tpope/vim-bundler'
-" NeoBundle 'tpope/vim-rake'
+NeoBundle 'tpope/vim-bundler'
+NeoBundle 'tpope/vim-rake'
 NeoBundle 'vim-ruby/vim-ruby'
 " NeoBundle 'vim-scripts/ack.vim'
 NeoBundle 'epmatsw/ag.vim'
@@ -56,9 +56,9 @@ NeoBundle 'derekwyatt/vim-scala'
 let VimuxHeight = "5"
 
 " gundo toggler
-nnoremap <leader>gu :GundoToggle<CR>
+" nnoremap <leader>gu :GundoToggle<CR>
 
-let g:syntastic_disabled_filetypes = ["haml"]
+" let g:syntastic_disabled_filetypes = ["haml"]
 
 " mappings for ctrlp
 " let g:ctrlp_map = '<leader>z'
