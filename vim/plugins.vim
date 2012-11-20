@@ -55,9 +55,6 @@ NeoBundle 'derekwyatt/vim-scala'
 "===============================
 let VimuxHeight = "5"
 
-" gundo toggler
-" nnoremap <leader>gu :GundoToggle<CR>
-
 " let g:syntastic_disabled_filetypes = ["haml"]
 
 " mappings for ctrlp
@@ -75,7 +72,7 @@ let VimuxHeight = "5"
 let g:EasyMotion_Leader_key = ',,'
 
 " set commant-t window height
-let g:CommandTMaxHeight=10
+" let g:CommandTMaxHeight=10
 
 " require matchit manually
 runtime macros/matchit.vim
