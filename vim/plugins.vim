@@ -40,6 +40,7 @@ NeoBundle 'sickill/vim-pasta'
 NeoBundle 'nono/vim-handlebars'
 NeoBundle 'jgdavey/vim-blockle'
 NeoBundle 'derekwyatt/vim-scala'
+NeoBundle 'Shougo/vimproc'
 
 """"""""" DISABLED PLUGINS
 " NeoBundle 'php.vim'
@@ -86,3 +87,11 @@ let coffee_compile_vert = 1
 " use vim-pasta in coffeescript
 let g:pasta_disabled_filetypes = ["python", "markdown", "coffee", "haml", "sass"]
 
+
+" check if all is installed
+if neobundle#exists_not_installed_bundles()
+  echomsg 'Not installed bundles : ' .
+        \ string(neobundle#get_not_installed_bundle_names())
+  echomsg 'Please execute ":NeoBundleInstall" command.'
+  "finish
+endif
