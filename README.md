@@ -3,6 +3,10 @@
 
 use gpointing-device-settings
 
+## vimproc after first install
+```
+  After install, turn shell ~/.vim/bundle/vimproc, (n,g)make -f your_machines_makefile
+```
 
 ## dotjs
 ```bash
