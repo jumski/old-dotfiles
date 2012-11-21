@@ -39,7 +39,7 @@ alias tf="tail -100f"
 alias k9="kill -9 "
 killzeus() {
   ps ax|grep zeus|grep -v grep|awk '{print $1}'|xargs kill -9
-  test -f .zeus.sock && rm zeus.sock
+  test -S .zeus.sock && rm .zeus.sock
 }
 
 alias visor="supervisorctl -c /home/jumski/dotfiles/conf/supervisord.conf"
