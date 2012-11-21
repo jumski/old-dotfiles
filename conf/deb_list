@@ -76,3 +76,4 @@ rcconf
 supervisor
 bitcoind
 gnupg-agent
+python-qt4

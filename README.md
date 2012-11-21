@@ -8,6 +8,11 @@ use gpointing-device-settings
   After install, turn shell ~/.vim/bundle/vimproc, (n,g)make -f your_machines_makefile
 ```
 
+## electrum bitcoin client
+```
+  sudo pip install http://electrum.ecdsa.org/Electrum-1.5.tar.gz
+```
+
 ## dotjs
 ```bash
 @reboot /home/jumski/dotfiles/vendor/dotjs-ubuntu/bin/djsd -d
