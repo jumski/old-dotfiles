@@ -48,6 +48,7 @@ GEM
     ruby-readability (0.5.4)
       guess_html_encoding (>= 0.0.4)
       nokogiri (>= 1.4.2)
+    rubygems-bundler (1.1.0)
     slop (3.3.3)
     spoon (0.0.1)
     spruz (0.2.13)
@@ -81,6 +82,7 @@ DEPENDENCIES
   pry
   pry-doc
   pry-theme
+  rubygems-bundler
   tmuxinator
   vimdb
   what_methods

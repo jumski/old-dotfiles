@@ -16,6 +16,7 @@ gem 'hookup'
 gem 'tmuxinator'
 gem 'github'
 gem 'zeus'
+gem 'rubygems-bundler'
 
 group :pry do
   gem 'pry'
