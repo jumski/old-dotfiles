@@ -106,6 +106,9 @@ set wildmode=list:longest,list:full
 " ignore files
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 
+" ignore case when <TAB>completing filenames
+set wildignorecase
+
 " command history window height
 set cmdwinheight=10
 
