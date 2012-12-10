@@ -78,3 +78,4 @@ bitcoind
 gnupg-agent
 python-qt4
 pgadmin3
+memcached
