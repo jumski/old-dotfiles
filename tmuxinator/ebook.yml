@@ -3,13 +3,13 @@
 
 project_name: ebook
 project_root: ~/work/ebookmakr
-rvm: 1.9.3-p327
+rvm: default
 tabs:
 - stuff:
     layout: even-horizontal
     panes:
-      - foreman start -f Procfile.dev
-      - bundle exec unicorn -p 3000 -c ./config/unicorn.rb
+      - foreman start
+      - rails s
 - bash: todo @ebook
 - vim: vim
 - console: ls
