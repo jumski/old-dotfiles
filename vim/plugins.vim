@@ -56,7 +56,7 @@ NeoBundle 'Shougo/vimproc'
 "===============================
 let VimuxHeight = "20"
 
-" let g:syntastic_disabled_filetypes = ["haml"]
+let g:syntastic_disabled_filetypes = ["haml", "sass"]
 
 " mappings for ctrlp
 " let g:ctrlp_map = '<leader>z'
