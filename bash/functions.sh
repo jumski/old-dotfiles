@@ -24,3 +24,7 @@ scr(){
 
   tmux new-window -n "$window_title" "cd ${new_scratch_dir}; bash -i"
 }
+
+downloaded(){
+  ifconfig ppp0 | grep 'RX bytes'
+}
