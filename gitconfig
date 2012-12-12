@@ -17,6 +17,7 @@
   today = log --pretty=format:\"%Cgreen%h%Creset %Cblue%ad%Creset %s%C(yellow)%d%Creset %Cblue[%an]%Creset\" --graph --date=short --since='1 Day Ago' --date=relative --author=Wojtek
   clfd = clean -fd
   cap = !git commit && git push && cap deploy
+  deploy = !git pull --rebase && git push && cap deploy
   unstage = reset HEAD  # removes files from index
   uncommit = reset --soft HEAD^
   amend = commit --amend
