@@ -54,12 +54,6 @@ cmap w!! w !sudo tee >/dev/null %
 
 cmap wqq wq
 
-" Rails specific
-map <leader>gr :topleft :tabnew config/routes.rb<cr>
-map <leader>gg :topleft 100 :tabnew Gemfile<cr>
-map <leader>gb :topleft 100 :tabnew spec/support/blueprints.rb<cr>
-map <leader>gs :topleft 100 :tabnew spec/spec_helper.rb<cr>
-
 " Convert to Ruby 1.9 hash syntax
 noremap <leader>9 :s/:\(\S\+\)\s\+=>\s\+/\1: /g<cr>
 
@@ -91,3 +85,13 @@ nnoremap <leader>gu :GundoToggle<CR>
 
 " replase word under cursor in whole file
 nnoremap <leader>: yiw:%s/<C-R>"/
+
+" Rails specific
+map <leader>rr :topleft :tabnew config/routes.rb<cr>
+map <leader>rg :topleft 100 :tabnew Gemfile<cr>
+
+" fugitive shortcuts
+nnoremap <leader>gc :Gcommit<CR>
+nnoremap <leader>gw :Gwrite<CR>
+nnoremap <leader>gr :Gread<CR>
+nnoremap <leader>gs :Gstatus<CR>
