@@ -5,9 +5,9 @@
 [alias]
   ci = commit
   cim = !git-cim
-#  s = status
   s = status -s
   d = diff
+  wd = diff --word-diff=color
   dc = diff --cached
   c = checkout
   b = branch
