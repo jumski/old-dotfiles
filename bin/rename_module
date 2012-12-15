@@ -1,0 +1,21 @@
+#!/usr/bin/ruby
+require 'fileutils'
+
+from, to = ARGV[0..1]
+
+raise 'Provide from and to' if [from, to].any?(&:nil?)
+
+[ Dir["#{from}_spec.rb"], Dir["#{from}.rb"] ].inject({}) do |moves, source|
+
+end
+
+
+puts 'source:'
+puts '===================='
+puts paths.join("\n")
+puts '===================='
+puts 'are you sure?'
+raise 'chicken!' unless (gets == 'y')
+
+
+raise 'moved'
