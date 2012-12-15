@@ -73,24 +73,6 @@ function pwd_indicator {
 }
 
 source $DOTFILES_PATH/bash/battery_functions.sh
-battery_indicator() {
-  if [ !battery_present ]; then
-    return 0
-  fi
-
-  local state=$(battery_state)
-  if [ "$state" != "discharging" ]; then
-    return 0
-  fi
-
-  local percent=$(battery_percentage)
-  local battery_color=$c_red
-
-  [ "$percent" -gt "15" ] && local battery_color=$c_yellow
-  [ "$percent" -gt "30" ] && local battery_color=$c_green
-
-  echo "${battery_color}${percent}%${c_reset} "
-}
 
 function prompt_indicator {
   if [ $LAST_EXIT_CODE = 0 ];
@@ -113,18 +95,7 @@ function todo_oneliner {
 prompt_command() {
   LAST_EXIT_CODE=$?
   history -a
-  export PS1="$(todo_oneliner) $(battery_indicator)$(hostname_indicator)$(pwd_indicator)$(git_indicator)$(rails_env_indicator)$(prompt_indicator)"
-}
-
-speedy_prompt_command() {
-  LAST_EXIT_CODE=$?
-  history -a
   export PS1="$(todo_oneliner) $(hostname_indicator)$(pwd_indicator)$(git_indicator)$(rails_env_indicator)$(prompt_indicator)"
 }
 
-if [ `hostname` = 'jumski-akra' ];
-then
-  PROMPT_COMMAND=speedy_prompt_command
-else
-  PROMPT_COMMAND=prompt_command
-fi
+PROMPT_COMMAND=prompt_command
