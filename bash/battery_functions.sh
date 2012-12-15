@@ -52,10 +52,10 @@ battery_state_indicator() {
     local state_indicator="."
     ;;
     'charging')
-    local state_indicator="+"
+    local state_indicator="▲"
     ;;
     'discharging')
-    local state_indicator="-"
+    local state_indicator="▼"
     ;;
   esac
 
