@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+
+line = %x[ ifconfig ppp0 2>/dev/null ].split("\n").grep(/RX bytes/).first
+
+exit 0 unless line
+
+in_megabytes = line.scan(/RX bytes.*\((.*) MB\).*\((.*) MB\)/).flatten.map(&:to_i)
+
+in_kilobytes = line.scan(/RX bytes.*\((.*) KB\).*\((.*) KB\)/).flatten.map(&:to_i).map{|kb| kb / 1024}
+
+amounts = (in_megabytes.size > 0) ? in_megabytes : in_kilobytes
+
+puts amounts.join('/')
+
