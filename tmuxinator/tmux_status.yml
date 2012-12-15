@@ -1,0 +1,15 @@
+# ~/.tmuxinator/default.yml
+# you can make as many tabs as you wish...
+
+project_name: tmux_status
+project_root: ~/work/tmux_status
+rvm: ruby-1.9.3-p286-falcon
+tabs:
+  - bash:
+  - stuff:
+      layout: even-vertical
+      panes:
+        - guard
+        - vim
+  - vim: vim
+  - console: bundle exec pry -r bundler -e "Bundler.require"
