@@ -79,3 +79,7 @@ gnupg-agent
 python-qt4
 pgadmin3
 memcached
+libpurple-bin
+lm-sensors
+libnotify-bin
+libnotify4
