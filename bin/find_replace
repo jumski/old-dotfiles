@@ -1,0 +1,22 @@
+#!/bin/bash
+
+search=$1
+replace=$2
+
+ag "$search" || exit 1
+
+echo
+echo "==================================================="
+echo " > replacing <$search> for <$replace>"
+echo " > are you sure? "
+read -e confirmed
+
+if [ "$confirmed" = "y" ]; then
+  echo "yes"
+else
+  echo "no"
+fi
+
+echo "ag '$search' -l | xargs sed -i 's/$search/$replace/g'"
+echo ""
+
