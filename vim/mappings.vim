@@ -40,12 +40,12 @@ nnoremap <C-e> 3<C-e>
 nnoremap <C-y> 3<C-y>
 
 " easy access/surce vimrc and other
-nnoremap <leader>rs :source ~/.vimrc<CR>
-nnoremap <leader>rt :tabnew ~/dotfiles/vim/plugins.vim<cr>
+nnoremap <leader>vs :source ~/.vimrc<CR>
+nnoremap <leader>vp :tabnew ~/dotfiles/vim/plugins.vim<cr>
   " \ :sp     ~/dotfiles/settings.vim<cr>
   " \ :sp     ~/dotfiles/mappings.vim<cr>
   " \ :vs     ~/dotfiles/macros.vim<cr><c-k><c-k>
-nnoremap <leader>rb :BundleInstall<cr>
+nnoremap <leader>vb :NeoBundleInstall<cr>
 
 " Split line(opposite to S-J joining line)
 " nnoremap <C-J> gEa<CR><ESC>
@@ -92,6 +92,7 @@ map <leader>rg :topleft 100 :tabnew Gemfile<cr>
 
 " fugitive shortcuts
 nnoremap <leader>gc :Gcommit<CR>
+nnoremap <leader>gd :Gdiff<CR>
 nnoremap <leader>gw :Gwrite<CR>
 nnoremap <leader>gr :Gread<CR>
 nnoremap <leader>gs :Gstatus<CR>
