@@ -6,21 +6,24 @@
   ci = commit
   cim = !git-cim
   s = status -s
+  c = checkout
+
+  amend = commit --amend
+  unstage = reset HEAD  # removes files from index
+  uncommit = reset --soft HEAD^
+  clfd = clean -fd
+
   d = diff
   wd = diff --word-diff=color
   dc = diff --cached
-  c = checkout
   b = branch
   ba = branch -a
   l = log
   yesterday = log --pretty=format:\"%Cgreen%h%Creset %Cblue%ad%Creset %s%C(yellow)%d%Creset %Cblue[%an]%Creset\" --graph --date=short --after=yesterday --author=Wojtek
   today = log --pretty=format:\"%Cgreen%h%Creset %Cblue%ad%Creset %s%C(yellow)%d%Creset %Cblue[%an]%Creset\" --graph --date=short --since='1 Day Ago' --date=relative --author=Wojtek
-  clfd = clean -fd
   cap = !git commit && git push && cap deploy
   deploy = !git pull --rebase && git push && cap deploy
-  unstage = reset HEAD  # removes files from index
-  uncommit = reset --soft HEAD^
-  amend = commit --amend
+
   chr = cherry -v
   rmt = remote -v
 	wc = whatchanged
@@ -33,6 +36,7 @@
   resolve = !vim -p $(git conflicts)
   stats = !git-stats
   rank = !git-rank-contributors
+
   new = ls-files --others --exclude-standard
   done = !git fetch origin && git rebase origin/master && git checkout master && git merge --no-ff @{-1} && bundle exec rake && git push
 
