@@ -6,10 +6,6 @@ project_root: ~/work/tmux_status
 rvm: ruby-1.9.3-p286-falcon
 tabs:
   - bash:
-  - stuff:
-      layout: even-vertical
-      panes:
-        - guard
-        - vim
+  - bash:
   - vim: vim
   - console: bundle exec pry -r bundler -e "Bundler.require"
