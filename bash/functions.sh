@@ -28,3 +28,7 @@ scr(){
 downloaded(){
   ifconfig ppp0 | grep 'RX bytes'
 }
+
+drop_caches() {
+  sudo sync && sudo echo 3 | sudo tee /proc/sys/vm/drop_caches
+}
