@@ -8,7 +8,7 @@ tabs:
   - stuff:
       layout: even-horizontal
       panes:
-        - ls
+        - puma
         - ls
   - bash: todo @books
   - vim: vim
