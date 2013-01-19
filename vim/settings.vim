@@ -91,9 +91,10 @@ colorscheme solarized
 " do not redraw while executing macros etc
 set lazyredraw
 
-" force syntax highlighting on files w/o extensions
+" force syntax highlighting on certain filetypes
 au BufNewFile,BufRead Rakefile,Capfile,Guardfile,Gemfile,pryrc,*.god setfiletype ruby
-autocmd BufNewFile,BufRead *.json set ft=javascript
+au BufNewFile,BufRead *.json set ft=javascript
+au BufNewFile,BufRead *.hamlc setfiletype haml
 
 " use ack as grep
 set grepprg=ack-grep\ -a
@@ -164,7 +165,7 @@ set smartcase
 set scrolloff=3
 
 " disable reading modelines
-set nomodeline
+" set nomodeline
 
 " session saving options
 set sessionoptions=buffers,winsize,tabpages,winpos,winsize
