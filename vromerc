@@ -13,3 +13,8 @@ unmap <C-d>
 map J gT
 map K gt
 map x <M-d>
+map d 8j
+map u 8k
+
+map <A-n> <S-j> 
+map <A-p> <S-k> 
