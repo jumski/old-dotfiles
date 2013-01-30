@@ -1,11 +1,6 @@
 #!/bin/bash
 
-# set keyboard repeat
-xset r rate 250 100
-
-# remap caps and right win key
-setxkbmap -option ctrl:nocaps
-setxkbmap -option altwin:ctrl_win
+$HOME/dotfiles/bin/setup_keyboard
 
 # prevent mouse clicks
 syndaemon -i 1.5 -t &
