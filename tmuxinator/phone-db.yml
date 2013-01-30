@@ -7,10 +7,10 @@ tabs:
   - stuff:
       layout: even-horizontal
       panes:
-        - zeus start
-        - sleep 7 && zeus server
+        -
+        -
   - bash: todo @phone-db
   - vim: vim
-  - console: sleep 7 && zeus console
+  - console:
   - bash: tail -f log/development.log
 

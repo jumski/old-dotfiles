@@ -1,0 +1,12 @@
+# ~/.tmuxinator/default.yml
+# you can make as many tabs as you wish...
+
+project_name: webmonks
+project_root: ~/work/webmonks-chef-repo
+rvm: 1.9.3-p286-falcon
+tabs:
+  - ssh:
+  - bash:
+  - vim: vim
+  - chef-cache: cd ~/chef-cache/web-accessible && pkill -f SimpleHTTPServer && python -m SimpleHTTPServer
+
