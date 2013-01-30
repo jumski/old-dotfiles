@@ -1,6 +1,8 @@
 # work specific
 .bundle
 *~
+.rvmrc
+.zeus.sock
 
 # Compiled source #
 ###################
