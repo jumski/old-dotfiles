@@ -32,6 +32,8 @@
   h = log --pretty=format:\"%Cgreen%h%Creset %Cblue%ad%Creset %s%C(yellow)%d%Creset %Cblue[%an]%Creset\" --graph --date=short
   dstat = diff --stat
 	wtf = !git-wtf
+  trail = !git-trail
+  neck = !git-neck
 
   conflicts = !git ls-files -u | cut -f 2 | sort -u
   resolve = !vim -p $(git conflicts)
@@ -55,6 +57,7 @@
 
   up = !git fetch origin && git rebase origin/master
   aa = add .
+  ap = add -p
   plre = pull --rebase
   ff = merge --ff-only
   noff = merge --no-ff
