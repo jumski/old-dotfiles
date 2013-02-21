@@ -19,6 +19,9 @@ nmap <silent> <leader><Tab> :tabp<CR>
 nmap <silent> <leader>f :tabn<CR>
 nmap <silent> <leader>x :tabclose<CR>
 
+" toggle hlsearch
+nmap <leader>h :se invhlsearch<CR>
+
 " open file under curson in vsplit
 " nmap <C-X>gf :vs %<CR>gf
 
@@ -74,6 +77,8 @@ map Y y$
 vmap > >gv
 vmap < <gv
 
+" select last changed/pasted text
+nnoremap <expr> gp '`[' . strpart(getregtype(), 0, 1) . '`]'
 
 " plugin specific mappings
 nnoremap <leader>a :RunRubyFocusedTest<CR>
