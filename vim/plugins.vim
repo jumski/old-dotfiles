@@ -42,6 +42,7 @@ NeoBundle 'jgdavey/vim-blockle'
 NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'Shougo/vimproc'
 NeoBundle "DataWraith/auto_mkdir"
+NeoBundle 'Valloric/YouCompleteMe'
 
 """"""""" DISABLED PLUGINS
 " NeoBundle 'php.vim'
