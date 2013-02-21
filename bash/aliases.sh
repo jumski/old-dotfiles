@@ -26,10 +26,6 @@ complete -o default -o nospace -F _git g
 complete -o default -o nospace -F _git_status gs
 complete -o default -o nospace -F _git_diff gd
 
-coltree(){
-  tree -C "$@" | less -R
-}
-
 alias updatedb="sudo updatedb"
 
 ## CUSTOM ALIASES
@@ -37,11 +33,6 @@ alias ack=ack-grep
 alias g=git
 alias tf="tail -100f"
 alias k9="kill -9 "
-killzeus() {
-  ps ax|grep zeus|grep -v grep|awk '{print $1}'|xargs kill -9
-  test -S .zeus.sock && rm .zeus.sock
-  reset
-}
 
 alias visor="supervisorctl -c /home/jumski/dotfiles/conf/supervisord.conf"
 
@@ -59,17 +50,6 @@ alias pg_stop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
 alias compile_tags="ctags -R --exclude=.git --exclude=log * $GEM_HOME/gems/*"
 alias realias="source $DOTFILES_PATH/bash/aliases.sh && echo 'reloaded .bash/aliases.sh'"
 
-function s {
-  apt-cache search "$@" | sort | less
-}
-function i {
-  if ! grep "$1" $DOTFILES_PATH/conf/deb_list; then
-    echo "$1" >> $DOTFILES_PATH/conf/deb_list
-  fi
-
-  sudo apt-get install $1
-}
-
 alias fav="~/various/fav"
 alias favgrep="~/various/favgrep"
 
@@ -78,100 +58,7 @@ alias skype="LD_PRELOAD=/usr/lib32/libv4l/v4l1compat.so skype"
 alias ssh-maroko="ssh -t -p 60022 jumski@dev.jumski.com ssh root@127.0.0.1 -p 9999"
 vpnbluair="ssh svnbluair \"echo 'status' | nc localhost 7505\""
 
-function killflash {
-  ps ax|grep flashplugin|grep -v grep|awk {'print $1'}|xargs kill
-}
-
-function mkcd {
-  mkdir $1 && cd $1
-}
-function .. {
-  cd ..
-}
-function ... {
-  cd ../..
-}
-function - {
-  cd -
-}
-
-function list-colors {
-  for i in {0..255} ; do
-    printf "\x1b[38;5;${i}mcolour${i} ";
-  done
-}
-
-function p {
-  ps ax|grep -i $1
-}
-
-# ======================================================================
-#
-# Function: confirm
-# Asks the user to confirm an action, If the user does not answer yes,
-# then the script will immediately exit.
-#
-# Parameters:
-# $@ - The confirmation message
-#
-# Examples:
-# >  # Example 1
-# >  # The preferred way to use confirm
-# >  confirm Delete file1? && echo rm file1
-# >
-# >  # Example 2
-# >  # Use the $? variable to examine confirm's return value
-# >  confirm Delete file2?
-# >  if [ $? -eq 0 ]
-# >  then
-# >      echo Another file deleted
-# >  fi
-# >
-# >  # Example 3
-# >  # Tell bash to exit right away if any command returns a non-zero code
-# >  set -o errexit
-# >  confirm Do you want to run the rest of the script?
-# >  echo Here is the rest of the script
-#
-# ======================================================================
-
-function confirm()
-{
-  echo -n "$@ "
-  read -e answer
-  for response in y Y yes YES Yes Sure sure SURE OK ok Ok t T tak Tak TAK
-  do
-    if [ "_$answer" == "_$response" ]
-    then
-      return 0
-    fi
-  done
-
-  # Any answer other than the list above is considerred a "no" answer
-  return 1
-}
-
 alias xevx="xev | grep -A2 --line-buffered '^KeyRelease' | sed -n '/keycode /s/^.*keycode \([0-9]*\).* (.*, \(.*\)).*$/\1 \2/p'"
-
-function vol() {
-  VOLUME="$1"0
-  echo "volume set to $VOLUME"
-  amixer set Master $VOLUME
-}
-
-gcd() {
-  gem_require_path=$(gem which "$1")
-  gem_require_folder=$(dirname "$gem_require_path")
-
-  ls -la "$gem_require_folder"
-  # cd "$gem_require_folder"
-}
-
-alias hth=html2haml
 
 alias goprod="export RAILS_ENV=production; echo 'Rails.env set to production'"
 alias godev="export RAILS_ENV=development; echo 'Rails.env set to development'"
-
-precompile() {
-  git rm -rfq public/assets; rake assets:precompile RAILS_ENV=production && git add public/assets
-}
