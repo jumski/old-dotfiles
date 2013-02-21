@@ -4,6 +4,7 @@
 export DOTFILES_PATH=~/dotfiles/
 
 ## LOAD SCRIPTS
+. $DOTFILES_PATH/bash/variables.sh
 . $DOTFILES_PATH/bash/setup_terminal.sh
 source $DOTFILES_PATH/bash/aliases.sh
 source $DOTFILES_PATH/bash/functions.sh

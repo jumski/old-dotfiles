@@ -1,0 +1,2 @@
+
+export BROWSER=google-chrome

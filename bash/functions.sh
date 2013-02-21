@@ -36,3 +36,14 @@ downloaded(){
 drop_caches() {
   sudo sync && sudo echo 3 | sudo tee /proc/sys/vm/drop_caches
 }
+
+rtfm() { help $@ || man $@ || $BROWSER "http://www.google.com/search?q=$@"; }
+
+# ruby related
+zeus_custom_plan() {
+  cp $DOTFILES_PATH/zeus_custom_plan.rb custom_plan.rb
+  echo " > copied custom_plan.rb"
+
+  echo "custom_plan.rb" >> .gitignore
+  echo " > added to gitignore"
+}
