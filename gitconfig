@@ -54,6 +54,7 @@
   good = bisect good
   bad  = bisect bad
   next =!git add . && git rebase --continue
+  skip = rebase --skip
 
   up = !git fetch origin && git rebase origin/master
   aa = add .
