@@ -17,3 +17,4 @@ https://github.com/tpope/vim-abolish
 http://www.vim.org/scripts/script.php?script_id=356
 https://github.com/remiprev/teamocil
 https://github.com/Valloric/YouCompleteMe
+http://www.theunixschool.com/p/awk-sed.html
