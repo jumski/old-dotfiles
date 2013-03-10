@@ -19,7 +19,10 @@ alias mkdir='mkdir -p'
 
 alias g=git
 alias gs="git status"
+alias gps="git push"
 alias gd="git diff"
+alias gcim="!git-cim"
+alias gcim="commit"
 alias t=tig
 alias ts="tig status"
 complete -o default -o nospace -F _git g
@@ -30,7 +33,6 @@ alias updatedb="sudo updatedb"
 
 ## CUSTOM ALIASES
 alias ack=ack-grep
-alias g=git
 alias tf="tail -100f"
 alias k9="kill -9 "
 

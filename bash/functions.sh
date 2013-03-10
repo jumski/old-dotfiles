@@ -25,21 +25,22 @@ scr(){
 
   tmux new-window -n "$window_title" "cd ${new_scratch_dir}; bash -i"
 }
-cdscr() { cd ~/scratch/*$1* }
+cdscr() { cd ~/scratch/*$1*; }
 
 
 # workflow enhancements ..............................
-mkcd()      { mkdir $1 && cd $1 }
-coltree()   { tree -C "$@" | less -R }
-..()        { cd ..  }
-...()       { cd ../..  }
--()         { cd - }
-p()         { pgrep -fl $1 }
-killflash() { pkill -f flashplugin }
+mkcd()      { mkdir $1 && cd $1; }
+coltree()   { tree -C "$@" | less -R; }
+..()        { cd .. ; }
+...()       { cd ../.. ; }
+-()         { cd -; }
+p()         { pgrep -fl "$1"; }
+killflash() { pkill -f flashplugin; }
 rtfm()      { help $@ || man $@ || $BROWSER "http://www.google.com/search?q=$@"; }
+fname()     { find . -iname "*$@*"; }
 
 # apt .....................................
-function s { apt-cache search "$@" | sort | less }
+function s { apt-cache search "$@" | sort | less; }
 function i {
   if ! grep "$1" $DOTFILES_PATH/conf/deb_list; then
     echo "$1" >> $DOTFILES_PATH/conf/deb_list
@@ -48,14 +49,17 @@ function i {
 }
 
 # others ....................................
-drop_caches() { sudo sync && sudo echo 3 | sudo tee /proc/sys/vm/drop_caches }
+drop_caches() { sudo sync && sudo echo 3 | sudo tee /proc/sys/vm/drop_caches; }
 
 # ruby related ..............................
-zeus_custom_plan() {
+init_zeus() {
   cp $DOTFILES_PATH/zeus_custom_plan.rb custom_plan.rb
   echo " > copied custom_plan.rb"
+  cp $DOTFILES_PATH/zeus.json ./
+  echo " > copied zeus.json"
 
   echo "custom_plan.rb" >> .gitignore
+  echo "zeus.json" >> .gitignore
   echo " > added to gitignore"
 }
 killzeus() {
@@ -68,14 +72,13 @@ precompile() {
 }
 
 # big stuff ................................
-function list-colors {
+list-colors() {
   for i in {0..255} ; do
     printf "\x1b[38;5;${i}mcolour${i} ";
   done
 }
 
-function confirm()
-{
+confirm() {
   echo -n "$@ "
   read -e answer
   for response in y Y yes YES Yes Sure sure SURE OK ok Ok t T tak Tak TAK
