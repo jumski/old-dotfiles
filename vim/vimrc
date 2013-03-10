@@ -8,5 +8,3 @@ source ~/dotfiles/vim/mappings.vim
 
 source ~/dotfiles/vim/navigation.vim
 
-source ~/dotfiles/vim/macros.vim
-
