@@ -129,6 +129,10 @@ set ttimeoutlen=100
 set matchpairs+=<:>
 set matchpairs+=/:/
 
+" show matching bracket for 2 seconds when inserter
+set showmatch
+set matchtime=2
+
 " in ruby ? and : can be a part of keyword
 set iskeyword+=?
 set iskeyword+=!
@@ -139,6 +143,7 @@ set sw=2          " automagic indent width
 set tabstop=2     " size of tab in spaces
 set ts=2          " size of tab
 set shiftround    " round indent to multiple of 'shiftwidth', applies to > and <
+set smarttab
 set softtabstop=2 " number of spaces that a <Tab> counts for
                   " while performing editing operations
 
@@ -163,6 +168,7 @@ set smartcase
 " maintain context around the cursor
 " when scrolling near the edge of screen
 set scrolloff=3
+set sidescrolloff=5
 
 " disable reading modelines
 " set nomodeline
