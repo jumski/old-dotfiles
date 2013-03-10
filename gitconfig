@@ -5,8 +5,10 @@
 [alias]
   ci = commit
   cim = !git-cim
+  wip = !git-cim 'wip'
   s = status -s
   c = checkout
+  ps = push
 
   amend = commit --amend
   unstage = reset HEAD  # removes files from index
@@ -76,6 +78,8 @@
 	main-window-view = HistoryView
 [push]
 	default = current
+[interactive]
+  singlekey = true
 [color]
 	branch = auto
 	diff = auto
