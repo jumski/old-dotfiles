@@ -32,7 +32,7 @@ NeoBundle 'vim-scripts/file-line'
 " NeoBundle 'ZoomWin'
 NeoBundle 'ecomba/vim-ruby-refactoring'
 NeoBundle 'sjl/gundo.vim'
-" NeoBundle 'jumski/ultisnips'
+NeoBundle 'SirVer/ultisnips'
 " NeoBundle 'duskhacker/sweet-rspec-vim'
 " NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'vim-scripts/vimux'
@@ -66,6 +66,8 @@ let g:syntastic_mode_map = { 'mode': 'passive',
                            \ 'active_filetypes': ['ruby', 'erb', 'javascript', 'coffee'],
                            \ 'passive_filetypes': [] }
 
+let g:ycm_complete_in_comments_and_strings = 1
+
 " mappings for ctrlp
 " let g:ctrlp_map = '<leader>z'
 " let g:ctrlp_map = '<leader>v'
@@ -94,6 +96,12 @@ let coffee_compile_vert = 1
 
 " use vim-pasta in coffeescript
 let g:pasta_disabled_filetypes = ["python", "markdown", "coffee", "haml", "sass"]
+
+""" ULTISNIPS
+let g:UltiSnipsEditSplit = "vertical"
+let g:UltiSnipsSnippetsDir = "~/dotfiles/ultisnips"
+let g:UltiSnipsExpandTrigger = "<C-a>"
+" g:UltiSnipsListSnippets                <c-tab>
 
 
 " check if all is installed
