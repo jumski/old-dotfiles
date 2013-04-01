@@ -48,7 +48,9 @@ nnoremap <leader>vp :tabnew ~/dotfiles/vim/plugins.vim<cr>
   " \ :sp     ~/dotfiles/settings.vim<cr>
   " \ :sp     ~/dotfiles/mappings.vim<cr>
   " \ :vs     ~/dotfiles/macros.vim<cr><c-k><c-k>
+nnoremap <leader>vu :UltiSnipsEdit<cr>
 nnoremap <leader>vb :NeoBundleInstall<cr>
+nnoremap <leader>vp :tabnew config/projections.json<cr>
 
 " Split line(opposite to S-J joining line)
 " nnoremap <C-J> gEa<CR><ESC>
@@ -89,7 +91,7 @@ nnoremap <leader>Q :CloseVimTmuxPane<CR>
 nnoremap <leader>gu :GundoToggle<CR>
 
 " replase word under cursor in whole file
-nnoremap <leader>: yiw:%s/<C-R>"/
+nnoremap <leader>: "xyiw:%s/<C-R>x/
 
 " Rails specific
 map <leader>rr :topleft :tabnew config/routes.rb<cr>

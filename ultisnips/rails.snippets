@@ -1,0 +1,106 @@
+snippet bp "binding.pry"
+binding.pry
+endsnippet
+
+snippet xp "expect()"
+expect($1).to${2:_not} $0
+endsnippet
+
+snippet exp "expect { }"
+expect {
+  $1
+}.to${2:_not} $0
+endsnippet
+
+snippet cha "change()"
+change($1, :$2)${3:.from($4)}${5:.to($6)}
+endsnippet
+
+snippet eq "expect to equal"
+expect($1).to${2:_not} eq($3)
+endsnippet
+
+snippet be "expect to equal"
+expect($1).to${2:_not} be_$3
+endsnippet
+
+snippet mck "expects"
+$1.expects(:$2)${3:.with(:$4)}${5:.returns($6)}$0
+endsnippet
+
+snippet stb "stubs"
+$1.stubs($2)$0
+endsnippet
+
+snippet re "raise_error"
+raise_error($0)
+endsnippet
+
+snippet des "describe"
+describe "$1" do
+  $0
+end
+endsnippet
+
+snippet con "context"
+context "$1" do
+  $0
+end
+endsnippet
+
+snippet it "it"
+it "$1" do
+  $0
+end
+endsnippet
+
+snippet itt "it { }"
+it { should${1:_not} $2 }
+endsnippet
+
+snippet its "its(:xxx)"
+its(:$1) { should${2:_not} $3 }
+endsnippet
+
+snippet sub "subject"
+subject { $1 }
+endsnippet
+
+snippet let "let"
+let(:$1) { $2 }
+endsnippet
+
+snippet bef "before { }"
+before { $1 }
+endsnippet
+
+snippet befo "before do end"
+before do
+  $1
+end
+endsnippet
+
+snippet aro "around"
+around do |example|
+  $1
+  example.run
+  $2
+end
+endsnippet
+
+snippet fc "factory create"
+create :$0
+endsnippet
+
+snippet fb "factory create"
+build :$0
+endsnippet
+
+snippet fs "factory stubbed"
+build_stubbed :$0
+endsnippet
+
+snippet fa "factory attribures for"
+attributes_for :$0
+endsnippet
+

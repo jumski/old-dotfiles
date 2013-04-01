@@ -1,3 +1,4 @@
+NeoBundle 'dbext.vim'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'delimitMate.vim'
 " NeoBundle 'gmarik/ide-popup.vim'
@@ -100,6 +101,7 @@ let g:pasta_disabled_filetypes = ["python", "markdown", "coffee", "haml", "sass"
 """ ULTISNIPS
 let g:UltiSnipsEditSplit = "vertical"
 let g:UltiSnipsSnippetsDir = "~/dotfiles/ultisnips"
+let g:UltiSnipsSnippetDirectories = ["UltiSnips", "../../../dotfiles/ultisnips"]
 let g:UltiSnipsExpandTrigger = "<C-a>"
 augroup filetypedetect
   au! BufRead,BufNewFile *_spec.rb		set filetype=rspec.ruby
