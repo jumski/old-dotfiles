@@ -38,6 +38,14 @@ p()         { pgrep -fl "$1"; }
 killflash() { pkill -f flashplugin; }
 rtfm()      { help $@ || man $@ || $BROWSER "http://www.google.com/search?q=$@"; }
 fname()     { find . -iname "*$@*"; }
+repeat() {
+  n=$1
+  shift
+  while [ $(( n -= 1 )) -ge 0 ]
+  do
+    "$@"
+  done
+}
 
 # apt .....................................
 function s { apt-cache search "$@" | sort | less; }
