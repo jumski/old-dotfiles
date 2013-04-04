@@ -57,6 +57,8 @@
   bad  = bisect bad
   next =!git add . && git rebase --continue
   skip = rebase --skip
+  gemfile = !git checkout --ours Gemfile.lock && bundle && git add Gemfile.lock && git rebase --continue
+  schema = !git checkout --ours db/schema.rb && bundle exec rake db:migrate && git add db/schema.rb && git rebase --continue && bundle exec rake db:test:prepare &
 
   up = !git fetch origin && git rebase origin/master
   aa = add .
