@@ -5,5 +5,6 @@ project_name: dotfilez
 project_root: ~/dotfiles
 tabs:
   - todos: todo
+  - irssi: irssi
   - vim: vim -p vim/ bash/
   - shell: ls
