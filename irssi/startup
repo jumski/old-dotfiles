@@ -1,0 +1,7 @@
+SCRIPT LOAD uberprompt
+SCRIPT LOAD vim_mode
+STATUSBAR WINDOW ADD vim_mode
+STATUSBAR WINDOW ADD vim_windows
+SAVE
+CONNECT irc.freenode.net
+JOIN #bitcurex.pl
