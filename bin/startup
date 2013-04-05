@@ -18,7 +18,7 @@ pidgin &
 google-chrome &
 
 # urxvt
-urxvt &
+gnome-terminal &
 
 # supervisor
 supervisord -c $HOME/dotfiles/conf/supervisord.conf
