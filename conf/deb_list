@@ -101,3 +101,4 @@ irssi-scripts
 miniupnpc
 libcurl4-gnutls-dev
 gnome-terminal
+php5-curl
