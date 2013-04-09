@@ -1,0 +1,4 @@
+#!/bin/bash
+tmux ls | grep attached | awk '{print $1}' | sed 's/://g'
+
+
