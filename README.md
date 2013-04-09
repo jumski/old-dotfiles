@@ -1,4 +1,9 @@
 
+## reduce swappiness
+```
+  sudo sysctl -w vm.swappiness=10
+```
+
 ## two finger scroll
 
 use gpointing-device-settings
