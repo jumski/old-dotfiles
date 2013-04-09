@@ -52,6 +52,9 @@ nnoremap <leader>vu :UltiSnipsEdit<cr>
 nnoremap <leader>vb :NeoBundleInstall<cr>
 nnoremap <leader>vp :tabnew config/projections.json<cr>
 
+" some custom stuff
+nnoremap <leader>op :sp ~/todos.txt<cr>Go
+
 " Split line(opposite to S-J joining line)
 " nnoremap <C-J> gEa<CR><ESC>
 
