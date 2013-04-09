@@ -4,6 +4,11 @@
   sudo sysctl -w vm.swappiness=10
 ```
 
+## fix for debugger-linecache bug @ 2.0.0
+```
+  gem install debugger-linecache -v 1.1.2 -- --with-ruby-include=$rvm_path/src/ruby-2.0.0-p0
+```
+
 ## two finger scroll
 
 use gpointing-device-settings
