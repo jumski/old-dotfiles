@@ -102,3 +102,5 @@ miniupnpc
 libcurl4-gnutls-dev
 gnome-terminal
 php5-curl
+libgdbm-dev
+libffi-dev
