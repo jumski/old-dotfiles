@@ -1,6 +1,6 @@
 map j 10j
 map k 10k
-set disablesites=mail.google.com, reader.google.com, www.grupaimage.pl, grupaimage.pl, trello.com
+set disablesites=mail.google.com, reader.google.com, www.grupaimage.pl, grupaimage.pl, trello.com, app.divshot.com
 set hintkeys=asdfghjkl;
 set hintkeysdisplayuppercase=1
 set useletters=1
