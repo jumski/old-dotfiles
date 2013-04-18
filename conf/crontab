@@ -9,3 +9,4 @@
 
 # 1/* * * * * /home/jumski/bin/dupa
 
+*/1 * * * * find /home/jumski/downloads/chrome/ -mtime +14 -exec rm {} \;
