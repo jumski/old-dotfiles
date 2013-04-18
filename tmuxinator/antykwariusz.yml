@@ -9,10 +9,10 @@ tabs:
       layout: even-horizontal
       panes:
         - puma
-        - ls
+        - zeus start
   - bash: todo @books
   - vim: vim
-  - console: ls
+  - console: zeus c
   - bash: tail -f log/development.log
   - bodhi: mosh bodhi tmux at
 
