@@ -18,6 +18,7 @@ NeoBundle 'tpope/vim-abolish'
 NeoBundle 'tpope/vim-endwise'
 NeoBundle 'tpope/vim-eunuch'
 NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'tpope/vim-git'
 NeoBundle 'tpope/vim-haml'
 NeoBundle 'tpope/vim-markdown'
 NeoBundle 'tpope/vim-rails'
@@ -47,6 +48,7 @@ NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'Shougo/vimproc'
 NeoBundle "DataWraith/auto_mkdir"
 NeoBundle 'Valloric/YouCompleteMe'
+NeoBundle 'bronson/vim-visual-star-search'
 
 """"""""" DISABLED PLUGINS
 " NeoBundle 'php.vim'
