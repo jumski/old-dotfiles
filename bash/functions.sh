@@ -27,6 +27,24 @@ scr(){
 }
 cdscr() { cd ~/scratch/*$1*; }
 
+# jet-pack bootstrapper
+# see: https://github.com/raul/jet-pack
+function jp()
+{
+  if [ "$1" == "" ]; then
+    echo "Usage:  jp <YOUR-APP-NAME>"
+  else
+    git clone git://github.com/raul/jet-pack.git $1
+    cd $1
+    rm -rf .git
+    bundle
+    git init .
+    git add *
+    git add .gitignore
+    git commit -a -m"jet-pack boilerplate"
+  fi
+}
+
 
 # workflow enhancements ..............................
 mkcd()      { mkdir $1 && cd $1; }
