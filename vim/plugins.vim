@@ -49,6 +49,8 @@ NeoBundle 'Shougo/vimproc'
 NeoBundle "DataWraith/auto_mkdir"
 NeoBundle 'Valloric/YouCompleteMe'
 NeoBundle 'bronson/vim-visual-star-search'
+NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'slim-template/vim-slim'
 
 """"""""" DISABLED PLUGINS
 " NeoBundle 'php.vim'
