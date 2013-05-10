@@ -105,3 +105,8 @@ php5-curl
 libgdbm-dev
 libffi-dev
 aircrack-ng
+xvfb
+pyrcc4
+pyqt4-dev-tools
+npm
+coffeescript
