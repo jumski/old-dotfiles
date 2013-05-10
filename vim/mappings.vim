@@ -44,7 +44,9 @@ nnoremap <C-y> 3<C-y>
 
 " easy access/surce vimrc and other
 nnoremap <leader>vs :source ~/.vimrc<CR>
+nnoremap <leader>vm :tabnew ~/dotfiles/vim/mappings.vim<cr>
 nnoremap <leader>vp :tabnew ~/dotfiles/vim/plugins.vim<cr>
+nnoremap <leader>vv :tabnew ~/dotfiles/vim/mappings.vim<cr>:vs ~/dotfiles/vim/settings.vim<cr>
   " \ :sp     ~/dotfiles/settings.vim<cr>
   " \ :sp     ~/dotfiles/mappings.vim<cr>
   " \ :vs     ~/dotfiles/macros.vim<cr><c-k><c-k>
@@ -53,7 +55,7 @@ nnoremap <leader>vb :NeoBundleInstall<cr>
 nnoremap <leader>vp :tabnew config/projections.json<cr>
 
 " some custom stuff
-nnoremap <leader>op :sp ~/todos.txt<cr>Go
+nnoremap <leader>op :sp ./todos.txt<cr>Gi
 
 " Split line(opposite to S-J joining line)
 " nnoremap <C-J> gEa<CR><ESC>
