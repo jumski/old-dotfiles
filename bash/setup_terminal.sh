@@ -23,6 +23,7 @@ esac
 
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
+    . $DOTFILES_PATH/bash/git-completion.bash
 fi
 
 [ -f $HOME/.local_variables ] && source $HOME/.local_variables
