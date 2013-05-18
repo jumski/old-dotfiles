@@ -64,7 +64,7 @@ fi
 # set up rvm
 if [ ! -d $HOME/.rvm ]; then
   #log 'Installing RVM'
-  #curl -L https://get.rvm.io | bash -s stable --ruby
+  curl -L https://get.rvm.io | bash -s stable --ruby
 
   log 'Installing RVM requirements'
   sudo $(rvm requirements|grep -A1 "# For Ruby"|grep "ruby:"|cut -c9-|sed 's/install/install -y/g')
