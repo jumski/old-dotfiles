@@ -45,6 +45,20 @@ function jp()
   fi
 }
 
+# rspec - runn all, but fail if bad factories
+allspec() {
+  local command
+  command="rspec --fail-fast spec/factories_spec.rb spec/"
+
+  if [ -S .zeus.sock ]; then
+    echo "running using Zeus"
+    zeus $command
+  else
+    echo "running bare rspec"
+    $command
+  fi
+
+}
 
 # workflow enhancements ..............................
 mkcd()      { mkdir $1 && cd $1; }
