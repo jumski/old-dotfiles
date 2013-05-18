@@ -72,6 +72,9 @@ if [ ! -d $HOME/.rvm ]; then
   log 'Installing ruby-falcon'
   rvm get head && rvm reinstall 1.9.3-perf --patch falcon
 
+  log 'Coping rvm global.gems'
+  cp $DOTFILES_PATH/.rvm-global.gems $HOME/.rvm/gemsets/global.gems
+
   source bashrc
   rvm use 1.9.3-perf --default
 fi
