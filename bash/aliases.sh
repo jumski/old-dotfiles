@@ -18,7 +18,7 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 alias mkdir='mkdir -p'
 
 alias g=git
-alias gs="git status"
+alias gs="git status -s"
 alias gps="git push"
 alias gd="git diff"
 alias gcim="!git-cim"
