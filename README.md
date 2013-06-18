@@ -1,4 +1,10 @@
 
+## smb + cups
+http://www.tldp.org/HOWTO/Debian-and-Windows-Shared-Printing/printing_to_windows.html
+
+## regional settings in LXDE
+Preferences->Language Support->Regional Formats
+
 ## reduce swappiness
 ```
   sudo sysctl -w vm.swappiness=10
