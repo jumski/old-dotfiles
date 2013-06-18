@@ -55,7 +55,7 @@ nnoremap <leader>vb :NeoBundleInstall<cr>
 nnoremap <leader>vp :tabnew config/projections.json<cr>
 
 " some custom stuff
-nnoremap <leader>op :sp ./todos.txt<cr>Gi
+nnoremap <leader>op :sp /home/jumski/dropbox/projects/`basename \`pwd\``/todos.txt<cr>
 
 " Split line(opposite to S-J joining line)
 " nnoremap <C-J> gEa<CR><ESC>
