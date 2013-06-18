@@ -27,6 +27,15 @@ scr(){
 }
 cdscr() { cd ~/scratch/*$1*; }
 
+stage() {
+  git fetch -a &&
+    git rebase master &&
+    git push -f &&
+    cap staging deploy
+
+  alert
+}
+
 # jet-pack bootstrapper
 # see: https://github.com/raul/jet-pack
 function jp()
@@ -48,7 +57,7 @@ function jp()
 # rspec - runn all, but fail if bad factories
 allspec() {
   local command
-  command="rspec --fail-fast spec/factories_spec.rb spec/"
+  command="rspec --fail-fast spec/factories_spec.rb spec/ ; alert"
 
   if [ -S .zeus.sock ]; then
     echo "running using Zeus"
