@@ -94,9 +94,9 @@ fi
 # install dropbox
 if ! which dropbox; then
   sudo dpkg -i vendor/debs/dropbox_1.6.0_amd64.deb
-  #dropbox start -i &
+  dropbox start -i &
 fi
-if [ -d $HOME/Dropbox ];then
+if [ -d $HOME/Dropbox ] && [ ! -d $HOME/dropbox ]; then
   ln -s --force $HOME/Dropbox/ $HOME/dropbox
 fi
 
