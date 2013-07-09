@@ -1,0 +1,3 @@
+#!/bin/bash
+
+sudo apt-get install $(tr '\n' ' ' < conf/deb_list)

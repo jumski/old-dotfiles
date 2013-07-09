@@ -37,10 +37,8 @@ exim4-daemon-light
 chromium-browser
 libinotifytools-dev
 firefox
-qnapi
 smplayer
 wine
-rxvt-unicode
 libmysqlclient-dev
 libmysqlclient18
 curl
@@ -55,7 +53,7 @@ virtualbox-dkms
 transmission
 calibre
 aptitude
-virtualbox-guest-additions
+virtualbox-guest-additions-iso
 libgtkmm-3.0
 nicotine
 nmap
@@ -67,7 +65,7 @@ bcrypt
 scala
 gpointing-device-settings
 shutter
-gnapi
+qnapi
 gftp
 smartmontools
 gsmartcontrol
@@ -106,7 +104,6 @@ libgdbm-dev
 libffi-dev
 aircrack-ng
 xvfb
-pyrcc4
 pyqt4-dev-tools
 npm
 coffeescript
@@ -115,3 +112,5 @@ john
 samba
 smbclient
 inkscape
+python-gconf
+testdisk
