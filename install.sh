@@ -22,10 +22,6 @@ ln -s --force -T "$DOTFILES_PATH/irssi" "$HOME/.irssi"
 ln -s --force "$DOTFILES_PATH/Xdefaults" "$HOME/.Xdefaults"
 ln -s --force "$DOTFILES_PATH/sh-todo" "$HOME/.sh-todo"
 
-if [ ! -d $HOME/dropbox ]; then
-  ln -s --force $HOME/Dropbox $HOME/dropbox
-fi
-
 if [ -d $HOME/.kde/share/apps/konsole ]; then
   ln -s --force "$DOTFILES_PATH/vendor/kde/share/apps/konsole/konsoleui.rc" "$HOME/.kde/share/apps/konsole/konsoleui.rc"
   ln -s --force "$DOTFILES_PATH/vendor/kde/share/apps/konsole/solarized_dark.colorscheme" "$HOME/.kde/share/apps/konsole/solarized_dark.colorscheme"
@@ -97,8 +93,16 @@ fi
 
 # install dropbox
 if ! which dropbox; then
-  wget -O /tmp/dropbox.deb https://www.dropbox.com/download?dl=packages/ubuntu/dropbox_1.4.0_amd64.deb
-  sudo dpkg -i /tmp/dropbox.deb && rm /tmp/dropbox.deb
+  sudo dpkg -i vendor/debs/dropbox_1.6.0_amd64.deb
+  dropbox start -i &
+fi
+if [ -d $HOME/Dropbox ];then
+  ln -s --force $HOME/Dropbox $HOME/dropbox
+fi
+
+# install silver searcher
+if ! which ag; then
+  sudo dpkg -i vendor/debs/the-silver-searcher_0.14-1_amd64.deb
 fi
 
 # openbox
@@ -128,7 +132,7 @@ fi
 mkdir -p $HOME/tmp
 mkdir -p $HOME/log/supervisor
 if ! which supervisord; then
-  sudo apt-get install -y supervisord
+  sudo apt-get install -y supervisor
 fi
 if [ -f /etc/rc3.d/S20supervisor ]; then
   sudo /etc/init.d/supervisor stop
