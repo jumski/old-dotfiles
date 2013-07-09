@@ -1,6 +1,6 @@
 project_name: webmonks
 project_root: ~/work/webmonks-chef-repo
-rvm: 1.9.3-p286-falcon
+rvm: default
 tabs:
   - ssh:
   - bash:

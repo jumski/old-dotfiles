@@ -3,7 +3,7 @@
 
 project_name: tmux_status
 project_root: ~/work/tmux_status
-rvm: ruby-1.9.3-p286-falcon
+rvm: default
 tabs:
   - bash:
   - bash:
