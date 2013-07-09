@@ -94,15 +94,20 @@ fi
 # install dropbox
 if ! which dropbox; then
   sudo dpkg -i vendor/debs/dropbox_1.6.0_amd64.deb
-  dropbox start -i &
+  #dropbox start -i &
 fi
 if [ -d $HOME/Dropbox ];then
-  ln -s --force $HOME/Dropbox $HOME/dropbox
+  ln -s --force $HOME/Dropbox/ $HOME/dropbox
 fi
 
 # install silver searcher
 if ! which ag; then
   sudo dpkg -i vendor/debs/the-silver-searcher_0.14-1_amd64.deb
+fi
+
+# install vagrant
+if ! which vagrant; then
+  sudo dpkg -i vendor/debs/vagrant_1.2.2_i686.deb
 fi
 
 # openbox
