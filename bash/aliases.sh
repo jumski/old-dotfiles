@@ -14,6 +14,7 @@ fi
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+alias lh='ls --color=always -lasth | less -R'
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 alias mkdir='mkdir -p'
 
@@ -64,3 +65,5 @@ alias xevx="xev | grep -A2 --line-buffered '^KeyRelease' | sed -n '/keycode /s/^
 
 alias goprod="export RAILS_ENV=production; echo 'Rails.env set to production'"
 alias godev="export RAILS_ENV=development; echo 'Rails.env set to development'"
+
+alias joodo="lein joodo"

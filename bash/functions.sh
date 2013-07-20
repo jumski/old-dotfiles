@@ -38,7 +38,7 @@ stage() {
 
 # jet-pack bootstrapper
 # see: https://github.com/raul/jet-pack
-function jp()
+jp()
 {
   if [ "$1" == "" ]; then
     echo "Usage:  jp <YOUR-APP-NAME>"
@@ -53,6 +53,8 @@ function jp()
     git commit -a -m"jet-pack boilerplate"
   fi
 }
+
+mux-edit() { vim ~/dotfiles/tmuxinator/`tmux_current_session`.yml; }
 
 # rspec - runn all, but fail if bad factories
 allspec() {
@@ -142,3 +144,14 @@ confirm() {
   return 1
 }
 
+
+### BACKUPZZZ
+single_backup() {
+  mv /mnt/loop1/jumski/$1/ /home/jumski/$1/
+}
+multi_backup() {
+  for name in $*
+  do
+    single_backup $name
+  done
+}
