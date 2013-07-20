@@ -1,4 +1,7 @@
 
+## mounting partitions from image file
+Kpartx can be used to set up device mappings for the partitions of any partitioned block device. It is part of the Linux multipath-tools. With kpartx -l imagefile you get an overview of the partitions in the image file and with kpartx -a imagefile the partitions will accessible via /dev/mapper/loop0pX (X is the number of the partition). You can mount it now with mount /dev/mapper/loop0pX /mnt/ -o loop,ro. After unmounting you can disconnect the mapper devices with kpartx -d imagefile.
+
 ## smb + cups
 http://www.tldp.org/HOWTO/Debian-and-Windows-Shared-Printing/printing_to_windows.html
 
