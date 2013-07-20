@@ -114,3 +114,13 @@ smbclient
 inkscape
 python-gconf
 testdisk
+kpartx
+libxslt1.1
+libxslt1-dev
+postgresql-9.1
+postgresql-server-dev-9.1
+skype
+smbfs
+cifs-utils
+gimp
+leiningen
