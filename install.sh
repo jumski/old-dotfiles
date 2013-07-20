@@ -105,6 +105,11 @@ if ! which ag; then
   sudo dpkg -i vendor/debs/the-silver-searcher_0.14-1_amd64.deb
 fi
 
+# install elasticsearch
+if [ ! -d /etc/elasticsearch ]; then
+  sudo dpkg -i vendor/debs/elasticsearch-0.90.2.deb
+fi
+
 # install vagrant
 if ! which vagrant; then
   sudo dpkg -i vendor/debs/vagrant_1.2.2_i686.deb
