@@ -46,7 +46,7 @@ nnoremap <C-y> 3<C-y>
 nnoremap <leader>vs :source ~/.vimrc<CR>
 nnoremap <leader>vm :tabnew ~/dotfiles/vim/mappings.vim<cr>
 nnoremap <leader>vp :tabnew ~/dotfiles/vim/plugins.vim<cr>
-nnoremap <leader>vv :tabnew ~/dotfiles/vim/mappings.vim<cr>:vs ~/dotfiles/vim/settings.vim<cr>
+nnoremap <leader>vv :tabnew ~/dotfiles/vim/mappings.vim<cr>:vs ~/dotfiles/vim/settings.vim<cr>:sp ~/dotfiles/vim/plugins.vim<cr>
   " \ :sp     ~/dotfiles/settings.vim<cr>
   " \ :sp     ~/dotfiles/mappings.vim<cr>
   " \ :vs     ~/dotfiles/macros.vim<cr><c-k><c-k>
