@@ -1,11 +1,15 @@
 # ~/.tmuxinator/default.yml
 # you can make as many tabs as you wish...
 
-project_name: phone-db
-project_root: ~/work/phone-db
+project_name: authserver
+project_root: ~/work/authserver
 tabs:
-  - server: rails s
-  - bash: todo @phone-db
+  - stuff:
+      layout: even-horizontal
+      panes:
+        -
+        -
+  - bash:
   - vim: vim
   - console:
   - bash: tail -f log/development.log
