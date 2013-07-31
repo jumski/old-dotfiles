@@ -33,6 +33,7 @@ NeoBundle 'tpope/vim-classpath'
 NeoBundle 'tpope/vim-fireplace'
 NeoBundle 'guns/vim-clojure-static'
 NeoBundle 'vim-ruby/vim-ruby'
+NeoBundle 'mattn/gist-vim'
 " NeoBundle 'vim-scripts/ack.vim'
 NeoBundle 'epmatsw/ag.vim'
 NeoBundle 'vim-scripts/file-line'
@@ -55,6 +56,7 @@ NeoBundle 'Valloric/YouCompleteMe'
 NeoBundle 'bronson/vim-visual-star-search'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'slim-template/vim-slim'
+NeoBundle 'mattn/webapi-vim'
 
 """"""""" DISABLED PLUGINS
 " NeoBundle 'php.vim'
@@ -117,6 +119,7 @@ augroup filetypedetect
 augroup END
 " g:UltiSnipsListSnippets                <c-tab>
 
+let g:gist_clip_command = 'xclip -selection clipboard'
 
 " check if all is installed
 if neobundle#exists_not_installed_bundles()
