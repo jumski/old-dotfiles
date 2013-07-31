@@ -12,7 +12,7 @@ tabs:
         - zeus start
   - bash: todo @books
   - vim: vim
-  - console: zeus c
+  - console: sleep 7 && zeus c
   - bash: tail -f log/development.log
   - bodhi: mosh bodhi tmux at
 

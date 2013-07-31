@@ -1,0 +1,10 @@
+# ~/.tmuxinator/dotfilez.yml
+# you can make as many tabs as you wish...
+
+project_name: babushka
+project_root: ~/work/babushka
+tabs:
+  - bash: ll
+  - bash: ll
+  - vim: vim -p vim/ bash/
+  - bash: ll
