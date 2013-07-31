@@ -73,6 +73,10 @@
 
   ftp = !git-ftp
 
+  assume = update-index --assume-unchanged
+  unassume = update-index --no-assume-unchanged
+  list-assumed = !git ls-files -v `git rev-parse --show-toplevel` | grep "^[a-z]" | cut -c3-
+
 [giggle]
 	main-window-maximized = true
 	main-window-geometry = 0x0+0+0
