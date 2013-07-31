@@ -115,6 +115,13 @@ if ! which vagrant; then
   sudo dpkg -i vendor/debs/vagrant_1.2.2_i686.deb
 fi
 
+if ! which mosh; then
+  sudo apt-get install -y python-software-properties
+  sudo add-apt-repository -y ppa:keithw/mosh
+  sudo apt-get update -y
+  sudo apt-get install -y mosh
+fi
+
 # openbox
 if [ -d $HOME/.config/openbox ]; then
   ln -s --force $DOTFILES_PATH/conf/openbox/lubuntu-rc.xml $HOME/.config/openbox/
