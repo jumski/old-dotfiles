@@ -113,3 +113,5 @@
 [url "git@github.com:"]
   # With write access
   insteadOf = wgh:
+[web]
+	browser = chromium-browser
