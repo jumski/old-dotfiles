@@ -17,6 +17,8 @@ gem 'tmuxinator'
 gem 'github'
 gem 'zeus'
 gem 'rubygems-bundler'
+gem 'pomo'
+gem 'libnotify'
 
 group :pry do
   gem 'pry'
