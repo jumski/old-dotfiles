@@ -126,3 +126,7 @@ gimp
 leiningen
 libevent-dev
 mongodb
+mpc
+mpd
+libudev1
+chromium-codecs-ffmpeg-extra
