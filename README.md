@@ -1,4 +1,7 @@
 
+## default browser
+sudo update-alternatives --config x-www-browser
+
 ## tmux 1.8
 http://garr.dl.sourceforge.net/project/tmux/tmux/tmux-1.8/tmux-1.8.tar.gz
 $ sudo apt-get install libevent-dev libncurses-dev
