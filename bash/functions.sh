@@ -73,7 +73,7 @@ allspec() {
 
 # workflow enhancements ..............................
 mkcd()      { mkdir $1 && cd $1; }
-coltree()   { tree -C "$@" | less -R; }
+coltree()   { tree -C $@ | less -R; }
 ..()        { cd .. ; }
 ...()       { cd ../.. ; }
 -()         { cd -; }
