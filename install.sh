@@ -112,7 +112,7 @@ fi
 
 # install vagrant
 if ! which vagrant; then
-  sudo dpkg -i vendor/debs/vagrant_1.2.2_i686.deb
+  sudo dpkg -i vendor/debs/vagrant*.deb
 fi
 
 if ! which mosh; then
