@@ -80,6 +80,8 @@ alias godev="export RAILS_ENV=development; echo 'Rails.env set to development'"
 
 alias joodo="lein joodo"
 
+alias humandate="date +\"%Y-%m-%d\""
+
 
 
 
