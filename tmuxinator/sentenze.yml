@@ -12,5 +12,6 @@ tabs:
   - bash: todo @sentenze
   - vim: vim
   - console:
-  - bash: tail -f log/development.log
+  - proxy: ruby ~/work/simple-proxy/proxy.rb si.webmonks.org
+  - logs: tail -f log/development.log
 
