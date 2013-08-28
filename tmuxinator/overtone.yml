@@ -1,0 +1,11 @@
+# ~/.tmuxinator/default.yml
+# you can make as many tabs as you wish...
+
+project_name: overtone
+project_root: ~/work/overtone
+tabs:
+  - bash:
+  - bash:
+  - vim: vim
+  - repl: lein repl
+  - bash:

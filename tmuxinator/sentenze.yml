@@ -4,14 +4,11 @@
 project_name: sentenze
 project_root: ~/work/sentenze
 tabs:
-  - stuff:
-      layout: even-horizontal
-      panes:
-        -
-        -
+  - server: rails s
   - bash: todo @sentenze
   - vim: vim
   - console:
-  - proxy: ruby ~/work/simple-proxy/proxy.rb si.webmonks.org
   - logs: tail -f log/development.log
+  - proxy: cd ~/work/simple-proxy/ && ./proxy.rb si.webmonks.org -vfp
+  - proxy-vim: cd ~/work/simple-proxy/ && vim proxy.rb
 
