@@ -1,5 +1,5 @@
 " NeoBundle 'dbext.vim'
-NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'jumski/vim-colors-solarized'
 NeoBundle 'delimitMate.vim'
 NeoBundle 'vim-puppet'
 " NeoBundle 'gmarik/ide-popup.vim'
@@ -57,6 +57,11 @@ NeoBundle 'bronson/vim-visual-star-search'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'slim-template/vim-slim'
 NeoBundle 'mattn/webapi-vim'
+NeoBundle 'christoomey/vim-tmux-navigator'
+NeoBundle 'airblade/vim-gitgutter'
+" NeoBundle 'mhinz/vim-signify'
+NeoBundle 'matze/vim-move'
+NeoBundle 'danro/rename.vim'
 
 """"""""" DISABLED PLUGINS
 " NeoBundle 'php.vim'
@@ -113,7 +118,7 @@ let g:pasta_disabled_filetypes = ["python", "markdown", "coffee", "haml", "sass"
 let g:UltiSnipsEditSplit = "vertical"
 let g:UltiSnipsSnippetsDir = "~/dotfiles/ultisnips"
 let g:UltiSnipsSnippetDirectories = ["UltiSnips", "../../../dotfiles/ultisnips"]
-let g:UltiSnipsExpandTrigger = "<C-a>"
+let g:UltiSnipsExpandTrigger = "<C-z>"
 augroup filetypedetect
   au! BufRead,BufNewFile *_spec.rb		set filetype=rspec.ruby
 augroup END
@@ -128,3 +133,9 @@ if neobundle#exists_not_installed_bundles()
   echomsg 'Please execute ":NeoBundleInstall" command.'
   "finish
 endif
+
+" do not overwrite syntastics signs
+let g:signify_sign_overwrite = 0
+
+" vim-move
+let g:move_key_modifier = 'M'
