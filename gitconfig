@@ -36,6 +36,7 @@
 	wtf = !git-wtf
   trail = !git-trail
   neck = !git-neck
+  churn = !git-churn
 
   conflicts = !git ls-files -u | cut -f 2 | sort -u
   resolve = !vim -p $(git conflicts)
