@@ -36,6 +36,7 @@ alias updatedb="sudo updatedb"
 alias ack=ack-grep
 alias tf="tail -100f"
 alias k9="kill -9 "
+alias parallel="parallel --gnu"
 
 alias visor="supervisorctl -c /home/jumski/dotfiles/conf/supervisord.conf"
 
@@ -81,6 +82,8 @@ alias godev="export RAILS_ENV=development; echo 'Rails.env set to development'"
 alias joodo="lein joodo"
 
 alias humandate="date +\"%Y-%m-%d\""
+
+alias prettyjson="python -mjson.tool"
 
 
 
