@@ -14,3 +14,14 @@ def reqs(model)
     puts " -- All columns are optional"
   end
 end
+
+def _hash(num = 3)
+  _arr(num).reduce({}) do |hash, letter|
+    hash[letter.to_sym] = letter.upcase
+    hash
+  end
+end
+
+def _arr(num = 3)
+    ('a'..'z').to_a[0, num]
+end
