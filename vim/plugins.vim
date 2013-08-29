@@ -61,7 +61,6 @@ NeoBundle 'christoomey/vim-tmux-navigator'
 NeoBundle 'airblade/vim-gitgutter'
 " NeoBundle 'mhinz/vim-signify'
 NeoBundle 'matze/vim-move'
-NeoBundle 'danro/rename.vim'
 
 """"""""" DISABLED PLUGINS
 " NeoBundle 'php.vim'
