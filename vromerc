@@ -1,6 +1,6 @@
 map j 10j
 map k 10k
-set disablesites=mail.google.com, reader.google.com, www.grupaimage.pl, grupaimage.pl, trello.com, app.divshot.com, theoldreader.com
+set disablesites=mail.google.com, reader.google.com, www.grupaimage.pl, grupaimage.pl, trello.com, app.divshot.com, theoldreader.com, webmandala-kandan.herokuapp.com
 set hintkeys=asdfghjkl;
 set hintkeysdisplayuppercase=1
 set useletters=1
