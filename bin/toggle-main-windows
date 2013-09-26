@@ -6,9 +6,9 @@
 active_window() { xdotool getwindowname `xdotool getactivewindow`; }
 
 if [ `active_window` == "tmux-main" ]; then
-  # wmctrl -a "chromium"; wmctrl -a "chromium"
-  wmctrl -a $MAIN_BROWSER_WINDOW_NAME
+  echo 'tmux active' >> /tmp/konsole.log
+  wmctrl -a "chromium"; wmctrl -a "chromium"
 else
-  # wmctrl -a "tmux-main"; wmctrl -a "tmux-main"
-  wmctrl -a $MAIN_TERMINAL_WINDOW_NAME
+  echo 'chromium active' >> /tmp/konsole.log
+  wmctrl -a "tmux-main"; wmctrl -a "tmux-main"
 if 
