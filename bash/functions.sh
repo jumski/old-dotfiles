@@ -94,9 +94,9 @@ repeat() {
 function s { apt-cache search "$@" | sort | less; }
 function i {
   if ! grep "$1" $DOTFILES_PATH/conf/deb_list; then
+    sudo apt-get install $1
     echo "$1" >> $DOTFILES_PATH/conf/deb_list
   fi
-  sudo apt-get install $1
 }
 
 # others ....................................
