@@ -28,8 +28,8 @@
 
   chr = cherry -v
   rmt = remote -v
-	wc = whatchanged
-	lp = log -p
+  wc = whatchanged --oneline
+  lp = log -p
   hist = log --pretty=format:\"%Cgreen%h%Creset %Cblue%ad%Creset %s%C(yellow)%d%Creset %Cblue[%an]%Creset\" --graph --date=short
   h = log --pretty=format:\"%Cgreen%h%Creset %Cblue%ad%Creset %s%C(yellow)%d%Creset %Cblue[%an]%Creset\" --graph --date=short
   dstat = diff --stat
@@ -47,7 +47,7 @@
   rank = !git-rank-contributors
 
   new = ls-files --others --exclude-standard
-  done = !git fetch origin && git rebase origin/master && git checkout master && git merge --no-ff @{-1} && bundle exec rake && git push
+  done = !git-done
 
   ribbon = tag --force _ribbon origin/master
   catchup = log --patch --reverse --topo-order _ribbon..origin/master
