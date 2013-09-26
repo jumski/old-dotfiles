@@ -3,7 +3,8 @@
 
 project_name: antykwariusz
 project_root: ~/work/antykwariusz
-rvm: default
+# rvm: default
+rvm: ruby-1.9.3-p327-falcon@antykwariusz --create
 tabs:
   - stuff:
       layout: even-horizontal

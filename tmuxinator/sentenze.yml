@@ -3,11 +3,12 @@
 
 project_name: sentenze
 project_root: ~/work/sentenze
+rvm: 2.0.0@sentenze --create
 tabs:
   - server: rails s
   - bash: todo @sentenze
   - vim: vim
-  - console:
+  - console: rails c
   - logs: tail -f log/development.log
   - proxy: cd ~/work/simple-proxy/ && ./proxy.rb si.webmonks.org -vfp
   - proxy-vim: cd ~/work/simple-proxy/ && vim proxy.rb
