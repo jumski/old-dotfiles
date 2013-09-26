@@ -30,6 +30,8 @@ complete -o default -o nospace -F _git g
 complete -o default -o nospace -F _git_status gs
 complete -o default -o nospace -F _git_diff gd
 
+alias r=rspec
+
 alias updatedb="sudo updatedb"
 
 ## CUSTOM ALIASES
@@ -85,6 +87,8 @@ alias humandate="date +\"%Y-%m-%d\""
 
 alias prettyjson="python -mjson.tool"
 
+alias docker="sudo docker"
+alias babushka="babushka --no-color"
 
 
 
