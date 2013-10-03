@@ -1,8 +1,8 @@
 # ~/.tmuxinator/default.yml
 # you can make as many tabs as you wish...
 
-project_name: overtone
-project_root: ~/work/overtone
+project_name: overtone-sandbox
+project_root: ~/work/overtone-sandbox
 tabs:
   - bash:
   - bash:
