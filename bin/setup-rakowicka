@@ -1,3 +1,2 @@
 #!/bin/bash
 ~/dotfiles/bin/arandr-rakowicka
-cp ~/dotfiles/conf/panel_rakowicka ~/.config/lxpanel/Lubuntu/panels/panel
