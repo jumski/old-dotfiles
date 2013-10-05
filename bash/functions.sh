@@ -71,6 +71,9 @@ allspec() {
 
 }
 
+# works with vim WriteCursorLastPosition
+curspec() { rspec `cat .cursor_last_position`; }
+
 # workflow enhancements ..............................
 mkcd()      { mkdir $1 && cd $1; }
 coltree()   { tree -C $@ | less -R; }
