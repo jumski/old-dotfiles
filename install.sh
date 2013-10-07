@@ -157,6 +157,9 @@ if [ -f /etc/rc3.d/S20supervisor ]; then
   sudo update-rc.d -f supervisor remove
 fi
 
+# create current_ruby wrapper
+which current_ruby || rvm wrapper 1.9.3 current ruby
+
 echo 'Load bashrc'
 source ~/dotfiles/bashrc
 source ~/dotfiles/bash/aliases.sh
