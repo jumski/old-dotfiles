@@ -10,6 +10,6 @@ tabs:
   - vim: vim
   - console: rails c
   - logs: tail -f log/development.log
+  - ssh: mosh webmonks
   - proxy: cd ~/work/simple-proxy/ && ./proxy.rb si.webmonks.org -vfp
-  - proxy-vim: cd ~/work/simple-proxy/ && vim proxy.rb
 
