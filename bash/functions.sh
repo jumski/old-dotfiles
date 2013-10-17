@@ -82,6 +82,7 @@ coltree()   { tree -C $@ | less -R; }
 -()         { cd -; }
 p()         { pgrep -fl "$1"; }
 killflash() { pkill -f flashplugin; }
+killjackd() { pkill --signal QUIT -f jackd; }
 rtfm()      { help $@ || man $@ || $BROWSER "http://www.google.com/search?q=$@"; }
 fname()     { find . -iname "*$@*"; }
 repeat() {
