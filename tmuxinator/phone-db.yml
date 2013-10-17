@@ -4,7 +4,11 @@
 project_name: phone-db
 project_root: ~/work/phone-db
 tabs:
-  - server: rails s
+  - servers:
+      layout: even-vertical
+      panes:
+        - rails s
+        - cd angular-app && grunt server
   - bash: todo @phone-db
   - vim: vim
   - console:
