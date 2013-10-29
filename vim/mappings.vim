@@ -114,3 +114,6 @@ nnoremap <leader>gd :Gdiff<CR>
 nnoremap <leader>gw :Gwrite<CR>
 nnoremap <leader>gr :Gread<CR>
 nnoremap <leader>gs :Gstatus<CR>
+
+" clojure mappings
+nnoremap <leader>R :Require<CR>
