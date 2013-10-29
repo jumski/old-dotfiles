@@ -1,4 +1,3 @@
-" NeoBundle 'dbext.vim'
 NeoBundle 'jumski/vim-colors-solarized'
 NeoBundle 'delimitMate.vim'
 NeoBundle 'vim-puppet'
@@ -9,7 +8,6 @@ NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'lastpos.vim'
 NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'Lokaltog/vim-powerline'
-" NeoBundle 'jumski/Conque-Shell'
 NeoBundle 'matchit.zip'
 NeoBundle 'michaeljsmith/vim-indent-object'
 NeoBundle 'repeat.vim'
@@ -37,12 +35,10 @@ NeoBundle 'mattn/gist-vim'
 " NeoBundle 'vim-scripts/ack.vim'
 NeoBundle 'epmatsw/ag.vim'
 NeoBundle 'vim-scripts/file-line'
-" NeoBundle 'ZoomWin'
 NeoBundle 'ecomba/vim-ruby-refactoring'
 NeoBundle 'sjl/gundo.vim'
 NeoBundle 'SirVer/ultisnips'
 " NeoBundle 'duskhacker/sweet-rspec-vim'
-" NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'vim-scripts/vimux'
 NeoBundle 'jumski/vimux-ruby-test'
 NeoBundle 'jayferd/eco.vim'
@@ -58,14 +54,12 @@ NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'slim-template/vim-slim'
 NeoBundle 'mattn/webapi-vim'
 NeoBundle 'christoomey/vim-tmux-navigator'
-" NeoBundle 'airblade/vim-gitgutter'
-NeoBundle 'mhinz/vim-signify'
-NeoBundle 'matze/vim-move'
 NeoBundle 'kana/vim-textobj-user'
 NeoBundle 'nelstrom/vim-textobj-rubyblock'
 NeoBundle 'abijr/colorpicker'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'closetag.vim'
+NeoBundle 'kien/rainbow_parentheses.vim'
 
 """"""""" DISABLED PLUGINS
 " NeoBundle 'php.vim'
@@ -138,12 +132,6 @@ if neobundle#exists_not_installed_bundles()
   "finish
 endif
 
-" do not overwrite syntastics signs
-let g:signify_sign_overwrite = 0
-
-" vim-move
-let g:move_key_modifier = 'M'
-
 """""""""""""""""""" custom functions
 fu! WriteCursorLastPosition()
   let output = system('echo ' . getreg('%') . ':' . line('.') . ' > .cursor_last_position')
@@ -154,3 +142,13 @@ if !exists("b:jumski_write_rspec_guide")
 
   au BufWritePost *_spec.rb call WriteCursorLastPosition()
 endif
+
+" rainbow parenthesis
+au VimEnter * RainbowParenthesesActivate
+au VimEnter * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesActivate
+au Syntax * RainbowParenthesesLoadRound
+au BufRead * RainbowParenthesesActivate
+au BufRead * RainbowParenthesesLoadRound
+" au Syntax *.clj RainbowParenthesesLoadSquare
+" au Syntax *.clj RainbowParenthesesLoadBraces
