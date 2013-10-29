@@ -8,7 +8,7 @@ tabs:
       layout: even-vertical
       panes:
         - rails s
-        - cd angular-app && grunt server
+        - cd angular-app ; grunt server
   - bash: todo @phone-db
   - vim: vim
   - console:
