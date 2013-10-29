@@ -87,10 +87,16 @@ rtfm()      { help $@ || man $@ || $BROWSER "http://www.google.com/search?q=$@";
 fname()     { find . -iname "*$@*"; }
 repeat() {
   n=$1
+  i=0
   shift
-  while [ $(( n -= 1 )) -ge 0 ]
+
+  echo "Repeating \`$@\` $n times"
+  echo
+
+  while [ $(( i += 1 )) -le $n ]
   do
-    "$@"
+    echo "= Run #$i ($@)"
+    eval "$@"
   done
 }
 
