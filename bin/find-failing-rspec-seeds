@@ -1,0 +1,12 @@
+#!/bin/bash
+while true; do
+  echo START ===================
+  last_seed=$(bundle exec rspec spec --format p --no-color --order rand $1 2>&1)
+
+  if [ "$?" != "0" ]; then
+    echo "Errored...: $last_seed"
+    echo -e "$last_seed" | grep "Randomized with seed" | sed 's/Randomized with seed //g' >> .invalid_rspec_seeds
+  fi
+  echo END ===================
+done
+
