@@ -60,6 +60,8 @@ NeoBundle 'abijr/colorpicker'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'closetag.vim'
 NeoBundle 'kien/rainbow_parentheses.vim'
+NeoBundle 'leafgarland/typescript-vim'
+NeoBundle 'OrangeT/vim-csharp'
 
 """"""""" DISABLED PLUGINS
 " NeoBundle 'php.vim'
