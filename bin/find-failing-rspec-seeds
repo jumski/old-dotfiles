@@ -1,7 +1,7 @@
 #!/bin/bash
 while true; do
   echo START ===================
-  last_seed=$(bundle exec rspec spec --format p --no-color --order rand $1 2>&1)
+  last_seed=$(bundle exec rspec --no-color --order rand $1 2>&1)
 
   if [ "$?" != "0" ]; then
     echo "Errored...: $last_seed"
