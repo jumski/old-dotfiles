@@ -8,15 +8,16 @@ export DOTFILES_PATH=~/dotfiles/
 . $DOTFILES_PATH/bash/setup_terminal.sh
 source $DOTFILES_PATH/bash/aliases.sh
 source $DOTFILES_PATH/bash/functions.sh
-. $DOTFILES_PATH/bash/colors.sh
 
-export PATH=$PATH:$HOME/local/node/bin/:$DOTFILES_PATH/bin/:/home/jumski/various/bin/:$HOME/bin/
+if [ "$TERM" != "cygwin" ]; then
+  . $DOTFILES_PATH/bash/colors.sh
+  export PATH=$PATH:$HOME/local/node/bin/:$DOTFILES_PATH/bin/:/home/jumski/various/bin/:$HOME/bin/
 
-## LOAD RVM
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+  ## LOAD RVM
+  [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+  PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+fi # cygwin
 
 # source .local_variables if present
 if [ -f $HOME/.local_variables ]; then
@@ -24,4 +25,4 @@ if [ -f $HOME/.local_variables ]; then
 fi
 
 ### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+# export PATH="/usr/local/heroku/bin:$PATH"

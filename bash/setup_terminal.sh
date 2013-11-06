@@ -44,11 +44,13 @@ bind "set completion-ignore-case on"
 bind "set show-all-if-ambiguous On" # this allows you to automatically show completion without double tab-ing
 
 # enable keychain
-eval `keychain --eval --agents ssh --inherit local-once --nolock`
+which keychain 2>&1 >/dev/null && eval `keychain --eval --agents ssh --inherit local-once --nolock`
 
 # add identity if not set
-if ! ssh-add -l 1>/dev/null;
+ssh_add_cmd=ssh-add
+[ "$TERM" = "cygwin" ] && ssh_add_cmd=ssh-add.exe
+if ! $ssh_add_cmd -l 1>/dev/null;
 then
-  ssh-add
+  $ssh_add_cmd
 fi
 
