@@ -6,6 +6,9 @@ HISTFILESIZE=200000
 shopt -s checkwinsize
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
+# disable flow control shortcuts (C-Q and C-S)
+stty -ixon -ixoff
+
 export EDITOR=vim
 
 if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
