@@ -1,9 +1,9 @@
 # ~/.tmuxinator/default.yml
 # you can make as many tabs as you wish...
 
-project_name: authserver
-project_root: ~/work/authserver
-tabs:
+name: authserver
+root: ~/work/authserver
+windows:
   - stuff:
       layout: even-horizontal
       panes:

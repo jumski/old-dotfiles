@@ -1,11 +1,11 @@
 # ~/.tmuxinator/default.yml
 # you can make as many tabs as you wish...
 
-project_name: antykwariusz
-project_root: ~/work/antykwariusz
-# rvm: default
-rvm: ruby-1.9.3-p327-falcon@antykwariusz --create
-tabs:
+name: antykwariusz
+root: ~/work/antykwariusz
+
+pre_window: ruby-1.9.3-p327-falcon@antykwariusz --create
+windows:
   - stuff:
       layout: even-horizontal
       panes:

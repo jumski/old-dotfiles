@@ -1,9 +1,9 @@
 # ~/.tmuxinator/default.yml
 # you can make as many tabs as you wish...
 
-project_name: monk-website
-project_root: ~/work/monk-website
-tabs:
+name: monk-website
+root: ~/work/monk-website
+windows:
   - foreman: foreman start
   - bash:
   - vim: vim

@@ -1,10 +1,10 @@
 # ~/.tmuxinator/default.yml
 # you can make as many tabs as you wish...
 
-project_name: sentenze
-project_root: ~/work/sentenze
-rvm: 2.0.0@sentenze --create
-tabs:
+name: sentenze
+root: ~/work/sentenze
+pre_window: rvm use 2.0.0@sentenze --create
+windows:
   - server: rails s
   - bash: todo @sentenze
   - vim: vim
