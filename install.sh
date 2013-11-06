@@ -20,9 +20,13 @@ ln -s --force "$DOTFILES_PATH/kderc" "$HOME/.kderc"
 ln -s --force "$DOTFILES_PATH/vromerc" "$HOME/.vromerc"
 ln -s --force "$DOTFILES_PATH/xhotkeys" "$HOME/.xhotkeys"
 ln -s --force "$DOTFILES_PATH/vendor/dircolors.256dark" "$HOME/.dircolors"
-ln -s --force -T "$DOTFILES_PATH/tmuxinator" "$HOME/.tmuxinator"
-ln -s --force -T "$DOTFILES_PATH/dotjs" "$HOME/.js"
-ln -s --force -T "$DOTFILES_PATH/irssi" "$HOME/.irssi"
+
+if on_linux; then
+  ln -s --force -T "$DOTFILES_PATH/tmuxinator" "$HOME/.tmuxinator"
+  ln -s --force -T "$DOTFILES_PATH/dotjs" "$HOME/.js"
+  ln -s --force -T "$DOTFILES_PATH/irssi" "$HOME/.irssi"
+fi # on_linux
+
 ln -s --force "$DOTFILES_PATH/Xdefaults" "$HOME/.Xdefaults"
 ln -s --force "$DOTFILES_PATH/sh-todo" "$HOME/.sh-todo"
 
