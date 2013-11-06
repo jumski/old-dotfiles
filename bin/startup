@@ -20,5 +20,7 @@ google-chrome &
 # urxvt
 gnome-terminal &
 
+hipchat &
+
 # supervisor
 supervisord -c $HOME/dotfiles/conf/supervisord.conf
