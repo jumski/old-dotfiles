@@ -1,0 +1,2 @@
+#!/bin/bash
+sudo mount -t cifs //192.168.2.13/work /home/jumski/work/oahu -o username=samba,password=samba,uid=1000
