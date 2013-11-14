@@ -1,7 +1,9 @@
 # ~/.tmuxinator/oahu.yml
 
 name: oahu
-root: ~/work/oahu/Trov.Web.UI/
+root: ~/work/oahu/oahu/Trov.Web.UI/
+pre: export DISABLE_GIT_INDICATOR=true
+pre_window: export DISABLE_GIT_INDICATOR=true
 
 # Optional tmux socket
 # socket_name: foo
@@ -16,7 +18,7 @@ root: ~/work/oahu/Trov.Web.UI/
 # tmux_options: -f ~/.tmux.mac.conf
 
 windows:
-  - server: grunt watch
+  - server:
   - bash:
   - vim: vim
   - logs: tail -f logs/development.log
