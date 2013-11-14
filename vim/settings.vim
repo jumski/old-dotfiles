@@ -176,6 +176,9 @@ set sidescrolloff=5
 " session saving options
 set sessionoptions=buffers,winsize,tabpages,winpos,winsize
 
+" ES5 for typescript
+au BufEnter,BufNew *.ts set makeprg=tsc\ -t\ ES5\ %
+
 " automatically strip whitespaces
 fun! <SID>StripTrailingWhitespaces()
   let l = line(".")
@@ -189,10 +192,13 @@ autocmd BufWritePre *.* :call <SID>StripTrailingWhitespaces()
 
 " change cursor type in insert mode
 if has("autocmd")
-  au InsertEnter * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape ibeam"
-  au InsertLeave * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape block"
-  au VimLeave * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape block"
+  au InsertEnter * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Solarized/cursor_shape ibeam"
+  au InsertLeave * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Solarized/cursor_shape block"
+  au VimLeave * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Solarized/cursor_shape block"
 endif
+
+autocmd QuickFixCmdPost [^l]* nested cwindow
+autocmd QuickFixCmdPost    l* nested lwindow
 
 " {{{
 " {{{ SESSION AUTOSAVE
