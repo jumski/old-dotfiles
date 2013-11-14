@@ -1,0 +1,24 @@
+
+snippet it
+it("$1", () => {
+    $2
+});
+endsnippet
+
+snippet des
+describe("$1", ($2) => {
+    $0
+});
+endsnippet
+
+snippet doc
+/*
+ * $1
+ *
+ * $2
+ */
+endsnippet
+
+snippet eq
+expect($1).toEqual($2);
+endsnippet
