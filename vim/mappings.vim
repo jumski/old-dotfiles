@@ -104,6 +104,9 @@ nnoremap <leader>gu :GundoToggle<CR>
 " replase word under cursor in whole file
 nnoremap <leader>: "xyiw:%s/<C-R>x/
 
+" Ag search for word under cursor
+nnoremap <leader>A "xyiw:Ag <C-R>x
+
 " Rails specific
 map <leader>rr :topleft :tabnew config/routes.rb<cr>
 map <leader>rg :topleft 100 :tabnew Gemfile<cr>
