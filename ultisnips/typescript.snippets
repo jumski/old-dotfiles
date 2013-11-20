@@ -5,6 +5,16 @@ it("$1", () => {
 });
 endsnippet
 
+snippet bef
+beforeEach($1);
+endsnippet
+
+snippet befi
+beforeEach(inject(($1) => {
+    $2
+}));
+endsnippet
+
 snippet des
 describe("$1", ($2) => {
     $0
