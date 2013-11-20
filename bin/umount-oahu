@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo umount -f -t cifs /home/jumski/work/oahu
+sudo umount -fl -t cifs /home/jumski/work/oahu
