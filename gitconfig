@@ -116,3 +116,6 @@
   insteadOf = wgh:
 [web]
 	browser = chromium-browser
+[merge]
+	tool = vimdiff
+	conflictstyle = diff3
