@@ -1,9 +1,9 @@
 # ~/.tmuxinator/dotfilez.yml
 # you can make as many tabs as you wish...
 
-project_name: dotfilez
-project_root: ~/dotfiles
-tabs:
+name: dotfilez
+root: ~/dotfiles
+windows:
   - todos: todo
   - irssi: irssi
   - vim: vim -p vim/ bash/
