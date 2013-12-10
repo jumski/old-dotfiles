@@ -1,0 +1,3 @@
+#!/bin/bash
+date +"%Y-%m-%d" >> ~/dropbox/private/monk-hours.txt
+$EDITOR ~/dropbox/private/monk-hours.txt -c'norm GA'
