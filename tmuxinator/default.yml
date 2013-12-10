@@ -1,12 +1,12 @@
 # ~/.tmuxinator/default.yml
 # you can make as many tabs as you wish...
 
-project_name: default
-project_root: ~/work/default
-rvm: ree
-tabs:
-  - server: rails server
-  - bash: 
+name: default
+root: ~/work/default
+# pre_window: rvm use default
+windows:
+  - bash:
+  - bash:
   - vim: vim
-  - console: rails console
-  - bash: 
+  - console:
+  - bash:
