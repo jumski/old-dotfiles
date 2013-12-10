@@ -1,4 +1,16 @@
 
+snippet fn
+($1) => {$2}
+endsnippet
+
+snippet cli
+console.log("$1 = " + $1);
+endsnippet
+
+snippet cl
+console.log($1);
+endsnippet
+
 snippet it
 it("$1", () => {
     $2
@@ -7,6 +19,10 @@ endsnippet
 
 snippet bef
 beforeEach($1);
+endsnippet
+
+snippet befn
+beforeEach(($1) => {$2});
 endsnippet
 
 snippet befi
@@ -27,6 +43,10 @@ snippet doc
  *
  * $2
  */
+endsnippet
+
+snippet xp
+expect($1).$2;
 endsnippet
 
 snippet eq
