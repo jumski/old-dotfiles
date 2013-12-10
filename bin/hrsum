@@ -1,0 +1,40 @@
+#!/usr/bin/env ruby
+# encoding: utf-8
+
+lines = File.readlines("/home/jumski/Dropbox/private/monk-hours.txt")
+dates = lines.inject({}) do |dates_hash, line|
+    date = line.split(/\s+/).first
+    dates_hash[date] = line.split(/\s+/)[1..-1].inject({}) do |entries_hash, entry|
+        hours, project = entry.split(?@)
+        entries_hash[project.to_sym] = hours.gsub(',', '.').to_f 
+        entries_hash
+    end
+
+    dates_hash
+end
+
+total_hours = dates.values.map(&:values).flatten.inject(&:+)
+total_days  = dates.count
+eur_to_pln  = 4.18
+eur_per_day = 10
+eur_per_hour = 11.25
+total_euro = total_hours * eur_per_hour + total_days * eur_per_day
+total_pln = total_euro * eur_to_pln
+
+puts <<INFO
+
+    TOTAL HOURS: #{total_hours}
+    TOTAL DAYS:  #{dates.count}
+
+    EURO = #{total_euro}
+
+    Netto  = #{total_pln}
+    Vat    = #{total_pln * 0.23}
+    Brutto = #{total_pln * 1.23}
+    Dochodowy = #{total_pln * 0.18}
+
+    Na ręke:    #{total_pln * 0.82}
+    (dziennie): #{total_pln * 0.82 / total_days.to_f}
+    (na godz.): #{total_pln * 0.82 / total_hours.to_f}
+
+INFO
