@@ -67,6 +67,19 @@ snippet itt "it { }"
 it { should${1:_not} $2 }
 endsnippet
 
+snippet ima
+it { should allow_mass_assignment_of :$1 }
+endsnippet
+
+snippet pre
+it { should validate_presence_of :$1 }
+endsnippet
+
+snippet ful
+it { should allow_mass_assignment_of :$1 }
+it { should validate_presence_of :$1 }
+endsnippet
+
 snippet its "its(:xxx)"
 its(:$1) { should${2:_not} $3 }
 endsnippet
