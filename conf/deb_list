@@ -85,7 +85,6 @@ acpi
 duplicity
 koules
 gnuplot
-parallel
 traceroute
 sound-juicer
 ranger
@@ -119,8 +118,6 @@ libxslt1.1
 libxslt1-dev
 postgresql-9.1
 postgresql-server-dev-9.1
-skype
-smbfs
 cifs-utils
 gimp
 leiningen
@@ -138,7 +135,6 @@ libscsynth1
 moreutils
 arandr
 ideviceinstaller
-linux-image-extra-3.8.0-29-generic
 mmv
 git-svn
 elinks
@@ -148,3 +144,8 @@ vrms
 synergy
 quicksynergy
 gvfs-bin
+gparted
+ntfs-3g
+markdown
+libsqlite0-dev
+pavucontrol
