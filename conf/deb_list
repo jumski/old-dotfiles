@@ -149,3 +149,6 @@ ntfs-3g
 markdown
 libsqlite0-dev
 pavucontrol
+cheese
+audacity
+s3cmd
