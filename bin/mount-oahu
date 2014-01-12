@@ -1,3 +1,4 @@
 #!/bin/bash
-# sudo mount -t cifs //192.168.1.177/work /home/jumski/work/oahu -o username=samba,password=samba,uid=1000
-sudo mount -t cifs //192.168.2.13/work /home/jumski/work/oahu -o username=samba,password=samba,uid=1000
+VM_IP=192.168.1.102
+# VM_IP=10.42.0.95
+sudo mount -t cifs //$VM_IP/work /home/jumski/work/oahu -o username=samba,password=samba,uid=1000
