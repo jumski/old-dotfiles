@@ -1,3 +1,12 @@
+## lubuntu 13.10 laptop_mode
+
+Check ~/.config/lxsession/Lubuntu/desktop.conf.
+Look for laptop_mode and see that it's set to 'yes':
+
+```
+[State]
+laptop_mode=yes
+```
 
 ## default browser
 sudo update-alternatives --config x-www-browser
