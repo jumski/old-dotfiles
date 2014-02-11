@@ -5,7 +5,7 @@ name: dotfilez
 root: ~/dotfiles
 windows:
   - todos: todo
-  - irssi: irssi
+  - bash:
   - vim: vim -p vim/ bash/
   - shell: ls
   - pry: pry
