@@ -6,7 +6,7 @@
   ci = commit
   cim = !git-cim
   wip = !git-cim 'wip'
-  s = status -s
+  s = status -sb
   c = checkout
   ps = push
 
