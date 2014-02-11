@@ -62,6 +62,7 @@ NeoBundle 'closetag.vim'
 NeoBundle 'kien/rainbow_parentheses.vim'
 NeoBundle 'leafgarland/typescript-vim'
 NeoBundle 'OrangeT/vim-csharp'
+NeoBundle 'ekalinin/Dockerfile.vim'
 
 """"""""" DISABLED PLUGINS
 " NeoBundle 'php.vim'

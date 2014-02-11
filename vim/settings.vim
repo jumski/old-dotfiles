@@ -95,6 +95,7 @@ set lazyredraw
 au BufNewFile,BufRead Rakefile,Capfile,Guardfile,Gemfile,pryrc,*.god setfiletype ruby
 au BufNewFile,BufRead *.json set ft=javascript
 au BufNewFile,BufRead *.hamlc setfiletype haml
+au BufNewFile,BufRead Dockerfile setfiletype conf
 
 " use ack as grep
 set grepprg=ack-grep\ -a
