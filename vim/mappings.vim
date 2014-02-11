@@ -28,6 +28,11 @@ nmap <leader>p :se invpaste<CR>
 " reformat whole file
 noremap <leader>g mggg=G'g
 
+" save with C-S
+noremap <silent> <C-S> :update<CR>
+vnoremap <silent> <C-S> <C-C>:update<CR>
+inoremap <silent> <C-S> <C-O>:update<CR>
+
 " open file under curson in vsplit
 " nmap <C-X>gf :vs %<CR>gf
 
