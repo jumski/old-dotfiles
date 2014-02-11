@@ -6,7 +6,7 @@ root: ~/work/antykwariusz
 
 pre_window: ruby-1.9.3-p327-falcon@antykwariusz --create
 windows:
-  - stuff: puma
+  - stuff: puma -t 16:16
   - bash: todo @books
   - vim: vim
   - console: rails c

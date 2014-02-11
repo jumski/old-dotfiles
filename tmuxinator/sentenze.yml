@@ -5,11 +5,11 @@ name: sentenze
 root: ~/work/sentenze
 pre_window: rvm use 2.0.0@sentenze --create
 windows:
-  - server: rails s
+  - server: puma -t 16:16
   - bash: todo @sentenze
   - vim: vim
   - console: rails c
-  - logs: tail -f log/development.log
+  - karma: karma start
   - ssh: mosh webmonks
-  - proxy: cd ~/work/simple-proxy/ && ./proxy.rb si.webmonks.org -vfp
+  - logs: tail -f log/development.log
 
