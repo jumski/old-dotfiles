@@ -72,7 +72,15 @@ allspec() {
 }
 
 # works with vim WriteCursorLastPosition
-curspec() { rspec `cat .cursor_last_position`; }
+curspec() {
+  [ -S .zeus.sock ] && PREFIX=zeus
+  COMMAND="$PREFIX rspec `cat .cursor_last_position`"
+
+  echo $COMMAND
+  $COMMAND
+}
+
+sizes() { du --max-depth=1 -h .; }
 
 # workflow enhancements ..............................
 mkcd()      { mkdir $1 && cd $1; }

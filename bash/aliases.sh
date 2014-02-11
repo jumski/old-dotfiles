@@ -19,7 +19,7 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 alias mkdir='mkdir -p'
 
 alias g=git
-alias gs="git status -s"
+alias gs="git status -sb"
 alias gps="git push"
 alias gd="git diff"
 alias gcim="!git-cim"
@@ -89,6 +89,7 @@ alias humandate="date +\"%Y-%m-%d\""
 alias prettyjson="python -mjson.tool"
 
 alias docker="sudo docker"
+alias dockerlite="sudo dockerlite"
 alias babushka="babushka --no-color"
 
 
