@@ -43,7 +43,8 @@ alias parallel="parallel --gnu"
 
 alias visor="supervisorctl -c /home/jumski/dotfiles/conf/supervisord.conf"
 
-alias jungletrain="mocp -l http://stream2.jungletrain.net:8000"
+
+alias jungletrain="mocp -l http://stream6.jungletrain.net:8000"
 alias bassdrive="mocp -l http://shouthost.com.32-1.streams.bassdrive.com:8200"
 alias livednb="mocp -l http://173.236.56.82:8006"
 alias iwayhigh="mocp -l http://72.55.137.82:8000"
