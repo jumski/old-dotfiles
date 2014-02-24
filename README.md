@@ -1,3 +1,14 @@
+## Postgresql for local user
+
+```
+sudo su postgres -c createuser jumski
+sudo su postgres -c "createdb jumski"
+```
+
+## supress postgres warnings
+
+http://robots.thoughtbot.com/global-min-messages
+
 ## lubuntu 13.10 laptop_mode
 
 Check ~/.config/lxsession/Lubuntu/desktop.conf.
