@@ -36,6 +36,9 @@ fi
 [ -f $HOME/.local_variables ] && source $HOME/.local_variables
 # [ -f $DOTFILES_PATH/bash/bundler-exec.sh ] && source $DOTFILES_PATH/bash/bundler-exec.sh
 
+# added by travis gem
+[ -f /home/jumski/.travis/travis.sh ] && source /home/jumski/.travis/travis.sh
+
 # java home
 export JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:bin/java::")
 
