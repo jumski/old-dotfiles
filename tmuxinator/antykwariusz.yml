@@ -4,7 +4,7 @@
 name: antykwariusz
 root: ~/work/antykwariusz
 
-pre_window: ruby-1.9.3-p327-falcon@antykwariusz --create
+pre_window: rvm use ruby-1.9.3-p327@antykwariusz --create
 windows:
   - stuff: puma -t 16:16
   - bash: todo @books
