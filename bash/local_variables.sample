@@ -1,3 +1,11 @@
 export MAIN_TERMINAL_WINDOW_NAME=urxvt-main
 export BIG_SCREEN_NAME=VGA-0
 export SMALL_SCREEN_NAME=LVDS
+export RBXOPT=-X19
+export JRUBY_OPTS="-Xcext.enabled=true --1.9"
+
+# export ALLE_API_CONFIG_PATH=
+# export ALLE_API_DEV_LOGIN=
+# export ALLE_API_DEV_PASSWORD=
+
+
