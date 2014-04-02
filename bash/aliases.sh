@@ -43,6 +43,8 @@ alias parallel="parallel --gnu"
 
 alias visor="supervisorctl -c /home/jumski/dotfiles/conf/supervisord.conf"
 
+alias biggest="du -hs * | sort -h | column -t"
+
 
 alias jungletrain="mocp -l http://stream6.jungletrain.net:8000"
 alias bassdrive="mocp -l http://shouthost.com.32-1.streams.bassdrive.com:8200"
@@ -73,6 +75,9 @@ alias realias="source $DOTFILES_PATH/bash/aliases.sh && echo 'reloaded .bash/ali
 alias fav="~/various/fav"
 alias favgrep="~/various/favgrep"
 
+alias spreed='while read line; do for word in $line; do echo -en "\r\033[K          $word"; sleep 0.2; done; done; echo'
+alias bigspreed='(while read line; do for word in $line; do clear; for i in `seq $(($(($LINES / 2)) - 4))`; do echo; done; figlet -w $COLUMNS $word; sleep 0.2; done; done; echo)'
+
 alias skype="LD_PRELOAD=/usr/lib32/libv4l/v4l1compat.so skype"
 
 alias ssh-maroko="ssh -t -p 60022 jumski@dev.jumski.com ssh root@127.0.0.1 -p 9999"
@@ -92,6 +97,9 @@ alias prettyjson="python -mjson.tool"
 alias docker="sudo docker"
 alias dockerlite="sudo dockerlite"
 alias babushka="babushka --no-color"
+alias coffeewatch="coffee -bcw"
+
+alias pgsizes='psql -c "SELECT pg_database.datname, pg_database_size(pg_database.datname), pg_size_pretty(pg_database_size(pg_database.datname)) FROM pg_database ORDER BY pg_database_size DESC;"'
 
 
 
