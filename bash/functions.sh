@@ -54,7 +54,13 @@ jp()
   fi
 }
 
-mux-edit() { vim ~/dotfiles/tmuxinator/`tmux_current_session`.yml; }
+mux-edit() {
+  SESSION="$1"
+  if [ "$SESSION" == "" ]; then
+    SESSION=`tmux_current_session`
+  fi
+  vim ~/dotfiles/tmuxinator/$SESSION.yml;
+}
 
 # rspec - runn all, but fail if bad factories
 allspec() {

@@ -1,4 +1,7 @@
 
+# disable auto updating of the terminal title
+export DISABLE_AUTO_TITLE=true
+
 HISTCONTROL=ignoredups:ignorespace
 shopt -s histappend
 HISTSIZE=50000
