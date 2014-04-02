@@ -17,3 +17,4 @@ libnotify
 pry
 pry-doc
 pry-theme
+pry-editline
