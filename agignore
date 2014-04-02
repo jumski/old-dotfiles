@@ -23,3 +23,4 @@
 *.md
 *.log
 *.js.map
+*.min.map
