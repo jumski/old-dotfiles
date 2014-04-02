@@ -1,3 +1,4 @@
 #!/bin/bash
-date +"%Y-%m-%d" >> ~/dropbox/private/monk-hours.txt
-$EDITOR ~/dropbox/private/monk-hours.txt -c'norm GA'
+hours_path=~/dropbox/private/monk-hours
+date +"%Y-%m-%d" >> ${hours_path}.txt
+$EDITOR ${hours_path}.txt -c'norm GA'

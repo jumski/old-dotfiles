@@ -1,2 +1,10 @@
 #!/bin/bash
-vim ~/dropbox/private/monk-hours.txt
+hours_path=~/dropbox/private/monk-hours
+
+if [ "$1" = "" ]; then
+  path=${hours_path}.txt
+else
+  path=${hours_path}/${1}.txt
+fi
+
+vim $path
