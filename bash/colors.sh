@@ -68,8 +68,17 @@ function hostname_indicator {
   esac
 }
 
+function shortened_pwd {
+  dirname `pwd` | sed 's:\B\w*::g'
+
+}
+function parent_dirname {
+  dirname `pwd` | sed 's|/\(.*\)\+/\(.*\)|\2|g'
+}
+
 function pwd_indicator {
-  echo "${c_white}`basename "$PWD"`$c_reset "
+  echo "`parent_dirname `/${c_white}`basename "$PWD"`$c_reset "
+  # echo "`parent_dirname | head -c1 `/${c_white}`basename "$PWD"`$c_reset "
 }
 
 source $DOTFILES_PATH/bash/battery_functions.sh
