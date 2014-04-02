@@ -21,7 +21,7 @@ end
 
 total_hours = dates.values.map(&:values).flatten.inject(&:+)
 total_days  = dates.count
-eur_to_pln  = 4.18
+eur_to_pln  = 4.16
 eur_per_day = 10
 eur_per_hour = 11.25
 total_euro = total_hours * eur_per_hour + total_days * eur_per_day
@@ -32,7 +32,7 @@ puts <<INFO
     TOTAL HOURS: #{total_hours}
     TOTAL DAYS:  #{dates.count}
 
-    EURO = #{total_euro}
+    EURO = #{total_euro} (eur/pln = #{eur_to_pln})
 
     Netto  = #{total_pln}
     Vat    = #{total_pln * 0.23}
