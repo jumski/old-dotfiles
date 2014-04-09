@@ -1,0 +1,132 @@
+#!/bin/bash
+
+# hardsub.sh
+# a basic script to hardcode subtitles into movie files using mencoder
+#
+# uses a two pass - high quality encode by default
+# fast option invokes a quick one pass encode 
+#
+# it assumes that you are using an .srt subtitle file with the same
+#+ name as the movie file
+#
+# if you are using a matroska movie (.mkv) and it can't find the .srt
+#+ file it uses the embedded english subtitle track
+#
+#
+# NB: this is a preliminary script and doesn't do much error checking
+#
+# Version 0.11
+#
+# Mike Lahey 2009
+#####################
+
+# language used for subtitle track embedded in a matroska file
+# for alternative subtitle (& audio) tracks try "mplayer -v movie.mkv"
+LANG=eng
+
+# these mencoder options scale down the subtitles and move them 
+#+ up just a bit 
+SUBOPTS="-subfont-text-scale 3.3 -subpos 96"
+
+if [ -z "$1" ]; then
+  echo usage: $0 movie.avi [fast]
+  echo 
+  echo fast -  do a fast one pass encode
+  exit 1
+fi
+MOVIE=$1
+EXT=${MOVIE##*.}
+OUTPUT=${MOVIE/%.$EXT/.hardsub.avi}
+
+# first make sure that our movie file is there
+if [ ! -f "$MOVIE" ]; then
+  echo input file \"$MOVIE\" does not exit
+  exit 1
+fi
+
+# next check if we have the SRT file and create subtitle command for 
+# mencoder 
+SRT=${MOVIE/%$EXT/srt}
+
+if [ -f "$SRT" ]; then
+  
+  # good we have an SRT file, so create our subtitle command
+  SUBCMD="-sub \"$SRT\""
+else  
+  #no SRT file? well check if we are dealing with a matroska file
+  if [ "$EXT" == "mkv" ]; then
+    echo "################################################"
+    echo couldnt find \"$SRT\" 
+    echo so trying embedded subtitle track \"$LANG\"
+    echo "################################################"
+    SUBCMD="-slang $LANG -spualign 2"
+                # "-spualign 2" ensures proper placement of vobsub tracks
+  else
+    echo could not find subtitle file \"$SRT\"
+    echo
+    echo maybe its called something else? try renameing it.
+    exit 1
+  fi
+fi
+
+# if the input movie is not an avi then transcode the audio to mp3 
+# this may result in an unnecessary transcode but it will make 
+#+ incompatable audio streams (such as ogg/vorbis) work with an avi
+
+if [ "$EXT" == "avi" ]; then
+  ACODEC=copy
+else
+  ACODEC=mp3lame
+fi
+
+# most formats other than avi allow non-square pixels.  
+# by invoking the scale filter we ensure that the video is 
+# displayed with the proper aspect ratio in our avi
+# since were scaling anyway - scale to a multiple of 16 to make the encoding more effiecient
+if [ "$EXT" != "avi" ]; then
+  SUBOPTS="$SUBOPTS -vf-pre scale=-8:-8"
+fi
+
+#### if fast option was invoked, do a fast one pass encode
+if [ "$2" == "fast" ]; then
+
+  CMD="mencoder \"$MOVIE\" $SUBCMD $SUBOPTS -o \"$OUTPUT\" \
+  -oac $ACODEC -ovc lavc"
+  echo $CMD
+  eval $CMD
+
+  if [ $? != 0 ]; then
+     echo "################# mencoder failed ################"
+     exit 1
+  fi
+  exit
+fi
+
+
+
+
+#### normal two pass encode
+
+CMD="mencoder \"$MOVIE\" $SUBCMD $SUBOPTS -o /dev/null -oac $ACODEC \
+-ovc lavc -lavcopts vcodec=mpeg4:vhq:turbo:vpass=1"
+echo $CMD
+eval $CMD
+
+if [ $? != 0 ]; then
+  echo "################# mencoder failed ################"
+  rm divx2pass.log
+  exit 1
+fi
+
+CMD="mencoder \"$MOVIE\" $SUBCMD $SUBOPTS -o \"$OUTPUT\" -oac $ACODEC \
+-ovc lavc -lavcopts vcodec=mpeg4:vhq:vpass=2"
+echo $CMD
+eval $CMD
+
+if [ $? != 0 ]; then
+  echo "################# mencoder failed ################"
+  rm divx2pass.log
+  exit 1
+fi
+
+rm divx2pass.log
