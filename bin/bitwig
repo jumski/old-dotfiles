@@ -1,0 +1,4 @@
+#!/bin/bash
+/etc/init.d/pulseaudio stop
+pasuspender -- bitwig-studio
+/etc/init.d/pulseaudio start
