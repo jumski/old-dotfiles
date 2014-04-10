@@ -10,6 +10,6 @@ windows:
   - vim: vim
   - console: rails c
   - karma: karma start
-  - ssh: mosh webmonks
+  - ssh: ssh webmonks
   - logs: tail -f log/development.log
 
