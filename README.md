@@ -1,3 +1,9 @@
+## movie subtitles downloader
+
+```
+sudo pip install subliminal
+```
+
 ## Postgresql for local user
 
 ```

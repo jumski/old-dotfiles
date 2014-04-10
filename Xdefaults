@@ -70,7 +70,9 @@ URxvt.pointerBlank:         true
 
 !! black dark/light
 *color0: #073642
-*color8: #002b36
+!!*color8: #002b36
+!! fix for invisible solarized "bright black"
+*color8: #1c1c1c
 
 !! red dark/light
 *color1: #dc322f

@@ -21,6 +21,7 @@ ln -s --force "$DOTFILES_PATH/kderc" "$HOME/.kderc"
 ln -s --force "$DOTFILES_PATH/vromerc" "$HOME/.vromerc"
 ln -s --force "$DOTFILES_PATH/xhotkeys" "$HOME/.xhotkeys"
 ln -s --force "$DOTFILES_PATH/vendor/dircolors.256dark" "$HOME/.dircolors"
+sudo ln -s --force "$DOTFILES_PATH/bin/bitwig" "/usr/bin/"
 
 if on_linux; then
   ln -s --force -T "$DOTFILES_PATH/tmuxinator" "$HOME/.tmuxinator"
