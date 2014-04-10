@@ -77,15 +77,6 @@ allspec() {
 
 }
 
-# works with vim WriteCursorLastPosition
-curspec() {
-  [ -S .zeus.sock ] && PREFIX=zeus
-  COMMAND="$PREFIX rspec `cat .cursor_last_position`"
-
-  echo $COMMAND
-  $COMMAND
-}
-
 sizes() { du --max-depth=1 -h .; }
 
 # workflow enhancements ..............................
@@ -110,6 +101,18 @@ repeat() {
   while [ $(( i += 1 )) -le $n ]
   do
     echo "= Run #$i ($@)"
+    eval "$@"
+  done
+}
+loop() {
+  i=0
+
+  echo "Looping \`$@\`"
+  echo
+
+  while true; do
+    i=$((i += 1 ))
+    echo "= Iteration #$i ($@)"
     eval "$@"
   done
 }
