@@ -1,11 +1,14 @@
 #!/bin/bash
+present()     { which $1 2>&1 >/dev/null; }
+missing()     { ! present $1; }
+apt_install() { log installing "$@" via apt-get; sudo apt-get install -y "$@"; }
+on_windows()  { [ "$TERM" = "cygwin" ]; }
+on_linux()    { ! on_windows ; }
+log()         { echo " -- $@"; }
 
-present() { which $1 2>&1 >/dev/null; }
-missing() { ! present $1; }
-on_windows() { [ "$TERM" = "cygwin" ]; }
-on_linux()   { ! on_windows ; }
+echo Installing dotfiles
 
-echo 'Installing scripts'
+log Linking dotfiles
 export DOTFILES_PATH=~/dotfiles
 
 ln -s --force "$DOTFILES_PATH/bashrc" "$HOME/.bashrc"
@@ -41,48 +44,40 @@ if [ -d $HOME/.kde/share/apps/konsole ]; then
   ln -s --force "$DOTFILES_PATH/vendor/kde/share/apps/konsole/tmux-guard.profile" "$HOME/.kde/share/apps/konsole/tmux-guard.profile"
 fi
 
-function log() {
-  echo "-- ${1}"
-}
-
 if on_linux; then
-  # install git if missing
-  which git 2>/dev/null >/dev/null || sudo apt-get install -y git
-
-  # install curl if missing
-  which curl 2>/dev/null >/dev/null || sudo apt-get install -y curl
+  present git || apt_install git
+  present curl || apt_install curl
 
   # init submodules
   git submodule update --init
 
   # install vendor debs
   has_20_bash_completion() {
-    dpkg -l | grep bash-completion | awk '{print $3}' | grep '2.0'
+    dpkg -l | grep bash-completion | awk '{print $3}' | grep '2.0' 2>&1 >/dev/null
   }
   if ! has_20_bash_completion; then
-    log 'Intalling bash-completion 2.0'
+    log intalling bash-completion 2.0
     sudo apt-get purge bash-completion &&
     sudo dpkg -i $DOTFILES_PATH/vendor/bash-completion_2.0-1_all.deb
   fi
 
   # link chromium to fake google-chrome for some apps
-  if ! which google-chrome && which chromium-browser; then
+  if missing google-chrome && present chromium-browser; then
     sudo ln -s $(which chromium-browser) /usr/bin/google-chrome
   fi
 
   # set up rvm
   if [ ! -d $HOME/.rvm ]; then
-    #log 'Installing RVM'
+    log installing rvm
     curl -L https://get.rvm.io | bash -s stable --ruby
 
-    log 'Installing RVM requirements'
+    log installing rvm requirements
     sudo $(rvm requirements|grep -A1 "# For Ruby"|grep "ruby:"|cut -c9-|sed 's/install/install -y/g')
 
-    log 'Installing ruby-falcon'
-    rvm get head && rvm reinstall 1.9.3-perf --patch falcon
-
-    log 'Coping rvm global.gems'
     cp $DOTFILES_PATH/.rvm-global.gems $HOME/.rvm/gemsets/global.gems
+
+    log installing ruby falcon
+    rvm get head && rvm reinstall 1.9.3-perf --patch falcon
 
     source bashrc
     rvm use 1.9.3-perf --default
@@ -95,19 +90,12 @@ if [ ! -f $HOME/.local_variables ]; then
 fi
 
 if on_linux; then
-  # make git-dude dir
-  test -d $HOME/.git-dude || mkdir $HOME/.git-dude
+  (present ack-grep && missing ack) && sudo ln -s /usr/bin/ack-grep /usr/bin/ack
+  (present python && missing fu) && (cd vendor/fu && sudo python setup.py install)
 
-  (which ack-grep && ! which ack) && sudo ln -s /usr/bin/ack-grep /usr/bin/ack
-  (which python && ! which fu) && (cd vendor/fu && sudo python setup.py install)
+  present wget || apt_install wget
 
-  # install wget
-  if ! which wget ; then
-    sudo apt-get install -y wget
-  fi
-
-  # install dropbox
-  if ! which dropbox; then
+  if missing dropbox; then
     sudo dpkg -i vendor/debs/dropbox_1.6.0_amd64.deb
     dropbox start -i &
   fi
@@ -116,19 +104,14 @@ if on_linux; then
   fi
 
   # install silver searcher
-  if ! which ag; then
-    sudo dpkg -i vendor/debs/the-silver-searcher_0.14-1_amd64.deb
-  fi
+  present ag || sudo dpkg -i vendor/debs/the-silver-searcher_0.14-1_amd64.deb
 
   # install elasticsearch
   if [ ! -d /etc/elasticsearch ]; then
     sudo dpkg -i vendor/debs/elasticsearch-0.90.2.deb
   fi
 
-  # install vagrant
-  if missing vagrant; then
-    sudo dpkg -i vendor/debs/vagrant*.deb
-  fi
+  present vagrant || sudo dpkg -i vendor/debs/vagrant*.deb
 
   if missing mosh; then
     sudo apt-get install -y python-software-properties
@@ -143,11 +126,10 @@ if on_linux; then
     ln -s --force $DOTFILES_PATH/conf/startup.desktop $HOME/.config/autostart/
   fi
 
-  # vundle
-  if [ ! -d ~/.vim/bundle/vundle ]; then
-    echo "Vundle not found - installing"
-    git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-    vim -se -c BundleInstall -c qa
+  if [ ! -d ~/.vim/bundle/neobundle.vim ]; then
+    mkdir -p ~/.vim/bundle
+    git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
+    vim -c ":NeoBundleInstall" -c ":qa"
   fi
   mkdir -p $HOME/.vim-tmp
 
@@ -176,7 +158,7 @@ if on_linux; then
   fi
 
   if missing node; then
-    echo Installing node
+    log installing node
     sudo apt-get install python-software-properties python g++ make
     sudo add-apt-repository ppa:chris-lea/node.js
     sudo apt-get update
