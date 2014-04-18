@@ -75,6 +75,7 @@ libxcb-icccm4
 libxslt1-dev
 libxslt1.1
 lm-sensors
+lxc
 lynx
 markdown
 mencoder
