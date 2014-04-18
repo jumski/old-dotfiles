@@ -1,5 +1,7 @@
 #!/bin/bash
 
+present() { which $1 2>&1 >/dev/null; }
+missing() { ! present $1; }
 on_windows() { [ "$TERM" = "cygwin" ]; }
 on_linux()   { ! on_windows ; }
 
@@ -101,7 +103,7 @@ if on_linux; then
 
   # install wget
   if ! which wget ; then
-    sudo apt-get install wget
+    sudo apt-get install -y wget
   fi
 
   # install dropbox
@@ -124,11 +126,11 @@ if on_linux; then
   fi
 
   # install vagrant
-  if ! which vagrant; then
+  if missing vagrant; then
     sudo dpkg -i vendor/debs/vagrant*.deb
   fi
 
-  if ! which mosh; then
+  if missing mosh; then
     sudo apt-get install -y python-software-properties
     sudo add-apt-repository -y ppa:keithw/mosh
     sudo apt-get update -y
@@ -161,7 +163,7 @@ if on_linux; then
   # local user supervisor
   mkdir -p $HOME/tmp
   mkdir -p $HOME/log/supervisor
-  if ! which supervisord; then
+  if missing supervisord; then
     sudo apt-get install -y supervisor
   fi
   if [ -f /etc/rc3.d/S20supervisor ]; then
@@ -169,8 +171,17 @@ if on_linux; then
     sudo update-rc.d -f supervisor remove
   fi
 
-  # create current_ruby wrapper
-  which current_ruby || rvm wrapper 1.9.3 current ruby
+  if missing current_ruby; then
+    rvm wrapper 1.9.3 current ruby
+  fi
+
+  if missing node; then
+    echo Installing node
+    sudo apt-get install python-software-properties python g++ make
+    sudo add-apt-repository ppa:chris-lea/node.js
+    sudo apt-get update
+    sudo apt-get install nodejs -y
+  fi
 fi # on_linux
 
 echo 'Load bashrc'
