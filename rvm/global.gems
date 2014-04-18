@@ -2,7 +2,7 @@ rubygems-bundler
 bundler
 rake
 rvm
-
+tmuxinator
 awesome_print
 interactive_editor
 github
