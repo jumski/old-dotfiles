@@ -6,8 +6,10 @@ NeoBundle 'godlygeek/tabular'
 NeoBundle 'kana/vim-fakeclip'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'lastpos.vim'
+
 NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'Lokaltog/vim-powerline'
+" NeoBundle 'bling/vim-airline'
 NeoBundle 'matchit.zip'
 NeoBundle 'michaeljsmith/vim-indent-object'
 NeoBundle 'repeat.vim'
@@ -17,6 +19,7 @@ NeoBundle 'tpope/vim-abolish'
 NeoBundle 'tpope/vim-endwise'
 NeoBundle 'tpope/vim-eunuch'
 NeoBundle 'tpope/vim-fugitive'
+
 NeoBundle 'tpope/vim-git'
 NeoBundle 'tpope/vim-haml'
 NeoBundle 'tpope/vim-markdown'
@@ -29,7 +32,11 @@ NeoBundle 'tpope/vim-sleuth'
 NeoBundle 'tpope/vim-dispatch'
 NeoBundle 'guns/vim-clojure-static'
 NeoBundle 'tpope/vim-classpath'
+
+
+
 NeoBundle 'tpope/vim-fireplace'
+NeoBundle 'tpope/vim-projectile'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'mattn/gist-vim'
 " NeoBundle 'vim-scripts/ack.vim'
@@ -38,6 +45,8 @@ NeoBundle 'vim-scripts/file-line'
 NeoBundle 'ecomba/vim-ruby-refactoring'
 NeoBundle 'sjl/gundo.vim'
 NeoBundle 'SirVer/ultisnips'
+
+
 " NeoBundle 'duskhacker/sweet-rspec-vim'
 NeoBundle 'vim-scripts/vimux'
 NeoBundle 'jumski/vimux-ruby-test'
@@ -45,15 +54,26 @@ NeoBundle 'jayferd/eco.vim'
 NeoBundle 'sickill/vim-pasta'
 NeoBundle 'nono/vim-handlebars'
 NeoBundle 'jgdavey/vim-blockle'
+
+
+
+
+
 NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'Shougo/vimproc'
 NeoBundle "DataWraith/auto_mkdir"
-NeoBundle 'Valloric/YouCompleteMe'
+" NeoBundle 'Shougo/neocomplcache.vim'
+" NeoBundle 'Valloric/YouCompleteMe'
 NeoBundle 'bronson/vim-visual-star-search'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'slim-template/vim-slim'
 NeoBundle 'mattn/webapi-vim'
 NeoBundle 'christoomey/vim-tmux-navigator'
+
+
+
+
+
 NeoBundle 'kana/vim-textobj-user'
 NeoBundle 'nelstrom/vim-textobj-rubyblock'
 NeoBundle 'abijr/colorpicker'
@@ -63,6 +83,12 @@ NeoBundle 'kien/rainbow_parentheses.vim'
 NeoBundle 'leafgarland/typescript-vim'
 NeoBundle 'OrangeT/vim-csharp'
 NeoBundle 'ekalinin/Dockerfile.vim'
+
+
+
+" NeoBundle 'tommcdo/vim-exchange'
+" NeoBundle 'AndrewRadev/splitjoin.vim'
+" NeoBundle 'AndrewRadev/switch.vim'
 
 """"""""" DISABLED PLUGINS
 " NeoBundle 'php.vim'
