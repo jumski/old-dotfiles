@@ -69,11 +69,11 @@ function hostname_indicator {
 }
 
 function shortened_pwd {
-  dirname `pwd` | sed 's:\B\w*::g'
+  dirname "`pwd`" | sed 's:\B\w*::g'
 
 }
 function parent_dirname {
-  dirname `pwd` | sed 's|/\(.*\)\+/\(.*\)|\2|g'
+  dirname "`pwd`" | sed 's|/\(.*\)\+/\(.*\)|\2|g'
 }
 
 function pwd_indicator {
