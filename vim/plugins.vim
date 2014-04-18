@@ -1,13 +1,13 @@
 NeoBundle 'jumski/vim-colors-solarized'
 NeoBundle 'delimitMate.vim'
-NeoBundle 'vim-puppet'
+" NeoBundle 'vim-puppet'
 " NeoBundle 'gmarik/ide-popup.vim'
 NeoBundle 'godlygeek/tabular'
 NeoBundle 'kana/vim-fakeclip'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'lastpos.vim'
 
-NeoBundle 'Lokaltog/vim-easymotion'
+" NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'Lokaltog/vim-powerline'
 " NeoBundle 'bling/vim-airline'
 NeoBundle 'matchit.zip'
@@ -44,26 +44,22 @@ NeoBundle 'epmatsw/ag.vim'
 NeoBundle 'vim-scripts/file-line'
 NeoBundle 'ecomba/vim-ruby-refactoring'
 NeoBundle 'sjl/gundo.vim'
-NeoBundle 'SirVer/ultisnips'
+" NeoBundle 'SirVer/ultisnips'
 
 
 " NeoBundle 'duskhacker/sweet-rspec-vim'
-NeoBundle 'vim-scripts/vimux'
-NeoBundle 'jumski/vimux-ruby-test'
-NeoBundle 'jayferd/eco.vim'
+" NeoBundle 'jayferd/eco.vim'
 NeoBundle 'sickill/vim-pasta'
-NeoBundle 'nono/vim-handlebars'
+" NeoBundle 'nono/vim-handlebars'
 NeoBundle 'jgdavey/vim-blockle'
 
 
 
 
 
-NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'Shougo/vimproc'
 NeoBundle "DataWraith/auto_mkdir"
-" NeoBundle 'Shougo/neocomplcache.vim'
-" NeoBundle 'Valloric/YouCompleteMe'
+NeoBundle 'Valloric/YouCompleteMe'
 NeoBundle 'bronson/vim-visual-star-search'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'slim-template/vim-slim'
@@ -75,13 +71,13 @@ NeoBundle 'christoomey/vim-tmux-navigator'
 
 
 NeoBundle 'kana/vim-textobj-user'
-NeoBundle 'nelstrom/vim-textobj-rubyblock'
+" NeoBundle 'nelstrom/vim-textobj-rubyblock'
 NeoBundle 'abijr/colorpicker'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'closetag.vim'
 NeoBundle 'kien/rainbow_parentheses.vim'
-NeoBundle 'leafgarland/typescript-vim'
-NeoBundle 'OrangeT/vim-csharp'
+" NeoBundle 'leafgarland/typescript-vim'
+" NeoBundle 'OrangeT/vim-csharp'
 NeoBundle 'ekalinin/Dockerfile.vim'
 
 
