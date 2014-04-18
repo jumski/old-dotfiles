@@ -6,7 +6,4 @@ source ~/dotfiles/vim/plugins.vim
 source ~/dotfiles/vim/settings.vim
 source ~/dotfiles/vim/mappings.vim
 source ~/dotfiles/vim/projections.vim
-source ~/dropbox/private/trov-projections.vim
-
-" source ~/dotfiles/vim/navigation.vim
 
