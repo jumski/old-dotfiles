@@ -17,7 +17,10 @@ set nowritebackup
 set tags=TAGS;~/
 
 " use horizontal line at cursor position
-set cursorline
+" WARNING !!!
+" this makese moving cursor VERY slow!!!
+" !!!!!!!!!!!
+" set cursorline
 
 " disable line numbering
 set nonu
