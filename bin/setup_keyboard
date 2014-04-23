@@ -2,5 +2,6 @@
 xset r rate 250 100
 
 # remap caps and right win key
+setxkbmap -option ctrl:menu_rctrl
 setxkbmap -option ctrl:nocaps
 setxkbmap -option altwin:ctrl_win
