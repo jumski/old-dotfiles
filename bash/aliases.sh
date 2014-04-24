@@ -98,10 +98,14 @@ alias docker="sudo docker"
 alias dockerlite="sudo dockerlite"
 alias babushka="babushka --no-color"
 alias coffeewatch="coffee -bcw"
+alias karma="./node_modules/.bin/karma"
 
 alias pgsizes='psql -c "SELECT pg_database.datname, pg_database_size(pg_database.datname), pg_size_pretty(pg_database_size(pg_database.datname)) FROM pg_database ORDER BY pg_database_size DESC;"'
 
 
+## keyboard
+encaps() { setxkbmap -option ctrl:swapcaps; }
+discaps() { setxkbmap -option ctrl:nocaps; }
 
 
 ## logstash specific
