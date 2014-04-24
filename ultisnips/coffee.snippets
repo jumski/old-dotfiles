@@ -23,7 +23,12 @@ snippet xp
 expect($1).$2
 endsnippet
 
-snippet be "beforeEach ->"
+snippet bef "beforeEach ->"
 beforeEach ->
 endsnippet
 
+snippet befi "beforeEach ->"
+beforeEach inject(($1) ->
+  $2
+)
+endsnippet
