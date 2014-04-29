@@ -1,8 +1,10 @@
 # set keyboard repeat
 xset r rate 250 100
 
-# remap caps and right win key
-setxkbmap -option ctrl:menu_rctrl
-# setxkbmap -option ctrl:swapcaps
-setxkbmap -option ctrl:nocaps
-setxkbmap -option altwin:ctrl_win
+options="-option ctrl:menu_rctrl -option altwin:ctrl_win -option ctrl:nocaps"
+
+if [[ "swapcaps" == $1 ]]; then
+  options="$options -option ctrl:swapcaps"
+fi
+
+setxkbmap -option $options

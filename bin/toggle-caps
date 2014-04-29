@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if setxkbmap -query | grep ctrl:swapcaps >/dev/null; then
+  echo CAPS disabled
+  setup_keyboard
+else
+  echo CAPS enabled
+  setup_keyboard swapcaps
+fi
