@@ -179,3 +179,6 @@ let g:UltiSnipsExpandTrigger = "<C-z>"
 " au BufRead * RainbowParenthesesLoadRound
 " " au Syntax *.clj RainbowParenthesesLoadSquare
 " " au Syntax *.clj RainbowParenthesesLoadBraces
+
+" syntax highlight .nghaml files
+au BufRead,BufNewFile *.nghaml set filetype=haml
