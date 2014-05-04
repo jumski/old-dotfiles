@@ -1,0 +1,12 @@
+#!/bin/bash
+
+maya_card=$(aplay -l | grep MAYA44)
+
+if [ $? = 1 ]; then
+  alsamixer
+  exit 0
+fi
+
+maya_number=$(echo "$maya_card" | awk '{print $2}' | cut -c -1)
+
+alsamixer -c$maya_number
