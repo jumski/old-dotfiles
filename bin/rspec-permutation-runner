@@ -1,11 +1,21 @@
 #!/usr/bin/env ruby
-# encoding: utf-8
 require 'logger'
-require 'ruby-progressbar'
-
+begin
+    require 'ruby-progressbar' 
+rescue LoadError
+    puts "Please run `gem install ruby-progressbar` first"
+    exit 1
+end
 
 spec_files = Dir['spec/**/*_spec.rb']
-pairs_to_run = spec_files.product(spec_files).uniq { |pair| pair.sort }
+failing_specs = %w(
+    spec/models/raw_document_spec.rb
+    spec/lib/new_scraping/by_sentence_number_spec.rb
+    spec/lib/scraping/integration_spec.rb
+    spec/models/decree_spec.rb
+    spec/controllers/gazettes_controller_spec.rb
+)
+pairs_to_run = failing_specs.product(spec_files).uniq { |pair| pair.sort }
 
 @progressbar = ProgressBar.create(total: pairs_to_run.length, format: '%e %b%i %p%% %t')
 @logger = Logger.new('tmp/rspec-permutations.log')
