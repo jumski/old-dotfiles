@@ -14,6 +14,10 @@ NeoBundle 'lastpos.vim'
 "
 " " NeoBundle 'Lokaltog/vim-easymotion'
 " " NeoBundle 'bling/vim-airline'
+
+
+
+
 NeoBundle 'matchit.zip'
 NeoBundle 'michaeljsmith/vim-indent-object'
 NeoBundle 'repeat.vim'
@@ -103,7 +107,8 @@ NeoBundle 'ekalinin/Dockerfile.vim'
 " let VimuxHeight = "50"
 " let VimuxOrientation = "h"
 "
-" " let g:syntastic_disabled_filetypes = ["haml", "sass"]
+" let g:syntastic_disabled_filetypes = ["haml", "sass"]
+let g:syntastic_mode_map = { 'passive_filetypes': ['haml', 'sass'] }
 " let g:syntastic_mode_map = { 'mode': 'passive',
 "                            \ 'active_filetypes': ['ruby', 'erb', 'javascript', 'coffee'],
 "                            \ 'passive_filetypes': [] }
