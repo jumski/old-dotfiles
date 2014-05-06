@@ -1,0 +1,29 @@
+#!/usr/bin/env ruby
+# encoding: utf-8
+require 'logger'
+require 'ruby-progressbar'
+
+
+spec_files = Dir['spec/**/*_spec.rb']
+pairs_to_run = spec_files.product(spec_files).uniq { |pair| pair.sort }
+
+@progressbar = ProgressBar.create(total: pairs_to_run.length, format: '%e %b%i %p%% %t')
+@logger = Logger.new('tmp/rspec-permutations.log')
+@fail_logger = Logger.new('tmp/rspec-permutations-failed.log')
+
+def run_pair(pair)
+    @logger.info "running pair #{pair.join(' ')}"    
+
+    `bundle exec rspec --order default #{pair.join(' ')} 2>&1 >/dev/null`
+
+    unless $?.success?
+        @fail_logger.warn pair.join("\n")
+    end
+
+    @progressbar.increment
+end
+
+@logger.info '========= NEW BATCH ============'
+pairs_to_run.each do |pair|
+    run_pair pair
+end
