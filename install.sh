@@ -101,6 +101,7 @@ if on_linux; then
   fi
   if [ -d $HOME/Dropbox ] && [ ! -d $HOME/dropbox ]; then
     ln -s --force $HOME/Dropbox/ $HOME/dropbox
+    ln -s --force $HOME/dropbox/projects $HOME/projects
   fi
 
   # install silver searcher
