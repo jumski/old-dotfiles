@@ -27,7 +27,7 @@ def run_pair(pair)
     `bundle exec rspec --order default #{pair.join(' ')} 2>&1 >/dev/null`
 
     unless $?.success?
-        @fail_logger.warn pair.join("\n")
+        @fail_logger.warn pair.join(" ")
     end
 
     @progressbar.increment
