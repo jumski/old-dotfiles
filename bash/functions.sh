@@ -182,3 +182,5 @@ multi_backup() {
     single_backup $name
   done
 }
+
+histgrep() { history | grep "$1" | sort -ur; }
