@@ -156,3 +156,4 @@ youtube-dl
 stow
 primus
 electrum
+libsqlite3-dev
