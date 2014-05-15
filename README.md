@@ -1,3 +1,8 @@
+## speed up ubuntu tricks
+
+http://itsfoss.com/speed-up-ubuntu-1310/
+
+
 ## movie subtitles downloader
 
 ```
