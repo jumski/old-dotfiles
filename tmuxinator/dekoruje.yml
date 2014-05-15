@@ -1,11 +1,13 @@
 # ~/.tmuxinator/default.yml
 # you can make as many tabs as you wish...
 
-project_name: dekoruje
-project_root: ~/work/dekoruje
-tabs:
-  - guard: guard
+name: dekoruje
+root: ~/work/dekoruje
+
+windows:
+  - server: rails s
   - bash:
   - vim: vim
   - console: rails console
   - bash: tail -f log/development.log
+  - spree_core: cd `bundle show spree_core`
