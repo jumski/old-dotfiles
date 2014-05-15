@@ -78,6 +78,7 @@ allspec() {
 }
 
 sizes() { du --max-depth=1 -h .; }
+dux() { du -kchxa -d 1 . | sort -h; }
 
 # workflow enhancements ..............................
 mkcd()      { mkdir $1 && cd $1; }
@@ -115,6 +116,9 @@ loop() {
     echo "= Iteration #$i ($@)"
     eval "$@"
   done
+}
+retry() {
+  while ! "$@"; do sleep 1; done
 }
 
 # apt .....................................
