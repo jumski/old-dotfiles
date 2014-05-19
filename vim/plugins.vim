@@ -44,7 +44,7 @@ NeoBundle 'tpope/vim-classpath'
 
 
 NeoBundle 'tpope/vim-fireplace'
-NeoBundle 'tpope/vim-projectile'
+NeoBundle 'tpope/vim-projectionist'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'mattn/gist-vim'
 " " NeoBundle 'vim-scripts/ack.vim'
@@ -85,6 +85,7 @@ NeoBundle 'kien/rainbow_parentheses.vim'
 " " NeoBundle 'leafgarland/typescript-vim'
 " " NeoBundle 'OrangeT/vim-csharp'
 NeoBundle 'ekalinin/Dockerfile.vim'
+NeoBundle 'nginx.vim'
 
 
 
