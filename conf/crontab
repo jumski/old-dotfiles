@@ -7,6 +7,8 @@
 # | +- - - - - - - hour (0 - 23)
 # +- - - - - - - - minute (0 - 59)
 
-# 1/* * * * * /home/jumski/bin/dupa
+# remove downloaded files older than 14 days
+*/1 * * * * find /home/jumski/Downloads/ -mtime +14 -exec rm -r {} \;
 
-*/1 * * * * find /home/jumski/downloads/chrome/ -mtime +14 -exec rm {} \;
+# log battery status if discharging
+*/5 * * * * (acpi | grep Discharging) && (cat /home/jumski/battery.log > /tmp/battery.log && echo `date` '::' `acpi` >> /tmp/battery.log && tail -1000 /tmp/battery.log > /home/jumski/battery.log)
