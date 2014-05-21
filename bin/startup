@@ -3,13 +3,13 @@
 $HOME/dotfiles/bin/setup_keyboard
 
 # prevent mouse clicks
-syndaemon -i 1.5 -t &
+# syndaemon -i 1.5 -t &
 
 # mocp
 mocp --server
 
 # skype
-skype &
+PULSE_LATENCY_MSEC=30 skype &
 
 # pidgin
 pidgin &
@@ -19,8 +19,6 @@ google-chrome &
 
 # urxvt
 gnome-terminal &
-
-hipchat &
 
 # supervisor
 supervisord -c $HOME/dotfiles/conf/supervisord.conf
