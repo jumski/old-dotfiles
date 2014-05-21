@@ -1,0 +1,15 @@
+#!/bin/bash
+
+if ! git remote -v | grep git.webmonks.org 2>&1 >/dev/null; then
+  echo "This is not a gitlab repo!"
+  exit 1
+fi
+
+if [ -z "$BROWSER" ]; then
+  echo "Please set \$BROWSER variable to your web browser executable!"
+  exit 1
+fi
+
+REPO_URL=$(git remote -v | grep origin | head -1 | sed 's/:/\//g' | sed 's/origin\s\+git@/http:\/\//g' | sed 's/\.git.*//g')
+
+$BROWSER $REPO_URL
