@@ -1,3 +1,9 @@
+# various hacks and improvements
+
+## skype pulseaudio cracklings fix
+
+```PULSE_LATENCY_MSEC=30 skype```
+
 ## speed up ubuntu tricks
 
 http://itsfoss.com/speed-up-ubuntu-1310/
