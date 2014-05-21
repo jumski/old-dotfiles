@@ -10,6 +10,15 @@ if [ -z "$BROWSER" ]; then
   exit 1
 fi
 
-REPO_URL=$(git remote -v | grep origin | head -1 | sed 's/:/\//g' | sed 's/origin\s\+git@/http:\/\//g' | sed 's/\.git.*//g')
+BASE_URL=$(git remote -v | grep origin | head -1 | sed 's/:/\//g' | sed 's/origin\s\+git@/http:\/\//g' | sed 's/\.git.*//g')
 
-$BROWSER $REPO_URL
+if [ -z "$1" ]; then # base url
+  URL=$BASE_URL
+elif [ -f "$1" ]; then # file url
+  BRANCH=$(git branch | grep '*' | cut -c3-)
+  URL="$BASE_URL/blob/$BRANCH/$1"
+else # other path
+  URL="$BASE_URL/$1"
+fi
+
+$BROWSER $URL
