@@ -68,6 +68,9 @@ nnoremap <leader>vp :tabnew config/projections.json<cr>
 " some custom stuff
 nnoremap <leader>op :sp /home/jumski/dropbox/projects/`basename \`pwd\``/todos.txt<cr>
 
+" Glbrowse
+nnoremap <leader>og :Glbrowse<cr>
+
 " Split line(opposite to S-J joining line)
 " nnoremap <C-J> gEa<CR><ESC>
 
