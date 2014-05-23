@@ -1,12 +1,24 @@
 #!/bin/bash
+iteration_cnt=0
+failed_cnt=0
+seed_file=.invalid_rspec_seeds
+
 while true; do
-  echo START ===================
-  last_seed=$(bundle exec rspec --no-color --order rand $1 2>&1)
+  iteration_cnt=$((iteration_cnt + 1))
+  human_date=$(date +'%Y-%m-%d %H:%M')
+
+  echo === $human_date "($1) [iteration: $iteration_cnt, failed: $failed_cnt]"
+
+  rspec_output=$(bundle exec rspec --no-color --order rand $1 2>&1)
 
   if [ "$?" != "0" ]; then
-    echo "Errored...: $last_seed"
-    echo -e "$last_seed" | grep "Randomized with seed" | sed 's/Randomized with seed //g' >> .invalid_rspec_seeds
+    failed_cnt=$((failed_cnt + 1))
+    echo "  >>> FAILED!"
+    echo -e "$rspec_output" | grep Failures -A1000
+    seed=$(echo -e "$rspec_output" | grep "Randomized with seed" | sed 's/Randomized with seed //g')
+
+    echo "$1 [$human_date] $seed" >> $seed_file 
+    sort -u -o $seed_file $seed_file
   fi
-  echo END ===================
 done
 
