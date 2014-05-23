@@ -158,3 +158,4 @@ primus
 electrum
 libsqlite3-dev
 at
+ethtool
