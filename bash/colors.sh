@@ -6,6 +6,8 @@ c_green="\[\e[32m\]"
 c_violet="\[\e[34m\]"
 c_red="\[\e[31m\]"
 c_reset="\[\e[0m\]"
+c_bold_white='\[\033[1;29m\]'
+
 
 gitdir()
 {
@@ -77,7 +79,7 @@ function parent_dirname {
 }
 
 function pwd_indicator {
-  echo "`parent_dirname `/${c_white}`basename "$PWD"`$c_reset "
+  echo "`parent_dirname `/${c_bold_white}`basename "$PWD"`$c_reset "
   # echo "`parent_dirname | head -c1 `/${c_white}`basename "$PWD"`$c_reset "
 }
 
@@ -101,10 +103,29 @@ function todo_oneliner {
   echo ""
 }
 
+horizontal_separator() {
+  terminal_width=${COLUMNS:-$(tput cols)}
+  datetime=$(date +'%Y-%m-%d %H:%M')
+  padding_length=$(($terminal_width - ${#datetime} - 2))
+  padding=$(printf '%*s\n' "$padding_length" '' | tr ' ' -)
+
+  echo $padding $datetime
+}
+
 prompt_command() {
   LAST_EXIT_CODE=$?
+
   history -a
-  export PS1="$(todo_oneliner) $(hostname_indicator)$(pwd_indicator)$(git_indicator)$(rails_env_indicator)$(prompt_indicator)"
+  PS1=$c_reset
+  PS1="${PS1}$(horizontal_separator)"
+  PS1="${PS1}\n"
+  PS1="${PS1}$(hostname_indicator)"
+  PS1="${PS1}$(pwd_indicator)"
+  PS1="${PS1}$(git_indicator)"
+  PS1="${PS1}$(rails_env_indicator)"
+  PS1="${PS1}$(prompt_indicator)"
+  PS1="${PS1}${c_white}"
+  export PS1
 }
 
 PROMPT_COMMAND=prompt_command
