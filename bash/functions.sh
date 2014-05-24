@@ -187,4 +187,4 @@ multi_backup() {
   done
 }
 
-histgrep() { history | grep "$1" | sort -ur; }
+histgrep() { history | grep "$1" | sort -uh; }
