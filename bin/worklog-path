@@ -1,0 +1,22 @@
+#!/bin/bash
+
+project_name=$(basename `pwd`)
+date=`date +"%Y-%m-%d"`
+
+if [ -n "$1" ]; then
+  date="$1"
+
+  if [ -n "$2" ]; then
+    project_name="$1"
+    date="$2"
+  fi
+fi 
+
+worklogs_dir=~/dropbox/monk-shared/worklog/$project_name
+mkdir -p $worklogs_dir
+
+worklog_path=$worklogs_dir/${date}.txt
+
+touch $worklog_path
+
+echo $worklog_path
