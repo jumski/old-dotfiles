@@ -11,6 +11,10 @@ require 'pry'
 binding.pry
 endsnippet
 
+snippet tp ".tap(&:pry)"
+.tap(&:pry)
+endsnippet
+
 snippet xp "expect()"
 expect($1).to${2:_not} $0
 endsnippet
