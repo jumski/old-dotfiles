@@ -26,6 +26,7 @@ ln -s --force "$DOTFILES_PATH/kderc" "$HOME/.kderc"
 ln -s --force "$DOTFILES_PATH/vromerc" "$HOME/.vromerc"
 ln -s --force "$DOTFILES_PATH/xhotkeys" "$HOME/.xhotkeys"
 ln -s --force "$DOTFILES_PATH/vendor/dircolors.256dark" "$HOME/.dircolors"
+ln -s --force "$DOTFILES_PATH/bundle" "$HOME/.bundle"
 sudo ln -s --force "$DOTFILES_PATH/bin/bitwig" "/usr/bin/"
 
 if on_linux; then
@@ -108,11 +109,11 @@ if on_linux; then
   present ag || sudo dpkg -i vendor/debs/the-silver-searcher_0.14-1_amd64.deb
 
   # install elasticsearch
-  if [ ! -d /etc/elasticsearch ]; then
-    sudo dpkg -i vendor/debs/elasticsearch-0.90.2.deb
-  fi
+  # if [ ! -d /etc/elasticsearch ]; then
+  #   sudo dpkg -i vendor/debs/elasticsearch-0.90.2.deb
+  # fi
 
-  present vagrant || sudo dpkg -i vendor/debs/vagrant*.deb
+  present vagrant || sudo dpkg -i $HOME/dropbox/linux/debs/vagrant*.deb
 
   if missing mosh; then
     sudo apt-get install -y python-software-properties
