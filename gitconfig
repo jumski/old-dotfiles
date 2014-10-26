@@ -38,6 +38,7 @@
   trail = !git-trail
   neck = !git-neck
   churn = !git-churn
+  recent-branches = !git for-each-ref --sort=-committerdate --format='%(committerdate:short) %(refname)' refs/heads refs/remotes
 
   conflicts = !git ls-files -u | cut -f 2 | sort -u
   resolve = !vim -p $(git conflicts)
@@ -117,7 +118,7 @@
   # With write access
   insteadOf = wgh:
 [web]
-	browser = chromium-browser
+	browser = google-chrome
 [merge]
 	tool = vimdiff
 	conflictstyle = diff3
