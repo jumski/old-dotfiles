@@ -29,9 +29,9 @@ nmap <leader>p :se invpaste<CR>
 noremap <leader>g mggg=G'g
 
 " save with C-S
-noremap <silent> <C-S> :update<CR>
-vnoremap <silent> <C-S> <C-C>:update<CR>
-inoremap <silent> <C-S> <Esc>:update<CR>
+noremap <silent> <C-s> :update<CR>
+vnoremap <silent> <C-s> <C-C>:update<CR>
+inoremap <silent> <C-s> <Esc>:update<CR>
 
 " open file under curson in vsplit
 " nmap <C-X>gf :vs %<CR>gf
@@ -66,7 +66,9 @@ nnoremap <leader>vb :NeoBundleInstall<cr>
 nnoremap <leader>vp :tabnew config/projections.json<cr>
 
 " some custom stuff
-nnoremap <leader>op :sp /home/jumski/dropbox/projects/`basename \`pwd\``/todos.txt<cr>
+nnoremap <leader>op :15sp /home/jumski/dropbox/projects/`basename \`pwd\``/todos.txt<cr>
+nnoremap <leader>ow :15sp `/home/jumski/dotfiles/bin/worklog-path`<cr>
+" nnoremap <leader>oW :Ex $(dirname `/home/jumski/dotfiles/bin/worklog-path`)<cr>
 
 " Glbrowse
 nnoremap <leader>og :Glbrowse<cr>
@@ -115,7 +117,8 @@ nnoremap <leader>: "xyiw:%s/<C-R>x/
 " Ag search
 nnoremap \ :tabnew<CR>:Ag<space>
 " Ag search for word under cursor
-nnoremap <leader>\ "xyiw:tabnew<CR>:Ag <C-R>x
+nnoremap <leader>\ "xyiw:tabnew<CR>:Ag <C-R>x<space>
+vnoremap \ "xy:tabnew<CR>:Ag "<C-R>x"<space>
 
 " Rails specific
 map <leader>rr :topleft :tabnew config/routes.rb<cr>

@@ -95,7 +95,7 @@ colorscheme solarized
 set lazyredraw
 
 " force syntax highlighting on certain filetypes
-au BufNewFile,BufRead Rakefile,Capfile,Guardfile,Gemfile,pryrc,*.god setfiletype ruby
+au BufNewFile,BufRead Rakefile,Capfile,Guardfile,Gemfile,pryrc,*.god,*.cap,*.rake setfiletype ruby
 au BufNewFile,BufRead *.json set ft=javascript
 au BufNewFile,BufRead *.hamlc setfiletype haml
 au BufNewFile,BufRead Dockerfile setfiletype conf
@@ -223,6 +223,17 @@ if filereadable(getcwd() . '/.session.vim')
 endif
 syntax enable
 endfunction
+
+
+function! CursorPing()
+    set cursorline cursorcolumn
+    redraw
+    sleep 50m
+    set nocursorline nocursorcolumn
+endfunction
+" nnoremap <C-Space> :call CursorPing()<CR>
+
+
 " autocmd VimLeave * call SaveSess()
 "autocmd VimEnter * call RestoreSess()
 " }}}

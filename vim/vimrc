@@ -8,3 +8,4 @@ source ~/dotfiles/vim/mappings.vim
 source ~/dotfiles/vim/projections.vim
 source ~/dotfiles/vim/functions.vim
 
+" source ~/dotfiles/vim/boostmove.vim

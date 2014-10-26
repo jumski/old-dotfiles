@@ -4,9 +4,10 @@ NeoBundle 'Valloric/YouCompleteMe'
 
 
 NeoBundle 'jumski/vim-colors-solarized'
-NeoBundle 'delimitMate.vim'
+" NeoBundle 'delimitMate.vim'
 " " NeoBundle 'vim-puppet'
 " " NeoBundle 'gmarik/ide-popup.vim'
+NeoBundle 'logstash.vim'
 NeoBundle 'godlygeek/tabular'
 NeoBundle 'kana/vim-fakeclip'
 NeoBundle 'kchmck/vim-coffee-script'
@@ -166,16 +167,16 @@ let g:UltiSnipsExpandTrigger = "<C-z>"
 " endif
 "
 " """""""""""""""""""" custom functions
-" fu! WriteCursorLastPosition()
-"   let output = system('echo ' . getreg('%') . ':' . line('.') . ' > .cursor_last_position')
-" endfunction
+fu! WriteCursorLastPosition()
+  let output = system('echo ' . getreg('%') . ':' . line('.') . ' > .cursor_last_position')
+endfunction
 "
-" if !exists("b:jumski_write_rspec_guide")
-"   let b:jumski_write_rspec_guide = 1
-"
-"   au BufWritePost *_spec.rb call WriteCursorLastPosition()
-" endif
-"
+if !exists("b:jumski_write_rspec_guide")
+  let b:jumski_write_rspec_guide = 1
+
+  au BufWritePost *_spec.rb call WriteCursorLastPosition()
+endif
+
 " " rainbow parenthesis
 " au VimEnter * RainbowParenthesesActivate
 " au VimEnter * RainbowParenthesesLoadRound
