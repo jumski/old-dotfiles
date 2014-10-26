@@ -19,6 +19,8 @@ while true; do
 
     echo "$1 [$human_date] $seed" >> $seed_file 
     sort -u -o $seed_file $seed_file
+
+    notify-send --urgency=low -i error "Failing rspec seed found!"
   fi
 done
 

@@ -1,3 +1,4 @@
+#!/bin/bash
 
 [ -S .zeus.sock ] && PREFIX=zeus
 COMMAND="$PREFIX rspec `cat .cursor_last_position`"
