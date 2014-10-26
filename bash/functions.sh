@@ -188,3 +188,23 @@ multi_backup() {
 }
 
 histgrep() { history | grep "$1" | sort -uh; }
+
+cdproject() {
+  if [ -z "$1" ]; then
+    project_name=$(basename `pwd`)
+  else
+    project_name="$1"
+  fi
+
+  cd ~/projects/$project_name
+}
+
+cdwork() {
+  if [ -z "$1" ]; then
+    project_name=$(basename `pwd`)
+  else
+    project_name="$1"
+  fi
+
+  cd ~/work/$project_name
+}

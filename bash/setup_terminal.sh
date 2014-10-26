@@ -10,6 +10,7 @@ shopt -s checkwinsize
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
 # disable flow control shortcuts (C-Q and C-S)
+stty stop undef
 stty -ixon -ixoff
 
 export EDITOR=vim
