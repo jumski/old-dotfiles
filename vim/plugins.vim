@@ -1,5 +1,5 @@
 NeoBundle 'SirVer/ultisnips'
-NeoBundle 'Lokaltog/vim-powerline'
+" NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'Valloric/YouCompleteMe'
 
 
@@ -115,6 +115,20 @@ let g:syntastic_mode_map = { 'passive_filetypes': ['haml', 'sass'] }
 "                            \ 'active_filetypes': ['ruby', 'erb', 'javascript', 'coffee'],
 "                            \ 'passive_filetypes': [] }
 "
+
+" [YouCompleteMe] collect identifiers from comments and strings
+let g:ycm_collect_identifiers_from_comments_and_strings = 1
+
+" [YouCompleteMe] collect identifiers from tags file
+let g:ycm_collect_identifiers_from_tags_files = 1
+
+" [YouCompleteMe] don't add default identifiers based on vim filetype
+let g:ycm_seed_identifiers_with_syntax = 0
+
+" [YouCompleteMe] work nicely with floobits' plugin
+let g:ycm_allow_changing_updatetime = 0
+
+"
 " let g:ycm_complete_in_comments_and_strings = 1
 "
 " " mappings for ctrlp
@@ -177,15 +191,11 @@ if !exists("b:jumski_write_rspec_guide")
   au BufWritePost *_spec.rb call WriteCursorLastPosition()
 endif
 
-" " rainbow parenthesis
-" au VimEnter * RainbowParenthesesActivate
-" au VimEnter * RainbowParenthesesLoadRound
-" au Syntax * RainbowParenthesesActivate
-" au Syntax * RainbowParenthesesLoadRound
-" au BufRead * RainbowParenthesesActivate
-" au BufRead * RainbowParenthesesLoadRound
-" " au Syntax *.clj RainbowParenthesesLoadSquare
-" " au Syntax *.clj RainbowParenthesesLoadBraces
+" [rainbow_parentheses.vim]
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
 
 " syntax highlight .nghaml files
 au BufRead,BufNewFile *.nghaml set filetype=haml

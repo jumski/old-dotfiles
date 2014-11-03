@@ -252,3 +252,8 @@ endfunction
 " marks, registers, searches, buffer list
 " TODO: some error happens here
 " set viminfo='100,<50,s10,h,%>
+
+
+" use sane regexes
+nnoremap / /\v
+vnoremap / /\v
