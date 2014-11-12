@@ -134,3 +134,23 @@ nnoremap <leader>gs :Gstatus<CR>
 
 " clojure mappings
 nnoremap <leader>R :Require<CR>
+
+" improve movement on wrapped lines
+nnoremap j gj
+nnoremap k gk
+nnoremap $ g$
+nnoremap ^ g^
+nnoremap 0 g0
+vnoremap j gj
+vnoremap k gk
+vnoremap $ g$
+vnoremap ^ g^
+vnoremap 0 g0
+
+" keep search matches in the middle of the window
+nnoremap n nzzzv
+nnoremap N Nzzzv
+
+" same when jumping around
+nnoremap g; g;zz
+nnoremap g, g,zz
