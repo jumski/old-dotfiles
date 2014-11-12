@@ -1,7 +1,8 @@
 #!/bin/bash
 
-[ -S .zeus.sock ] && PREFIX=zeus
-COMMAND="$PREFIX rspec `cat .cursor_last_position`"
+[ -S .zeus.sock ] && PREFIX="zeus "
+[ -f bin/rspec ] && PREFIX="bin/"
+COMMAND="${PREFIX}rspec `cat .cursor_last_position`"
 
 VERBOSE=false
 echo $COMMAND
