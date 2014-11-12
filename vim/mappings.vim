@@ -125,6 +125,7 @@ map <leader>rr :topleft :tabnew config/routes.rb<cr>
 map <leader>rg :topleft 100 :tabnew Gemfile<cr>
 
 " fugitive shortcuts
+nnoremap <leader>gp :Git push<CR>
 nnoremap <leader>gc :Gcommit<CR>
 nnoremap <leader>gd :Gdiff<CR>
 nnoremap <leader>gw :Gwrite<CR>
