@@ -1,5 +1,5 @@
 NeoBundle 'SirVer/ultisnips'
-" NeoBundle 'Lokaltog/vim-powerline'
+NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'Valloric/YouCompleteMe'
 
 
@@ -14,7 +14,6 @@ NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'lastpos.vim'
 "
 " " NeoBundle 'Lokaltog/vim-easymotion'
-" " NeoBundle 'bling/vim-airline'
 
 
 
@@ -88,7 +87,17 @@ NeoBundle 'kien/rainbow_parentheses.vim'
 NeoBundle 'ekalinin/Dockerfile.vim'
 NeoBundle 'nginx.vim'
 
+NeoBundle 'lucapette/vim-ruby-doc'
 
+NeoBundle 'haya14busa/incsearch.vim'
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
+
+
+let g:ruby_doc_ruby_mapping='<leader>dR'
+let g:rspec_doc_ruby_mapping='<leader>ds'
+let g:rails_doc_ruby_mapping='<leader>dr'
 
 " " NeoBundle 'tommcdo/vim-exchange'
 " " NeoBundle 'AndrewRadev/splitjoin.vim'
@@ -152,7 +161,7 @@ let g:ycm_allow_changing_updatetime = 0
 " runtime macros/matchit.vim
 "
 " " powerline settings
-" let g:Powerline_symbols = 'fancy'
+let g:Powerline_symbols = 'fancy'
 "
 " " coffee script
 " let coffee_compile_vert = 1
