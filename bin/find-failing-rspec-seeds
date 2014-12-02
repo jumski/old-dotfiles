@@ -3,13 +3,19 @@ iteration_cnt=0
 failed_cnt=0
 seed_file=.invalid_rspec_seeds
 
+rspec_bin="bundle exec rspec"
+[ -f bin/rspec ] && rspec_bin="bin/rspec"
+
+rspec_command="$rspec_bin --no-color --order rand $1 $2 $3 $4 $5 $6 $7 $8 $9"
+echo $rspec_command
+
 while true; do
   iteration_cnt=$((iteration_cnt + 1))
   human_date=$(date +'%Y-%m-%d %H:%M')
 
-  echo === $human_date "($1) [iteration: $iteration_cnt, failed: $failed_cnt]"
+  echo "=== $human_date [iteration: $iteration_cnt, failed: $failed_cnt]"
 
-  rspec_output=$(bundle exec rspec --no-color --order rand $1 2>&1)
+  rspec_output=$($rspec_command 2>&1)
 
   if [ "$?" != "0" ]; then
     failed_cnt=$((failed_cnt + 1))
