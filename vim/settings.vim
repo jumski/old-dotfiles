@@ -100,6 +100,9 @@ au BufNewFile,BufRead *.json set ft=javascript
 au BufNewFile,BufRead *.hamlc setfiletype haml
 au BufNewFile,BufRead Dockerfile setfiletype conf
 
+" " disable some features for certain filetypes
+" au BufRead *.yml,*.json se nomodeline
+
 " use ack as grep
 set grepprg=ack-grep\ -a
 
@@ -175,7 +178,7 @@ set scrolloff=3
 set sidescrolloff=5
 
 " disable reading modelines
-" set nomodeline
+set nomodeline
 
 " session saving options
 set sessionoptions=buffers,winsize,tabpages,winpos,winsize
@@ -203,6 +206,10 @@ endif
 
 autocmd QuickFixCmdPost [^l]* nested cwindow
 autocmd QuickFixCmdPost    l* nested lwindow
+
+autocmd BufReadPost Quickfix nmap q :cclose<cr>
+
+noremap <leader>d :Dispatch<cr>
 
 " {{{
 " {{{ SESSION AUTOSAVE
