@@ -39,6 +39,7 @@
   neck = !git-neck
   churn = !git-churn
   recent-branches = !git for-each-ref --sort=-committerdate --format='%(committerdate:short) %(refname)' refs/heads refs/remotes
+  copy-last-sha = !(git show --oneline | head -1) && git show --oneline | head -1 | awk '{print $1}' | xclip -sel clipboard
 
   conflicts = !git ls-files -u | cut -f 2 | sort -u
   resolve = !vim -p $(git conflicts)
