@@ -10,3 +10,7 @@ snippet ful
 it { should allow_mass_assignment_of :$1 }
 it { should validate_presence_of :$1 }
 endsnippet
+
+snippet grn
+expect(${1}Policy).to grant(${4:user}).permission_to(:$2, $3)
+endsnippet
