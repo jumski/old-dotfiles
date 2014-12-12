@@ -3,6 +3,8 @@
 let mapleader=","
 let g:mapleader = ","
 
+noremap <leader>d :Dispatch<cr>
+
 " experimental ESC mapping
 inoremap kj <esc>
 
