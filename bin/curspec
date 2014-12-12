@@ -1,8 +1,13 @@
 #!/bin/bash
 
+PREFIX="bundle exec "
 [ -S .zeus.sock ] && PREFIX="zeus "
 [ -f bin/rspec ] && PREFIX="bin/"
-COMMAND="${PREFIX}rspec `cat .cursor_last_position`"
+
+[ -f .cursor_last_position ] && CURSOR_FILE='.cursor_last_position'
+[ -f cursor_last_position ] && CURSOR_FILE='cursor_last_position'
+
+COMMAND="${PREFIX}rspec `cat $CURSOR_FILE`"
 
 VERBOSE=false
 echo $COMMAND
