@@ -39,6 +39,11 @@ let g:rails_projections = {
   \   "test":      "spec/finders/%i_spec.rb",
   \   "template":  "class %S\nend"
   \ },
+  \ "app/forms/*_form.rb": {
+  \   "command": "form",
+  \   "test":    "spec/forms/%i_spec.rb",
+  \   "template": "class %S\nend"
+  \ }
   \}
 
 " [vim-rails] gem projections - typing `:Efactory users` will open the users factory, etc.
