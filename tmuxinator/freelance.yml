@@ -6,12 +6,13 @@ root: ~/work/freelance
 pre_window: rvm use 2.1.3@freelance --create
 windows:
   - server:
-    layout: main-vertical
-    panes:
-      - rails s --pid=tmp/pids/server.pid
-      - bundle exec sunspot-solr start -p 8982
+      layout: main-vertical
+      panes:
+        - bin/rails s --pid=tmp/pids/server.pid
+        - bundle exec sunspot-solr start -p 8982
   - bash:
   - vim: vim
-  - console: rails c
+  - console: bin/rails c
   - logs: tail -100f log/development.log
+  - guard: guard
 

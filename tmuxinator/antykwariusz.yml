@@ -9,7 +9,7 @@ windows:
   - stuff: puma -t 16:16 --pidfile tmp/pids/server.pid
   - bash: todo @books
   - vim: vim
-  - console: rails c
+  - console: bin/rails c
   - bash: tail -f log/development.log
   - bodhi: mosh bodhi tmux at
 
