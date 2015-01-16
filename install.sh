@@ -168,6 +168,12 @@ if on_linux; then
   fi
 fi # on_linux
 
+# run install scripts
+for script in install_scripts/*; do
+  log executing $script
+  $script
+done
+
 echo 'Load bashrc'
 source ~/dotfiles/bashrc
 source ~/dotfiles/bash/aliases.sh

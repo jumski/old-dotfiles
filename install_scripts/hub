@@ -1,0 +1,14 @@
+#!/bin/bash
+
+which hub 2>&1 >/dev/null || {
+  HUB_VERSION="2.2.0-rc1"
+  HUB_ARCHIVE="hub_${HUB_VERSION}_linux_amd64.gz.tar"
+  TAR_URL="https://github.com/github/hub/releases/download/v${HUB_VERSION}/$HUB_ARCHIVE"
+
+  pushd /tmp
+  wget $TAR_URL
+  tar zxvf $HUB_ARCHIVE
+  cd `basename --suffix=".gz.tar" $HUB_ARCHIVE`
+  sudo cp hub /usr/bin/
+  sudo cp etc/hub.bash_completion.sh /etc/bash_completion.d/
+}
