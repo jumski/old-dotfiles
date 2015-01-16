@@ -9,8 +9,6 @@ which xdotool 2>&1 >/dev/null || {
   sudo apt-get install xdotool 
 }
 
-activate_window() { xdotool windowactivate --sync $1; }
-
 active_window_id=$( xdotool getactivewindow )
 browser_window_id=$( xdotool search --onlyvisible --classname "$MAIN_BROWSER_WINDOW_CLASSNAME" )
 terminal_window_id=$( xdotool search --onlyvisible --classname "$MAIN_TERMINAL_WINDOW_CLASSNAME" )
