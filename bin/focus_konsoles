@@ -4,11 +4,6 @@
 export MAIN_BROWSER_WINDOW_CLASSNAME="google-chrome"
 export MAIN_TERMINAL_WINDOW_CLASSNAME="gnome-terminal"
 
-which xdotool 2>&1 >/dev/null || {
-  echo Installing xdotool...
-  sudo apt-get install xdotool 
-}
-
 active_window_id=$( xdotool getactivewindow )
 browser_window_id=$( xdotool search --onlyvisible --classname "$MAIN_BROWSER_WINDOW_CLASSNAME" )
 terminal_window_id=$( xdotool search --onlyvisible --classname "$MAIN_TERMINAL_WINDOW_CLASSNAME" )
