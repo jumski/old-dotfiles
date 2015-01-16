@@ -18,10 +18,10 @@ terminal_window_id = $terminal_window_id
 active_window_id = $active_window_id
 "
 
-if [ $active_window_id == $browser_window_id ]; then
+if [ $active_window_id == $terminal_window_id ]; then
   echo activating $MAIN_BROWSER_WINDOW_CLASSNAME
-  xdotool windowactivate $terminal_window_id
+  xdotool windowactivate $browser_window_id
 else
   echo activating $MAIN_TERMINAL_WINDOW_CLASSNAME
-  xdotool windowactivate $browser_window_id
+  xdotool windowactivate $terminal_window_id
 fi 
