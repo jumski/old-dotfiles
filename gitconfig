@@ -39,7 +39,8 @@
   neck = !git-neck
   churn = !git-churn
   recent-branches = !git for-each-ref --sort=-committerdate --format='%(committerdate:short) %(refname)' refs/heads refs/remotes
-  copy-last-sha = !(git show --oneline | head -1) && git show --oneline | head -1 | awk '{print $1}' | xclip -sel clipboard
+  head-sha = ! git log --pretty=format:'%h' -n 1
+  copy-head-sha = ! git log --pretty=format:'%h' -n 1 | xclip -sel clipboard
 
   conflicts = !git ls-files -u | cut -f 2 | sort -u
   resolve = !vim -p $(git conflicts)
@@ -54,7 +55,7 @@
 
   ribbon = tag --force _ribbon origin/master
   catchup = log --patch --reverse --topo-order _ribbon..origin/master
-	ctags = !.git/hooks/ctags
+  ctags = !.git/hooks/ctags
   binstubs = !.git/hooks/install-binstubs
 
   good = bisect good
