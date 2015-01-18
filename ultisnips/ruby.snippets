@@ -72,7 +72,7 @@ end
 endsnippet
 
 snippet itt "it { }"
-it { should${1:_not} $2 }
+it { is_expected.${1:to} $2 }
 endsnippet
 
 snippet its "its(:xxx)"
@@ -125,4 +125,8 @@ snippet memo "method that memoizes value"
 def $1
   @$1 ||= $2
 end
+endsnippet
+
+snippet vpo
+validate_presence_of $1
 endsnippet

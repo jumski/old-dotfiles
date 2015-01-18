@@ -12,17 +12,21 @@ it { should validate_presence_of :$1 }
 endsnippet
 
 snippet grn
-expect(${1}Policy).to grant(${4:user}).permission_to(:$2, $3)
+expect($1Policy).to grant(${4:user}).permission_to(:$2, $3)
 endsnippet
 
 snippet stub
-allow(${1}).to receive(${2})${3:.with(${4})}${5:.and_return(${6})}
+allow($1).to receive($2)${3:.with($4)}${5:.and_return($6)}
 endsnippet
 
 snippet mock
-expect(${1}).to receive(${2})${3:.with(${4})}${5:.and_return(${6})}
+expect($1).to receive($2)${3:.with($4)}${5:.and_return($6)}
 endsnippet
 
 snippet stubcall
-allow(${1}).to receive(:new).and_return(double call: true)
+allow($1).to receive(:new).and_return(double call: true)
+endsnippet
+
+snippet esc
+expect($1).to receive_service_call${2:.with($3)}${4:.and_return($5)}
 endsnippet
