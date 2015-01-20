@@ -1,0 +1,201 @@
+#!/bin/bash
+
+SK_arr_branches=()
+SK_branch_depth=-1
+
+SK_init() {
+  SK_work_dir=$PWD
+  SK_log_path=$HOME/.skittle/log/$1.log
+
+  if [[ ! -d `dirname $SK_log_path` ]]
+  then
+    mkdir -p `dirname $SK_log_path`
+  fi
+
+  if [[ -f $SK_log_path ]]
+  then
+    rm $SK_log_path
+  fi
+}
+
+SK_process() {
+  (
+  SK_draw_dep_path
+
+  set -x
+  if ! (is_met)
+  then
+    (meet)
+    (is_met)
+  fi
+  )
+}
+
+SK_include_dep() {
+  if ! SK_is_defined $1
+  then
+    paths=("$SK_work_dir/deps" "$SK_work_dir/skittle-deps" "$HOME/skittle-deps")
+    for path in $paths
+    do
+      for file in $(find $path -name "$1.sh")
+      do
+        p=$(dirname $file)
+        source $file
+        return
+      done
+    done
+  fi
+}
+
+SK_push_branch() {
+  ((SK_branch_depth+=1))
+  SK_arr_branches+=($1)
+}
+
+SK_is_defined() {
+  [[ `type -t $1` = function ]] >/dev/null
+}
+
+SK_draw_dep_path() {
+  echo
+  echo "# `date`"
+  echo -n "#"
+  echo -n " Processing "
+  for ((i=0; i<$SK_branch_depth+1; i++))
+  do
+    if [[ $i -gt 0 ]]
+    then
+      echo -n "-> "
+    fi
+
+    echo -n "${SK_arr_branches[$i]} "
+  done
+  echo
+}
+
+SK_draw_branch() {
+  if [[ $SK_branch_depth -gt 0 ]]
+  then
+    SK_draw_branch_down ""
+
+    for ((i=0; i<SK_branch_depth-1; i++))
+    do
+      echo -n "| "
+    done
+
+    echo -n "+-"
+  fi
+
+  echo -e "+ \x1b[1m$1\x1b[0m"
+}
+
+SK_draw_branch_down() {
+  for ((i=0; i<SK_branch_depth; i++))
+  do
+    echo -n "| "
+  done
+  echo -e $1
+}
+
+SK_draw_status() {
+  case $1 in
+    ok)
+      color=32
+      ;;
+    fail)
+      color=31
+      ;;
+  esac
+
+  echo -e "\x1b[1m[\x1b[${color}m$1\x1b[0;1m]\x1b[0m"
+}
+
+SK_draw_pass() {
+  SK_draw_branch_down "| "
+  SK_draw_branch_down "\\ `SK_draw_status ok` $1"
+}
+
+SK_draw_fail() {
+  SK_draw_branch_down "| "
+  SK_draw_branch_down "\\ `SK_draw_status fail` $1"
+}
+
+SK_draw_log() {
+  SK_draw_branch_down "| "
+  SK_draw_branch_down "\\ \x1b[1m[\x1b[33m..\x1b[0;1m]\x1b[0m $*"
+}
+
+SK_fail_unwind() {
+  for ((; SK_branch_depth>=0; SK_branch_depth--))
+  do
+    SK_draw_fail ${SK_arr_branches[$SK_branch_depth]}
+  done
+
+  echo "Error: $1"
+  exit 1
+}
+
+SK_unset_dep() {
+  unset -f $1
+}
+
+SK_expand_dep() {
+  is_met() {
+    true
+  }
+
+  meet() {
+    true
+  }
+
+  "$@"
+}
+
+SK_recurse() {
+  (
+  SK_deps=()
+  SK_push_branch $1
+  SK_draw_branch $1
+  SK_include_dep $1
+
+  if SK_is_defined $1
+  then
+    SK_expand_dep "$@" 3>&1
+  else
+    SK_fail_unwind "Cannot find dependency '$1'"
+  fi
+
+  SK_unset_dep $1
+
+  for dep in "${SK_deps[@]}"
+  do
+    eval SK_recurse $dep || exit 1
+  done
+
+  if SK_process $1 3>&1 2>>$SK_log_path 1>&2
+  then
+    SK_draw_pass $1
+  else
+    SK_fail_unwind "Dependency '$1' not met. See $SK_log_path."
+  fi
+
+  unset -f is_met
+  unset -f meet
+  )
+}
+
+require() {
+  SK_deps+=("`printf " %q " "$@"`")
+}
+
+echolog() {
+  log "*echolog is deprecated, please use log*"
+  log "$@"
+}
+
+log() {
+  SK_draw_log "$@" >&3
+}
+
+SK_init "$@"
+SK_recurse "$@"

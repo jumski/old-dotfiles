@@ -11,39 +11,39 @@ echo Installing dotfiles
 log Linking dotfiles
 export DOTFILES_PATH=~/dotfiles
 
-ln -s --force "$DOTFILES_PATH/bashrc" "$HOME/.bashrc"
-ln -s --force "$DOTFILES_PATH/tmux.conf" "$HOME/.tmux.conf"
-ln -s --force "$DOTFILES_PATH/gitconfig" "$HOME/.gitconfig"
-ln -s --force "$DOTFILES_PATH/gitignore_global" "$HOME/.gitignore_global"
-ln -s --force "$DOTFILES_PATH/vim/vimrc" "$HOME/.vimrc"
-ln -s --force "$DOTFILES_PATH/psqlrc" "$HOME/.psqlrc"
-ln -s --force "$DOTFILES_PATH/gemrc" "$HOME/.gemrc"
-ln -s --force "$DOTFILES_PATH/irbrc" "$HOME/.irbrc"
-ln -s --force "$DOTFILES_PATH/pryrc" "$HOME/.pryrc"
-ln -s --force "$DOTFILES_PATH/ackrc" "$HOME/.ackrc"
-ln -s --force "$DOTFILES_PATH/agignore" "$HOME/.agignore"
-ln -s --force "$DOTFILES_PATH/kderc" "$HOME/.kderc"
-ln -s --force "$DOTFILES_PATH/vromerc" "$HOME/.vromerc"
-ln -s --force "$DOTFILES_PATH/xhotkeys" "$HOME/.xhotkeys"
-ln -s --force "$DOTFILES_PATH/vendor/dircolors.256dark" "$HOME/.dircolors"
-ln -s --force "$DOTFILES_PATH/bundle" "$HOME/.bundle"
-sudo ln -s --force "$DOTFILES_PATH/bin/bitwig" "/usr/bin/"
+# ln -s --force "$DOTFILES_PATH/bashrc" "$HOME/.bashrc"
+# ln -s --force "$DOTFILES_PATH/tmux.conf" "$HOME/.tmux.conf"
+# ln -s --force "$DOTFILES_PATH/gitconfig" "$HOME/.gitconfig"
+# ln -s --force "$DOTFILES_PATH/gitignore_global" "$HOME/.gitignore_global"
+# ln -s --force "$DOTFILES_PATH/vim/vimrc" "$HOME/.vimrc"
+# ln -s --force "$DOTFILES_PATH/psqlrc" "$HOME/.psqlrc"
+# ln -s --force "$DOTFILES_PATH/gemrc" "$HOME/.gemrc"
+# ln -s --force "$DOTFILES_PATH/irbrc" "$HOME/.irbrc"
+# ln -s --force "$DOTFILES_PATH/pryrc" "$HOME/.pryrc"
+# ln -s --force "$DOTFILES_PATH/ackrc" "$HOME/.ackrc"
+# ln -s --force "$DOTFILES_PATH/agignore" "$HOME/.agignore"
+# ln -s --force "$DOTFILES_PATH/kderc" "$HOME/.kderc"
+# ln -s --force "$DOTFILES_PATH/vromerc" "$HOME/.vromerc"
+# ln -s --force "$DOTFILES_PATH/xhotkeys" "$HOME/.xhotkeys"
+# ln -s --force "$DOTFILES_PATH/vendor/dircolors.256dark" "$HOME/.dircolors"
+# ln -s --force "$DOTFILES_PATH/bundle" "$HOME/.bundle"
+# sudo ln -s --force "$DOTFILES_PATH/bin/bitwig" "/usr/bin/"
 
-if on_linux; then
-  ln -s --force -T "$DOTFILES_PATH/tmuxinator" "$HOME/.tmuxinator"
-  ln -s --force -T "$DOTFILES_PATH/dotjs" "$HOME/.js"
-  ln -s --force -T "$DOTFILES_PATH/irssi" "$HOME/.irssi"
-fi # on_linux
+# if on_linux; then
+#   ln -s --force -T "$DOTFILES_PATH/tmuxinator" "$HOME/.tmuxinator"
+#   ln -s --force -T "$DOTFILES_PATH/dotjs" "$HOME/.js"
+#   ln -s --force -T "$DOTFILES_PATH/irssi" "$HOME/.irssi"
+# fi # on_linux
 
-ln -s --force "$DOTFILES_PATH/Xdefaults" "$HOME/.Xdefaults"
-ln -s --force "$DOTFILES_PATH/sh-todo" "$HOME/.sh-todo"
+# ln -s --force "$DOTFILES_PATH/Xdefaults" "$HOME/.Xdefaults"
+# ln -s --force "$DOTFILES_PATH/sh-todo" "$HOME/.sh-todo"
 
-if [ -d $HOME/.kde/share/apps/konsole ]; then
-  ln -s --force "$DOTFILES_PATH/vendor/kde/share/apps/konsole/konsoleui.rc" "$HOME/.kde/share/apps/konsole/konsoleui.rc"
-  ln -s --force "$DOTFILES_PATH/vendor/kde/share/apps/konsole/solarized_dark.colorscheme" "$HOME/.kde/share/apps/konsole/solarized_dark.colorscheme"
-  ln -s --force "$DOTFILES_PATH/vendor/kde/share/apps/konsole/tmux-main.profile" "$HOME/.kde/share/apps/konsole/tmux-main.profile"
-  ln -s --force "$DOTFILES_PATH/vendor/kde/share/apps/konsole/tmux-guard.profile" "$HOME/.kde/share/apps/konsole/tmux-guard.profile"
-fi
+# if [ -d $HOME/.kde/share/apps/konsole ]; then
+#   ln -s --force "$DOTFILES_PATH/vendor/kde/share/apps/konsole/konsoleui.rc" "$HOME/.kde/share/apps/konsole/konsoleui.rc"
+#   ln -s --force "$DOTFILES_PATH/vendor/kde/share/apps/konsole/solarized_dark.colorscheme" "$HOME/.kde/share/apps/konsole/solarized_dark.colorscheme"
+#   ln -s --force "$DOTFILES_PATH/vendor/kde/share/apps/konsole/tmux-main.profile" "$HOME/.kde/share/apps/konsole/tmux-main.profile"
+#   ln -s --force "$DOTFILES_PATH/vendor/kde/share/apps/konsole/tmux-guard.profile" "$HOME/.kde/share/apps/konsole/tmux-guard.profile"
+# fi
 
 if on_linux; then
   present git || apt_install git
@@ -67,22 +67,22 @@ if on_linux; then
     sudo ln -s $(which chromium-browser) /usr/bin/google-chrome
   fi
 
-  # set up rvm
-  if [ ! -d $HOME/.rvm ]; then
-    log installing rvm
-    curl -L https://get.rvm.io | bash -s stable --ruby
-
-    log installing rvm requirements
-    sudo $(rvm requirements|grep -A1 "# For Ruby"|grep "ruby:"|cut -c9-|sed 's/install/install -y/g')
-
-    cp $DOTFILES_PATH/.rvm-global.gems $HOME/.rvm/gemsets/global.gems
-
-    log installing ruby falcon
-    rvm get head && rvm reinstall 1.9.3-perf --patch falcon
-
-    source bashrc
-    rvm use 1.9.3-perf --default
-  fi
+  # # set up rvm
+  # if [ ! -d $HOME/.rvm ]; then
+  #   log installing rvm
+  #   curl -L https://get.rvm.io | bash -s stable --ruby
+  #
+  #   log installing rvm requirements
+  #   sudo $(rvm requirements|grep -A1 "# For Ruby"|grep "ruby:"|cut -c9-|sed 's/install/install -y/g')
+  #
+  #   cp $DOTFILES_PATH/.rvm-global.gems $HOME/.rvm/gemsets/global.gems
+  #
+  #   log installing ruby falcon
+  #   rvm get head && rvm reinstall 1.9.3-perf --patch falcon
+  #
+  #   source bashrc
+  #   rvm use 1.9.3-perf --default
+  # fi
 fi # on_linux
 
 # copy local_variables sample, if not present
