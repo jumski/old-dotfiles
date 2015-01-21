@@ -53,14 +53,14 @@ if on_linux; then
   git submodule update --init
 
   # install vendor debs
-  has_20_bash_completion() {
-    dpkg -l | grep bash-completion | awk '{print $3}' | grep '2.0' 2>&1 >/dev/null
-  }
-  if ! has_20_bash_completion; then
-    log intalling bash-completion 2.0
-    sudo apt-get purge bash-completion &&
-    sudo dpkg -i $DOTFILES_PATH/vendor/bash-completion_2.0-1_all.deb
-  fi
+  # has_20_bash_completion() {
+  #   dpkg -l | grep bash-completion | awk '{print $3}' | grep '2.0' 2>&1 >/dev/null
+  # }
+  # if ! has_20_bash_completion; then
+  #   log intalling bash-completion 2.0
+  #   sudo apt-get purge bash-completion &&
+  #   sudo dpkg -i $DOTFILES_PATH/vendor/bash-completion_2.0-1_all.deb
+  # fi
 
   # link chromium to fake google-chrome for some apps
   if missing google-chrome && present chromium-browser; then
@@ -133,7 +133,7 @@ if on_linux; then
     git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
     vim -c ":NeoBundleInstall" -c ":qa"
   fi
-  mkdir -p $HOME/.vim-tmp
+  # mkdir -p $HOME/.vim-tmp
 
   # fonts
   FONT_DIR=$HOME/.fonts

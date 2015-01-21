@@ -1,6 +1,6 @@
 install(){
-  require file_linked bashrc $HOME/.bashrc
-  require file_linked vim/vimrc $HOME/.vimrc
+  require bash
+  require vim
   require file_linked tmux.conf $HOME/.tmux.conf
   require file_linked gitconfig $HOME/.gitconfig
   require file_linked gitignore_global $HOME/.gitignore_global

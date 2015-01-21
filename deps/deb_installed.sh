@@ -1,6 +1,11 @@
+deb_installed() {
   dpkg_finds() {
     name=$1
-    dpkg -r $name | grep " ii " 2>&1 >/dev/null
+    dpkg -s $name | grep "ii " 2>&1 >/dev/null
+  }
+
+  is_met() {
+    dpkg_finds $name
   }
 
   dpkg_installed() {
