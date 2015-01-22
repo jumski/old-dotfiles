@@ -1,6 +1,8 @@
 install(){
-  require vim
+  require apt_updated
   require git_submodules_initialized
+  require bundle_installed 2.1.2
+
   require file_linked tmux.conf $HOME/.tmux.conf
   require file_linked gitconfig $HOME/.gitconfig
   require file_linked gitignore_global $HOME/.gitignore_global
@@ -21,7 +23,6 @@ install(){
   require file_linked Xdefaults $HOME/.Xdefaults
   require file_linked sh-todo $HOME/.sh-todo
 
-  require bundle_installed 2.1.2
-
+  require vim
   require bash
 }

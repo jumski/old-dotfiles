@@ -7,7 +7,7 @@ apt_installed() {
   }
 
   meet() {
-    log sudo apt-get install -y $names
+    log sudo apt-get install -y --force-yes $names
     sudo apt-get install -y $names
   }
 }

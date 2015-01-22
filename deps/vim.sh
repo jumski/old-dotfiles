@@ -1,5 +1,5 @@
 vim() {
-  # require vim_from_source
+  require vim_from_source
   require vim_with_neobundle
 
   vim_with_neobundle() {
