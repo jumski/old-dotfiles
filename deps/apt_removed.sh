@@ -1,11 +1,11 @@
 apt_removed() {
-  name=$1
+  names="$@"
 
   is_met() {
-    ! dpkg -s $name | grep "ii " 2>&1 >/dev/null
+    ! dpkg -s $names
   }
 
   meet() {
-    sudo apt-get purge -y $name
+    sudo apt-get purge -y $names
   }
 }

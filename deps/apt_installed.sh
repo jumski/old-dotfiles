@@ -1,12 +1,13 @@
 apt_installed() {
-  name=$1
+  names="$@"
 
   is_met() {
-    dpkg -s $name | grep "ii " 2>&1 >/dev/null
+    log dpkg -s $names
+    dpkg -s $names
   }
 
   meet() {
-    log Installing \'$name\' via apt-get
-    sudo apt-get install -y $name
+    log sudo apt-get install -y $names
+    sudo apt-get install -y $names
   }
 }

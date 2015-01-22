@@ -50,7 +50,7 @@ if on_linux; then
   present curl || apt_install curl
 
   # init submodules
-  git submodule update --init
+  # git submodule update --init
 
   # install vendor debs
   # has_20_bash_completion() {

@@ -6,7 +6,7 @@ rvm_ruby_installed() {
   }
 
   meet() {
-    log Installing ruby-$version
-    rvm install ruby-$version
+    log Installing $version
+    rvm install $version
   }
 }
