@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # settings
-export MAIN_BROWSER_WINDOW_CLASSNAME="google-chrome"
-export MAIN_TERMINAL_WINDOW_CLASSNAME="gnome-terminal"
+MAIN_BROWSER_WINDOW_CLASSNAME="google-chrome"
+MAIN_TERMINAL_WINDOW_CLASSNAME="gnome-terminal"
 
 active_window_id=$( xdotool getactivewindow )
 browser_window_id=$( xdotool search --onlyvisible --classname "$MAIN_BROWSER_WINDOW_CLASSNAME" )
