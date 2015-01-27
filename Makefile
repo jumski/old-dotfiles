@@ -6,5 +6,5 @@ build:
 	sudo docker build --tag=jumski/dotfiles .
 
 shell: build
-	sudo docker run 
+	sudo docker run -i -t jumski/dotfiles bash
 

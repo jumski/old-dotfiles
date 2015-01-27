@@ -3,11 +3,11 @@
 FROM ubuntu:13.04
 MAINTAINER Wojtek Majewski <jumski@gmail.com>
 
-# ENV LANG en_US.UTF-8
-# ENV LANGUAGE en_US.UTF-8
-# ENV LC_ALL en_US.UTF-8
-#
-# RUN echo "deb http://archive.ubuntu.com/ubuntu trusty main universe" > /etc/apt/sources.list
+ENV LANG en_US.UTF-8
+ENV LANGUAGE en_US.UTF-8
+ENV LC_ALL en_US.UTF-8
+
+RUN echo "deb http://archive.ubuntu.com/ubuntu trusty main universe" > /etc/apt/sources.list
 RUN apt-get update
 RUN apt-get upgrade -y
 RUN apt-get install -y sudo
