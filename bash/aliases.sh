@@ -102,9 +102,11 @@ alias prettyjson="python -mjson.tool"
 
 alias docker="sudo docker"
 alias dockerlite="sudo dockerlite"
+alias crane="sudo crane"
 alias babushka="babushka --no-color"
 alias coffeewatch="coffee -bcw"
 alias karma="./node_modules/.bin/karma"
+alias vssh='ssh -i ./.vagrant/machines/default/virtualbox/private_key vagrant@localhost -p 2222'
 
 alias pgsizes='psql -c "SELECT pg_database.datname, pg_database_size(pg_database.datname), pg_size_pretty(pg_database_size(pg_database.datname)) FROM pg_database ORDER BY pg_database_size DESC;"'
 
