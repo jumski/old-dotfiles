@@ -1,0 +1,15 @@
+#!/bin/bash
+
+window_id=$(xdotool search --name TaskInformer2)
+screen_height=1080
+# screen_height=1200
+
+if [[ -n "$window_id" ]]; then
+  x_position=$(( 1920 / 2 ))
+  y_position=$(( $screen_height - 17 ))
+  width=80
+  height=20
+
+  xdotool windowmove $window_id $x_position $y_position
+  xdotool windowsize --sync $window_id $width $height
+fi
