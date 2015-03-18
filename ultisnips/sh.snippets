@@ -47,7 +47,7 @@ $1() {
 endsnippet
 
 snippet dep
-${1:name}(){
+${1:name}() {
   ${2:require $3}
 
   ${4:is_met() {
@@ -72,11 +72,16 @@ endsnippet
 
 snippet me
 meet() {
- $1
+  $1
 }$0
 endsnippet
 
 snippet ln
 require file_linked $1 $2
+$0
+endsnippet
+
+snippet apt
+require apt_installed $1
 $0
 endsnippet

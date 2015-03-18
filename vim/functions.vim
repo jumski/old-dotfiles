@@ -13,3 +13,12 @@ fu! OpenGitlabForCurrentFile()
   :!glbrowse %
 endfunction
 command! -bar Glbrowse call OpenGitlabForCurrentFile()
+
+command Til :tabe ~/dotfiles/TIL.md<CR>
+
+function! Browser ()
+  let line = getline(".")
+  let line = matchstr(line, "\%(http://\|www\.\)[^ ,;\t]*")
+  exec "!google-chrome ".line
+endfunction
+map gX :call Browser()<CR>

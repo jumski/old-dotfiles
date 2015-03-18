@@ -49,6 +49,7 @@ NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'mattn/gist-vim'
 " " NeoBundle 'vim-scripts/ack.vim'
 NeoBundle 'epmatsw/ag.vim'
+" NeoBundle 'ervandew/ag'
 NeoBundle 'vim-scripts/file-line'
 NeoBundle 'ecomba/vim-ruby-refactoring'
 NeoBundle 'sjl/gundo.vim'
@@ -93,6 +94,13 @@ NeoBundle 'haya14busa/incsearch.vim'
 map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)
+
+NeoBundle 'jaxbot/semantic-highlight.vim'
+
+" let g:filebeagle_suppress_keymaps = "true"
+" NeoBundle 'jeetsukumaran/vim-filebeagle'
+" map <silent> - <Plug>FileBeagleOpenCurrentBufferDir
+" map <silent> <Leader>f  <Plug>FileBeagleOpenCurrentWorkingDir
 
 
 let g:ruby_doc_ruby_mapping='<leader>dR'

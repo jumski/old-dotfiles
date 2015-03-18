@@ -156,3 +156,12 @@ nnoremap N Nzzzv
 " same when jumping around
 nnoremap g; g;zz
 nnoremap g, g,zz
+
+function! SpecCommandForCurrentFile(alternate_letter)
+  let basename = expand("%:p:t:r")
+  exec ":".a:alternate_letter."spec ".basename."!"
+endfunction
+cmap A! call SpecCommandForCurrentFile("R")<cr>
+cmap V! call SpecCommandForCurrentFile("V")<cr>
+cmap S! call SpecCommandForCurrentFile("S")<cr>
+cmap T! call SpecCommandForCurrentFile("T")<cr>
