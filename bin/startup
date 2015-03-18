@@ -15,4 +15,4 @@ primus-chrome &
 
 gnome-terminal &
 
-supervisord -c $HOME/dotfiles/conf/supervisord.conf
+supervisord -c $HOME/dotfiles/conf/supervisord.conf &

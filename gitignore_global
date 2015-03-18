@@ -44,3 +44,5 @@ ehthumbs.db
 Thumbs.db
 
 .cursor_last_position
+
+bin/failing

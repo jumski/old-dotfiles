@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+require 'yaml'
+require 'json'
+
+from_path, to_path = ARGV[0..1]
+
+YAML.load(File.read from_path).tap do |hash|
+  File.open(to_path, 'w') { |f| f.write JSON.dump(hash) }
+end
