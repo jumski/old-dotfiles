@@ -1,8 +1,8 @@
 bash() {
   require file_linked bashrc $HOME/.bashrc
-  require has_20_bash_completion
+  require bash_completion_2.0
 
-  has_20_bash_completion() {
+  bash_completion_2.0() {
     is_met() {
       dpkg -s bash-completion | grep 2.0
     }

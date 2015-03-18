@@ -1,0 +1,6 @@
+repo_cloned() {
+  require apt_installed git
+
+  is_met() {
+  }
+}

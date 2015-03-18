@@ -1,4 +1,6 @@
 rvm_installed(){
+  apt_installed curl gnupg
+
   is_met() {
     source ~/.rvm/scripts/rvm && rvm --version
   }

@@ -6,7 +6,8 @@
 # backwards compatibility). Please don't change it unless you know what
 # you're doing.
 Vagrant.configure(2) do |config|
-  config.vm.box = 'trusty-amd64-dev'
+  config.vm.box = 'trusty-server-amd64'
+  # config.vm.box = 'trusty-amd64-dev'
   # config.vm.box = 'ubuntu-14.04-amd64'
   # config.vm.box_url = "https://cloud-images.ubuntu.com/vagrant/trusty/trusty-server-cloudimg-amd64-juju-vagrant-disk1.box"
 

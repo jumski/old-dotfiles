@@ -22,6 +22,7 @@ install(){
   require file_linked irssi $HOME/.irssi
   require file_linked Xdefaults $HOME/.Xdefaults
   require file_linked sh-todo $HOME/.sh-todo
+  require file_linked erdconfig $HOME/.erdconfig
 
   require vim
   require bash

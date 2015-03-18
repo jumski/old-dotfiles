@@ -1,4 +1,5 @@
 apt_installed() {
+  # https://github.com/ilikenwf/apt-fast
   names="$@"
 
   is_met() {
