@@ -1,0 +1,20 @@
+attributes:
+  - foreign_key
+  - inheritance
+disconnected: true
+filename: erd
+filetype: pdf
+indirect: true
+inheritance: false
+markup: true
+notation: simple
+orientation: horizontal
+polymorphism: true
+sort: true
+warn: true
+title: ERD
+exclude: null
+only: [bid, contract_change, contract_funds, contract, deposit, escrow, fund_transaction, payment, payout, user, withdrawal]
+prepend_primary: false
+
+
