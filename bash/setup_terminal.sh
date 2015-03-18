@@ -35,6 +35,8 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     if [ -f /usr/share/doc/tmux/examples/bash_completion_tmux.sh ]; then
       . /usr/share/doc/tmux/examples/bash_completion_tmux.sh
     fi
+    . $DOTFILES_PATH/hub/hub.bash_completion.sh
+
 fi
 
 [ -f $HOME/.local_variables ] && source $HOME/.local_variables

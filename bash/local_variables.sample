@@ -14,3 +14,4 @@ export AWS_CONFIG_FILE=~/.aws-config
 # export TRELLO_DEVELOPER_PUBLIC_KEY=
 # export TRELLO_MEMBER_TOKEN=
 
+export FLOPPY=/dev/fd0

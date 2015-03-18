@@ -24,7 +24,6 @@ alias gs="git status -sb"
 alias gps="git push"
 alias gd="git diff"
 alias gcim="!git-cim"
-alias gcim="commit"
 alias t=tig
 alias ts="tig status"
 alias vi=vim
@@ -94,8 +93,6 @@ alias xevx="xev | grep -A2 --line-buffered '^KeyRelease' | sed -n '/keycode /s/^
 alias goprod="export RAILS_ENV=production; echo 'Rails.env set to production'"
 alias godev="export RAILS_ENV=development; echo 'Rails.env set to development'"
 
-alias joodo="lein joodo"
-
 alias humandate="date +\"%Y-%m-%d\""
 
 alias prettyjson="python -mjson.tool"
@@ -107,10 +104,17 @@ alias babushka="babushka --no-color"
 alias coffeewatch="coffee -bcw"
 alias karma="./node_modules/.bin/karma"
 alias vssh='ssh -i ./.vagrant/machines/default/virtualbox/private_key vagrant@localhost -p 2222'
+vscp() {
+  scp -i ./.vagrant/machines/default/virtualbox/private_key -P 2222 vagrant@localhost
+}
 
 alias pgsizes='psql -c "SELECT pg_database.datname, pg_database_size(pg_database.datname), pg_size_pretty(pg_database_size(pg_database.datname)) FROM pg_database ORDER BY pg_database_size DESC;"'
 
 alias bc="bc -l"
+
+alias routegrep="bin/rake routes | grep"
+
+alias xo=xdg-open
 
 
 ## logstash specific
