@@ -1,8 +1,6 @@
 /log/
 /logs/
 /images/
-/javascripts/
-/stylesheets/
 /tmp/
 /vendor/
 *.sql
