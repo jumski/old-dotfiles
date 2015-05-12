@@ -25,3 +25,11 @@ end
 def _arr(num = 3)
     ('a'..'z').to_a[0, num]
 end
+
+def conjune(hours, usdpln = 3.7)
+  hours * 30 * usdpln * 0.81
+end
+
+def monk(hours, eurpln = 4.05)
+  hours * 20 * eurpln * 0.81
+end
