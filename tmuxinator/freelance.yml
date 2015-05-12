@@ -8,7 +8,10 @@ windows:
   - server:
       layout: main-vertical
       panes:
-        - bin/rails s --pid=tmp/pids/server.pid
+        # - passenger start --pid-file tmp/pids/server.pid
+        - puma -e development -t 16:16 -p 3000 --pidfile tmp/pids/server.pid
+        # - bin/rails s --pid=tmp/pids/server.pid
+        - bin/rake websocket_rails:start_server || true
         - bundle exec sunspot-solr start -p 8982
   - bash:
   - vim: vim
