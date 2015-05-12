@@ -1,7 +1,0 @@
-#!/bin/bash
-# notyet ready
-exit 0
-
-BINSTUBS_PATH=.git/binstubs
-
-mkdir -p $BINSTUBS_PATH 2>/dev/null 1>/dev/null && bundle install --binstubs=$BINSTUBS_PATH 2>/dev/null 1>/dev/null &
