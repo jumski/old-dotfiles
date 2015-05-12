@@ -44,6 +44,10 @@ let g:rails_projections = {
   \   "test":    "spec/forms/%i_spec.rb",
   \   "template": "class %S\nend"
   \ },
+  \ "app/form_mixins/*_form_mixin.rb": {
+  \   "command": "fmixin",
+  \   "template": "class %SFormMixin\nend"
+  \ },
   \ "app/views/shared/*": { "command": "sview" }
   \}
 
