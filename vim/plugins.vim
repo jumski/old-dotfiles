@@ -11,9 +11,6 @@ NeoBundle 'logstash.vim'
 NeoBundle 'godlygeek/tabular'
 NeoBundle 'kana/vim-fakeclip'
 NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'lastpos.vim'
-"
-" " NeoBundle 'Lokaltog/vim-easymotion'
 
 
 
@@ -39,6 +36,7 @@ NeoBundle 'tpope/vim-rake'
 NeoBundle 'tpope/vim-sleuth'
 NeoBundle 'tpope/vim-dispatch'
 NeoBundle 'guns/vim-clojure-static'
+NeoBundle 'guns/vim-clojure-highlight'
 NeoBundle 'tpope/vim-classpath'
 
 
@@ -48,8 +46,7 @@ NeoBundle 'tpope/vim-projectionist'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'mattn/gist-vim'
 " " NeoBundle 'vim-scripts/ack.vim'
-NeoBundle 'epmatsw/ag.vim'
-" NeoBundle 'ervandew/ag'
+NeoBundle 'rking/ag.vim'
 NeoBundle 'vim-scripts/file-line'
 NeoBundle 'ecomba/vim-ruby-refactoring'
 NeoBundle 'sjl/gundo.vim'
@@ -96,6 +93,8 @@ map ?  <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)
 
 NeoBundle 'jaxbot/semantic-highlight.vim'
+
+NeoBundle 'mhinz/vim-sayonara'
 
 " let g:filebeagle_suppress_keymaps = "true"
 " NeoBundle 'jeetsukumaran/vim-filebeagle'
@@ -216,3 +215,9 @@ au Syntax * RainbowParenthesesLoadBraces
 
 " syntax highlight .nghaml files
 au BufRead,BufNewFile *.nghaml set filetype=haml
+
+" Uncomment the following to have Vim jump to the last position when
+" reopening a file
+if has("autocmd")
+ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif

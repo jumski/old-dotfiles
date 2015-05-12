@@ -109,11 +109,6 @@ vmap < <gv
 nnoremap <expr> gp '`[' . strpart(getregtype(), 0, 1) . '`]'
 
 " plugin specific mappings
-nnoremap <leader>a :RunRubyFocusedTest<CR>
-nnoremap <leader>q :RunRubyFocusedContext<CR>
-nnoremap <leader>t :RunAllRubyTests<CR>
-nnoremap <leader>Q :CloseVimTmuxPane<CR>
-" nnoremap <leader>b :CtrlPBuffer<CR>
 nnoremap <leader>gu :GundoToggle<CR>
 
 " replase word under cursor in whole file
@@ -168,3 +163,7 @@ cmap A! call SpecCommandForCurrentFile("R")<cr>
 cmap V! call SpecCommandForCurrentFile("V")<cr>
 cmap S! call SpecCommandForCurrentFile("S")<cr>
 cmap T! call SpecCommandForCurrentFile("T")<cr>
+
+" Sayonara
+nnoremap <leader>q :Sayonara<cr>
+nnoremap <leader>Q :Sayonara!<cr>
