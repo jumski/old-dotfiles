@@ -50,6 +50,7 @@ NeoBundle 'rking/ag.vim'
 NeoBundle 'vim-scripts/file-line'
 NeoBundle 'ecomba/vim-ruby-refactoring'
 NeoBundle 'sjl/gundo.vim'
+NeoBundle 'tpope/vim-vinegar'
 
 
 " " NeoBundle 'duskhacker/sweet-rspec-vim'
