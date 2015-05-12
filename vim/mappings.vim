@@ -30,6 +30,9 @@ nmap <leader>p :se invpaste<CR>
 " reformat whole file
 noremap <leader>g mggg=G'g
 
+" disable Ex mode, use its mapping for repeating a macro
+nmap Q @@
+
 " save with C-S
 noremap <silent> <C-s> :update<CR>
 vnoremap <silent> <C-s> <C-C>:update<CR>
