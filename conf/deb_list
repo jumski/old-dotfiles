@@ -184,3 +184,10 @@ libcggl
 opt
 inotify-tools
 e2fslibs
+lakai
+scrot
+hexer
+liblscp6
+entr
+supercollider-server
+midisnoop
