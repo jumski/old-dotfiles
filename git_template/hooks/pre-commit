@@ -1,0 +1,11 @@
+#!/bin/bash
+
+ag_output=$(ag --color "(describe|context|it|specify|example|feature|scenario).*,.*:focus.*do" spec/ || true)
+
+if [ -n "$ag_output" ]; then
+  echo "Please remove any :focus tags from following files before commiting:"
+  echo -e "$ag_output"
+  exit 1
+fi
+
+exit 0
