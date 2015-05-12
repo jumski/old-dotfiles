@@ -17,6 +17,11 @@ alias l='ls -CF'
 alias lh='ls --color=always -lasth | less -R'
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 alias mkdir='mkdir -p'
+alias :w='echo This is not vim, stupid!'
+alias :wq='echo This is not vim, stupid!'
+alias :q='confirm "Quit terminal? [Y/n]" && exit'
+
+alias path="echo $PATH | tr ':' '\n'"
 
 alias g=hub
 alias git=hub
