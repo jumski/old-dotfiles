@@ -43,6 +43,7 @@ alias updatedb="sudo updatedb"
 
 ## CUSTOM ALIASES
 alias ack=ack-grep
+alias agp="ag --pager='less -R'"
 alias tf="tail -100f"
 alias k9="kill -9 "
 alias parallel="parallel --gnu"
