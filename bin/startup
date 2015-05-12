@@ -16,3 +16,5 @@ primus-chrome &
 gnome-terminal &
 
 supervisord -c $HOME/dotfiles/conf/supervisord.conf &
+
+echo "`date` DONE!" >> ~/.startup.log
