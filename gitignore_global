@@ -46,3 +46,4 @@ Thumbs.db
 .cursor_last_position
 
 bin/failing
+Session.vim
