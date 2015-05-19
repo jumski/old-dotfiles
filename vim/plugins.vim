@@ -51,6 +51,7 @@ NeoBundle 'vim-scripts/file-line'
 NeoBundle 'ecomba/vim-ruby-refactoring'
 NeoBundle 'sjl/gundo.vim'
 NeoBundle 'tpope/vim-vinegar'
+NeoBundle 'tpope/vim-obsession'
 
 
 " " NeoBundle 'duskhacker/sweet-rspec-vim'
@@ -101,6 +102,10 @@ NeoBundle 'mhinz/vim-sayonara'
 " NeoBundle 'jeetsukumaran/vim-filebeagle'
 " map <silent> - <Plug>FileBeagleOpenCurrentBufferDir
 " map <silent> <Leader>f  <Plug>FileBeagleOpenCurrentWorkingDir
+" endfor
+NeoBundle 'suan/vim-instant-markdown'
+NeoBundle 'tpope/vim-sexp-mappings-for-regular-people'
+NeoBundle 'guns/vim-sexp'
 
 
 let g:ruby_doc_ruby_mapping='<leader>dR'
