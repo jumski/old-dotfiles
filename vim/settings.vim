@@ -1,4 +1,7 @@
 
+" enable mouse, yeah, it is the time...
+set mouse=a
+
 " default file encoding
 set fileencodings=utf-8,latin2
 set encoding=utf-8
