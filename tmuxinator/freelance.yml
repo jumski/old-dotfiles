@@ -13,6 +13,7 @@ windows:
         # - bin/rails s --pid=tmp/pids/server.pid
         - bin/rake websocket_rails:start_server || true
         - bundle exec sunspot-solr start -p 8982
+        - mailcatcher
   - bash:
   - vim: vim
   - console: bin/rails c
