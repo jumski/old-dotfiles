@@ -81,7 +81,8 @@ NeoBundle 'kana/vim-textobj-user'
 NeoBundle 'abijr/colorpicker'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'closetag.vim'
-NeoBundle 'kien/rainbow_parentheses.vim'
+" NeoBundle 'kien/rainbow_parentheses.vim'
+NeoBundle 'junegunn/rainbow_parentheses.vim'
 " " NeoBundle 'leafgarland/typescript-vim'
 " " NeoBundle 'OrangeT/vim-csharp'
 NeoBundle 'ekalinin/Dockerfile.vim'
@@ -104,8 +105,32 @@ NeoBundle 'mhinz/vim-sayonara'
 " map <silent> <Leader>f  <Plug>FileBeagleOpenCurrentWorkingDir
 " endfor
 NeoBundle 'suan/vim-instant-markdown'
-NeoBundle 'tpope/vim-sexp-mappings-for-regular-people'
 NeoBundle 'guns/vim-sexp'
+NeoBundle 'tpope/vim-sexp-mappings-for-regular-people'
+
+
+" GOYO
+NeoBundle 'junegunn/goyo.vim'
+function! s:goyo_enter()
+  silent !tmux set status off
+  set noshowmode
+  set noshowcmd
+  set scrolloff=999
+  " Limelight
+  " ...
+endfunction
+
+function! s:goyo_leave()
+  silent !tmux set status on
+  set showmode
+  set showcmd
+  set scrolloff=5
+  " Limelight!
+  " ...
+endfunction
+
+autocmd! User GoyoEnter nested call <SID>goyo_enter()
+autocmd! User GoyoLeave nested call <SID>goyo_leave()
 
 
 let g:ruby_doc_ruby_mapping='<leader>dR'
@@ -214,10 +239,17 @@ if !exists("b:jumski_write_rspec_guide")
 endif
 
 " [rainbow_parentheses.vim]
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
+augroup rainbow_lisp
+  autocmd!
+  autocmd FileType lisp,clojure,scheme RainbowParentheses
+augroup END
+let g:rainbow#pairs = [['(', ')'], ['[', ']']]
+let g:rainbow#max_level = 16
+let g:rainbow#blacklist = [12, 14]
+" au VimEnter * RainbowParenthesesToggle
+" au Syntax * RainbowParenthesesLoadRound
+" au Syntax * RainbowParenthesesLoadSquare
+" au Syntax * RainbowParenthesesLoadBraces
 
 " syntax highlight .nghaml files
 au BufRead,BufNewFile *.nghaml set filetype=haml
