@@ -115,10 +115,10 @@ nnoremap <leader>gu :GundoToggle<CR>
 nnoremap <leader>: "xyiw:%s/<C-R>x/
 
 " Ag search
-nnoremap \ :tabnew<CR>:Ag<space>
+nnoremap <LocalLeader>\ :tabnew<CR>:Ag<space>
 " Ag search for word under cursor
 nnoremap <leader>\ "xyiw:tabnew<CR>:Ag <C-R>x<space>
-vnoremap \ "xy:tabnew<CR>:Ag "<C-R>x"<space>
+vnoremap <LocalLeader>\ "xy:tabnew<CR>:Ag "<C-R>x"<space>
 
 " Rails specific
 map <leader>rr :topleft :tabnew config/routes.rb<cr>
