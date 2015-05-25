@@ -77,6 +77,8 @@ alias soma_dronezone="mocp -l http://mp4.somafm.com:80"
 alias soma_spacestationsoma="mocp -l http://mp2.somafm.com:2666"
 alias soma_ambientdrones="mocp -l http://srv3.electro-music.com:8500/"
 
+alias vdokku="ssh -t dokku@dokku.me"
+alias dokku="ssh -t dokku@dokku.webmandala.com"
 alias pg_start="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
 alias pg_stop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
 
