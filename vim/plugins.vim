@@ -107,6 +107,7 @@ NeoBundle 'mhinz/vim-sayonara'
 NeoBundle 'suan/vim-instant-markdown'
 NeoBundle 'guns/vim-sexp'
 NeoBundle 'tpope/vim-sexp-mappings-for-regular-people'
+NeoBundle 'beloglazov/vim-online-thesaurus'
 
 
 " GOYO
