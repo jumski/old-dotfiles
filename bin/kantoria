@@ -1,0 +1,22 @@
+#!/usr/bin/ruby
+
+require 'nokogiri'
+require 'open-uri'
+require 'pry'
+
+noko = Nokogiri::HTML(open 'https://www.kantoria.com/')
+
+val = noko.css("#currency-table .updown").each_with_object({}) do |updown, values|
+    symbol, status, buy, sale = updown.css('td')  
+
+    values[symbol.text.to_sym] = { 
+      status: (status.attr(:class).to_s.include? 'up') ? :up : :down,
+      buy: buy.text.to_f, 
+      sale: sale.text.to_f
+    }
+end
+
+[:USD, :EUR, :GBP].each do |curr|
+    v = val[curr]
+    puts "#{curr} -- #{v[:status]} -- #{v[:buy]} -- #{v[:sale]}"
+end
