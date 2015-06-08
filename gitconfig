@@ -1,5 +1,5 @@
 [user]
-	name = Wojtek Majewski
+	name = Wojtek Majewski\n
 	email = jumski@gmail.com
 
 [alias]
@@ -41,6 +41,10 @@
   recent-branches = !git for-each-ref --sort=-committerdate --format='%(committerdate:short) %(refname)' refs/heads refs/remotes
   head-sha = ! git log --pretty=format:'%h' -n 1
   copy-head-sha = ! git log --pretty=format:'%h' -n 1 | xclip -sel clipboard
+  hierarchy = log --all --graph --decorate --oneline --simplify-by-decoration
+  lg1 = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+  lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+
 
   conflicts = !git ls-files -u | cut -f 2 | sort -u
   resolve = !vim -p $(git conflicts)
