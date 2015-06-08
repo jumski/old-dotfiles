@@ -23,6 +23,7 @@ install(){
   require file_linked Xdefaults $HOME/.Xdefaults
   require file_linked sh-todo $HOME/.sh-todo
   require file_linked erdconfig $HOME/.erdconfig
+  require file_linked inputrc $HOME/.inputrc
 
   require vim
   require bash
