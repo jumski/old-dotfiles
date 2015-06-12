@@ -27,4 +27,6 @@ install(){
 
   require vim
   require bash
+
+  require dropbox
 }
