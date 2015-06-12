@@ -105,9 +105,6 @@ if on_linux; then
     ln -s --force $HOME/dropbox/projects $HOME/projects
   fi
 
-  # install silver searcher
-  present ag || sudo dpkg -i vendor/debs/the-silver-searcher_0.14-1_amd64.deb
-
   # install elasticsearch
   # if [ ! -d /etc/elasticsearch ]; then
   #   sudo dpkg -i vendor/debs/elasticsearch-0.90.2.deb
