@@ -5,7 +5,7 @@ $HOME/dotfiles/bin/setup_keyboard
 # prevent mouse clicks
 # syndaemon -i 1.5 -t &
 
-mocp --server
+mocp --server || rm ~/.moc/pid && mocp --server
 
 PULSE_LATENCY_MSEC=30 skype &
 
