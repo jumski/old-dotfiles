@@ -35,6 +35,7 @@ NeoBundle 'tpope/vim-bundler'
 NeoBundle 'tpope/vim-rake'
 NeoBundle 'tpope/vim-sleuth'
 NeoBundle 'tpope/vim-dispatch'
+NeoBundle 'tpope/vim-capslock'
 NeoBundle 'guns/vim-clojure-static'
 NeoBundle 'guns/vim-clojure-highlight'
 NeoBundle 'tpope/vim-classpath'
@@ -42,6 +43,9 @@ NeoBundle 'tpope/vim-classpath'
 
 
 NeoBundle 'tpope/vim-fireplace'
+NeoBundle 'tpope/vim-leiningen'
+NeoBundle 'tpope/vim-dotenv'
+
 NeoBundle 'tpope/vim-projectionist'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'mattn/gist-vim'
@@ -109,6 +113,7 @@ NeoBundle 'guns/vim-sexp'
 NeoBundle 'tpope/vim-sexp-mappings-for-regular-people'
 NeoBundle 'beloglazov/vim-online-thesaurus'
 
+NeoBundle 'vimwiki/vimwiki'
 
 " GOYO
 NeoBundle 'junegunn/goyo.vim'
@@ -129,6 +134,9 @@ function! s:goyo_leave()
   " Limelight!
   " ...
 endfunction
+NeoBundle 'junegunn/limelight.vim'
+let g:limelight_conceal_ctermfg = 0
+" let g:limelight_conceal_ctermfg = 240
 
 autocmd! User GoyoEnter nested call <SID>goyo_enter()
 autocmd! User GoyoLeave nested call <SID>goyo_leave()
