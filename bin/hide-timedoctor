@@ -28,4 +28,5 @@ if [[ -n "$window_id" ]]; then
 
   xdotool windowmove $window_id $x_position $y_position
   xdotool windowsize --sync $window_id $width $height
+  xdotool windowraise $window_id 
 fi
