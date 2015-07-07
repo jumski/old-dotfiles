@@ -24,5 +24,7 @@ if [ -f $HOME/.local_variables ]; then
   source $HOME/.local_variables
 fi
 
+source $DOTFILES_PATH/bash/h.sh
+
 ### Added by the Heroku Toolbelt
 # export PATH="/usr/local/heroku/bin:$PATH"
