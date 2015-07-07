@@ -90,6 +90,10 @@
   hotfix = !git-hotfix
   circle = !git-circle
 
+[branch]
+  # set up git pull to do a rebase instead of merge
+  autosetuprebase = always
+
 [giggle]
 	main-window-maximized = true
 	main-window-geometry = 0x0+0+0
