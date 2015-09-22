@@ -33,3 +33,7 @@ end
 def monk(hours, eurpln = 4.05)
   hours * 20 * eurpln * 0.81
 end
+
+def rebased(hours, plnhr = 85)
+  hours * plnhr * 0.81
+end
