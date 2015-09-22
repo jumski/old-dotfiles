@@ -16,12 +16,20 @@ if [ "$TERM" != "cygwin" ]; then
   ## LOAD RVM
   [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
+  ## LOAD NVM
+  [[ -s "$HOME/.nvm/nvm.sh" ]] && . "$HOME/.nvm/nvm.sh"
+
   PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 fi # cygwin
 
 # source .local_variables if present
 if [ -f $HOME/.local_variables ]; then
   source $HOME/.local_variables
+fi
+
+# add studio scripts binaries
+if [[ -d ~/work/studio-scripts/bin ]]; then
+  PATH=$PATH:~/work/studio-scripts/bin
 fi
 
 source $DOTFILES_PATH/bash/h.sh
