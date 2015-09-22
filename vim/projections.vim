@@ -130,5 +130,15 @@ let g:rails_gem_projections = {
     \       "test":      "spec/jobs/%s_spec.rb",
     \       "template":  "class %SJob\n\n  def self.perform\n  end\n\nend"
     \     }
+    \   },
+    \   "cancan": {
+    \     "app/models/ability/*_role.rb": {
+    \       "command":   "ability",
+    \       "related":   "app/models/user.rb"
+    \     },
+    \     "app/models/ability.rb": {
+    \       "command":   "ability",
+    \       "related":   "app/models/user.rb"
+    \     }
     \   }
     \ }
