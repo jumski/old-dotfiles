@@ -206,3 +206,10 @@ lingot
 patchage
 sox
 nemo-dropbox
+beast
+libasound2-dev
+libsndfile1-dev
+sndfile-programs
+a2jmidid
+libqtwebkit-dev
+gmidimonitor
