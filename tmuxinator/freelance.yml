@@ -3,18 +3,24 @@
 
 name: freelance
 root: ~/work/freelance
-pre_window: rvm use 2.1.3@freelance --create
+# pre:
+#   - google-chrome 'sprint.ly'
+#   - google-chrome 'kumdle.slack.com'
+#   - google-chrome 'https://github.com/conjune118/Freelance/pulls'
+pre_window: rvm use 2.2.3@freelance --create
 windows:
   - server:
       layout: main-vertical
       panes:
         - puma -p 3000 --pidfile tmp/pids/server.pid
-        - bin/rake websocket_rails:start_server || true
+        - echo
+        # - bin/rake websocket_rails:start_server || true
         - bundle exec sunspot-solr start -p 8982
-        - mailcatcher
+        - echo
+        # - mailcatcher
   - bash:
   - vim: vim
-  - console: bin/rails c
+  - console: echo #bin/rails c
   - logs: tail -100f log/development.log
   - guard: guard
 

@@ -4,6 +4,9 @@
 name: antykwariusz
 root: ~/work/antykwariusz
 
+pre:
+  - sudo /etc/init.d/elasticsearch start
+  - sudo /etc/init.d/mysql start
 pre_window: rvm use ruby-1.9.3-p327@antykwariusz --create
 windows:
   - stuff: puma -t 16:16 --pidfile tmp/pids/server.pid
