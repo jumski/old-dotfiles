@@ -1,5 +1,10 @@
 # various hacks and improvements
 
+## Pidgin Facebook
+
+https://github.com/jgeboski/purple-facebook/wiki
+
+
 ## skype pulseaudio cracklings fix
 
 ```PULSE_LATENCY_MSEC=30 skype```
