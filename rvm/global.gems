@@ -11,10 +11,10 @@ gem-browse
 gem-ctags
 hookup
 tmuxinator
-zeus
 rubygems-bundler
 libnotify
 pry
 pry-doc
 pry-theme
 pry-editline
+hosts_updater
