@@ -1,6 +1,7 @@
 #!/bin/sh
 set -e
-# PATH="/usr/local/bin:$PATH"
-# trap "rm -f .git/tags.$$" EXIT
-# nice ctags --tag-relative -Rf.git/tags.$$ --exclude=.git --languages=-sql
-# mv .git/tags.$$ .git/tags
+PATH="/usr/local/bin:$PATH"
+trap "rm -f .git/tags.$$" EXIT
+excludes="--exclude=node_modules/ --exclude=bower_components/ --exclude=*.js.map --exclude=*.min.map --exclude=*.min.js --exclude=.git"
+nice ctags --tag-relative -Rf.git/tags.$$ $excludes --languages=-sql
+mv .git/tags.$$ .git/tags
