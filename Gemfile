@@ -11,6 +11,7 @@ gem 'github'
 gem 'rubygems-bundler'
 gem 'libnotify'
 gem 'catpix'
+gem 'hosts_updater'
 
 group :pry do
   gem 'pry'
