@@ -12,6 +12,8 @@ NeoBundle 'godlygeek/tabular'
 NeoBundle 'kana/vim-fakeclip'
 NeoBundle 'kchmck/vim-coffee-script'
 
+NeoBundle 'Glench/Vim-Jinja2-Syntax'
+NeoBundle 'chase/vim-ansible-yaml'
 
 
 
@@ -43,7 +45,7 @@ NeoBundle 'tpope/vim-classpath'
 
 
 NeoBundle 'tpope/vim-fireplace'
-NeoBundle 'tpope/vim-leiningen'
+" NeoBundle 'tpope/vim-leiningen'
 NeoBundle 'tpope/vim-dotenv'
 
 NeoBundle 'tpope/vim-projectionist'
@@ -61,7 +63,7 @@ NeoBundle 'tpope/vim-obsession'
 " " NeoBundle 'duskhacker/sweet-rspec-vim'
 " " NeoBundle 'jayferd/eco.vim'
 NeoBundle 'sickill/vim-pasta'
-" " NeoBundle 'nono/vim-handlebars'
+NeoBundle 'nono/vim-handlebars'
 NeoBundle 'jgdavey/vim-blockle'
 
 
@@ -71,7 +73,8 @@ NeoBundle 'jgdavey/vim-blockle'
 NeoBundle 'Shougo/vimproc'
 NeoBundle "DataWraith/auto_mkdir"
 NeoBundle 'bronson/vim-visual-star-search'
-NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'othree/yajs.vim'
+" NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'slim-template/vim-slim'
 NeoBundle 'mattn/webapi-vim'
 NeoBundle 'christoomey/vim-tmux-navigator'
@@ -110,10 +113,18 @@ NeoBundle 'mhinz/vim-sayonara'
 " endfor
 NeoBundle 'suan/vim-instant-markdown'
 NeoBundle 'guns/vim-sexp'
+" disable bracket-closing madness in insert mode
+let g:sexp_enable_insert_mode_mappings = 0
+
 NeoBundle 'tpope/vim-sexp-mappings-for-regular-people'
 NeoBundle 'beloglazov/vim-online-thesaurus'
 
 NeoBundle 'vimwiki/vimwiki'
+
+NeoBundle 'nathanaelkane/vim-indent-guides'
+let g:indent_guides_auto_colors = 0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=black
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=NONE
 
 " GOYO
 NeoBundle 'junegunn/goyo.vim'
