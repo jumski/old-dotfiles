@@ -132,3 +132,7 @@ disconf() {
 enconf() {
   mv $1 ${1}.conf
 }
+
+
+### breakage, akai etc
+alias akai-rear="xdg-open ~/dropbox/maszynki/akai-s2000/rear.jpg"
