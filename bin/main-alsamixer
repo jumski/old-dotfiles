@@ -1,12 +1,6 @@
 #!/bin/bash
 
-maya_card=$(aplay -l | grep MAYA44)
+main_card=$(aplay -l | grep MAYA44 || aplay -l | grep "HDA Intel PCH")
+main_card_number=$(echo "$main_card" | awk '{print $2}' | cut -c -1)
 
-if [ $? = 1 ]; then
-  alsamixer
-  exit 0
-fi
-
-maya_number=$(echo "$maya_card" | awk '{print $2}' | cut -c -1)
-
-alsamixer -c$maya_number
+alsamixer -c$main_card_number
