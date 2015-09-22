@@ -1,5 +1,9 @@
 #!/bin/bash
 
+if [ ! -d spec/ ]; then
+  exit 0
+fi
+
 ag_output=$(ag --color "(describe|context|it|specify|example|feature|scenario).*,.*:focus.*do" spec/ || true)
 
 if [ -n "$ag_output" ]; then
