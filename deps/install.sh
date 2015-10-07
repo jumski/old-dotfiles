@@ -24,6 +24,7 @@ install(){
   require file_linked sh-todo $HOME/.sh-todo
   require file_linked erdconfig $HOME/.erdconfig
   require file_linked inputrc $HOME/.inputrc
+  require file_linked ansible.cfg $HOME/.ansible.cfg
 
   require vim
   require bash
