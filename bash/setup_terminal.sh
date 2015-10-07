@@ -4,8 +4,8 @@ export DISABLE_AUTO_TITLE=true
 
 HISTCONTROL=ignoredups:ignorespace
 shopt -s histappend
-HISTSIZE=50000
-HISTFILESIZE=200000
+HISTSIZE=5000000
+HISTFILESIZE=1000000
 shopt -s checkwinsize
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
