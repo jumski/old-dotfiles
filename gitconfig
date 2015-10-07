@@ -1,5 +1,5 @@
 [user]
-	name = Wojtek Majewski\n
+	name = Wojtek Majewski
 	email = jumski@gmail.com
 
 [alias]
@@ -34,7 +34,7 @@
   hist = log --pretty=format:\"%Cgreen%h%Creset %Cblue%ad%Creset %s%C(yellow)%d%Creset %Cblue[%an]%Creset\" --graph --date=short
   h = log --pretty=format:\"%Cgreen%h%Creset %Cblue%ad%Creset %s%C(yellow)%d%Creset %Cblue[%an]%Creset\" --graph --date=short
   dstat = diff --stat
-	wtf = !git-wtf
+  wtf = !git-wtf
   trail = !git-trail
   neck = !git-neck
   churn = !git-churn
