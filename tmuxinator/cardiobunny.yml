@@ -1,0 +1,13 @@
+# ~/.tmuxinator/default.yml
+# you can make as many tabs as you wish...
+
+name: cardiobunny
+root: ~/work/cardiobunny
+pre_window: rvm use ruby-2.1.5@cardiobunny --create
+windows:
+  - server: bin/rails server
+  - bash:
+  - vim: vim
+  - console: bin/rails c
+  - logs: tail -100f log/development.log
+
