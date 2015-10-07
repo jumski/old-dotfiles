@@ -224,3 +224,8 @@ parse_yaml() {
       }
    }'
 }
+
+
+prefix_with_dates() {
+  awk '{ print strftime("%Y-%m-%d %H:%M:%S"), $0; fflush(); }'
+}
