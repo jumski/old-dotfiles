@@ -1,5 +1,12 @@
 # various hacks and improvements
 
+## Intel Centrino Wifi card problem
+
+Last line of `etc/modprobe.d/iwlwifi.conf` should land into `/etc/modprobe.d/iwlwifi.conf`
+(full file included for brevity).
+
+Then it's best to just restart.
+
 ## Pidgin Facebook
 
 https://github.com/jgeboski/purple-facebook/wiki
