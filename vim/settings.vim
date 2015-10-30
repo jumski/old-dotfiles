@@ -99,6 +99,7 @@ set lazyredraw
 
 " force syntax highlighting on certain filetypes
 au BufNewFile,BufRead Rakefile,Capfile,Guardfile,Gemfile,Vagrantfile,pryrc,*.god,*.cap,*.rake setfiletype ruby
+au BufNewFile,BufRead *.deface setfiletype eruby
 au BufNewFile,BufRead *.json set ft=javascript
 au BufNewFile,BufRead *.hamlc setfiletype haml
 au BufNewFile,BufRead Dockerfile setfiletype conf
