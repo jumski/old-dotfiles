@@ -96,6 +96,7 @@ NeoBundle 'ekalinin/Dockerfile.vim'
 NeoBundle 'nginx.vim'
 
 NeoBundle 'lucapette/vim-ruby-doc'
+NeoBundle 'danchoi/ri.vim'
 
 NeoBundle 'haya14busa/incsearch.vim'
 map /  <Plug>(incsearch-forward)
