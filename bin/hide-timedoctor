@@ -3,10 +3,6 @@
 window_id=$(xdotool search --name TaskInformer2)
 
 case "$1" in
-  laptop)
-    screen_width=$(( 1366 + 200 ))
-    screen_height=768
-  ;;
   tauzen)
     screen_width=1920
     screen_height=1080
@@ -15,9 +11,10 @@ case "$1" in
     screen_width=1680
     screen_height=1200
   ;;
-  *)
-    echo "Dont know size '$1'. Only laptop|tauzen|podzamcze sizes available"
-    exit 1
+  laptop|*)
+    screen_width=$(( 1366 + 200 ))
+    screen_height=768
+  ;;
 esac
 
 if [[ -n "$window_id" ]]; then
