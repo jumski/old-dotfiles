@@ -1,0 +1,4 @@
+# List domains that should be ignored here.
+# One domain per line, lines starting with # will be ignored.
+www.googleadservices.com
+googleadservices.com
