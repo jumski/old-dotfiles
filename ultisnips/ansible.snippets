@@ -1,0 +1,14 @@
+snippet template
+- name: $1
+  template: src=$2 dest=$3 owner=${4:root} group=${5:root} mode=${6:0600}
+endsnippet
+
+snippet copy
+- name: $1
+  copy: src=$2 dest=$3 owner=${4:root} group=${5:root} mode=${6:0600}
+endsnippet
+
+snippet apt
+- name: install $1
+  apt: name=$1 state=${2:present}
+endsnippet
