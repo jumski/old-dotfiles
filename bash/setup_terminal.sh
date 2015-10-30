@@ -31,11 +31,11 @@ esac
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
     . $DOTFILES_PATH/bash/git-completion.bash
-    . $DOTFILES_PATH/bash/git-completion.bash
     if [ -f /usr/share/doc/tmux/examples/bash_completion_tmux.sh ]; then
       . /usr/share/doc/tmux/examples/bash_completion_tmux.sh
     fi
     . $DOTFILES_PATH/hub/hub.bash_completion.sh
+    . $DOTFILES_PATH/bash/git-stree-completion.bash
 
 fi
 
