@@ -3,7 +3,7 @@
 window_id=$(xdotool search --name TaskInformer2)
 
 case "$1" in
-  tauzen)
+  skarpa)
     screen_width=1920
     screen_height=1080
   ;;
