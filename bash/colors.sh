@@ -94,19 +94,10 @@ function prompt_indicator {
   echo "${indicator_color}\$${c_reset} "
 }
 
-function reminder {
-  c_tip="\[\033[40m\]"
-
-  if date +'%M' | egrep "(00|05|10|15|20|25|30|35|40|45|50|55)" 2>&1 >/dev/null; then
-    echo "\n      ${c_tip}!!!!!!!!!! ŁOKIEĆ !!!!!!!!!!!\n${c_reset}"
-    echo ""
-  fi
-}
-
 prompt_command() {
   LAST_EXIT_CODE=$?
   history -a
-  export PS1="$(reminder) $(hostname_indicator)$(pwd_indicator)$(git_indicator)$(rails_env_indicator)$(prompt_indicator)"
+  export PS1="$(hostname_indicator)$(pwd_indicator)$(git_indicator)$(rails_env_indicator)$(prompt_indicator)"
 }
 
 PROMPT_COMMAND=prompt_command
