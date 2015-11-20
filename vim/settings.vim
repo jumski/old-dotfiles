@@ -103,6 +103,7 @@ au BufNewFile,BufRead *.deface setfiletype eruby
 au BufNewFile,BufRead *.json set ft=javascript
 au BufNewFile,BufRead *.hamlc setfiletype haml
 au BufNewFile,BufRead Dockerfile setfiletype conf
+au BufNewFile,BufRead .psqlrc setfiletype sql
 
 " " disable some features for certain filetypes
 " au BufRead *.yml,*.json se nomodeline
