@@ -27,6 +27,10 @@ let g:rails_projections = {
   \   "command": "factory",
   \   "affinity": "collection"
   \ },
+  \ "spec/support/factories/*_factory.rb": {
+  \   "command": "factory",
+  \   "affinity": "collection"
+  \ },
   \ "app/services/*.rb": {
   \   "command":   "service",
   \   "affinity":  "collection",
@@ -129,6 +133,12 @@ let g:rails_gem_projections = {
     \       "command":   "job",
     \       "test":      "spec/jobs/%s_spec.rb",
     \       "template":  "class %SJob\n\n  def self.perform\n  end\n\nend"
+    \     }
+    \   },
+    \   "spree": {
+    \     "app/models/spree/calculator/*.rb": {
+    \       "command": "calculator",
+    \       "test":    "spec/models/spree/calculator/%s_spec.rb"
     \     }
     \   },
     \   "cancan": {
