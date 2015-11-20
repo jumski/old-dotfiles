@@ -9,10 +9,15 @@ pre:
   - sudo /etc/init.d/mysql start
 pre_window: rvm use ruby-1.9.3-p327@antykwariusz --create
 windows:
-  - stuff: puma -t 16:16 --pidfile tmp/pids/server.pid
+  - stuff: puma --pidfile tmp/pids/server.pid
   - bash: todo @books
   - vim: vim
   - console: bin/rails c
   - bash: tail -f log/development.log
-  - bodhi: mosh bodhi tmux at
+  - ssh: ssh books_production@mudita -t 'tmux at || tmux'
+  - jobs:
+      layout: main-horizontal
+      panes:
+        - sidekiq -C config/sidekiq.yml
+        - '#clockwork app/clock.rb'
 

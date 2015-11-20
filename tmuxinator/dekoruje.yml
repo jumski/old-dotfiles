@@ -10,4 +10,5 @@ windows:
   - vim: vim
   - console: rails console
   - bash: tail -f log/development.log
+  - ssh: ssh candles_production@mudita -t 'tmux at || tmux'
   - spree_core: cd `bundle show spree_core`
