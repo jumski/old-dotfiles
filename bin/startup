@@ -11,11 +11,13 @@ PULSE_LATENCY_MSEC=30 skype &
 
 pidgin &
 
-primusrun gnome-terminal &
+gnome-terminal &
 
 /usr/optirun google-chrome &
 
 redshift &
+
+scudcloud &
 
 supervisord -c $HOME/dotfiles/conf/supervisord.conf &
 
