@@ -16,8 +16,9 @@ if [ "$TERM" != "cygwin" ]; then
   ## LOAD RVM
   [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
-  ## LOAD NVM
+  ## LOAD NVM and use node 5
   [[ -s "$HOME/.nvm/nvm.sh" ]] && . "$HOME/.nvm/nvm.sh"
+  nvm use 5
 
   PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 fi # cygwin

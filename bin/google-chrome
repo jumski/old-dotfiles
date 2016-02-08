@@ -1,3 +1,0 @@
-#!/bin/bash
-
-/usr/bin/primusrun /usr/bin/google-chrome-raw --ignore-gpu-blacklist "$@"
