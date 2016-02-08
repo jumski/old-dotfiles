@@ -1,3 +1,5 @@
 vmail.db
 vmail.log
 .vagrant
+bin/instant-markdown-d
+node_modules/

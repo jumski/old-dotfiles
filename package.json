@@ -1,0 +1,22 @@
+{
+  "name": "jumski-dotfiles",
+  "version": "1.0.0",
+  "description": "## Intel Centrino Wifi card problem",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jumski/dotfiles.git"
+  },
+  "author": "Wojtek Majewski",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jumski/dotfiles/issues"
+  },
+  "homepage": "https://github.com/jumski/dotfiles#readme",
+  "dependencies": {
+    "instant-markdown-d": "^0.1.0"
+  }
+}

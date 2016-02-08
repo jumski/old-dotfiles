@@ -1,5 +1,7 @@
 install(){
   require apt_updated
+  require node_modules_installed
+  require file_linked node_modules/instant-markdown-d/instant-markdown-d bin/instant-markdown-d
   require git_submodules_initialized
   require bundle_installed 2.1.2
 
