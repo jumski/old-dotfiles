@@ -22,3 +22,14 @@ function! Browser ()
   exec "!google-chrome ".line
 endfunction
 map gX :call Browser()<CR>
+
+" custom functions
+fu! WriteCursorLastPosition()
+  let output = system('echo ' . getreg('%') . ':' . line('.') . ' > .cursor_last_position')
+endfunction
+"
+if !exists("b:jumski_write_rspec_guide")
+  let b:jumski_write_rspec_guide = 1
+
+  au BufWritePost *_spec.rb call WriteCursorLastPosition()
+endif
