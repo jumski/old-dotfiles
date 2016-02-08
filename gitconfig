@@ -25,6 +25,8 @@
   yesterday = log --pretty=format:\"%Cgreen%h%Creset %Cblue%ad%Creset %s%C(yellow)%d%Creset %Cblue[%an]%Creset\" --graph --date=short --after=yesterday --author=Wojtek
   today = log --pretty=format:\"%Cgreen%h%Creset %Cblue%ad%Creset %s%C(yellow)%d%Creset %Cblue[%an]%Creset\" --graph --date=short --since='1 Day Ago' --date=relative --author=Wojtek
   cap = !git commit && git push && cap deploy
+  mina = !git push && mina staging deploy
+  staging = !git push && mina staging deploy
   deploy = !git pull --rebase && git push && cap deploy
 
   chr = cherry -v
