@@ -1,0 +1,9 @@
+#!/bin/bash
+
+date >> /tmp/pmlog
+echo $1 >> /tmp/pmlog
+echo '======' >> /tmp/pmlog
+
+if [ "resume" = "$1" ]; then
+  su jumski -c /home/jumski/bin/setup_keyboard  
+fi
