@@ -179,6 +179,7 @@ let g:rails_doc_ruby_mapping='<leader>dr'
 "
 " let g:syntastic_disabled_filetypes = ["haml", "sass"]
 let g:syntastic_mode_map = { 'passive_filetypes': ['haml', 'sass', 'slim'] }
+let g:syntastic_javascript_checkers = ['jshint', 'jslint']
 " let g:syntastic_mode_map = { 'mode': 'passive',
 "                            \ 'active_filetypes': ['ruby', 'erb', 'javascript', 'coffee'],
 "                            \ 'passive_filetypes': [] }

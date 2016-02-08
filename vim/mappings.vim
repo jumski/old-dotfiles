@@ -167,3 +167,5 @@ cmap T! call SpecCommandForCurrentFile("T")<cr>
 " Sayonara
 nnoremap <leader>q :Sayonara<cr>
 nnoremap <leader>Q :Sayonara!<cr>
+
+command! Figwheel :Piggieback! (do (require 'figwheel-sidecar.repl-api) (figwheel-sidecar.repl-api/cljs-repl))
