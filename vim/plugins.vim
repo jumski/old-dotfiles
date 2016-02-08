@@ -5,8 +5,6 @@ NeoBundle 'Valloric/YouCompleteMe'
 
 NeoBundle 'jumski/vim-colors-solarized'
 " NeoBundle 'delimitMate.vim'
-" " NeoBundle 'vim-puppet'
-" " NeoBundle 'gmarik/ide-popup.vim'
 NeoBundle 'logstash.vim'
 NeoBundle 'godlygeek/tabular'
 NeoBundle 'kana/vim-fakeclip'
@@ -58,10 +56,6 @@ NeoBundle 'ecomba/vim-ruby-refactoring'
 NeoBundle 'sjl/gundo.vim'
 NeoBundle 'tpope/vim-vinegar'
 NeoBundle 'tpope/vim-obsession'
-
-
-" " NeoBundle 'duskhacker/sweet-rspec-vim'
-" " NeoBundle 'jayferd/eco.vim'
 NeoBundle 'sickill/vim-pasta'
 NeoBundle 'nono/vim-handlebars'
 NeoBundle 'jgdavey/vim-blockle'
@@ -74,7 +68,6 @@ NeoBundle 'Shougo/vimproc'
 NeoBundle "DataWraith/auto_mkdir"
 NeoBundle 'bronson/vim-visual-star-search'
 NeoBundle 'othree/yajs.vim'
-" NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'slim-template/vim-slim'
 NeoBundle 'mattn/webapi-vim'
 NeoBundle 'christoomey/vim-tmux-navigator'
@@ -84,14 +77,13 @@ NeoBundle 'christoomey/vim-tmux-navigator'
 
 
 NeoBundle 'kana/vim-textobj-user'
-" " NeoBundle 'nelstrom/vim-textobj-rubyblock'
+" NeoBundle 'nelstrom/vim-textobj-rubyblock'
 NeoBundle 'abijr/colorpicker'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'closetag.vim'
-" NeoBundle 'kien/rainbow_parentheses.vim'
 NeoBundle 'junegunn/rainbow_parentheses.vim'
-" " NeoBundle 'leafgarland/typescript-vim'
-" " NeoBundle 'OrangeT/vim-csharp'
+" NeoBundle 'leafgarland/typescript-vim'
+" NeoBundle 'OrangeT/vim-csharp'
 NeoBundle 'ekalinin/Dockerfile.vim'
 NeoBundle 'nginx.vim'
 
@@ -113,9 +105,10 @@ NeoBundle 'beloglazov/vim-online-thesaurus'
 NeoBundle 'vimwiki/vimwiki'
 
 NeoBundle 'nathanaelkane/vim-indent-guides'
-" " NeoBundle 'tommcdo/vim-exchange'
-" " NeoBundle 'AndrewRadev/splitjoin.vim'
-" " NeoBundle 'AndrewRadev/switch.vim'
+NeoBundle 'tommcdo/vim-exchange'
+" NeoBundle 'AndrewRadev/splitjoin.vim' " plugin for splitting/joining lines
+" NeoBundle 'AndrewRadev/switch.vim'    " plugin to toggle stuff, like
+" true/false etc
 "
 " """"""""" DISABLED PLUGINS
 " " NeoBundle 'php.vim'
@@ -125,3 +118,5 @@ NeoBundle 'nathanaelkane/vim-indent-guides'
 " " NeoBundle 'vim-scripts/marvim' " macro persistent storage
 " " NeoBundle 'vimwiki'
 " " NeoBundle 'wincent/Command-T' " textmate-like searching throught project
+" " NeoBundle 'vim-puppet'
+" " NeoBundle 'gmarik/ide-popup.vim'
