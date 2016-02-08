@@ -125,3 +125,31 @@ let g:rainbow#blacklist = [12, 14]
 if has("autocmd")
  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
+
+" plugin specific mappings
+nnoremap <leader>gu :GundoToggle<CR>
+
+" fugitive shortcuts
+nnoremap <leader>gp :Git push<CR>
+nnoremap <leader>gc :Gcommit<CR>
+nnoremap <leader>gd :Gdiff<CR>
+nnoremap <leader>gw :Gwrite<CR>
+nnoremap <leader>gr :Gread<CR>
+nnoremap <leader>gs :Gstatus<CR>
+
+" clojure mappings
+nnoremap <leader>R :Require<CR>
+
+" Sayonara
+nnoremap <leader>q :Sayonara<cr>
+nnoremap <leader>Q :Sayonara!<cr>
+
+" Figwheel
+command! Figwheel :Piggieback! (do (require 'figwheel-sidecar.repl-api) (figwheel-sidecar.repl-api/cljs-repl))
+
+" vim-dispatch
+noremap <leader>d :Dispatch<cr>
+
+" command-t
+" noremap <leader>` :CommandT<cr>
+

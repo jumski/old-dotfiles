@@ -3,13 +3,10 @@
 let mapleader=","
 let g:mapleader = ","
 
-noremap <leader>d :Dispatch<cr>
-
 " experimental ESC mapping
 inoremap kj <esc>
 
 """"" CUSTOM MAPPINGS
-noremap <leader>` :CommandT<cr>
 " noremap <C-k><C-k> <C-w><C-w>
 " noremap <C-k>k <C-w><C-w>
 imap <C-w> <C-o><C-w> " this allows all window commands in insert mode and i'm not accidentally deleting words anymore :-)"
@@ -20,12 +17,6 @@ nmap <silent> <leader>c :tabnew %<CR>
 nmap <silent> <leader><Tab> :tabp<CR>
 nmap <silent> <leader>f :tabn<CR>
 nmap <silent> <leader>x :tabclose<CR>
-
-" toggle hlsearch
-nmap <leader>h :se invhlsearch<CR>
-
-" toggle paste
-nmap <leader>p :se invpaste<CR>
 
 " reformat whole file
 noremap <leader>g mggg=G'g
@@ -75,9 +66,6 @@ nnoremap <leader>op :15sp /home/jumski/dropbox/projects/`basename \`pwd\``/todos
 nnoremap <leader>ow :15sp `/home/jumski/dotfiles/bin/worklog-path`<cr>
 " nnoremap <leader>oW :Ex $(dirname `/home/jumski/dotfiles/bin/worklog-path`)<cr>
 
-" Glbrowse
-nnoremap <leader>og :Glbrowse<cr>
-
 " Split line(opposite to S-J joining line)
 " nnoremap <C-J> gEa<CR><ESC>
 
@@ -108,9 +96,6 @@ vmap < <gv
 " select last changed/pasted text
 nnoremap <expr> gp '`[' . strpart(getregtype(), 0, 1) . '`]'
 
-" plugin specific mappings
-nnoremap <leader>gu :GundoToggle<CR>
-
 " replase word under cursor in whole file
 nnoremap <leader>: "xyiw:%s/<C-R>x/
 
@@ -119,21 +104,11 @@ nnoremap <LocalLeader>\ :tabnew<CR>:Ag<space>
 " Ag search for word under cursor
 nnoremap <leader>\ "xyiw:tabnew<CR>:Ag <C-R>x<space>
 vnoremap <LocalLeader>\ "xy:tabnew<CR>:Ag "<C-R>x"<space>
+nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
 " Rails specific
 map <leader>rr :topleft :tabnew config/routes.rb<cr>
 map <leader>rg :topleft 100 :tabnew Gemfile<cr>
-
-" fugitive shortcuts
-nnoremap <leader>gp :Git push<CR>
-nnoremap <leader>gc :Gcommit<CR>
-nnoremap <leader>gd :Gdiff<CR>
-nnoremap <leader>gw :Gwrite<CR>
-nnoremap <leader>gr :Gread<CR>
-nnoremap <leader>gs :Gstatus<CR>
-
-" clojure mappings
-nnoremap <leader>R :Require<CR>
 
 " improve movement on wrapped lines
 nnoremap j gj
@@ -154,18 +129,3 @@ nnoremap N Nzzzv
 " same when jumping around
 nnoremap g; g;zz
 nnoremap g, g,zz
-
-function! SpecCommandForCurrentFile(alternate_letter)
-  let basename = expand("%:p:t:r")
-  exec ":".a:alternate_letter."spec ".basename."!"
-endfunction
-cmap A! call SpecCommandForCurrentFile("R")<cr>
-cmap V! call SpecCommandForCurrentFile("V")<cr>
-cmap S! call SpecCommandForCurrentFile("S")<cr>
-cmap T! call SpecCommandForCurrentFile("T")<cr>
-
-" Sayonara
-nnoremap <leader>q :Sayonara<cr>
-nnoremap <leader>Q :Sayonara!<cr>
-
-command! Figwheel :Piggieback! (do (require 'figwheel-sidecar.repl-api) (figwheel-sidecar.repl-api/cljs-repl))
