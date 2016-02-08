@@ -1,6 +1,39 @@
 
+snippet ce
+Crafty.e('$1')
+    $2
+endsnippet
+
+snippet cc
+Crafty.c('$1' {
+    init: function() {
+      $2
+    }${3:,
+
+    $4}
+});
+endsnippet
+
 snippet fn
 ($1) => {$2}
+endsnippet
+
+snippet fun
+function($1) {
+    $2
+}
+endsnippet
+
+snippet :fun
+$1: function($2) {
+    $3
+}$4
+endsnippet
+
+snippet :fn
+$1: ($2) => {
+  $3
+}$4
 endsnippet
 
 snippet cli
