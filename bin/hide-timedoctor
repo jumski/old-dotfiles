@@ -2,6 +2,8 @@
 
 window_id=$(xdotool search --name TaskInformer2)
 
+x_offset=0
+
 case "$1" in
   skarpa)
     screen_width=1920
@@ -12,13 +14,14 @@ case "$1" in
     screen_height=1200
   ;;
   laptop|*)
-    screen_width=$(( 1366 + 200 ))
+    x_offset=300
+    screen_width=1366
     screen_height=768
   ;;
 esac
 
 if [[ -n "$window_id" ]]; then
-  x_position=$(( $screen_width / 2 ))
+  x_position=$(( $screen_width / 2 + $x_offset ))
   y_position=$(( $screen_height - 17 ))
   width=80
   height=20
