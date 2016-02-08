@@ -3,15 +3,12 @@ bundler
 rake
 rvm
 tmuxinator
-awesome_print
 interactive_editor
-github
 gist
 gem-browse
 gem-ctags
 hookup
 tmuxinator
-rubygems-bundler
 libnotify
 pry
 pry-doc
