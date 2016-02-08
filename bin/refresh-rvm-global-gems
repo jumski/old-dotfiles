@@ -1,0 +1,20 @@
+#!/bin/bash
+
+source ~/.rvm/scripts/rvm
+
+rubies=`rvm list gemsets | grep global | awk '{print $1}' | tr '\n' ',' | sed 's/,$//' `
+gems=`tr '\n' ' ' < ~/dotfiles/rvm/global.gems | sed 's/,$//'`
+
+echo  \> Making sure following gems are installed:
+cat ~/dotfiles/rvm/global.gems
+
+echo
+echo  \> Updating following ruby versions:
+rvm list gemsets | grep global | awk '{print $1}'
+
+echo
+echo
+echo Performing work .....
+echo   \> rvm "$rubies" do gem install "$gems"
+rvm $rubies do gem install $gems
+
