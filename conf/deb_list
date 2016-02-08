@@ -221,3 +221,10 @@ weechat-plugins
 weechat-scripts
 httpie
 dwb
+bbswitch
+bbswitch-dkms
+bumblebee
+dtrx
+openuniverse
+libsfml-graphics2
+cmake
