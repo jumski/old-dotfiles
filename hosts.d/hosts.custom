@@ -1,0 +1,14 @@
+127.0.0.1	localhost
+127.0.1.1	jumski-Inspiron-N5110
+127.0.0.1 registry.docker.com antykwariusz.vagrant books.vagrant candles.vagrant dokku.me cardiobunny.dev pl.cardiobunny.dev en.cardiobunny.dev cardiobunny-en.dev cardiobunny-pl.dev monit.webmandala.vagrant kibana.webmandala.vagrant cardiobunny.dev candles-staging.vagrant www.candles-staging.vagrant
+
+176.9.125.117 mudita staging.biblioteka-hades.pl
+#staging.liturgicznie.pl liturgicznie.pl
+178.255.41.90 bodhi bodhi.webmandala.com
+
+# The following lines are desirable for IPv6 capable hosts
+::1     ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
