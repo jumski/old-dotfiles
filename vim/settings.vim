@@ -113,7 +113,7 @@ autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
 " au BufRead *.yml,*.json se nomodeline
 
 " use ack as grep
-set grepprg=ack-grep\ -a
+set grepprg=ag\ --nogroup\ --nocolor
 
 " change behaviour of <TAB> completion of commands
 " to similar to bash completion
