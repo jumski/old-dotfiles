@@ -153,3 +153,5 @@ noremap <leader>d :Dispatch<cr>
 " command-t
 " noremap <leader>` :CommandT<cr>
 
+nnoremap <leader>vu :UltiSnipsEdit<cr>
+nnoremap <leader>vb :NeoBundleInstall<cr>

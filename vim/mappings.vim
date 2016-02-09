@@ -19,7 +19,8 @@ nmap <silent> <leader>f :tabn<CR>
 nmap <silent> <leader>x :tabclose<CR>
 
 " reformat whole file
-noremap <leader>g mggg=G'g
+noremap <leader>G mggg=G'g
+
 
 " disable Ex mode, use its mapping for repeating a macro
 nmap Q @@
@@ -57,8 +58,6 @@ nnoremap <leader>vv :tabnew ~/dotfiles/vim/plugins.vim<cr>:vs ~/dotfiles/vim/set
   " \ :sp     ~/dotfiles/settings.vim<cr>
   " \ :sp     ~/dotfiles/mappings.vim<cr>
   " \ :vs     ~/dotfiles/macros.vim<cr><c-k><c-k>
-nnoremap <leader>vu :UltiSnipsEdit<cr>
-nnoremap <leader>vb :NeoBundleInstall<cr>
 nnoremap <leader>vp :tabnew config/projections.json<cr>
 
 " some custom stuff
