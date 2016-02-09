@@ -228,3 +228,4 @@ dtrx
 openuniverse
 libsfml-graphics2
 cmake
+clang
