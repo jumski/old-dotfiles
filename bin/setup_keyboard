@@ -5,7 +5,7 @@ xset r rate 250 100
 # and locked by this script
 which python 2>&1 >/dev/null && python -c 'from ctypes import *; X11 = cdll.LoadLibrary("libX11.so.6"); display = X11.XOpenDisplay(None); X11.XkbLockModifiers(display, c_uint(0x0100), c_uint(2), c_uint(0)); X11.XCloseDisplay(display)'
 
-options="-option ctrl:menu_rctrl -option altwin:ctrl_win -option ctrl:nocaps"
+options="-option ctrl:menu_rctrl -option altwin:ctrl_win -option ctrl:nocaps -option compose:lwin"
 
 if [[ "swapcaps" == $1 ]]; then
   options="$options -option ctrl:swapcaps"
