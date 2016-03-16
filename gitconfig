@@ -134,6 +134,17 @@
   insteadOf = wgh:
 [web]
 	browser = google-chrome
+; [merge]
+; 	tool = vimdiff
+; 	conflictstyle = diff3
+
+[transfer]
+        fsckobjects = true
+[fetch]
+        fsckobjects = true
+[receive]
+        fsckObjects = true
+[mergetool "fugitive"]
+	cmd = vim -f -c \"Gvdiff\" \"$MERGED\"
 [merge]
-	tool = vimdiff
-	conflictstyle = diff3
+	tool = fugitive
