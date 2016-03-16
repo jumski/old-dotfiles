@@ -103,7 +103,7 @@ nnoremap <LocalLeader>\ :tabnew<CR>:Ag<space>
 " Ag search for word under cursor
 nnoremap <leader>\ "xyiw:tabnew<CR>:Ag <C-R>x<space>
 vnoremap <LocalLeader>\ "xy:tabnew<CR>:Ag "<C-R>x"<space>
-nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+" nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
 " Rails specific
 map <leader>rr :topleft :tabnew config/routes.rb<cr>

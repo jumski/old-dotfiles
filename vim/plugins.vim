@@ -24,6 +24,7 @@ NeoBundle 'tpope/vim-abolish'
 NeoBundle 'tpope/vim-endwise'
 NeoBundle 'tpope/vim-eunuch'
 NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'tpope/vim-commentary'
 "
 NeoBundle 'tpope/vim-git'
 NeoBundle 'tpope/vim-haml'
