@@ -10,6 +10,6 @@ windows:
   - vim: vim
   - console: rails c
   - logs: tail -500f log/development.log | egrep "(Started|Processing|Parameters|Completed|Render)"
-  - guard: guard
+  # - guard: guard
   - spree: cd `bundle show spree`
   - payu: cd ~/work/spree_payu_integration && rvm use ruby-2.2.3@spree_payu_integration --create
