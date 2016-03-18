@@ -29,7 +29,7 @@ install(){
   require file_linked psqlrc $HOME/.psqlrc
   require file_linked ansible.cfg $HOME/.ansible.cfg
 
-  require vim
+  #require vim
   require bash
 
   require dropbox
