@@ -13,6 +13,6 @@ bundle_installed(){
   }
 
   meet() {
-    rvm_use && bundle install
+    rvm_use && gem install bundler && bundle install
   }
 }
