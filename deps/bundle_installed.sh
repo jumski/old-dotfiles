@@ -9,10 +9,15 @@ bundle_installed(){
   }
 
   is_met() {
-    rvm_use && bundle check
+    source ~/.rvm/scripts/rvm &&
+      rvm use ruby-$version &&
+      bundle check
   }
 
   meet() {
-    rvm_use && gem install bundler && bundle install
+    source ~/.rvm/scripts/rvm &&
+      rvm use ruby-$version &&
+      gem install bundler &&
+      bundle install
   }
 }
