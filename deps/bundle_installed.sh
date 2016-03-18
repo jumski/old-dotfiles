@@ -2,11 +2,7 @@ bundle_installed(){
   version=$1
 
   require rvm_ruby_installed $version
-
-  rvm_use() {
-    source ~/.rvm/scripts/rvm &&
-      rvm use ruby-$version
-  }
+  require apt_installed imagemagick
 
   is_met() {
     source ~/.rvm/scripts/rvm &&
