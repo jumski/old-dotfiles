@@ -28,6 +28,7 @@ install(){
   require file_linked inputrc $HOME/.inputrc
   require file_linked psqlrc $HOME/.psqlrc
   require file_linked ansible.cfg $HOME/.ansible.cfg
+  require file_linked vim/vimrc $HOME/.vimrc
 
   #require vim
   require bash
