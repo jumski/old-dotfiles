@@ -1,3 +1,7 @@
+call neobundle#begin(expand('~/.vim/bundle/'))
+NeoBundleFetch 'Shougo/neobundle.vim'
+"""""""""""""""""""""""""""""""""""""""""""""
+
 NeoBundle 'SirVer/ultisnips'
 NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'Valloric/YouCompleteMe'
@@ -121,3 +125,10 @@ NeoBundle 'tommcdo/vim-exchange'
 " " NeoBundle 'wincent/Command-T' " textmate-like searching throught project
 " " NeoBundle 'vim-puppet'
 " " NeoBundle 'gmarik/ide-popup.vim'
+
+NeoBundle 'junegunn/goyo.vim'
+NeoBundle 'junegunn/limelight.vim'
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+call neobundle#end()

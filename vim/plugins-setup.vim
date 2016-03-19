@@ -13,7 +13,6 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=black
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=NONE
 
 " GOYO
-NeoBundle 'junegunn/goyo.vim'
 function! s:goyo_enter()
   silent !tmux set status off
   set noshowmode
@@ -29,7 +28,6 @@ function! s:goyo_leave()
   " Limelight!
   " ...
 endfunction
-NeoBundle 'junegunn/limelight.vim'
 let g:limelight_conceal_ctermfg = 0
 " let g:limelight_conceal_ctermfg = 240
 
