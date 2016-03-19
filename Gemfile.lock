@@ -10,6 +10,7 @@ GEM
       tco (~> 0.1, >= 0.1.8)
     coderay (1.0.9)
     docopt (0.5.0)
+    erubis (2.7.0)
     ffi (1.6.0)
     gem-browse (1.0.0)
     gem-ctags (1.0.5)
@@ -57,7 +58,10 @@ GEM
     text-format (1.0.0)
       text-hyphen (~> 1.0.0)
     text-hyphen (1.0.0)
-    tmuxinator (0.5.0)
+    thor (0.19.1)
+    tmuxinator (0.7.1)
+      erubis (~> 2.6)
+      thor (~> 0.19, >= 0.15.0)
     yard (0.8.5.2)
 
 PLATFORMS
@@ -79,3 +83,6 @@ DEPENDENCIES
   pry-theme
   rubygems-bundler
   tmuxinator
+
+BUNDLED WITH
+   1.11.2
