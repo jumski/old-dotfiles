@@ -13,14 +13,14 @@ if [ "$TERM" != "cygwin" ]; then
   . $DOTFILES_PATH/bash/colors.sh
   export PATH=$PATH:$HOME/local/node/bin/:$DOTFILES_PATH/bin/:/home/jumski/various/bin/:$HOME/bin/
 
-  ## LOAD RVM
-  [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
-
   ## LOAD NVM and use node 5
   [[ -s "$HOME/.nvm/nvm.sh" ]] && . "$HOME/.nvm/nvm.sh"
   nvm use 5
 
+  ## LOAD RVM
   PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+  [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
 fi # cygwin
 
 # source .local_variables if present
