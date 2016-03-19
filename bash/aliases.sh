@@ -135,4 +135,4 @@ enconf() {
 
 
 ### breakage, akai etc
-alias akai-rear="xdg-open ~/dropbox/maszynki/akai-s2000/rear.jpg"
+alias akai-rear="xdg-open ~/Dropbox/maszynki/akai-s2000/rear.jpg"

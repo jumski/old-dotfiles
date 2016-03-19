@@ -1,4 +1,3 @@
 dropbox() {
-  require file_linked ~/Dropbox ~/dropbox
-  require file_linked ~/dropbox/vimwiki ~/vimwiki
+  require file_linked ~/Dropbox/vimwiki ~/vimwiki
 }

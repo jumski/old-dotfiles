@@ -12,7 +12,7 @@ if [ -n "$1" ]; then
   fi
 fi 
 
-worklogs_dir=~/dropbox/monk-shared/worklog/$project_name
+worklogs_dir=~/Dropbox/monk-shared/worklog/$project_name
 mkdir -p $worklogs_dir
 
 worklog_path=$worklogs_dir/${date}.txt

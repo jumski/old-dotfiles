@@ -61,7 +61,7 @@ nnoremap <leader>vv :tabnew ~/dotfiles/vim/plugins.vim<cr>:vs ~/dotfiles/vim/set
 nnoremap <leader>vp :tabnew config/projections.json<cr>
 
 " some custom stuff
-nnoremap <leader>op :15sp /home/jumski/dropbox/projects/`basename \`pwd\``/todos.txt<cr>
+nnoremap <leader>op :15sp /home/jumski/Dropbox/projects/`basename \`pwd\``/todos.txt<cr>
 nnoremap <leader>ow :15sp `/home/jumski/dotfiles/bin/worklog-path`<cr>
 " nnoremap <leader>oW :Ex $(dirname `/home/jumski/dotfiles/bin/worklog-path`)<cr>
 

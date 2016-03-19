@@ -100,9 +100,9 @@ if on_linux; then
     sudo dpkg -i vendor/debs/dropbox_1.6.0_amd64.deb
     dropbox start -i &
   fi
-  if [ -d $HOME/Dropbox ] && [ ! -d $HOME/dropbox ]; then
-    ln -s --force $HOME/Dropbox/ $HOME/dropbox
-    ln -s --force $HOME/dropbox/projects $HOME/projects
+  if [ -d $HOME/Dropbox ] && [ ! -d $HOME/projects ]; then
+    # ln -s --force $HOME/Dropbox/ $HOME/dropbox
+    ln -s --force $HOME/Dropbox/projects $HOME/projects
   fi
 
   # install elasticsearch
@@ -110,7 +110,7 @@ if on_linux; then
   #   sudo dpkg -i vendor/debs/elasticsearch-0.90.2.deb
   # fi
 
-  present vagrant || sudo dpkg -i $HOME/dropbox/linux/debs/vagrant*.deb
+  present vagrant || sudo dpkg -i $HOME/Dropbox/linux/debs/vagrant*.deb
 
   if missing mosh; then
     sudo apt-get install -y python-software-properties

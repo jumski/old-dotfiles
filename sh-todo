@@ -2,8 +2,8 @@
 # Part of sh-todo:
 # https://github.com/asb/sh-todo
 
-TODO_F=~/dropbox/dokumenty/todos/todo
-TODONE_F=~/dropbox/dokumenty/todos/todone
+TODO_F=~/Dropbox/dokumenty/todos/todo
+TODONE_F=~/Dropbox/dokumenty/todos/todone
 
 # BEGIN_DONE="\033[9m"
 # END_DONE="\033[29m"
