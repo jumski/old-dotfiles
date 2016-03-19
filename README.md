@@ -1,5 +1,16 @@
 # various hacks and improvements
 
+## fix too big tab/address bar in chrome
+
+google-chrome --high-dpi-support=1 --force-device-scale-factor=1.5
+
+
+## fix for bumblebee and kernel 4.2
+
+KeepUnusedXServer=true in /etc/bumblebee/bumblebee.conf
+
+source: https://forum.manjaro.org/index.php?topic=27156.0
+
 ## Intel Centrino Wifi card problem
 
 Last line of `etc/modprobe.d/iwlwifi.conf` should land into `/etc/modprobe.d/iwlwifi.conf`
