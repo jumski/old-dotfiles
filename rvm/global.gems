@@ -2,7 +2,6 @@ rubygems-bundler
 bundler
 rake
 rvm
-tmuxinator
 interactive_editor
 gist
 gem-browse
