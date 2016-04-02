@@ -1,0 +1,10 @@
+#!/bin/bash
+scale=$1
+
+if [ $scale = "" ]; then
+  scale=1
+fi
+
+gsettings set org.gnome.desktop.interface scaling-factor $scale
+gsettings set org.cinnamon.desktop.interface scaling-factor $scale
+gsettings set org.cinnamon active-display-scale $scale

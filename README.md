@@ -1,5 +1,65 @@
 # various hacks and improvements
 
+## Zenbook UX303UA wifi in "unmanaged" stage
+
+Add this line to `/etc/modprobe.d/iwlwifi.conf`:
+
+```
+options iwlwifi wd_disable=0
+```
+
+## diff-highlight
+
+```
+sudo chmod +x /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less
+```
+
+## Zenbook UX303UA keyboard backlight
+
+```
+sudo chmod a+w /sys/class/leds/asus::kbd_backlight/brightness
+echo 0 > /sys/class/leds/asus::kbd_backlight/brightness
+echo 3 > /sys/class/leds/asus::kbd_backlight/brightness
+# auto-set to 0 on startup
+```
+
+## Zenbook UX303UA brightness key not working
+
+Edit /etc/default/grub
+
+```
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
+```
+
+to
+
+```
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash pcie_aspm=force acpi_osi="
+```
+
+Reboot.
+Create `/usr/share/X11/xorg.conf.d/20-backlight.conf` with contents:
+
+```
+Section "Device"
+    Identifier "card0"
+    Driver "intel"
+    Option "Backlight" "intel_backlight"
+    BusID "PCI:0:2:0"
+EndSection
+```
+
+Reboot
+
+## advanced power management (TLP)
+
+http://linrunner.de/en/tlp/docs/tlp-linux-advanced-power-management.html
+
+
+## fix 2finger touchpad tap
+
+gsettings set org.gnome.settings-daemon.peripherals.input-devices hotplug-command /home/jumski/dotfiles/bin/setup_input_devices
+
 ## fix too big tab/address bar in chrome
 
 google-chrome --high-dpi-support=1 --force-device-scale-factor=1.5

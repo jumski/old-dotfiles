@@ -1,6 +1,8 @@
 #!/bin/bash
 
-$HOME/dotfiles/bin/setup_keyboard
+echo "`date` START" >> ~/.startup.log
+
+$HOME/dotfiles/bin/setup_input_devices
 
 # prevent mouse clicks
 # syndaemon -i 1.5 -t &
@@ -13,11 +15,11 @@ pidgin &
 
 gnome-terminal &
 
-/usr/optirun google-chrome &
+google-chrome &
 
-redshift &
+# redshift &
 
-scudcloud &
+slack &
 
 supervisord -c $HOME/dotfiles/conf/supervisord.conf &
 
