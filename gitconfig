@@ -111,10 +111,27 @@
 	interactive = auto
 	status = auto
 
+[color "diff"]
+  commit = green
+  meta = yellow
+  frag = cyan
+  old = red
+  new = green
+  whitespace = red reverse
+
+[color "diff-highlight"]
+  oldNormal = red bold
+  oldHighlight = red bold 52
+  newNormal = green bold
+  newHighlight = green bold 22
+
 [core]
 	autocrlf = input
 	whitespace = trailing-space,cr-at-eol
 	excludesfile = /home/jumski/.gitignore_global
+	pager = /usr/share/doc/git/contrib/diff-highlight/diff-highlight | less
+
+
 [github]
 	user = jumski
 [dude]
@@ -138,12 +155,12 @@
 ; 	tool = vimdiff
 ; 	conflictstyle = diff3
 
-[transfer]
-        fsckobjects = true
-[fetch]
-        fsckobjects = true
-[receive]
-        fsckObjects = true
+; [transfer]
+;         fsckobjects = true
+; [fetch]
+;         fsckobjects = true
+; [receive]
+;         fsckObjects = true
 [mergetool "fugitive"]
 	cmd = vim -f -c \"Gvdiff\" \"$MERGED\"
 [merge]
