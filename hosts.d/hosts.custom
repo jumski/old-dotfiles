@@ -1,5 +1,5 @@
 127.0.0.1	localhost
-127.0.1.1	jumski-Inspiron-N5110
+127.0.1.1	jumski-zenbook
 127.0.0.1 registry.docker.com antykwariusz.vagrant books.vagrant candles.vagrant dokku.me cardiobunny.dev pl.cardiobunny.dev en.cardiobunny.dev cardiobunny-en.dev cardiobunny-pl.dev monit.webmandala.vagrant kibana.webmandala.vagrant cardiobunny.dev candles-staging.vagrant www.candles-staging.vagrant
 
 176.9.125.117 mudita staging.biblioteka-hades.pl
