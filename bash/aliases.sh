@@ -32,6 +32,7 @@ alias gcim="!git-cim"
 alias t=tig
 alias ts="tig status"
 alias vi=vim
+alias nvim='nvim -u ~/.vimrc'
 alias xo=xdg-open
 complete -o default -o nospace -F _git g
 complete -o default -o nospace -F _git_status gs
