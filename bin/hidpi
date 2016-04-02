@@ -1,7 +1,7 @@
 #!/bin/bash
-scale=$1
 
-if [ $scale = "" ]; then
+scale=2
+if [ "$1" = "off" ]; then
   scale=1
 fi
 
