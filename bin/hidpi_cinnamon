@@ -8,3 +8,8 @@ fi
 gsettings set org.gnome.desktop.interface scaling-factor $scale
 gsettings set org.cinnamon.desktop.interface scaling-factor $scale
 gsettings set org.cinnamon active-display-scale $scale
+
+CHROMIUM_FLAGS="--force-device-scale-factor=1.6"
+# org.mate.font-rendering dpi 180.0 
+# org.mate.interface monospace-font-name 'Monaco for Powerline 20'
+# gconftool-2 --type boolean --set /apps/gnome-terminal/profiles/Default/use_system_font 1
