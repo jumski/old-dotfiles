@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sleep 5
+
 echo "`date` START" >> ~/.startup.log
 
 $HOME/dotfiles/bin/setup_input_devices
@@ -8,19 +10,29 @@ $HOME/dotfiles/bin/setup_input_devices
 # syndaemon -i 1.5 -t &
 
 mocp --server || rm ~/.moc/pid && mocp --server
+echo after mocp
 
 PULSE_LATENCY_MSEC=30 skype &
+echo after skype
 
 pidgin &
+echo after pidgin
 
 gnome-terminal &
+echo after gnome-terminal
 
-google-chrome &
+$BROWSER &
+echo after chrome
 
 # redshift &
 
 slack &
+echo after slack
 
 supervisord -c $HOME/dotfiles/conf/supervisord.conf &
+echo after supervisor
+
+echo '===============' `date -I` `date +%H:%m` >> $HOME/upower.log
+upower -d | grep energy-full >> $HOME/upower.log
 
 echo "`date` DONE!" >> ~/.startup.log
