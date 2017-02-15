@@ -1,0 +1,21 @@
+#!/usr/bin/env ruby
+
+window_name = ARGV[0]
+output_path = ARGV[1]
+
+if !window_name || !output_path
+    puts "Usage: "
+    puts
+    puts "  screencast window_to_search gif_path" 
+    exit 1
+end
+
+window_id = `xdotool search #{window_name} 2>/dev/null`.scan(/\d+/).first
+window_info = `xdotool getwindowgeometry #{window_id}`
+
+x, y = window_info.scan(/Position: (\d+),(\d+)/).flatten
+w, h = window_info.scan(/Geometry: (\d+)x(\d+)/).flatten
+
+byzanz_cmd = "byzanz-record --duration=180 --delay=3 --cursor -x #{x} -y #{y} -h #{h} -w #{w} --verbose  #{output_path}"
+
+system byzanz_cmd
