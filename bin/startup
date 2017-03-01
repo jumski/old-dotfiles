@@ -1,8 +1,12 @@
 #!/bin/bash
 
-sleep 5
+sleep 4
 
 echo "`date` START" >> ~/.startup.log
+
+$HOME/dotfiles/bin/autodpi
+
+sleep 4
 
 $HOME/dotfiles/bin/setup_input_devices
 
@@ -26,11 +30,14 @@ echo after chrome
 
 # redshift &
 
-slack &
-echo after slack
+# slack &
+# echo after slack
 
 supervisord -c $HOME/dotfiles/conf/supervisord.conf &
 echo after supervisor
+
+keepassx &
+echo after keepassx
 
 echo '===============' `date -I` `date +%H:%m` >> $HOME/upower.log
 upower -d | grep energy-full >> $HOME/upower.log

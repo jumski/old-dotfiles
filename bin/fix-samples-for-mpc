@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# find -iname '*.wav' -exec avconv -y -i "{}" {} \;
+echo "find . -name '*.wav' -print0 | xargs -0 -P 8 -I '{}' avconv -y -loglevel quiet -i '{}' '{}'"

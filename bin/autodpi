@@ -1,0 +1,9 @@
+#!/bin/bash
+
+displays_count=$(xrandr | grep ' connected ' | wc -l)
+
+if [ "$displays_count" = "2" ]; then
+    hidpi_mate off
+else
+    hidpi_mate
+fi

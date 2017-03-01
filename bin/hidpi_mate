@@ -1,20 +1,23 @@
 #!/bin/bash
 
 if [ "$1" = "off" ]; then
+  echo Disabling
   chromium_scale_factor=1
   mate_font_dpi=96
-  mate_font_size=14
+  mate_font_size=20
 else
+  echo Enabling
   chromium_scale_factor=1.6
   mate_font_dpi=180.0
   mate_font_size=20
 fi
 
+echo
+echo "--force-device-scale-factor=$chromium_scale_factor"
+echo org.mate.font-rendering dpi $mate_font_dpi
+echo org.mate.interface monospace-font-name "Monaco for Powerline $mate_font_size"
+echo
+
 echo "CHROMIUM_FLAGS=\"--force-device-scale-factor=${chromium_scale_factor}\"" > ~/.chromium-browser.init
 gsettings set org.mate.font-rendering dpi $mate_font_dpi
 gsettings set org.mate.interface monospace-font-name "Monaco for Powerline $mate_font_size"
-
-
-# org.mate.font-rendering dpi 180.0 
-# org.mate.interface monospace-font-name 'Monaco for Powerline 20'
-# gconftool-2 --type boolean --set /apps/gnome-terminal/profiles/Default/use_system_font 1
