@@ -1,5 +1,30 @@
 # various hacks and improvements
 
+## keepassx
+
+```
+sudo add-apt-repository ppa:eugenesan/ppa
+apt update
+apt install keepassx
+```
+
+## Hevc / H256 codec
+
+```
+sudo apt-add-repository ppa:strukturag/libde265
+sudo apt-get update
+sudo apt-get install gstreamer0.10-libde265 vlc-plugin-libde265
+```
+
+## intel i915 freeze
+
+Use kernel boot flag `intel_idle.max_cstate=1`.
+Edit `/etc/default/grub`:
+
+```
+GRUB_CMDLINE_LINUX_DEFAULT="intel_idle.max_cstate=1"
+```
+
 ## Zenbook UX303UA wifi in "unmanaged" stage
 
 Add this line to `/etc/modprobe.d/iwlwifi.conf`:
@@ -21,6 +46,15 @@ sudo chmod a+w /sys/class/leds/asus::kbd_backlight/brightness
 echo 0 > /sys/class/leds/asus::kbd_backlight/brightness
 echo 3 > /sys/class/leds/asus::kbd_backlight/brightness
 # auto-set to 0 on startup
+```
+
+!!! chmoding is not enought, need to add udev rule because permissions
+are overriden
+
+Create following file `/etc/udev/rules.d/99-keyboard-leds.rules`
+
+```
+DEVPATH=="/devices/platform/asus-nb-wmi/leds/asus::kbd_backlight", RUN+="/bin/chmod 0666 /sys/class/leds/asus::kbd_backlight/brightness"
 ```
 
 ## Zenbook UX303UA brightness key not working
