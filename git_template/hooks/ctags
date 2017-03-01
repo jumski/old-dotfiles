@@ -2,6 +2,6 @@
 set -e
 PATH="/usr/local/bin:$PATH"
 trap "rm -f .git/tags.$$" EXIT
-excludes="--exclude=node_modules/ --exclude=bower_components/ --exclude=*.js.map --exclude=*.min.map --exclude=*.min.js --exclude=.git"
-nice ctags --tag-relative -Rf.git/tags.$$ $excludes --languages=-sql
+excludes="--exclude=node_modules/ --exclude=bower_components/ --exclude=*.js.map --exclude=*.min.map --exclude=*.min.js  --exclude=*.map.js --exclude=*.map --exclude=node_modules --exclude=bower_components --exclude=.git"
+nice ctags --tag-relative -Rf.git/tags.$$ $excludes --languages=-sql --regex-ruby="/(\w+)\s+=\s+Class.new/\1/c/"
 mv .git/tags.$$ .git/tags

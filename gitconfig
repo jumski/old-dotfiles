@@ -79,6 +79,7 @@
   noff = merge --no-ff
   prune-remotes = remote prune origin
   nuke = !git-nuke
+  pfwlease = push --force-with-lease
 
   axe = !git-axe
   axer = !git-axer
@@ -165,3 +166,5 @@
 	cmd = vim -f -c \"Gvdiff\" \"$MERGED\"
 [merge]
 	tool = fugitive
+[rerere]
+	enabled = true
