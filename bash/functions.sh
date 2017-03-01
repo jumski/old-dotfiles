@@ -91,6 +91,7 @@ killflash() { pkill -f flashplugin; }
 killjackd() { pkill --signal QUIT -f jackd; }
 rtfm()      { help "$@" || man "$@" || $BROWSER "http://www.google.com/search?q=$@"; }
 fname()     { find . -iname "*$@*"; }
+ffname()     { find . -iname "*$@*" | grep -v tmp | grep -v bower_components | grep -v node_modules; }
 repeat() {
   n=$1
   i=0
@@ -190,13 +191,23 @@ multi_backup() {
 histgrep() { history | grep "$1" | sort -uh; }
 
 cdproject() {
-  if [ -z "$1" ]; then
-    project_name=$(basename `pwd`)
-  else
+  if [ -n "$1" ]; then
     project_name="$1"
   fi
 
-  cd ~/projects/$project_name
+  if [ -d ./.git/.project_dir ]; then
+    project_path="./.git/.project_dir"
+  fi
+
+  if [ -z "$project_name" ]; then
+    project_name=$(basename `pwd`)
+  fi
+
+  if [ -z "$project_path" ]; then
+    project_path="~/projects/$project_name"
+  fi
+
+  cd "$project_path"
 }
 
 cdwork() {

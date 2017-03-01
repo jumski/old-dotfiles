@@ -23,6 +23,10 @@ alias :q='confirm "Quit terminal? [Y/n]" && exit'
 
 alias path="echo $PATH | tr ':' '\n'"
 
+alias such=git
+alias very=git
+alias wow='git status'
+
 alias g=hub
 alias git=hub
 alias gs="git status -sb"

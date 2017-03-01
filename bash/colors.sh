@@ -97,7 +97,7 @@ function prompt_indicator {
 prompt_command() {
   LAST_EXIT_CODE=$?
   history -a
-  export PS1="$(hostname_indicator)$(pwd_indicator)$(git_indicator)$(rails_env_indicator)$(prompt_indicator)"
+  export PS1="\n$(hostname_indicator)$(pwd_indicator)$(git_indicator)$(rails_env_indicator)\n$(prompt_indicator)"
 }
 
 PROMPT_COMMAND=prompt_command
