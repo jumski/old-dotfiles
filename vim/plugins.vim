@@ -4,8 +4,12 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 NeoBundle 'SirVer/ultisnips'
 NeoBundle 'Lokaltog/vim-powerline'
-NeoBundle 'Valloric/YouCompleteMe'
 
+if has('nvim')
+    NeoBundle 'Shougo/deoplete.nvim'
+else
+    NeoBundle 'Valloric/YouCompleteMe'
+endif
 
 NeoBundle 'jumski/vim-colors-solarized'
 " NeoBundle 'delimitMate.vim'
@@ -29,6 +33,7 @@ NeoBundle 'tpope/vim-endwise'
 NeoBundle 'tpope/vim-eunuch'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-commentary'
+NeoBundle 'tpope/vim-rhubarb'
 "
 NeoBundle 'tpope/vim-git'
 NeoBundle 'tpope/vim-haml'
@@ -72,10 +77,13 @@ NeoBundle 'jgdavey/vim-blockle'
 NeoBundle 'Shougo/vimproc'
 NeoBundle "DataWraith/auto_mkdir"
 NeoBundle 'bronson/vim-visual-star-search'
-NeoBundle 'othree/yajs.vim'
+" NeoBundle 'othree/yajs.vim'
+" NeoBundle 'jelera/vim-javascript-syntax'
+NeoBundle 'sheerun/vim-polyglot'
 NeoBundle 'slim-template/vim-slim'
 NeoBundle 'mattn/webapi-vim'
 NeoBundle 'christoomey/vim-tmux-navigator'
+NeoBundle 'mxw/vim-jsx'
 
 
 
@@ -128,6 +136,8 @@ NeoBundle 'tommcdo/vim-exchange'
 
 NeoBundle 'junegunn/goyo.vim'
 NeoBundle 'junegunn/limelight.vim'
+
+NeoBundle 'zeavim.vim'
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

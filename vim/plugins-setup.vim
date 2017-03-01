@@ -50,6 +50,7 @@ let g:syntastic_javascript_checkers = ['jshint', 'jslint']
 "                            \ 'active_filetypes': ['ruby', 'erb', 'javascript', 'coffee'],
 "                            \ 'passive_filetypes': [] }
 "
+"
 " let g:syntastic_disabled_filetypes = ["haml", "sass"]
 
 " YouCompleteMe
@@ -153,3 +154,9 @@ noremap <leader>d :Dispatch<cr>
 
 nnoremap <leader>vu :UltiSnipsEdit<cr>
 nnoremap <leader>vb :NeoBundleInstall<cr>
+
+" Use deoplete.
+let g:deoplete#enable_at_startup = 1
+
+" highlight JSX in *.js files
+let g:jsx_ext_required = 0

@@ -81,6 +81,11 @@ filetype plugin on
 filetype indent on
 filetype plugin indent on
 
+" Use the old vim regex engine (version 1, as opposed to version 2, which was
+" introduced in Vim 7.3.969). The Ruby syntax highlighting is significantly
+" slower with the new regex engine.
+set re=1
+
 
 " set number of colors
 set t_Co=256
@@ -92,6 +97,7 @@ set background=dark
 set colorcolumn=80
 
 " use solarized scheme
+let g:solarized_termtrans = 1
 colorscheme solarized
 
 " do not redraw while executing macros etc
@@ -105,6 +111,13 @@ au BufNewFile,BufRead *.json set ft=javascript
 au BufNewFile,BufRead *.hamlc setfiletype haml
 au BufNewFile,BufRead Dockerfile setfiletype conf
 au BufNewFile,BufRead .psqlrc setfiletype sql
+au BufNewFile,BufRead *.js.erb set filetype=eruby.javascript
+
+augroup ft_rb
+    au!
+    " fix the SLOOOW syntax highlighting
+    au FileType ruby setlocal re=1 foldmethod=manual
+augroup END
 
 " force tabwidth per filetype
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2

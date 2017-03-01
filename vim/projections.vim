@@ -5,6 +5,29 @@ let g:rails_projections = {
   \     "module %S\n  include ActiveSupport::Concern\n\n  included do\n  end\nend",
   \   "keywords": "included"
   \ },
+  \ "app/events/*.rb": {
+  \   "command": "event",
+  \   "alternate": "spec/events/%s_spec.rb",
+  \ },
+  \ "app/injectors/*_injector.rb": {
+  \   "command": "injector",
+  \   "alternate": "spec/injectors/%s_injector_spec.rb",
+  \ },
+  \ "app/repositories/*_repository.rb": {
+  \   "command": "repository",
+  \   "alternate": "spec/repositories/%s_repository_spec.rb",
+  \   "affinity": "model"
+  \ },
+  \ "app/validators/*_validator.rb": {
+  \   "command": "validator",
+  \   "alternate": "spec/validators/%s_validator_spec.rb",
+  \   "affinity": "model"
+  \ },
+  \ "app/presenters/*_presenter.rb": {
+  \   "command": "presenter",
+  \   "alternate": "spec/presenters/%s_presenter_spec.rb",
+  \   "affinity": "model"
+  \ },
   \ "app/decorators/*_decorator.rb": {
   \   "command": "decorator",
   \   "alternate": "spec/decorators/%s_decorator_spec.rb",
@@ -31,6 +54,9 @@ let g:rails_projections = {
   \   "command": "factory",
   \   "affinity": "collection"
   \ },
+  \ "spec/requests/*_spec.rb": {
+  \   "command": "request"
+  \ },
   \ "app/services/*.rb": {
   \   "command":   "service",
   \   "affinity":  "collection",
@@ -52,7 +78,15 @@ let g:rails_projections = {
   \   "command": "fmixin",
   \   "template": "class %SFormMixin\nend"
   \ },
-  \ "app/views/shared/*": { "command": "sview" }
+  \ "app/views/shared/*": { "command": "sview" },
+  \ "app-ember/tests/*.js": { "command": "jtest" },
+  \ "app-ember/app/templates/*.hbs": { "command": "jtemplate" },
+  \ "app-ember/app/templates/components/*.hbs": { "command": "jctemplate" },
+  \ "app-ember/app/components/*.js": { "command": "jcomponent" },
+  \ "app-ember/app/routes/*.js": { "command": "jroute" },
+  \ "app-ember/app/controllers/*.js": { "command": "jcontroller" },
+  \ "app-ember/app/models/*.js": { "command": "jmodel" },
+  \ "app-ember/app/templates/shared/*.hbs": { "command": "jpartial" }
   \}
 
 " [vim-rails] gem projections - typing `:Efactory users` will open the users factory, etc.
