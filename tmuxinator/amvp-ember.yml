@@ -1,0 +1,8 @@
+name: amvp-ember
+root: ~/work/agencymvp.com/app-ember/
+pre_window: rvm use ruby-2.3.1@agencymvp --create
+windows:
+  - server: ember s --proxy http://localhost:3000/
+  - bash:
+  - vim: vim
+  - bash:

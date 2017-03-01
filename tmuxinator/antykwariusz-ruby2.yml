@@ -1,12 +1,12 @@
 # ~/.tmuxinator/default.yml
 # you can make as many tabs as you wish...
 
-name: antykwariusz
+name: antykwariusz-ruby2
 root: ~/work/antykwariusz
 
 pre:
   - sudo /etc/init.d/mysql start
-pre_window: rvm use ruby-1.9.3-p327@antykwariusz --create
+pre_window: rvm use ruby-2.2@default --create
 windows:
   - stuff: puma --pidfile tmp/pids/server.pid
   - bash: todo @books

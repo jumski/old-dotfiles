@@ -2,7 +2,8 @@
 # you can make as many tabs as you wish...
 
 name: dekoruje
-root: ~/work/dekoruje
+root: ~/work/dekoruje.com
+pre_window: rvm use ruby-1.9.3@dekoruje.com --create
 
 windows:
   - server: rails s

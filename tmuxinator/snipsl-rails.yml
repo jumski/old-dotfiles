@@ -7,4 +7,5 @@ windows:
   - vim: vim
   - console: rails c
   - bash: tail -100f log/development.log
-  - ssh: ssh snipsl
+  - ssh: ssh snipsl -t 'tmux at || tmux'
+  - ssh-prod:
