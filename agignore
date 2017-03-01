@@ -18,6 +18,7 @@ vendor/
 *.log
 *.js.map
 *.min.map
+*.map
 dist/
 node_modules/
 bower_components/
