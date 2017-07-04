@@ -1,6 +1,5 @@
 source 'http://rubygems.org'
 
-gem 'awesome_print'
 gem 'interactive_editor'
 gem 'gist'
 gem 'gem-browse'
@@ -10,7 +9,6 @@ gem 'tmuxinator'
 gem 'github'
 gem 'rubygems-bundler'
 gem 'libnotify'
-gem 'catpix'
 gem 'hosts_updater'
 
 group :pry do
