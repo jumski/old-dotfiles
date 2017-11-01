@@ -1,7 +1,5 @@
 name: amvp-dmv
 root: ~/work/amvp-dmv/
-pre_window: rvm use ruby-2.3.1@amvp-dmv --create
-pre: export OMG=hax
 windows:
   - server: shotgun
   - bash:

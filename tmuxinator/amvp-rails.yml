@@ -1,6 +1,5 @@
 name: amvp-rails
 root: ~/work/agencymvp.com/
-pre_window: rvm use ruby-2.3.1@agencymvp --create
 windows:
   - server: bin/rails s --binding 127.0.0.1
   - bash:
