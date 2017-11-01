@@ -2,13 +2,20 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 """""""""""""""""""""""""""""""""""""""""""""
 
-NeoBundle 'SirVer/ultisnips'
+"NeoBundle 'SirVer/ultisnips'
 NeoBundle 'Lokaltog/vim-powerline'
 
+"if has('nvim')
+"    NeoBundle 'Shougo/deoplete.nvim'
+"else
+"    NeoBundle 'Valloric/YouCompleteMe'
+"endif
 if has('nvim')
-    NeoBundle 'Shougo/deoplete.nvim'
+  NeoBundle 'Shougo/deoplete.nvim'
 else
-    NeoBundle 'Valloric/YouCompleteMe'
+  NeoBundle 'Shougo/deoplete.nvim'
+  NeoBundle 'roxma/nvim-yarp'
+  NeoBundle 'roxma/vim-hug-neovim-rpc'
 endif
 
 NeoBundle 'jumski/vim-colors-solarized'
@@ -34,7 +41,8 @@ NeoBundle 'tpope/vim-eunuch'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-commentary'
 NeoBundle 'tpope/vim-rhubarb'
-"
+
+NeoBundle 'christoomey/vim-tmux-navigator'
 NeoBundle 'tpope/vim-git'
 NeoBundle 'tpope/vim-haml'
 NeoBundle 'tpope/vim-markdown'

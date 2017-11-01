@@ -46,6 +46,12 @@ let g:rails_projections = {
   \ "spec/shared/*.rb": {
   \   "command": "shared",
   \ },
+  \ "spec/support/shared_context/*.rb": {
+  \   "command": "shcontext",
+  \ },
+  \ "spec/support/shared_examples/*.rb": {
+  \   "command": "shexamples",
+  \ },
   \ "spec/factories/*.rb": {
   \   "command": "factory",
   \   "affinity": "collection"

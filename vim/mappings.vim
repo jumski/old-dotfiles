@@ -128,3 +128,5 @@ nnoremap N Nzzzv
 " same when jumping around
 nnoremap g; g;zz
 nnoremap g, g,zz
+
+nnoremap U :syntax sync fromstart<enter>:redraw!<enter>
