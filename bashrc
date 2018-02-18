@@ -1,4 +1,4 @@
-
+echo 'bashrc' >> /tmp/wojtlog
 [ -z "$PS1" ] && return
 
 export DOTFILES_PATH=~/dotfiles/
@@ -15,12 +15,12 @@ if [ "$TERM" != "cygwin" ]; then
 
   ## LOAD NVM and use node 5
   [[ -s "$HOME/.nvm/nvm.sh" ]] && . "$HOME/.nvm/nvm.sh"
-  nvm use 5
+  nvm use default
 
-  ## LOAD RVM
-  PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-  [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
-
+  source /usr/local/share/chruby/chruby.sh
+  source /usr/local/share/chruby/auto.sh
+  source ~/.chruby-default-gems/chruby-default-gems.sh
+  export DEFAULT_GEMFILE="$DOTFILES_PATH/Gemfile"
 fi # cygwin
 
 # source .local_variables if present

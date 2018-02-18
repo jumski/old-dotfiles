@@ -36,7 +36,8 @@ alias gcim="!git-cim"
 alias t=tig
 alias ts="tig status"
 alias vi=vim
-alias nvim='nvim -u ~/.vimrc'
+# alias nvim='nvim -u ~/.vimrc'
+# alias vim='nvim -u ~/.vimrc'
 alias xo=xdg-open
 complete -o default -o nospace -F _git g
 complete -o default -o nospace -F _git_status gs
@@ -56,6 +57,8 @@ alias parallel="parallel --gnu"
 alias visor="supervisorctl -c /home/jumski/dotfiles/conf/supervisord.conf"
 
 alias biggest="du -hs * | sort -h | column -t"
+
+alias ember='node_modules/.bin/ember'
 
 
 alias jungletrain="mocp -l http://stream6.jungletrain.net:8000"
@@ -117,6 +120,7 @@ alias babushka="babushka --no-color"
 alias coffeewatch="coffee -bcw"
 alias karma="./node_modules/.bin/karma"
 alias vssh='ssh -i ./.vagrant/machines/default/virtualbox/private_key vagrant@localhost -p 2222'
+alias mux=tmuxinator
 vscp() {
   scp -i ./.vagrant/machines/default/virtualbox/private_key -P 2222 vagrant@localhost
 }
@@ -141,3 +145,5 @@ enconf() {
 
 ### breakage, akai etc
 alias akai-rear="xdg-open ~/Dropbox/maszynki/akai-s2000/rear.jpg"
+
+alias unfuck_js="rm -rf tmp/ node_modules/ bower_components/ dist/ && bower cache clean && npm cache clean && npm install && bower install && mkdir -p dist"

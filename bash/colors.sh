@@ -46,10 +46,12 @@ function git_indicator {
     return
   fi
 
-  echo "${c_yellow}[$(current_branch)${c_red}$(git_dirty_indicator)${c_yellow}]$c_reset "
-}
-function parse_rvm_prompt {
-  rvm-prompt | sed 's/\(ruby-\)\(.*\)@\(.*\)/\3/'
+  # sanitize branch name to avoid pwnage
+  # https://github.com/njhartwell/pw3nage
+  branch=$(current_branch)
+  branch=${branch//[^a-z0-9\/]/-}
+
+  echo "${c_yellow}[${branch}${c_red}$(git_dirty_indicator)${c_yellow}]$c_reset "
 }
 function rails_env_indicator {
   [ "$RAILS_ENV" = "production" ] && echo "${c_red}P$c_reset "
