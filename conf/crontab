@@ -12,3 +12,5 @@
 
 # log battery status if discharging
 */5 * * * * (acpi | grep Discharging) && (cat /home/jumski/battery.log > /tmp/battery.log && echo `date` '::' `acpi` >> /tmp/battery.log && tail -1000 /tmp/battery.log > /home/jumski/battery.log)
+
+* * * * * DISPLAY=:0 /usr/bin/xmodmap /home/jumski/.Xmodmap
