@@ -10,6 +10,8 @@
   c = checkout
   ps = push
 
+  pr = !sh -c 'git fetch origin pull/$0/head:pr-$0 && git checkout pr-$0'
+
   amend = commit --amend
   unstage = reset HEAD  # removes files from index
   uncommit = reset --soft HEAD^
@@ -130,7 +132,7 @@
 	autocrlf = input
 	whitespace = trailing-space,cr-at-eol
 	excludesfile = /home/jumski/.gitignore_global
-	pager = /usr/share/doc/git/contrib/diff-highlight/diff-highlight | less
+	;pager = /usr/share/doc/git/contrib/diff-highlight/diff-highlight | less
 
 
 [github]
