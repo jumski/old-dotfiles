@@ -1,5 +1,19 @@
 # various hacks and improvements
 
+## prevent accidental touchpad clicks while typing
+
+```
+sudo add-apt-repository ppa:atareao/atareao
+sudo apt-get update
+sudo apt-get install touchpad-indicator
+```
+
+## gpg-zip
+
+```
+gpg-zip --encrypt --symmetric --output output.enc dir/
+```
+
 ## keepassx
 
 ```
