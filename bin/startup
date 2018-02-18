@@ -16,13 +16,13 @@ $HOME/dotfiles/bin/setup_input_devices
 mocp --server || rm ~/.moc/pid && mocp --server
 echo after mocp
 
-PULSE_LATENCY_MSEC=30 skype &
-echo after skype
+# PULSE_LATENCY_MSEC=30 skype &
+# echo after skype
 
 pidgin &
 echo after pidgin
 
-gnome-terminal &
+gnome-terminal --maximize --hide-menubar &
 echo after gnome-terminal
 
 $BROWSER &
@@ -33,8 +33,8 @@ echo after chrome
 # slack &
 # echo after slack
 
-supervisord -c $HOME/dotfiles/conf/supervisord.conf &
-echo after supervisor
+# supervisord -c $HOME/dotfiles/conf/supervisord.conf &
+# echo after supervisor
 
 keepassx &
 echo after keepassx

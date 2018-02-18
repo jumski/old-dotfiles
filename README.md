@@ -62,6 +62,8 @@ echo 3 > /sys/class/leds/asus::kbd_backlight/brightness
 # auto-set to 0 on startup
 ```
 
+### setup permission
+
 !!! chmoding is not enought, need to add udev rule because permissions
 are overriden
 
@@ -69,6 +71,12 @@ Create following file `/etc/udev/rules.d/99-keyboard-leds.rules`
 
 ```
 DEVPATH=="/devices/platform/asus-nb-wmi/leds/asus::kbd_backlight", RUN+="/bin/chmod 0666 /sys/class/leds/asus::kbd_backlight/brightness"
+```
+
+### ALTERNATIVE PERMISSON FIX via acl
+
+```
+sudo setfacl -m u:username:6 /sys/class/leds/asus\:\:kbd_backlight/brightness
 ```
 
 ## Zenbook UX303UA brightness key not working

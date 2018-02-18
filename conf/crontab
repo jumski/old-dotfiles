@@ -7,10 +7,13 @@
 # | +- - - - - - - hour (0 - 23)
 # +- - - - - - - - minute (0 - 59)
 
-# remove downloaded files older than 14 days
-*/15 * * * * find /home/jumski/Downloads/ -mtime +14 -exec rm -r {} \;
+# remove downloaded files older than 30 days
+*/15 * * * * find /home/jumski/Downloads/ -mtime +30 -exec rm -r {} \;
 
 # log battery status if discharging
 */5 * * * * (acpi | grep Discharging) && (cat /home/jumski/battery.log > /tmp/battery.log && echo `date` '::' `acpi` >> /tmp/battery.log && tail -1000 /tmp/battery.log > /home/jumski/battery.log)
 
 * * * * * DISPLAY=:0 /usr/bin/xmodmap /home/jumski/.Xmodmap
+
+* * * * * echo 0 > /sys/class/leds/asus::kbd_backlight/brightness
+
