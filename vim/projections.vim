@@ -91,6 +91,12 @@ let g:rails_projections = {
   \ "app-ember/app/components/*.js": { "command": "jcomponent" },
   \ "app-ember/app/routes/*.js": { "command": "jroute" },
   \ "app-ember/app/controllers/*.js": { "command": "jcontroller" },
+  \ "app-ember/app/helpers/*.js": { "command": "jhelper" },
+  \ "app-ember/app/services/*.js": { "command": "jservice" },
+  \ "app-ember/app/mixins/*.js": { "command": "jmixin" },
+  \ "app-ember/app/initializers/*.js": { "command": "jinitializer" },
+  \ "app-ember/app/adapters/*.js": { "command": "jadapter" },
+  \ "app-ember/app/serializers/*.js": { "command": "jserializer" },
   \ "app-ember/app/models/*.js": { "command": "jmodel" },
   \ "app-ember/app/templates/shared/*.hbs": { "command": "jpartial" }
   \}

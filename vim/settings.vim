@@ -146,9 +146,6 @@ set cmdwinheight=10
 " more characters will be sent to the screen for redrawing
 set ttyfast
 
-" removes the delay after returning to normal mode
-set noesckeys
-
 " time out on mapping after three seconds
 " time out on key codes after a tenth of a second
 set timeoutlen=800
@@ -220,11 +217,14 @@ endfun
 autocmd BufWritePre *.* :call <SID>StripTrailingWhitespaces()
 
 " change cursor type in insert mode
-"if has("autocmd")
+if has("autocmd")
+  au InsertEnter * silent execute "!echo -ne '\e[6 q'"
+  au InsertLeave * silent execute "!echo -ne '\e[1 q'"
+  au VimLeave * silent execute "!echo -ne '\e[1 q'"
   "au InsertEnter * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape ibeam"
   "au InsertLeave * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape block"
   "au VimLeave * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape block"
-"endif
+endif
 
 autocmd QuickFixCmdPost [^l]* nested cwindow
 autocmd QuickFixCmdPost    l* nested lwindow

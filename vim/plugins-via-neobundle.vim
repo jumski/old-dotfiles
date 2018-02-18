@@ -2,7 +2,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 """""""""""""""""""""""""""""""""""""""""""""
 
-"NeoBundle 'SirVer/ultisnips'
+NeoBundle 'SirVer/ultisnips'
 NeoBundle 'Lokaltog/vim-powerline'
 
 "if has('nvim')
