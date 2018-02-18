@@ -1,0 +1,28 @@
+#!/bin/bash
+
+if [ "$1" = "off" ]; then
+  echo Disabling
+  chromium_scale_factor=1
+  scale_factor=1
+  font_dpi=96
+  font_size=20
+else
+  echo Enabling
+  chromium_scale_factor=1.6
+  scale_factor=2
+  font_dpi=180.0
+  font_size=20
+fi
+
+echo
+echo "--force-device-scale-factor=$chromium_scale_factor"
+# echo org.mate.font-rendering dpi $font_dpi
+# echo org.mate.interface monospace-font-name "Monaco for Powerline $font_size"
+echo
+
+echo "CHROMIUM_FLAGS=\"--force-device-scale-factor=${chromium_scale_factor}\"" > ~/.chromium-browser.init
+# gsettings set org.mate.font-rendering dpi $font_dpi
+# gsettings set org.mate.interface monospace-font-name "Monaco for Powerline $font_size"
+
+gsettings set org.gnome.settings-daemon.plugins.xsettings overrides "{'Gdk/WindowScalingFactor': <${scale_factor}>}"
+gsettings set org.gnome.desktop.interface scaling-factor ${scale_factor}

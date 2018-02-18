@@ -1,0 +1,6 @@
+#!/bin/bash
+
+factor=1
+
+gsettings set org.gnome.settings-daemon.plugins.xsettings overrides "{'Gdk/WindowScalingFactor': <${factor}>}"
+gsettings set org.gnome.desktop.interface scaling-factor ${factor}
