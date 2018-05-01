@@ -10,3 +10,4 @@ hosts_updater
 pry
 pry-doc
 pry-theme
+ripper-tags
