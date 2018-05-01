@@ -1,19 +1,16 @@
-echo 'bashrc' >> /tmp/wojtlog
 [ -z "$PS1" ] && return
 
 export DOTFILES_PATH=~/dotfiles/
 
 ## LOAD SCRIPTS
-. $DOTFILES_PATH/bash/variables.sh
-. $DOTFILES_PATH/bash/setup_terminal.sh
+source $DOTFILES_PATH/bash/variables.sh
+source $DOTFILES_PATH/bash/setup_terminal.sh
 source $DOTFILES_PATH/bash/aliases.sh
 source $DOTFILES_PATH/bash/functions.sh
 
 if [ "$TERM" != "cygwin" ]; then
-  . $DOTFILES_PATH/bash/colors.sh
-  export PATH=$PATH:$HOME/local/node/bin/:$DOTFILES_PATH/bin/:/home/jumski/various/bin/:$HOME/bin/
+  source $DOTFILES_PATH/bash/colors.sh
 
-  ## LOAD NVM and use node 5
   [[ -s "$HOME/.nvm/nvm.sh" ]] && . "$HOME/.nvm/nvm.sh"
   nvm use default
 
@@ -21,6 +18,12 @@ if [ "$TERM" != "cygwin" ]; then
   source /usr/local/share/chruby/auto.sh
   source ~/.chruby-default-gems/chruby-default-gems.sh
   export DEFAULT_GEMFILE="$DOTFILES_PATH/Gemfile"
+
+  export PYENV_ROOT="$HOME/.pyenv"
+  export PATH="$PYENV_ROOT/bin:$PATH"
+  if command -v pyenv 1>/dev/null 2>&1; then
+    eval "$(pyenv init -)"
+  fi
 fi # cygwin
 
 # source .local_variables if present
@@ -28,12 +31,6 @@ if [ -f $HOME/.local_variables ]; then
   source $HOME/.local_variables
 fi
 
-# add studio scripts binaries
-if [[ -d ~/work/studio-scripts/bin ]]; then
-  PATH=$PATH:~/work/studio-scripts/bin
-fi
-
 source $DOTFILES_PATH/bash/h.sh
 
-### Added by the Heroku Toolbelt
-# export PATH="/usr/local/heroku/bin:$PATH"
+export PATH="$PATH:$DOTFILES_PATH/bin"

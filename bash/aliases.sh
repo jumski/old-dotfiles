@@ -147,3 +147,4 @@ enconf() {
 alias akai-rear="xdg-open ~/Dropbox/maszynki/akai-s2000/rear.jpg"
 
 alias unfuck_js="rm -rf tmp/ node_modules/ bower_components/ dist/ && bower cache clean && npm cache clean && npm install && bower install && mkdir -p dist"
+alias random_mac='sudo ifconfig wlan0 ether `openssl rand -hex 6 | sed "s/\(..\)/\1:/g; s/.$//"`'

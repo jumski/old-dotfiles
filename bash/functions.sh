@@ -91,7 +91,7 @@ killflash() { pkill -f flashplugin; }
 killjackd() { pkill --signal QUIT -f jackd; }
 rtfm()      { help "$@" || man "$@" || $BROWSER "http://www.google.com/search?q=$@"; }
 fname()     { find . -iname "*$@*"; }
-ffname()     { find . -iname "*$@*" | grep -v tmp | grep -v bower_components | grep -v node_modules; }
+ffname()    { find . -iname "*$@*" | grep -v tmp | grep -v bower_components | grep -v node_modules | grep -v public; }
 repeat() {
   n=$1
   i=0
